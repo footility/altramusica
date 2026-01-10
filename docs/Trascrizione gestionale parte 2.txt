@@ -1,0 +1,296 @@
+00:00:03 Barbara Tripodi
+Chi fa sia il corso di strumento che il corso di teoria ha semplicemente si cerca di metterlo nello stesso pomeriggio. Però questo è più dirimente per i bambini più piccoli, per i più grandi è un pochino meno rigida la cosa.
+00:00:21 Paolo Mistretta
+OK, magari adesso qua mi si è interrotta la registrazione, potrei essermi perso il dettaglio, però comunque l'idea me la sono fatta. Poi esatto, poi ne riparliamo su queste cose. OK, quindi questa sarebbe la fase di gravità. 
+00:00:32 Barbara Tripodi
+Io l'ho sempre fatto manualmente. La cosa più impegnativa è la raccolta dei dati, cioè avere questo Google Form o quello che è questo link con tutta la loro disponibilità. e poi il gestionale in qualche modo mi fa vedere. Cioè io ho bisogno di utilizzare dei filtri per vedere tutti quelli delle elementari che fanno violino che vengono lunedì.
+00:00:58 Paolo Mistretta
+Certo, un grosso filtro. Però il filtro ti serve. Però aspetta, il filtro ti serve in quale occasione? Se in maniera generale.
+00:01:09 Barbara Tripodi
+Quando faccio l'orario mi serve assolutamente. Quando poi devo fare le comunicazioni, quindi devo filtrare tutti quelli che fanno la sinfonica base sezione archi, quindi quelli che fanno violino sono automaticamente nella sezione archi. automaticamente se hanno fatto l'iscrizione al progetto dell'orchestra, altrimenti sono potenzialmente nella sezione archi, che vuol dire che glielo possiamo proporre, ma non necessariamente accettano di farlo.
+00:01:52 Barbara Tripodi
+Per cui questa categorizzazione in livelli è la stessa che poi mi serve per fare l'orchestra ed è la stessa che poi va agli esami. Però sono cose, quelle degli esami, che posso gestire separatamente.
+00:02:12 Paolo Mistretta
+Sì, poi quella degli esami è un altro pezzo che si aggiunge a qualcosa che già è organizzato. Quindi nel caso si può vedere dopo. Ok, ma quindi queste tre quattro fasi sono quelle su cui tu vorresti avere qualcosa di funzionale, finale, finito, fatto, che va.
+00:02:32 Barbara Tripodi
+Allora le prime tre servono praticamente a fine agosto, cioè la prima fase uno serve a fine agosto, i primi di settembre mi serve la due e la tre per fare i contratti, quella didattica mi serve a fine settembre per fare l'orchestra entro fine ottobre. Poi. Finito l'anno scolastico c'è il tempo estivo per cui c'è un'iscrizione a un corso per il breve, quindi con altro contratto, altro regolamento, cifra forfettaria unica, nessuna rateizzazione e.
+00:03:20 Barbara Tripodi
+E a fine anno c'è la campagna di preiscrizione, quindi la quota d'iscrizione che c'è all'inizio dell'anno, in realtà se tu la paghi a fine anno vale per l'anno successivo come diritto di prelazione, però è fiscalmente di contabilmente contabilmente relativo all'esercizio di competenza dell'esercizio successivo.
+00:03:49 Paolo Mistretta
+Anche se viene pagato prima.
+00:03:52 Barbara Tripodi
+Sì, perché si riferisce all'anno scolastico successivo, anche lì c'è gente che fa la preiscrizione a maggio per due fratelli e poi a settembre successivo ne iscrive solo uno. Allora io giro il credito del fratello che non si è iscritto sul fratello che rimane. Se posso forzare questa situazione la lascio così anche perché il genitore che ha pagato è sempre lui, anche se i codici fiscali degli allievi sono differenti quest'anno.
+00:04:35 Barbara Tripodi
+Ecco, ad esempio, a differenza del. Del database che ti avevo mandato. Siccome tutti mi hanno detto che era necessario partire da dal codice fiscale dell'allievo, abbiamo impostato il database e quindi abbiamo fatto una grossa campagna di raccolta di dati aggiornati con i codici fiscali degli allievi che prima non avevamo. Avevamo il codice fiscale della persona a cui intestavamo la fattura.
+00:05:05 Barbara Tripodi
+Prima era CF, quindi io posso anche fare, nel caso della prescrizione non utilizzata, una nota di credito sull'allievo che non si è iscritto giusto per chiuderlo e poi tenere il credito sulla.
+00:05:32 Paolo Mistretta
+Sul corso attivo, OK la questione degli esercizi dell'anno e dell'esercizio. Ho un dubbio, tu vuoi vedere sempre tutti i dati oppure vuoi che il sistema lavori sull'anno. 
+00:05:51 Barbara Tripodi
+Un bacino di interessati che può essere anche un unico calderone. Non mi interessa, del resto adesso è così. E poi però, man mano che di queste persone XY, al di là del dei preiscritti che si semplicemente trasmigrano nell'esercizio successivo, no. Quindi se tu ti preiscrivi automaticamente, dovresti essere poi nel gestionale dell'anno scolastico successivo, OK?
+00:06:28 Barbara Tripodi
+I non preiscritti, ma gli iscritti dell'anno successivo sono una specie di limbo per cui ho bisogno. Ho già fatto la campagna di preiscrizione a fine anno. Aspetta, tolgo il telefono di là. Ho già fatto la campagna di preiscrizione, devo fare una nuova campagna a fine agosto, primi di settembre, dicendo che vuoi fare?
+00:07:02 Barbara Tripodi
+Nel momento in cui non si iscrivono più finiscono nel calderone dei vecchi iscritti che però sono categorizzati per me, cioè io ho questo unico foglio che poi è lo stesso che utilizzo. Per le mailing list in cui c'è una categoria di Stato, cioè interessato 25 interessato, uno che mi chiama a settembre è interessato ai corsi, non si iscrive, rimane così come 25 interessato, ho gli interessati del 2008 per dire, oppure ho gli iscritti del 2021.
+00:07:47 Barbara Tripodi
+Quindi quando gli allievi non si iscrivono più, mantengono, diciamo, memoria di quello che hanno fatto.
+00:07:58 Paolo Mistretta
+Hanno fatto? Certo, sì, infatti te lo dicevo, perché noi possiamo, diciamo, lavorare su diverse visualizzazioni, no? Quindi? Magari alcune visualizzazioni hanno bisogno di vedere tutti gli anni e altre visualizzazioni hanno bisogno di vedere due anni, cioè però in un a un cliente ho fatto una cosa e volevo chiederti se ti può piacere o se ti può essere utile e cioè in pratica il sistema lavora sull'esercizio, quindi tu hai in Alto hai un anno di esercizio attivo e tutto quello che vedi nel sistema è filtrato su quell'anno.
+00:08:36 Paolo Mistretta
+Di esercizio OK, potrebbe avere.
+00:08:39 Barbara Tripodi
+Senso adesso in fase di bilancio. Io devo fare l'approvazione del bilancio dell'esercizio precedente e quindi sto lavorando sulle statistiche degli iscritti dello scorso anno.
+00:08:52 Paolo Mistretta
+Allora lì secondo me funzionerà così, tu cambierai anno l'esercizio e andrai nella voce di bilancio a vedere cosa ti dà.
+00:09:01 Barbara Tripodi
+E devo per il bilancio sociale. Fare un confronto con gli ultimi 2 3 anni. Quindi io ho dei grafici dal 2008 a oggi dell'andamento degli iscritti e nel bilancio sociale io devo fare un minimo di raffronto, quindi devo poter accedere ai dati vecchi. Adesso per lo storico mi arrangio, mi arrangio con le mie, con i miei foglietti, però da questo momento in avanti.
+00:09:33 Barbara Tripodi
+Devo poter fare un minimo di statistica. Le statistiche che faccio sono di questo tipo, nuovi iscritti, vecchi iscritti. Quanti allievi si sono preiscritti sull'esercizio successivo? Ad esempio, me lo posso fare anche a mano, però giusto perché finisco il quadro. Quanti iscritti si sono hanno rinnovato, quanti si sono, quanti dei dei? Di tutti gli attivi nell'esercizio corrente sono iscritti a un corso regolare, cioè a un corso di durata annuale anche se parziale, e quanti invece si sono iscritti a un ciclo breve di lezioni, tipo il pacchetto di quattro lezioni e poi niente più, che sono i corsi speciali, cioè questo per determinare una specie di coefficiente sul fatturato.
+00:10:25 Barbara Tripodi
+Di percentuale di quello che è dovuto proprio all'attività curricolare rispetto invece a iniziative promozionali oppure a corsi brevi, come ad esempio possono essere il tempestivo. Poi io personalmente ho una statistica per cui quanti bambini delle elementari, quanti delle medie, quanti delle superiori è? Perché analizzo questi dati dal punto di vista didattico e mi rendo conto che gli allievi li ho cresciuti, per cui sono tanti di più i grandi e sono quasi tutti vecchi iscritti, proprio perché la mia proposta parte dal basso, ma c'è un'ottima tenuta, quindi la gente me la tengo per 10 anni.
+00:11:11 Barbara Tripodi
+E quindi io li analizzo questi dati, li ragiono questi dati, quanti di loro fanno orchestra? Perché la nostra missione è quella della musica d'insieme. Allora il 45%, 43% degli iscritti totali partecipa a un corso aggregativo perché siamo una cooperativa sociale. Quindi questa cosa ha. Un significato per quello che facciamo.
+00:11:46 Barbara Tripodi
+Quindi questo, queste statistiche io le vedo dal database, filtro è scritto vecchio sì, no corso regolare, filtro non filtro, medie, elementari, superiori, filtro.
+00:12:03 Paolo Mistretta
+Sì, perché poi Excel si presta.
+00:12:04 Barbara Tripodi
+Se non ho un Excel ho bisogno di poterlo fare da qualche parte, come li devo esportare o però se li devo esportare poi li devo poter leggere in qualche modo, però io di questo ho bisogno.
+00:12:17 Paolo Mistretta
+Sì, i filtri. Poi Excel in qualche modo abitua, anche giustamente, è fatto apposta. Diciamo che la mia, la mia, il mio intento è sempre quello, soprattutto con grande personalizzazioni. È chiaro che fare una tabella e mettere dei filtri è la cosa più facile, no? Però in certi momenti magari può essere utile pensare a delle visualizzazioni particolari che possono aiutare o delle o delle precalcoli no?
+00:12:53 Paolo Mistretta
+Quindi se tu vuoi sapere. Vai sul profilo dell'utente e vedi che è regolare. C'è già il calcolo del regolare, c'è già il calcolo del no, cioè certe cose le ha senso pensare di metterle in qualche punto dove sai dove andarla a prendere, però sicuramente il filtro però.
+00:13:10 Barbara Tripodi
+È che se io devo posso esportare determinati contenuti poi li posso analizzare.
+00:13:18 Paolo Mistretta
+Allora l'export sicuramente non c'è problema. L'export è una funzione che tendenzialmente metto sempre. Al massimo poi sarà ridotta. Sarà perché poi comunque quando fai un export di tanti dati incrociati.
+00:13:32 Barbara Tripodi
+Poi però eventualmente selezionare una serie di campi.
+00:13:37 Paolo Mistretta
+Che vuoi che vuoi esportare. 
+00:13:39 Barbara Tripodi
+Ti fai le tue analisi e le tue cose.
+00:13:42 Paolo Mistretta
+Sì, certo, certo va bene. OK, vabbè allora diciamo che sotto il punto di vista. Quello che mi hai detto io, quello che posso fare adesso, come prima fase iniziale, è rivedere quello che c'era qui per vedere se torna.
+00:14:01 Barbara Tripodi
+Mi ero dimenticato, ma ne avevamo parlato a suo tempo in magazzino. Forse la questione degli accessori? No, abbiamo sicuramente accessori e musicali, cioè nel contratto ci sono i corsi, poi ti do il libro, ma questo va nel tuo conto, OK? Io devo fare un inventario di rimanenze e di cose. Non mi aspetto che il gestionale abbia l'inventario dei libri. Lasciamo perdere, lo facciamo, non è un problema.
+00:14:34 Barbara Tripodi
+Mi interessa però sapere quanti libri ho venduto, questo sì, che valore complessivo di libri ho venduto.
+00:14:41 Paolo Mistretta
+Però scusami, l'inventario tu ce l'hai in che formato adesso. 
+00:14:46 Barbara Tripodi
+No, l'inventario allora, per quello che riguarda gli strumenti è preciso, ogni strumento che abbiamo qui è codificato, per cui VL 20, violino 20. Sappiamo che quel. è stato comprato in quella fase, è costato così, ha bisogno di manutenzione, è stato dato a noleggio a pinco pallo, quindi io ho un minimo di magazzino. Non è un magazzino gigantesco, però siccome io ho bisogno di un dato a bilancio, che sono i cespiti, il materiale di proprietà della scuola.
+00:15:30 Barbara Tripodi
+ha un valore anche nel bilancio, che poi si azzera nel tempo, dopo cinque anni non esiste più. Però i tavoli che compro e tutto quello che compro per far funzionare la scuola sono i cestiti. Quindi devo conservare il valore di acquisto finché questi strumenti non escono. Se li ho venduti ai clienti ho una fattura. Se li ho buttati, devo produrre un documento che attesta che in realtà li ho venduti per un euro a mio marito e li devo togliere dall'elenco dei cespiti, dal libro dei cespiti.
+00:16:17 Barbara Tripodi
+Quindi abbiamo gli strumenti che vengono comprati, che sono destinati alla vendita, come i libri, E sono a fine anno inventariati e hanno un valore che risulta essere una rimanenza, ma che è destinata a traslare nell'esercizio successivo. Dopodiché sarà a te venderli o meno. Va bene? Lo stesso vale per i libri. Io li qui faccio un grosso ordine, spendo 3.000 € a luglio per acquistare i libri e mi serviranno nell'esercizio successivo.
+00:16:53 Barbara Tripodi
+Quindi ho un fornitore e quindi in quel caso non sto a fare l'inventario del singolo libro. Faccio un o meglio, sì, lo faccio, ho detto una cazzata. Ho lo faccio un inventario del singolo libro in cui quando faccio l'ordine scrivo il valore, il link, il fornitore, tutto scrivo. E dopodiché ho un valore di massima delle rimanenze alla contabilità. Prendo una delle 1000 fatture di acquisto dei libri che ho fatto e gli dico, questa qua me la metti come rimanenza, vado alla grossa in quel caso.
+00:17:29 Barbara Tripodi
+E dopodiché anche lì parte di quei libri vengono venduti, altri vengono acquisiti. Da come biblioteca, nel senso che io continuo ad arricchire la scuola di strumentazioni o cose che sostituisco aggiorno, si rompono o integro. Però ecco, non impazziamo su questa cosa. Se io potessi ad esempio sugli strumenti, se do uno strumento a noleggio io faccio un contratto di noleggio, perché se ti do uno strumento che costa 600 € è.
+00:18:07 Barbara Tripodi
+Hai 8 anni, me lo fai cadere, mi paghi 800 € e me devi sottoscrivere questa cosa.
+00:18:13 Paolo Mistretta
+Certo, OK, va bene. Questo l'avevamo un po' accennato. Sì, comunque qua.
+00:18:26 Barbara Tripodi
+Sì, l'anagrafica dei fornitori che nel momento in cui il sistema può andare a pescare dal cassetto fiscale sia le fatture attive che quelle passive, io poi posso incrociare un minimo e categorizzare le spese.
+00:18:42 Paolo Mistretta
+Allora questo qui non lo so se si può fare, però vediamo.
+00:18:47 Barbara Tripodi
+Allora questo lo fanno sia Boli che non so con quali modalità.
+00:18:54 Paolo Mistretta
+Devo vedere se ci sono dei costi eventualmente, ma.
+00:19:03 Barbara Tripodi
+Comunque si la l'operatività col cassetto fiscale, quella che è perché sul cassetto fiscale arrivano anche le fatture degli insegnanti.
+00:19:17 Paolo Mistretta
+Ah ok, giusto.
+00:19:19 Barbara Tripodi
+Tutti e due generano anche delle. Così come io mando il prospetto, ripeto questo è futuribile, però visto che ne stiamo parlando, io mando all'insegnante il suo prospetto generale e poi gli dico, a seconda di quello che è l'accordo che ho con l'insegnante, se vuole un pagamento bimestrale, Sono 8 mesi, quindi lo divido in quattro pagamenti e quindi poi metto in pagamento anziché a ottobre a novembre e la cifra totale te la divido per quattro OK fattura per quindi.
+00:20:00 Barbara Tripodi
+L'insegnante in questo momento non vede il conteggio delle proprie ore, vede in termini economici, vede il conteggio in termini numerici. Io a quel punto boh, possiamo, devo pensarci un attimo, glielo mando io il conteggio economico periodicamente. Però ecco, ci sono delle voci che io all'inizio non ho valorizzato e che poi valorizzo soltanto a consuntivo, dei piccoli bonus, delle cose che stabilisco poi successivamente.
+00:20:37 Barbara Tripodi
+Quindi però i supplenti vengono per fare una supplenza di due ore in ritenuta d'acconto. Io ho bisogno di avere appunto tutti i loro documenti, quindi ci vuole di fatto un Form anagrafico anche per gli insegnanti che se sono insegnanti che ho già non devo stare a richiederglielo, se sono nuovi glielo mando e me lo fa pagare con l'IBAN e tutto il resto in maniera tale che questa anagrafica poi si vada ad incrociare con col cassetto fiscale.
+00:21:19 Barbara Tripodi
+E anche voi imposta delle ritenute per le prestazioni occasionali, perché quasi mai i supplenti sono capaci di fare un documento, quindi dovrebbero essere loro a farlo per noi di fatto glielo impostiamo, gli chiediamo di firmarcelo, quindi glielo mandiamo per email e gli paghiamo dopo che ce l'hanno rimandato e firmato. Però ecco, questo è un traffico per il momento che si può gestire ancora manualmente.
+00:21:57 Paolo Mistretta
+Sì, queste qua sono anche cose che magari magari può avere senso giusto tracciare sul i documenti sul sistema. OK, quindi se magari non ti produco la ritenuta da sistema però te la tracci caricandola tu per esempio, però forse sarebbe meglio generarla. Vediamo adesso poi. Vediamo. Allora io ti direi che un bel po' di cose le abbiamo dette. Io adesso faccio così: rimetto in ordine tutto questo documento, te lo rifaccio con la nuova modalità con cui lo sto facendo oggi, cioè con una quantificazione ideale di massima di ore per ogni sezione.
+00:22:46 Paolo Mistretta
+Chiaramente dire di ore.
+00:22:50 Barbara Tripodi
+No vabbè immagino che adesso non sia in grado.
+00:22:52 Paolo Mistretta
+No allora esatto quello che quello che mi servirà per farlo al meglio sarà ricevere tutti i dati, quindi tutto il nuovo.
+00:23:00 Barbara Tripodi
+Cosa vuoi? Cosa ho esattamente. 
+00:23:01 Paolo Mistretta
+Allora ti dico il. Esatto. Vabbè ma ti mando una mail, aspetta.
+00:23:15 Speaker 3
+Inviata.
+00:23:19 Barbara Tripodi
+Ok. Vuoi il DB. 
+00:23:22 Paolo Mistretta
+Il DB sicuramente.
+00:23:26 Barbara Tripodi
+Il calendario. 
+00:23:31 Paolo Mistretta
+Tutti i file che tu usi, che vuoi nel gestionale, me li devi dare. Anche se non li facciamo in prima fase.
+00:23:39 Barbara Tripodi
+Il DB è quello madre, lo chiamano DB gestionale. Poi c'è il DB contabile, che è quello che non so se ti serve, che è quello che serve a Laura per visualizzare esclusivamente i valori contabili.
+00:23:58 Paolo Mistretta
+Mettiamolo alla peggio. Poi ho lo scarto, ma almeno lo analizzo.
+00:24:03 Barbara Tripodi
+Poi c'è il DB accessori, che è quello dove si inseriscono le voci aggiuntive tipo esami, libri, che sono quelle che non sono nel contratto. Poi c'è appunto c'è il calendario dell'anno, le giornate attive e le sospensioni. Poi c'è l'anagrafica degli insegnanti, non c'è un'anagrafica dei fornitori, però forse ci dovrebbe essere.
+00:24:43 Paolo Mistretta
+E poi mi servono i dati, i dati di primo contatto, quali sono quindi i Google Form piuttosto che e poi mi serve l'esempio di contratto sia in PDF.
+00:25:02 Barbara Tripodi
+I contratti adesso, siccome sono di due tipi, perché chiaramente è un sistema rigido, per cui c'è un contratto per chi è iscritto al corso regolare perché ha le rate e ha i periodi di riferimento con le scadenze, ma c'è un secondo contratto per chi invece si iscrive a un corso breve. Perché ha delle regolamentazioni differenti, non ci sono indicazioni di rate, non ci sono queste voci.
+00:25:32 Barbara Tripodi
+Il contratto che vai a fare, fra l'altro, se lo cerchi in scuola semplice, dovrebbero averlo fatto anche loro, si dovrebbe aprire. Cioè se tu ti iscrivi a un certo tipo di corso regolare si dovrebbe dare. Come dire, seguito a una serie di indicazioni, come le date appunto e le scadenze. Se invece non ti iscrivi a quel tipo di corso, allora poi c'è il contratto del tempo estivo, perché essendo fuori sede ci sono questioni di sicurezza differenti, no, rispetto a quello che c'è in un corso che si fa qua.
+00:26:13 Barbara Tripodi
+E poi in tutti c'è la privacy, insomma.
+00:26:18 Paolo Mistretta
+Esatto, tutti quei documenti. Poi vabbè, se ci manca qualcosa al primo giro lo vediamo al secondo giro. Nel senso, non è che però.
+00:26:26 Barbara Tripodi
+Poi che ne so, c'è il contratto dei docenti, non so se questo si vuole far partire dal gestionale o meno.
+00:26:40 Paolo Mistretta
+Dipende. Se beh, se è una mail con un allegato sì, perché no? Il contratto è sempre quello, mandi un allegato, un conto è se lo precompili, allora è un'altro discorso.
+00:26:57 Barbara Tripodi
+Perché devi, dovresti e allora. 
+00:27:04 Paolo Mistretta
+Lo facciamo generare da sistema. Cioè tu adesso lo precompili sempre in uno di esse, immagino.
+00:27:11 Barbara Tripodi
+Sì, faccio anche lì la stampa guidata in serie, quindi ci sono tutti quelli in partita IVA che hanno un certo tipo di contratto.
+00:27:18 Paolo Mistretta
+E sì, allora dobbiamo vedere un.
+00:27:20 Barbara Tripodi
+Paio in Co che invece hanno un'altro tipo di contratto e poi quelli in ritenuta il contratto non ce l'hanno perché sono prestazioni occasionali.
+00:27:30 Paolo Mistretta
+No, facciamo che me li mandi perché così almeno li analizzo e c'ho un mi faccio un'idea se no.
+00:27:38 Barbara Tripodi
+Va bene. 
+00:27:39 Paolo Mistretta
+Se no sono troppo all'oscuro poi va bene.
+00:27:42 Barbara Tripodi
+E altro.
+00:27:43 Paolo Mistretta
+No, il Google Form l'hai messo. 
+00:27:45 Barbara Tripodi
+Poi c'è il contratto di noleggio.
+00:27:47 Paolo Mistretta
+Il contratto di noleggio. Il Google Form l'hai messo, hai detto. 
+00:28:00 Barbara Tripodi
+E poi ci sono i registri. In questo momento noi monitoriamo le supplenze eccetera, ma perché abbiamo dei cartacei, quindi il supplente che viene compila un registro della supplenza e poi se invece c'è un registro elettronico questo non serve. 
+00:28:23 Paolo Mistretta
+Vuoi che condividiamo un drive, così se ti vengono in mente altre cose. 
+00:28:28 Barbara Tripodi
+Va bene, sì.
+00:28:31 Paolo Mistretta
+Lo fai tu? Se faccio una cartella e ti aggiungo.
+00:28:34 Barbara Tripodi
+No, fai tu perché io non.
+00:28:36 Paolo Mistretta
+Ok, allora facciamo nuova cartella.
+00:28:39 Barbara Tripodi
+Io ne ho uno di drive, ma proprio.
+00:28:43 Paolo Mistretta
+No, ho sbagliato. Arrivo. Ho sbagliato il nome della cartella. 
+00:28:52 Barbara Tripodi
+Quindi diciamo che tu fai uno schema di lavoro, di massima, una tempistica. 
+00:29:04 Paolo Mistretta
+Allora sì, diciamo che io dovrei riuscire anche a usare una cosa che mi sono fatto io. Perché poi il problema delle tempistiche è che se io ti dico che per un'attività ci vogliono 50 ore, Uno si aspetta che in 5 10 giorni lo fa no, invece no. Perché? Perché come freelance quelle 50 ore si distribuiscono in modo strano.
+00:29:38 Barbara Tripodi
+Quindi quello che dovresti dirmi se vabbè poi ci deve essere una fase in cui qualcosina sarà pronto. Esatto, bisogna fare un minimo di formazione.
+00:29:54 Paolo Mistretta
+Esatto, non solo secondo me. Vista la complessità, esatto. Vista la vista la sfumatura, una cosa che secondo me dovremmo fare fin da subito è pianificare un incontro bisettimanale settimanale e vedere proprio quello che abbiamo che ho fatto, vedere se va bene, decidere se andare avanti su un fronte o migliorarlo. Cioè dovremmo fare proprio 1 1 collaborazione continuativa? Fondamentalmente no, è quasi impensabile.
+00:30:24 Paolo Mistretta
+Di parlare di un prodotto, perché il prodotto viene dalla dalla nostra, dalla nostra lavorazione continua di questa cosa è proprio un essere vivente che prenderà forma col tempo. Tempistiche quindi noi dobbiamo stare nelle tempistiche operative tue, quindi al di là di quello che posso metterci a farlo, che può essere tre mesi o 5 mesi, quindi da gennaio no, per dire. Secondo me noi dobbiamo puntare per avere il prima possibile tutte le funzioni che ti servono ad agosto, OK?
+00:30:57 Paolo Mistretta
+Il che vuol dire che se a giugno siamo già con le funzioni che ti servono ad agosto, a luglio possiamo fare un pezzo in più EO concentrarci su quelle di settembre. No, perché poi una volta che il sistema è consolidato va usato. E quando lo usiamo poi ci possono essere problematiche. Quindi è chiaro che all'inizio andremo belli spediti perché non c'è niente di problematico, tutto funziona, ma poi quando magari c'è un'anomalia o c'è qualcosa, gli sviluppi della seconda parte possono essere rallentati. OK, quindi di solito io ti ripeto come tempistiche.
+00:31:31 Paolo Mistretta
+Questo può essere un progetto anche di un annetto. Sicuramente lo è perché come minimo un annetto lo dobbiamo considerare. Però noi non dobbiamo pensare acceso o spento, no? Quindi noi dobbiamo pensare che se vogliamo lavorare bene prima ci incontriamo per vedere le i progressi prima. Possiamo passare alla prossima fase. 
+00:31:51 Barbara Tripodi
+Sì, allora questa è la fase dell'anno in cui io sono più disponibile. Come ti dicevo, mi farei affiancare da qualcuno in maniera tale che poi si possa andare avanti. E poi ripeto, ci possono volere anche due anni per averlo tutto. Si tratta di capire se tu ritieni. Cioè io posso fare il conto orario a mano a mano ancora per tutto l'anno prossimo posso fare l'orario delle lezioni a mano come l'ho sempre fatto.
+00:32:29 Barbara Tripodi
+Però alcune cose, cioè la fatturazione nel momento in cui parte parte e se c'è la fatturazione vuol dire che ci sono già i dati anagrafici, vuol dire che ci sono già tutti gli inserimenti nel gestionale, quindi alcune cose le posso gestire alla vecchia maniera. Il comodato, l'attestato, il tempestivo le posso tranquillamente.
+00:32:53 Paolo Mistretta
+Ti dovrebbe essere arrivata l'invito del drive, OK la su altramusicabarbaratripodialtramusica.com no, quello che allora io io personalmente è chiaro che la fatturazione è un qualcosa che se va. Cioè se tu emetti una fattura.
+00:33:15 Barbara Tripodi
+Devo richiedere l'accesso. 
+00:33:16 Paolo Mistretta
+No, te l'ho già mandato. Te l'ho già condiviso. No. Richiedilo al massimo.
+00:33:23 Barbara Tripodi
+L'ho richiesto.
+00:33:24 Paolo Mistretta
+Al massimo ti autorizzo. Eccolo qua, richiesta condivisione. Si, condividi. Te l'ho già mandato. Editor. Condividi.
+00:33:49 Speaker 3
+Va bene. 
+00:33:50 Paolo Mistretta
+Ok, qui puoi buttarci dentro tutte le cose che ti vengono in mente. Più cose mi dai, più cose posso posso fare per.
+00:33:56 Barbara Tripodi
+Va bene, va bene. Come vuoi che rimaniamo d'accordo. 
+00:34:02 Paolo Mistretta
+Allora, in linea di massima ti dico già che dovrò alzare un pochino il prezzo, ma, In realtà questo no, ma però però ragioniamo in un'altro modo, perché io onestamente faccio anche molta fatica a tenere i costi contenuti, cioè il tipo di prodotto che offro è proprio un prodotto che si cuce quotidianamente all'interno poi delle cose. Poi alla fine si può stabilire un prezzo.
+00:34:33 Paolo Mistretta
+Non è che non si può però. Quello che voglio dire è che noi andiamo a una fetta indicativa e che per quanto mi riguarda ti useremo uno strumento che mi permetterà di tenere traccia delle attività che faremo, che quantificherà il lavoro che faccio e che non faccio e che quantificherà le consegne che facciamo. OK, quindi quando arriveremo a non lo so, Marzo ti dirò, siamo arrivati fin qui. Quindi posso fatturarti questo? E tu mi dirai sì o no? E piano piano andremo a.
+00:35:04 Paolo Mistretta
+Quindi se qui mettiamo che diventano 8000 o 10.000, mettiamo, se poi sono spalmati in due anni capisci che diventano 5.000 € di progetto all'anno. Cioè nel senso è un'altro tipo di formula, no? Quindi la questione è un po' questa, una volta stabilito, diciamo che di solito adesso sto provando una nuova formula che è quella di dire siccome sono freelance, ti garantisco tre ore di lavoro al giorno, due ore di lavoro al giorno, tutti i giorni. Giorni questo crea una quota e quindi si può stabilire una quota mensile fissa che di fatto ci mette tutti in serenità.
+00:35:37 Paolo Mistretta
+Però questo qui dipende anche da come tu la vedi, cioè io mi adatto a quella che è la tua esigenza anche commerciale, le tue esigenze economiche e tutto quello.
+00:35:46 Barbara Tripodi
+Diciamo che se io posso spalmare, se la cifra è importante, appunto, mi dirai. Intanto uno ho bisogno dell'approvazione, di quantificarla in linea di massima e dell'approvazione del CTA che dobbiamo fare dei ragionamenti. Quindi io ho largamente già affrontato la questione gestionale perché appunto noi siamo ne stiamo parlando e quindi ho bisogno di capire a che cosa andiamo incontro. Perché nel caso di scuola semplice io sapevo che avevo un canone.
+00:36:20 Barbara Tripodi
+Annuale che però avrei tolto il canone annuale del gestionale di software di fatturazione adesso, quindi l'avrei utilizzato e avevo avrei avuto dei costi iniziali più contenuti rispetto a quelli che invece vado a. Quindi diciamo che le cifre che mi dici se sono tutte lì sono più che sostenibili e soprattutto comprensibili, cioè non è che non comprendo la quantità di lavoro che c'è dietro. Avrei bisogno di capire qual è la prospettiva.
+00:36:54 Barbara Tripodi
+Intanto, se posso spalmarla un pochino, a che cosa vado incontro negli anni successivi, a che tipo di impatto economico vado incontro per la quello che riguarda l'assistenza, la formazione, eccetera. Però queste sono cose che sicuramente sai meglio di me. Quindi devo fare una proposta al CDA che sia accettabile in questo senso. Che siamo nella necessità di dover fare questo passaggio, ormai è un discorso più che spianato, spianato, certo.
+00:37:28 Barbara Tripodi
+Quindi non stiamo lì a domandarci se ne abbiamo davvero bisogno, ne abbiamo davvero bisogno. Abbiamo già tentato le strade differenti in maniera assolutamente fallimentare, ma perché probabilmente arrivano tutti a rendersi conto che c'è una complessità tale che a loro non conviene.
+00:37:49 Paolo Mistretta
+Ma certo, ma allora il discorso, il discorso è un po' questo. Per questo ti dico perché. C'è anche la formula dell'anticipo, acconto e saldo mette tutti in difficoltà, perché se poi le cose cambiano uno avendo fatto anticipo acconto e saldo fa fatica a rimodulare i costi, perché poi come faccio a dimostrarti? Che quel costo lì va cambiato, cioè è tanto, è tanto complesso ed è un lavoro da Agency dove c'hai una figura che fa quello mentre il programmatore ti lavora, no? Quindi gli accordi commerciali.
+00:38:20 Paolo Mistretta
+Io preferisco una formula in cui ti dico guarda, in linea di massima sono 10.000 € mettiamo caso che lavoriamo sei mesi, poi ci accorgiamo che una funzione non serve più, non me li darai il pezzo, il pezzo di quella funzione mi hai pagato fino a che hai ricevuto funzioni. Poi per quanto riguarda invece la manutenzione dipende perché questo è un sistema. Che probabilmente c'è la c'è la fatturazione, ci potrebbero essere i pagamenti online, ci potrebbe essere, cioè dipende da quante cose io devo gestire poi a contorno al momento. Il ma il minimo che chiedo a tutti è 50 € al mese OK per mantenere il sistema vivo che non si che non diventi con le ragnatele, quindi vado a controllo degli aggiornamenti, controllo che lo spazio non si occupi troppo, controllo che il database sia integro sono delle cavolate e ti dico sono proprio un'oretta di lavoro al mese no?
+00:39:09 Paolo Mistretta
+In questo caso tra formazione e i primi mesi sicuramente sarà qualcosina di più, magari potrebbero essere 300 i primi mesi dopo che abbiamo finito tutto. Capito perché magari c'è e questi 300 possono essere in realtà assorbiti all'interno di quello che ti dicevo prima. Cioè se noi quantifichiamo tre ore al giorno e poi mi tieni tre ore in call non ti faccio pagare tre ore di call perché tu sai già tre 03:00 ore al giorno. Quindi in realtà il primo mese se fissiamo una quota che può essere, che ne so, 508 100 € al mese.
+00:39:41 Paolo Mistretta
+Per i primi mesi andiamo avanti così e tranquilla e arriviamo fin dove arriviamo. Cosa vuol dire? Che è ovvio che se tu mi dici Paolo non voglio più niente, io non ti posso rimborsare perché ho lavorato fino a quel momento lì. Tu non hai niente, io ho lavorato, quindi siamo d'accordo. Se tu invece mi dici Paolo non ti voglio più pagare e io ti dico aspetta. OK, in che senso? Nel senso che ho bisogno di pagarti tra un po'. E allora io ti dico, OK, io lavoro fino a quel momento lì, quando sarà il momento invece che pagarmi 800 mi pagherai 1006 perché magari sono passati due mesi, però io ti faccio vedere cosa ti ho prodotto.
+00:40:14 Paolo Mistretta
+OK, se poi ho lavorato per ed è quello il motivo della cosa fissa, se poi ho lavorato per 300 € e me ne dai 500 magari non succede niente. Se ho lavorato per 800 e me ne dai 500 continua a non succedere niente perché tanto c'è il mese dopo. Su cui andiamo, no. 
+00:40:31 Barbara Tripodi
+Quindi allora io e le preoccupazioni che ho nei confronti del su misura e che le avevo già esposte mesi fa. Cioè è la tenuta sul lungo periodo, la tenuta che è indipendente dal rapporto personale che abbiamo io e te che potrebbe vedere, che ne so, un'altra figura al mio posto succedermi e andare avanti.
+00:41:02 Barbara Tripodi
+Il fatto che questo sistema possa essere, cioè non mi aspetto che duri per sempre. Naturalmente però. Ora che l'abbiamo messo a posto, che ci vogliono due anni, mi aspetto che un attimino duri insomma, e che possa.
+00:41:16 Paolo Mistretta
+Sì, però però aspetta, attenzione, due anni è per quello che ti volevo dire, no? Se noi se tu pensi al discorso del se tu pensi che una funzione blocca l'altra, OK, che è vero per certe cose però limitiamo le potenzialità di uno sviluppo evolutivo. Questo si chiama sviluppo evolutivo, no? Dove io vado a cominciare a darti qualcosa che tu potenzialmente potresti usare. Tu mi stai dicendo che non lo farai perché c'hai il parallelismo? OK, però potenzialmente tu potresti scaricarti di una parte se quella parte è ben implementata e funziona.
+00:41:48 Paolo Mistretta
+Quindi la verità è che tu non aspetti due anni per avere tutto il gestionale, ma aspetti un certo periodo di tempo per avere una funzionalità di questo gestionale. Quindi magari arriviamo a fare tutta la parte di. Com'è che l'avevamo chiamata di primo contatto nel primo mese? Nelle prime settimane il primo contatto ce l'hai lì. Certo non lo puoi usare perché magari dici chi me lo fa fare di avere due Excel, però magari io non posso.
+00:42:14 Barbara Tripodi
+Esatto, questo io proprio lo escludo, nel senso che il primo contatto lo posso tranquillamente usare. OK, ma già sul secondo. Non faccio nulla, nel senso di lavorare sulle due quattro forme lo escludo categoricamente, cioè so il livello di casino e di inefficienza che abbiamo qua e quindi questa cosa mi fa molta paura. Quindi questa roba per essere un minimo operativa a settembre deve assolutamente funzionare prima della crisi.
+00:42:43 Paolo Mistretta
+Hai capito, quindi i due anni che ti dico sono molto relativi, cioè quei due anni vuol dire che. Se il se il peso della quantificazione che faccio è troppo, saranno due anni di pagamenti e un anno di lavoro. Non so come dire no, cioè il pagamento lo diluiamo ma e quindi magari quei quei soldi del dell'anno prossimo diventano assistenza. Non so come dire no, cioè dentro quel pacchetto lì.
+00:43:06 Barbara Tripodi
+Allora da parte mia c'è tutta la fiducia, al di là del fatto che ci conosciamo e che insomma c'è tutta la fiducia. Mandami tu sì, io no.
+00:43:16 Paolo Mistretta
+Adesso io lo rifaccio in maniera un pochettino più strutturata. Fai conto che questo lavoro mi prenderà del tempo, quindi penso che prima di 1 1 settimana non penso di poterti rispondere perché no? Ma a parte quello poi c'ho delle scadenze, cioè? E' una situazione un po'. Infatti è per quello che.
+00:43:36 Barbara Tripodi
+Io ho un'assemblea la settimana prossima, ma non parlo ai soci di questa cosa. Posso parlare da qui a una settimana con il CDA. Che giorno è oggi? 11? Si, una settimana. Posso cominciare ad accennare. Dopodiché ci sono dei giorni, fino a Natale e Capodanno. cosa farai tu o prima della Befana in cui eventualmente fosse anche un momento di calma per risentirci, se riterrai, se sarà possibile.
+00:44:08 Barbara Tripodi
+Anche io non so esattamente che cosa andrò a fare e quindi puoi darmi tu delle tempistiche se hai bisogno di più tempo per fare un piano, ecco. E di conseguenza io, se ho delle concretezze da riportare al CDA, ti posso poi dire: Che cosa? Che cosa ne viene fuori? Per quello che riguarda gli incontri regolari, penso di potermi fare affiancare dalla ragazza che sta lavorando per il momento qui da noi, che ha fatto un corso universitario di informatica musicale, quindi magari può dare più supporto, più supporto di questo, di quanto possa fare io e possa comprenderti meglio di quanto non riesco a fare io.
+00:44:57 Barbara Tripodi
+E magari, visto che è già qua per altre cose, le posso dare questo bell'incarico che non mi dispiace neanche insomma, visto che poi è la se resterà, è una delle persone che lo dovrà usare o che quantomeno si potrebbe occupare di fare la formazione. E quindi vabbè, facciamo un passo alla volta, Fammi sapere tu di quanto hai bisogno. Io adesso vado a far lezione con la demo che mi aspetta appena possibile, entro la giornata, entro stasera tardi ti mando, ti metto su drive.
+00:45:30 Paolo Mistretta
+Sì, esatto, perché quelli mi servono per l'analisi, sennò non posso farti l'analisi per bene.
+00:45:34 Barbara Tripodi
+Ascoltami, semmai questo link lo mandi a didattica perché così chiedo all'altro ragazzo di iniziare lui. metterti un po' di cose. Lui lo può fare oggi, già adesso. Quindi rimandami l'invito su didattica@altramusica.com così Giovanni può assolutamente metterti tutte queste belle robine qua.
+00:46:01 Paolo Mistretta
+Perfetto. Didattica, chiocciola, Altramusica.
+00:46:10 Barbara Tripodi
+L'altra musica.
+00:46:13 Paolo Mistretta
+Sì, con la "L" con la "L" sì sì. Chi è che mi risponde di là? C'è chi è che legge? Ha un nome. 
+00:46:27 Barbara Tripodi
+C'è Giovanni o Giulia che si alternano alla segreteria. Ci sono due ragazzi. Giulia sta qui tre giorni alla settimana e Giovanni due.
+00:46:35 Paolo Mistretta
+Beh allora gli scrivo un ciao a tutti.
+00:46:38 Barbara Tripodi
+Esatto. Quindi oggi c'è Giovanni, domani c'è Giulia. Quindi dico a Giovanni di Mandarti tutto questo elenco qua. Vi mando subito questo appunto che ho preso alcune cose lui non ce le ha, le devo fare io e quindi le faccio stasera perché adesso c'ho già l'allievo.
+00:46:58 Paolo Mistretta
+Sì, vai tranquilla, ti libero.

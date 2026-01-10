@@ -1,0 +1,92 @@
+Preventivo realizzazione software gestionale
+L'altramusica
+DI: P.IVA: Footility.com di Mistretta Paolo PER: L'altramusica Cooperativa Sociale E.T.S.
+10896740965 P.IVA: 6248450964
+C.C.I.A.A.: MI2564569 C.C.I.A.A.:-
+C.F: MSTPLA85S01M102S C.F: 6248450964
+INDIRIZZO: Via XXIV Maggio 87 INDIRIZZO: Corso Buones Aires
+20099, Sesto San Giovanni, MI CELL.: +39 338 91 70 501 CELL.:-
+E-MAIL: paolo.mistretta@footility.com E-MAIL: Sito web: https://www.footility.com Sito web: 20099, Sesto San Giovanni, MI
+info@laltramusica.com
+https://www.laltramusica.com
+Data: 17/04/2024 Scadenza: 02/05/2024
+DESCRIZIONE GENERALE
+Data la complessità e la varietà di implicazioni presenti negli attuali dati, il preventivo è suddiviso in aree generiche. I dettagli di ciascuna area saranno
+realizzati e formalizzati progressivamente durante l'avanzamento del progetto. Questo approccio garantisce flessibilità e adattabilità, permettendo di
+rispondere in modo efficiente alle esigenze emergenti e di ottimizzare le risorse nel corso dello sviluppo del sistema gestionale.
+SOLUZIONE PROPOSTA
+FUNZIONALITA' DESCRIZIONE
+Gestione delle utenze Controllo Accessi e Autorizzazioni
+Gestione Studenti
+Gestione Genitori/Tutore
+Gestione Fatturazione, Pagamenti e
+Recupero Crediti
+Iscrizione e Corsi
+Gestione Accessori e Strumenti Musicali
+Attività Extra (Orchestra/Coro) Gestione Esami Comunicazione e Privacy
+Amministrazione e Contratti
+Gestione Docenti Pianificazione Annuale e Reportistica Sicurezza e Integrità dei Dati
+Configurazione e gestione degli account utente, inclusa la registrazione degli utenti e l'assegnazione dei ruoli
+specifici a studenti, genitori, docenti e personale amministrativo.
+Implementazione di sistemi di autenticazione e autorizzazione per garantire che l'accesso alle informazioni sia
+limitato in base al ruolo e alle competenze dell'utente. Questo include la gestione di password,
+l'autenticazione a più fattori e l'assegnazione di permessi specifici per le diverse aree del sistema.
+Gestione completa dei dati anagrafici degli studenti dal primo contatto fino alla loro conversione in clienti,
+inclusa la gestione delle informazioni didattiche e personali. Include i dettagli relativi agli studenti e ai
+genitori/tutori, le note amministrative specifiche e la gestione della privacy dei dati.
+Conservazione delle informazioni dei genitori o tutori per contatti e transazioni finanziarie; essenziale per le
+comunicazioni riguardo pagamenti e iscrizioni. Incluso nel dettaglio sono i dati di contatto e la comunicazione,
+oltre alla gestione della privacy.
+Tracciamento delle fatture, rate di pagamento, note di credito e recupero crediti. Include dettagli specifici
+relativi alle fatture, rata di pagamento, e il totale annuale dei pagamenti.
+Registrazione dettagliata delle iscrizioni e dei corsi, incluse informazioni su date di inizio e conclusione dei corsi,
+descrizione dettagliata dei corsi compresa di tipologia e descrizione. Gestisce anche la schedulazione delle
+classi basata su vari parametri e monitoraggio dei livelli ABRSM.
+Gestione del noleggio e acquisto di strumenti musicali e altri accessori, con dettagli finanziari come cauzioni e
+rate di noleggio. Include informazioni dettagliate sul noleggio. Inclusione della gestione dei libri didattici, con
+operazioni di tracciamento, acquisto, e distribuzione dei libri necessari per i corsi e le attività extra.
+Organizzazione e gestione delle attività extracurriculari come orchestre e cori, con la gestione di eventi e le
+relative iscrizioni. Include dettagli specifici su partecipazione e costi relativi a orchestre e cori.
+Amministrazione degli esami, inclusi i costi di iscrizione e la pianificazione, in linea con i livelli ABRSM qualora
+applicabile. Gestisce anche dettagli specifici sugli esami.
+Gestione delle comunicazioni e della privacy, inclusi i dettagli su come i clienti siano venuti a conoscenza
+dell'istituto e la gestione della privacy delle foto. Implementa un sistema di comunicazione integrato per invio
+di email, WhatsApp o altri sistemi (se applicabili)
+Gestione dei contratti, dal rilascio alla firma, incluso il monitoraggio delle scadenze contrattuali e la gestione
+dei documenti legali come la privacy. Include la gestione documentale completa dei contratti, i dettagli sullo
+stato del contratto e termini. (da verificare implementazione con sistemi esterni)
+Gestione delle informazioni anagrafiche dei docenti, inclusi contratti, assegnazioni a corsi, e accesso ai profili
+didattici per la gestione delle attività di insegnamento.
+Preparazione per le iscrizioni annuali, programmazione dei calendari e riepiloghi contabili fino al termine
+dell'anno scolastico. Include la visualizzazione di statistiche con grafici o informaizoni testuali
+Implementazione di misure di sicurezza per la protezione dei dati personali e sensibili secondo le normative
+vigenti (es. GDPR). Sistema di backup e ripristino dati per garantire la continuità operativa e la sicurezza delle
+informazioni.
+Prezzo: € 5.000
+* la cancellazione dei dati dovrò essere analizzata e diversificata per ogni specifico dato
+* gli attuali costi non prevedono la gestione dei pagamenti attraverso il nuovo gestionale e non sono quindi previste integrazioni con sistemi di pagmento esterni
+Il preventivo continua nella prossima pagina
+ALTRE ATTIVITA' DURANTE LE LAVORAZIONI
+Apertura del dominio e installazione del software inclusa
+Correzione bug, assistenza e manutenzione inclusa
+Formazione del personale 48 ore
+Consulenza per le attività presenti in preventivo inclusa
+Import dei dati dell'anno 2024 incluso
+MANUTENZIONE E SERVIZI AL TERMINE DELLE LAVORAZIONI
+Import per eventuali anni precedenti 2024
+(cad. uno) € 50,00
+Correzione bug, assistenza e manutenzione da 50€/mese
+SERVIZI ESTERNI
+Apertura di un sito + hosting Sistema di gestione della privacy, cookie banner, GDPR a partire da 30€/anno
+a partire da 19€/anno
+TEMPISTICHE
+Si prevede di realizzare l'intero sistema entro settembre 2024 con i primi test operativi durante l'estate 2024
+Le consegne avverranno parzialmente e incrementalmente su base settimanale o bisettimanale in base alla complessità delle attività o alle esigenze
+concordate di volta in volta.
+Note:
+Il presente preventivo è da considerarsi indicativo e suscettibile a modifiche. Tali modifiche potrebbero subentrare in corso d'opera per soddisfare le necessità non
+identificate e non identificabili nelle fasi iniziali del progetto o della commessa sia di livello tecnico che di livello funzionale. Tutte le modifiche dovranno essere
+concordate e accettate dalle parti.
+Tutti gli importi sono da considerarsi esenti da iva
+Footility.com di Mistretta Paolo autorizza ai sensi e per gli effetti degli artt. 13 e 23 del D. L.gs. n. 196/2003, con l'invio del presente modulo, al trattamento dei dati personali
+secondo le modalità e nei limiti di cui all’informativa allegata.

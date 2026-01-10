@@ -1,0 +1,157 @@
+						
+	Preventivo realizzazione software gestionale					
+	L'altramusica					
+						
+						
+						
+DI:	Footility.com di Mistretta Paolo			PER:	L'altramusica Cooperativa Sociale E.T.S.	
+P.IVA:	10896740965			P.IVA:	6248450964	
+C.C.I.A.A.:	MI2564569			C.C.I.A.A.:	-	
+C.F:	MSTPLA85S01M102S			C.F:	6248450964	
+INDIRIZZO:	Via XXIV Maggio 87			INDIRIZZO:	Corso Buones Aires	
+	20099, Sesto San Giovanni, MI				20124, Milano	
+CELL.:	+39 338 91 70 501			CELL.:	-	
+E-MAIL:	paolo.mistretta@footility.com			E-MAIL:	info@laltramusica.com	
+Sito web:	https://www.footility.com			Sito web:	https://www.laltramusica.com	
+						
+						
+Data:	17/12/2025			Scadenza:	01/01/2026	
+						
+DESCRIZIONE GENERALE						
+Data la complessità e la varietà di implicazioni presenti negli attuali dati, il preventivo è suddiviso in aree generiche. I dettagli di ciascuna area saranno realizzati e formalizzati progressivamente durante l'avanzamento del progetto. Questo approccio garantisce flessibilità e adattabilità, permettendo di rispondere in modo efficiente alle esigenze emergenti e di ottimizzare le risorse nel corso dello sviluppo del sistema gestionale.						
+						
+SOLUZIONE PROPOSTA						
+FUNZIONALITA'	DESCRIZIONE					
+Gestione delle utenze	Configurazione e gestione degli account utente, inclusa la registrazione degli utenti e l'assegnazione dei ruoli specifici a studenti, genitori, docenti e personale amministrativo.					
+Controllo Accessi e Autorizzazioni	Implementazione di sistemi di autenticazione e autorizzazione per garantire che l'accesso alle informazioni sia limitato in base al ruolo e alle competenze dell'utente. Questo include la gestione di password, l'autenticazione a più fattori e l'assegnazione di permessi specifici per le diverse aree del sistema.					
+Anagrafica fornitori e clienti						
+Generazione attestati di frequenza						
+Comunicazione Mail / SMS						
+Gestione aule						
+Lezioi libere						
+Pacchetto lezioni						
+Supplenti / Supplenza	occhio alla gestione pagamenti in base a insegnante o supplente					
+Prospetto previsionale lezioni						
+Gestione Studenti	Gestione completa dei dati anagrafici degli studenti dal primo contatto fino alla loro conversione in clienti, inclusa la gestione delle informazioni didattiche e personali. Include i dettagli relativi agli studenti e ai genitori/tutori, le note amministrative specifiche e la gestione della privacy dei dati.					
+Gestione Genitori/Tutore	Conservazione delle informazioni dei genitori o tutori per contatti e transazioni finanziarie; essenziale per le comunicazioni riguardo pagamenti e iscrizioni. Incluso nel dettaglio sono i dati di contatto e la comunicazione, oltre alla gestione della privacy.					
+Gestione Fatturazione, Pagamenti e Recupero Crediti	Tracciamento delle fatture, rate di pagamento, note di credito e recupero crediti. Include dettagli specifici relativi alle fatture, rata di pagamento, e il totale annuale dei pagamenti.					
+Iscrizione e Corsi	Registrazione dettagliata delle iscrizioni e dei corsi, incluse informazioni su date di inizio e conclusione dei corsi, descrizione dettagliata dei corsi compresa di tipologia e descrizione. Gestisce anche la schedulazione delle classi basata su vari parametri e monitoraggio dei livelli ABRSM.					
+Gestione Accessori e Strumenti Musicali	Gestione del noleggio e acquisto di strumenti musicali e altri accessori, con dettagli finanziari come cauzioni e rate di noleggio. Include informazioni dettagliate sul noleggio. Inclusione della gestione dei libri didattici, con operazioni di tracciamento, acquisto, e distribuzione dei libri necessari per i corsi e le attività extra.					
+Attività Extra (Orchestra/Coro)	Organizzazione e gestione delle attività extracurriculari come orchestre e cori, con la gestione di eventi e le relative iscrizioni. Include dettagli specifici su partecipazione e costi relativi a orchestre e cori.					
+Gestione Esami	Amministrazione degli esami, inclusi i costi di iscrizione e la pianificazione, in linea con i livelli ABRSM qualora applicabile. Gestisce anche dettagli specifici sugli esami.					
+Comunicazione e Privacy	Gestione delle comunicazioni e della privacy, inclusi i dettagli su come i clienti siano venuti a conoscenza dell'istituto e la gestione della privacy delle foto. Implementa un sistema di comunicazione integrato per invio di email, WhatsApp o altri sistemi (se applicabili)					
+Amministrazione e Contratti	Gestione dei contratti, dal rilascio alla firma, incluso il monitoraggio delle scadenze contrattuali e la gestione dei documenti legali come la privacy. Include la gestione documentale completa dei contratti, i dettagli sullo stato del contratto e termini. (da verificare implementazione con sistemi esterni)					
+Gestione Docenti	Gestione delle informazioni anagrafiche dei docenti, inclusi contratti, assegnazioni a corsi, e accesso ai profili didattici per la gestione delle attività di insegnamento. Soci non soci --> posso stabilire di dare la supervisione di un determinato progetto con un forfet stabilito. Aggiungere voci forfettarie aggiuntive					
+Pianificazione Annuale e Reportistica	Preparazione per le iscrizioni annuali, programmazione dei calendari e riepiloghi contabili fino al termine dell'anno scolastico. Include la visualizzazione di statistiche con grafici o informaizoni testuali					
+Sicurezza e Integrità dei Dati	Implementazione di misure di sicurezza per la protezione dei dati personali e sensibili secondo le normative vigenti (es. GDPR). Sistema di backup e ripristino dati per garantire la continuità operativa e la sicurezza delle informazioni.					
+						
+roardmap	dati					
+1 - primo contatto						
+- mandare link con informazioni primo contatto, mandato dal sito attuale?	nota didattica	note informative generali	data nascita	telefono 	mail	nome allievo
+- anagrafica del primo genitore e del secondo genitore						
+- delega per recupero bambino (tutore)						
+- disponibilità oraria						
+						
+2- dopo la categorizazione dello studente (corso strumento)						
+vuole o non vuole l'orchestra						
+- proposta oraria						
+- visione definitiva classe, insegnatnte orari PRECISI						
+						
+						
+3 - iscrizzione effettiva - agosto						
+- anagrafica studente e informazioni tutelative per la responsabilità minori (può uscire da solo?)	codice fiscale	strumento	indirizzo	tipo studente = iscritto, nuovo, pre-iscrritto (negli anni precedenti)		
+- corso ? (per il contratto)						
+- invio link con il contratto per accettare proposta						
+						
+- generazione conteggio rate lezioni						
+- generazione fattura alla proposta di iscrizione						
+						
+- esercizio = coincide con l'anno scolastico 1° settembre - 31 agosto						
+- anno solare 						
+						
+interessati ---> sono interessati all'esercizio	data di ultimo contatto importante					
+						
+rate e solleciti 						
+possibilità di ritirarsi dal corso	crediti e acconti	attenzione 				
+						
+fatture elettroniche solo al pagamento avvenuto						
+proforme 						
+note di credito						
+spospensione delle rate in casi di automatismi						
+all'utente serve verificare se è in regola con i pagamenti						
+						
+- dati di primo contatto						
+- esempio di contratto (pdf e ods)						
+- google form per la raccolta dei dati						
+						
+fase 4 organizzazione orchestra - settembre						
+aule						
+insegnante						
+gestione presenze e gruppi (conto orario)						
+						
+nel profilo dell'utente disponibilità oraria degli allievi perchè consente						
+livello degli studenti - 0,1,2,3, 4, 5,6,7,8						
+						
+grosso filtro quando faccio l'orario						
+						
+diritto di prelazione quota pagata anno successivo pagato prima è di competenza dell'esercizio succesivo						
+girare il credito tra fratelll						
+						
+differenza database sul codice fiscale allievi -> prima era CF per fattura 						
+						
+per la gestione dell'anno:						
+- i presiscritti dovresti essere nell'anno scolastico successivo						
+- i non prescritti ma iscritti nell'anno successivo						
+						
+- per il bilancio socaile devo fare raffronto su 3 anni						
+- invece al sistema può lavorare sull'anni di esercizio e switchare su un anno piuttosto che un altro						
+- il filtraggio massivo è richiesto						
+						
+- export						
+						
+strumenti: cespiti	valore di acquisto	coide	venduti o no ai clienti		documento di cosa è fatto (togliere dai cespiti se tolto)	
+strumenti: contratto di noleggio						
+compro libri fornitore						
+inventario libri						
+						
+anagrafica / fornitore -> fatture attive e passive						
+pagamenti verso l'insegnante " rateizzati "						
+l'insegnante vede solo il suo conteggio orario metnre quello economico viene mandato						
+documento per la ritenuta d'acconto						
+						
+						
+						
+						
+Prezzo:				€ 5.000		
+"* la cancellazione dei dati dovrò essere analizzata e diversificata per ogni specifico dato
+* gli attuali costi non prevedono la gestione dei pagamenti attraverso il nuovo gestionale e non sono quindi previste integrazioni con sistemi di pagmento esterni"						
+						
+Il preventivo continua nella prossima pagina						
+						
+ALTRE ATTIVITA' DURANTE LE LAVORAZIONI						
+Apertura del dominio e installazione del software				inclusa		
+Correzione bug, assistenza e manutenzione				inclusa		
+Formazione del personale 				48 ore		
+Consulenza per le attività presenti in preventivo				inclusa		
+Import dei dati dell'anno 2024				incluso		
+						
+MANUTENZIONE E SERVIZI AL TERMINE DELLE LAVORAZIONI						
+"Import per eventuali anni precedenti 2024 
+(cad. uno)"				€ 50,00		
+Correzione bug, assistenza e manutenzione				da 50€/mese		
+						
+SERVIZI ESTERNI						
+Apertura di un sito + hosting				a partire da 30€/anno		
+Sistema di gestione della privacy, cookie banner, GDPR				a partire da 19€/anno		
+						
+TEMPISTICHE						
+Si prevede di realizzare l'intero sistema entro settembre 2024 con i primi test operativi durante l'estate 2024						
+Le consegne avverranno parzialmente e incrementalmente su base settimanale o bisettimanale in base alla complessità delle attività o alle esigenze concordate di volta in volta.						
+						
+						
+						
+Note:						
+Il presente preventivo è da considerarsi indicativo e suscettibile a modifiche. Tali modifiche potrebbero subentrare in corso d'opera per soddisfare le necessità non identificate e non identificabili nelle fasi iniziali del progetto o della commessa sia di livello tecnico che di livello funzionale. Tutte le modifiche dovranno essere concordate e accettate dalle parti.						
+Tutti gli importi sono da considerarsi esenti da iva						
+Footility.com di Mistretta Paolo autorizza ai sensi e per gli effetti degli artt. 13 e 23 del D. L.gs. n. 196/2003, con l'invio del presente modulo, al trattamento dei dati personali secondo le modalità e nei limiti di cui all’informativa allegata.						
+						

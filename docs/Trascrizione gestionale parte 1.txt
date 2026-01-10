@@ -1,0 +1,550 @@
+00:00:03 Paolo Mistretta
+Aspetta che accendo una cassa qua così ti sento meglio. Prova a parlare.
+00:00:11 Speaker 2
+Sì, mi senti. 
+00:00:13 Paolo Mistretta
+Sì, perfetto, molto meglio. Ok, visto che mi hai dato le credenziali sono entrato. Carino. Corsi uno, attività docenti OK, accetta tutto per un'altra sessione di training, didattica, piani di studio, prescrizione, corsi collettivi, lezioni individuali, carnet di lezione, OK, anagrafiche docenti. Vabbè OK, questo è il prodotto, tu mi vuoi dire qualcosa su questo. 
+00:00:49 Barbara Tripodi
+No, lo trovo poco intuitivo. Ogni volta che devo fare qualcosa non so dove, cioè o ci ho provato, non so assolutamente dove mettere le mani. La sensazione è che loro siano andati sovrastrutturando via via, per cui le impostazioni sono un pezzo da una parte, un pezzo dall'altro. E insomma non è non è semplice.
+00:01:13 Paolo Mistretta
+Sì, allora la l'impostazione è piuttosto classica, devo dire che. come impostazione è più o meno quella che farei anch'io. C'è da dire, cioè impostazioni intendo la disposizione degli elementi, quindi il menù a sinistra, quando hai tante voci è il menù più adatto, perché poi se lo fai sopra.
+00:01:30 Barbara Tripodi
+No no, non ho dubbi che sia quello.
+00:01:32 Paolo Mistretta
+Sì, però in effetti già quando apro ogni funzione ce.
+00:01:37 Barbara Tripodi
+Ne sono dentro delle altre. Per cui il problema è che se devi configurare o personalizzare una certa cosa, Non è tutto nelle impostazioni, non è tutto, cioè ogni ogni menù ha al suo interno una possibilità di questo genere. Adesso a memoria non me lo ricordo, ma so che quelle poche cose che ho cercato di fare, tipo configurare i corsi, configurare il calendario e cose di questo genere, mi hanno portato via delle ore.
+00:02:12 Barbara Tripodi
+Procede perché spesso non sono riuscita a trovare. Tra l'altro non ci sono tutorial, i video che ci sono molto scarni e soprattutto danno per scontato una serie di passaggi, quindi è abbastanza complicato orientarsi. Quindi deve essere qualcosa che io devo poter trasmettere a qualcuno, perché se devo essere qua fissa a fare l'assistenza a chiunque ci debba lavorare, siamo al punto di prima.
+00:02:43 Barbara Tripodi
+Che poi ci voglia un training questo è scontato, però deve essere comprensibile, almeno nelle funzioni essenziali. Diciamo che quello parte dal presupposto che il corso non esiste finché non fai un'iscrizione. Nel mio caso i corsi, cioè i prodotti, sono quella decina lì fissa.
+00:03:07 Paolo Mistretta
+Ma tu i corsi qua dove li metteresti. 
+00:03:10 Barbara Tripodi
+Adesso non me lo ricordo. Corsi collettivi. Esatto, perché il problema è che i corsi collettivi sono quelli che sviluppano un'ora di lezione collettiva per gli insegnanti. Quindi io devo fare una combo, siccome noi abbiamo la lezione di strumento più la lezione di laboratorio, io devo creare una specie di pacchetto, che adesso non mi ricordo come viene definito, in cui, Aggancio l'iscrizione al corso di strumento della durata XY alla lezione collettiva in cui ci possono essere più persone nel momento in cui io faccio le lezioni e c'è la possibilità poi di stabilire per queste lezioni un numero minimo e un numero massimo di partecipanti, OK?
+00:03:59 Barbara Tripodi
+Nel momento in cui io ho ad esempio le lezioni delle elementari, che sono tre bambini in un'ora, mi ero messa lì a configurare, perché anche la lezione di strumento a quel punto è una lezione collettiva. Posso stabilire che ci stanno massimo tre persone e durano un'ora. Quando sono due durano un'ora. Quando si toglie il secondo bambino la lezione non deve essere più di un'ora, deve diventare di mezz'ora e quindi a quel punto devo modificare il corso. Dell'ultimo allievo rimasto. Poi se mi spiego male Dimmelo.
+00:04:29 Paolo Mistretta
+No ma allora adesso io questo allora ti dico ti avviso, ma è una cosa che non richiede avviso, allora io sto registrando perché? Esatto, così poi faccio. Lo dovevo fare anche la volta scorsa ma mi sono dimenticato, quindi poi nel caso rifacciamo i passaggi che ci eravamo già detti. Allora, quello che stai descrivendo sicuramente è un'operatività un po' macchinosa quella di dover modificare un corso. In teoria potremmo mettere una regola, cioè se tu sai che quel corso lì deve cambiare.
+00:05:02 Paolo Mistretta
+di ora, quando ci sono più studenti diventa di un'ora in automatico, però bisogna capire quando, se vogliamo ridurre un pochino la meccanicità o la macchinosità, chiaramente devono essere regole che poi vanno bene sempre, perché sennò ogni volta devi configurarle, no. 
+00:05:20 Barbara Tripodi
+Allora, io ho continuamente bisogno di poter modificare i corsi perché c'è una, Fluidità, soprattutto all'inizio dell'anno, che è fisiologica. Quindi diciamo che l'operazione di modificare il corso deve essere qualcosa che chiunque può gestire, chiunque nella segreteria sono in grado di gestire. D'altro canto, a livello di orario la modifica del corso può essere una necessità dell'insegnante, per cui in quel gestionale c'è la possibilità che l'insegnante.
+00:05:54 Barbara Tripodi
+abbia o -1 livello di accesso per cui può modificare determinate cose oppure no. Siccome ha un registro elettronico, ai fini del conto orario, l'insegnante ha un minimo di flessibilità, ad esempio nel caso delle lezioni dei pacchetti, cioè non delle lezioni regolari.
+00:06:13 Paolo Mistretta
+Tipo carnet.
+00:06:15 Barbara Tripodi
+Esatto, l'insegnante, l'allievo compra tot lezioni, L'insegnante se le ritrova da fare e le fissa flessibilmente e io voglio sapere dove stanno e dove non stanno, per cui c'è un orario che si va a comporre, che comporta un utilizzo di aule eccetera eccetera. Quindi c'è una operatività minima che deve avere l'insegnante, ma proprio solo a questo livello. E poi invece un'operatività che deve avere la segreteria, perché l'allievo che aggiunge, toglie, cambia, fa un corso più lungo, fa un corso più breve.
+00:06:53 Barbara Tripodi
+non fa più il laboratorio capita molto di frequente, quindi non è una cosa rara. Quindi questa funzione deve essere assolutamente appannaggio della segreteria e di nessun altro, però deve essere fattibile.
+00:07:09 Paolo Mistretta
+Certo. Sì, sì. Diciamo che sicuramente questo, rispetto alle altre cose che abbiamo visto, questo prodotto è già più, vicino a un qualcosa di costumizzato in maniera abbastanza decente devo dire poi non so se tu davvero useresti tutte queste cose però.
+00:07:33 Barbara Tripodi
+No quello che io userei oltre alla gestione della fatturazione quindi io ecco lì quello che mi hanno detto in due o in tre è che l'allievo si iscrive, tramite un link e nel momento in cui il genitore 1 compila il form automaticamente instrada la scheda dell'allievo con il contatto principale diciamo così.
+00:08:09 Barbara Tripodi
+Quindi su quel contatto principale poi ci sono fatture e tutto il resto e quindi quella scheda lì sembra inamovibile, Nel senso che poi in questo gestionale io posso, se ci sono delle linguette, se vai nel menù dello studente in alto, per cui c'è una prima scheda e poi c'è una serie di altre indicazioni che si riferiscono all'anagrafica oppure alla questione contabile e poi si vanno ad aggiungere, per cui io posso aggiungere dei campi.
+00:08:44 Barbara Tripodi
+Ho la possibilità di aggiungere dei campi. Sì, grazie perché non me lo ricordo come hai fatto. Adesso lo vedo piccolissimo, riesci a ingrandire un altro po'. 
+00:08:55 Paolo Mistretta
+Aspetta che lo riduco un po'.
+00:09:01 Barbara Tripodi
+E se tu clicchi penso sulla scheda di ogni singola persona, A parte allora quella lunghezza che mi hai fatto vedere adesso sono le colonne che io posso customizzare, nel senso che per ogni accesso ad esempio c'è la persona che si occupa della contabilità che ha bisogno di vedere sempre le solite cose, il codice fiscale, i dati fiscali, le voci. Quindi siccome le colonne, i campi per ogni cliente sono tantissime, ogni persona che accede può salvare.
+00:09:36 Barbara Tripodi
+La propria visualizzazione personalizzata. Le colonne si possono anche spostare manualmente orizzontalmente e quindi io al successivo accesso troverò la mia visualizzazione. Adesso non ricordo, non so se posso crearne più di una, cioè delle maschere non mi sembra. Però sull'allievo prendi Francesco Barile e prova a cliccarci sopra.
+00:10:12 Paolo Mistretta
+Ci ho cliccato.
+00:10:13 Barbara Tripodi
+Perché quelli con il triangolino sono quelli che io ho cercato di importare. Ecco in alto vedi genitori tutori. Questa è, Allora queste sono cose. Ecco, questa credo che sia la scheda. No, però qui il codice fiscale non c'è e nell'anagrafica.
+00:10:46 Paolo Mistretta
+Sì, è qua.
+00:10:50 Barbara Tripodi
+Esatto. Io poi gli avevo fatto aggiungere i recapiti dell'allievo. Alcune cose sono alcune cose sono di test loro, quindi forse puoi vedere meglio il test che hanno fatto loro su un'altro tipo un cliente che non sono i miei. Gli avevo fatto aggiungere la disponibilità settimanale. Loro però avevano preso un po' alla rinfusa le cose che gli avevo chiesto del nostro mio database.
+00:11:21 Barbara Tripodi
+e messe tutte insieme così sono abbastanza illeggibili perché sono troppe.
+00:11:24 Paolo Mistretta
+Eh, sono tante, sì. Infatti io di solito non faccio questi grossi form. Anche tutti questi TAB sono molto. per quanto. 
+00:11:33 Barbara Tripodi
+No, quelli sono loro.
+00:11:36 Paolo Mistretta
+Sì sì, però comunque capisco l'esigenza di raggruppare tutto in un unico punto però l'hanno scelto così col TAB, insomma è un po' obsoleto. Comunque OK, allora diciamo che allora se vedo le potenzialità allora perché questo strumento le potenzialità le ha, nel senso che cioè io da solo per fare questo ci metto parecchio per fare un prodotto del genere. OK, però per esempio, a meno che non siano funzionalità molto importanti lo spostamento delle colonne piuttosto che la scelta delle colonne, sono cose che.
+00:12:14 Paolo Mistretta
+Una volta integrate tendenzialmente nel sistema le posso mettere dove voglio, però non sono quelle le cose importanti. Poi sia importante perché sia importante perché magari poi ci sono tante persone che ci lavorano e quindi.
+00:12:28 Barbara Tripodi
+Ci lavorano a livello diverso, ho bisogno, ho bisogno di delle formazioni anagrafiche in una certa fase, poi di quello didattica in un'altra e così via, quelle logistiche in un'altra ancora. E poi sono cose che non mi servono più, nel senso che il dato anagrafico mi serve al momento dell'iscrizione, ma poi da questo dato anagrafico io vorrei poter però mandare delle comunicazioni massive. Per cui so che Whatsapp ha un costo, però ad esempio so che gli SMS hanno un costo relativamente basso, perciò mi va anche bene di poter fare delle comunicazioni ufficiali importanti non sul canale Whatsapp ma sul canale SMS, come succede per le ricette mediche ad esempio, perché adesso su Whatsapp c'è di tutto e quindi bisogna trovare un'altro sistema.
+00:13:24 Barbara Tripodi
+Però ecco, quelle logistiche mi servono solo all'inizio dell'anno per comporre l'orario, poi mi poi le abbandono, non mi servono più. Poi mi occupo di quelle didattiche perché devo formare le classi, devo formare i gruppi, eccetera eccetera, mentre invece ci sono le altre persone che lavorano dal punto di vista contabile che invece hanno bisogno di vedere riassunte tutte le informazioni contabili, quanto ha pagato, quanto non ha pagato, come incrociare quello che è, che arriva con quello che c'è. con quello che c'è nella scheda di ogni singola persona perché il recupero crediti è terribilmente dispersivo.
+00:13:59 Paolo Mistretta
+Qua c'è già qualcosa.
+00:14:03 Barbara Tripodi
+Allora nella scheda personale di prima c'è quello che loro chiamano l'ordine.
+00:14:10 Paolo Mistretta
+Adesso ci mette un attimo ad aprirsi.
+00:14:19 Barbara Tripodi
+Dovrebbe essere ordini di iscrizione.
+00:14:24 Paolo Mistretta
+Però in questo caso probabilmente c'è.
+00:14:29 Barbara Tripodi
+E poi vedi, c'è sì, allora questo procede in un modo che per me, se si potesse fare diversamente, non va benissimo, cioè nel momento in cui ho fissato un calendario delle lezioni che da qualche parte c'è, per cui tu ti iscrivi al martedì alle 5. E io ho fissato i giorni di chiusura di sospensione, quindi tu sei iscritto dal giorno X al giorno X?
+00:15:00 Barbara Tripodi
+e rispetti quel calendario che poi è quello che io vedo è una di quelle cose difficili da trovare adesso te lo cerco da qualche parte configurazione anni di studi, anni didattici tabelloni orari forse? Nemmeno, adesso cerco la nota in cui avevo preso appunti comunque se non lo trovi tu.
+00:15:35 Paolo Mistretta
+Ah scadenzario pagamenti forse no. No.
+00:15:38 Barbara Tripodi
+No neanche. No io avevo fatto proprio calendario delle lezioni. Semplice. Allora vediamo se ho preso appunti. Allora. Allora le offerte cumulative sono quelle del pacchetto della lezione di strumento più la lezione di collettiva, poi.
+00:16:33 Paolo Mistretta
+Si fa proprio fatica a trovare il calendario, che mi sembra tra l'altro una visualizzazione che sarebbe piuttosto semplice per molte cose, a dire il vero.
+00:16:42 Barbara Tripodi
+Guarda, è abbastanza delirante. Sarà molto completo perché ci sono un sacco di cose ma.
+00:16:49 Paolo Mistretta
+Sì, però comunque posso dirti, allora io qua vedo una mancanza di modernità già a livello grafico, cioè anch'io faccio i gestionali con le tabelle, ok, però già la scelta del template è tutto così molto piccolo, molto, molto freddo, queste icone molto vecchie non aiutano comunque.
+00:17:08 Barbara Tripodi
+E poi quel cruscotto così invadente che invece non ti aiuta.
+00:17:14 Paolo Mistretta
+Esatto, il cruscotto è una cosa che hanno cercato di modernizzare ma con un po' troppi elementi a caso, cioè qui cose da fare va bene, può essere interessante perché ti avvisa che ci sono delle cose, urgenti da fare.
+00:17:29 Barbara Tripodi
+Delle criticità.
+00:17:30 Paolo Mistretta
+Esatto, però il fatto che hai quattro studenti attivi, boh, sì, magari è un'informazione, però non la metterei così importante. Magari è un'informazione che metti sul menù. A un cliente avevo messo dei conteggi sulle voci di menù che veniva più leggero. Comunque, adesso io però devo capire, perché qua io non pensavo, però dimmi tu se magari mi sbaglio, di basarmi su questo. Io magari posso andare a vedere. Se qualcosa ti va bene.
+00:17:59 Barbara Tripodi
+Che tu debba basarti di questo, se ti fa comodo.
+00:18:02 Paolo Mistretta
+Esatto, se ci fa comodo prendere spunto per.
+00:18:04 Barbara Tripodi
+È stato fatto perché questo è orientato alle scuole di musica. Quindi diciamo che la casistica delle problematiche, io, a sentir loro a parole, perché poi in un anno di fatto non hanno mosso un dito, sembrava tutto previsto e prevedibile, quindi. Poi io lavorando, lavorando, parlando con loro nei vari incontri, ho messo a fuoco meglio quello che in prospettiva poteva servire. Quindi non mi serve tutto quello che c'è lì.
+00:18:36 Barbara Tripodi
+Però alcune cose, per carità, lì ci sono anche le lettere di incarico agli insegnanti, per dire, me le posso fare tranquillamente alla vecchia maniera, non è certamente quello. Però una volta che hai l'anagrafica dell'insegnante perché hai. Le uscite, i pagamenti eccetera e importi le loro fatture, perché quello che a me interessa in questo in questo momento non c'è, non è solo l'organizzazione dell'orario eccetera, ma quello che faccio fatica a fare è avere una minore visione d'insieme dal punto di vista economico, per cui quello che mi piace.
+00:19:18 Barbara Tripodi
+In generale di quello che mi è stato detto fino adesso, ma non solo da loro, è che io posso. Non ho bisogno di avere un bilancio, perché il bilancio me lo fa il commercialista, naturalmente. Però se io faccio un'anagrafica di fornitori e importo dal cassetto fiscale, almeno alla grossa, un po' di cose in entrata e in uscita, io posso avere una visione del flusso di cassa migliore. Posso sapere qual è l'andamento? Cioè io sono troppi anni che vado alla cieca, chiaro?
+00:19:49 Barbara Tripodi
+Per buon senso e per intuito. Fino adesso è andata bene, però la cosa assurda è che per eccesso di prudenza io finisco con lo stare. Fin troppo indietro invece questi soldi vorrei poterli spendere, ma non ho la possibilità di programmare le spese. E se dovessimo fare un qualunque investimento, un mutuo che invece noi un andamento di flusso di cassa lo dobbiamo vedere da qualche parte, perché quello diventerebbe un grosso problema.
+00:20:20 Barbara Tripodi
+Adesso ce li abbiamo, sono lì in banca in sovrannumero e quindi possiamo fare quello che vogliamo, ma se decidiamo di spenderli io non so come andare avanti. Quindi oltre alla semplice gestione anagrafica di fatture di registro elettronico, il conto orario mi porta via un sacco di tempo e che sono cose mi piacerebbe fare. Mi interessa avere un contenitore che mi dia, almeno alla grossa, un'idea di entrate e uscite dove io posso inserire i pagamenti di cassa.
+00:20:58 Paolo Mistretta
+Io una cosa del genere l'ho fatta proprio per Federica, tra l'altro, nel loro programma del gestionale che mi hanno chiesto di fare. Poi, in realtà, i capi non hanno mai esposto nessuna particolare, Non hanno fatto sì, non hanno fatto grandi riunioni per farmi capire cosa volevano. Io gli ho fatto loro questo prototipo. Queste sono più o meno le grafiche che uso io, poi in realtà le cambio in base alle necessità qua adesso al di là è giusto per farti capire, in alcune situazioni non uso le tabelle perché questo qui è la visualizzazione da telefonino e quindi ho deciso di creare una card informativa.
+00:21:41 Paolo Mistretta
+No, però se loro vanno nella gestione dei carichi, ad esempio. Qua vedono una tabella, quindi di fatto vedono quello che vedi tu nelle altre. Nelle altre però vedi che vado a lavorare proprio di fino, cioè ogni cella ha un comportamento specifico, le note informazioni sul cliente, quindi non vai a creare grosse visualizzazioni ma vai a creare elementi di riferimento. Ma questo va beh, queste sono cose che poi però per esempio il report io gliel'ho fatto così, molto semplice, poi si può fare anche più sofisticato.
+00:22:13 Paolo Mistretta
+Però gli ho fatto un report di questo tipo dove hanno tutte le caselline in cui vendono i costi, gli acquisti, note di credito, note di credito, fornitore, provvigioni totali. Adesso qua ce ne sono un po', quindi te le riduco no acquisti, provvigioni così l'utile così. E poi hanno i costi e poi hanno anche un report tabellare per mese, quindi ogni mese possono vedere quali sono le informazioni che sono. Diciamo passate. Poi ci sono anche i grafici che non hanno, che non hanno avuto interesse ad avere, ma uno se vuole può mettere, può mettere anche i grafici che gli fanno vedere un po' l'andamento, no?
+00:22:50 Paolo Mistretta
+Quindi diciamo libertà di azione ne abbiamo veramente tanta, anche perché a differenza di quel prodotto che mi hai fatto vedere, io qua posso decidere di avere una dinamicità che non è sempre standard, no? Cioè di solito la dinamicità è quella, per esempio se vado nei carichi. Qua potrei decidere di aprire una schermata che mi fa vedere un dettaglio no? Oppure di aprire direttamente il Form di modifica e per esempio se tu hai necessità di vedere quale avevo fatto questa cosa, l'utile qui è calcolato no?
+00:23:24 Paolo Mistretta
+Ma se io apro qua mi viene fuori una tabella dedicata all'utile che fa vedere per esempio i passaggi che ci sono stati per arrivare ad avere un'utile di 3000. Abbiamo comprato quello, abbiamo speso quello no e c'è tutta la legenda. Quindi facciamo finestre dedicate a certe visualizzazioni che magari, come hai detto prima, siccome ci sono tante persone che lo usano, magari si può andare di fino a lavorare. Qual è il problema? Se vuoi nel tuo caso, nel caso del gestionale è tuo, è che essendoci tante cose è più conveniente incominciare a creare una base molto simile a questo gestionale di.
+00:24:02 Paolo Mistretta
+Di scuola di scuola semplice, perché sì, diciamo, magari gli facciamo una grafica un po' +1 po' più grande, un po' più leggibile, riduciamo un po' l'impatto di alcune form, però è chiaro che avendo tu tante cose è normale che il programma avrà una certa dimensione visiva anche no. Quindi se ipotizza che usciamo con l'anagrafica e le fatture per dire no, all'inizio ci avrai due voci, quindi ti sembrerà un gestionale snello perché c'è poca roba. Loro invece arrivano con le loro funzioni già tutte realizzate.
+00:24:34 Paolo Mistretta
+Quindi tu ti trovi in questa cosa piena di funzioni che non sai cosa fartene. Ecco, la mia idea invece è che se lo costruiamo insieme, pian piano ci arriviamo, ci arriviamo a costruire un menù, una navigazione che è alla portata della tua necessità e non qualcosa che non ti serve.
+00:24:50 Barbara Tripodi
+Sì, OK, anche se purtroppo quando un allievo si iscrive si aprono tutta una serie di fronti praticamente in contemporanea, quindi il problema non è essere spaventati dal menu. Il problema è che io con la sola fatturazione a settembre ci faccio poco per dire no? Quindi quello che a me serve, mi va benissimo che tu, come nell'altro caso, su ogni cosa vai ad aprire una tabella, come dire che sviluppi quell'argomento lì, d'accordo?
+00:25:27 Barbara Tripodi
+Mi domando se sia possibile perché mi sembra anche abbastanza ordinata come soluzione, anche perché noi siamo abituati ad avere a che fare con i fogli Excel e tutto sommato i nostri clienti sono tutti uguali, nel senso che hanno tutti la stessa tipologia, per cui non abbiamo una pluralità di situazioni differenti quindi. Salvo che per le situazioni in uscita, cioè che per i fornitori, che però sono una manciata.
+00:25:58 Barbara Tripodi
+Ok, le situazioni in entrata sono praticamente tutte uguali. Sì, magari capita che abbiamo un contributo dall'associazione Song, ma stiamo parlando di tre robe in croce. Possiamo prevederlo in maniera che sia visibile, però per il resto in uscita. c'è un pochino più di diversità perché ci sono, appunto, c'è da pagare gli insegnanti, da pagare il personale, da pagare i consulenti, gli acquisti e le cose varie, gli inventari, le rimanenze.
+00:26:36 Barbara Tripodi
+Ecco, non so se quanta roba si può mettere qua dentro, però.
+00:26:41 Paolo Mistretta
+No, allora, il problema mio. 
+00:26:43 Barbara Tripodi
+Il magazzino, c'è un minimo di.
+00:26:46 Paolo Mistretta
+Esatto, il problema mio è che, Quando c'è tanta roba, cioè quando il programma è così così arricchito di tante funzionalità, bisogna spendere del tempo per ragionarci. Cioè ogni funzionalità va presa, va presa e analizzata, analizzata. Anche perché noi abbiamo un grosso scoglio, cioè se noi mettiamo caso lavoriamo per tre mesi no? E facciamo non lo so, ipotizziamo un 30% delle cose che ti servono, no?
+00:27:20 Paolo Mistretta
+Nessuno ci vieta di cambiare strada, di cambiare una cosa, no? Cioè certo, dobbiamo tenerne conto. Perché poi se cambiamo, perché abbiamo sbagliato a capirci, perché cambia la necessità, perché è meglio fare in un modo piuttosto che in un'altro. Il tempo lo perdiamo comunque, cioè il tempo è una cosa su cui non possiamo lavorare quasi mai, cioè una volta che lavoriamo e si va avanti, il tempo è quello. Sui costi tendenzialmente una volta che abbiamo capito più o meno la fetta di lavoro non credo ci siano grossi problemi, però il discorso è che noi abbiamo solo l'unica problematica che avremmo ce l'abbiamo quando il sito incomincia a essere usato, cioè da quel momento in poi le cose si complicano.
+00:27:58 Paolo Mistretta
+Quindi ha più senso cambiare idea, sbatterci la testa, mettersi lì a fare le cose prima, piuttosto andare in ritardo, piuttosto andare in ritardo, però dopo, Piuttosto che fare, perché una volta che poi sono d'accordo. Detto questo, quindi io io il problema. 
+00:28:15 Barbara Tripodi
+È che quando io comincio a lavorare lì non posso avere parallelamente al il vecchio sistema, cioè nel momento in cui devo fare il passaggio, io non ho fisicamente il tempo di lavorare su due fronti. Perché già così ci facciamo casino, per cui se finisce che quello che è importato nel gestionale mi serve solo a fare quella certa cosa, ma io devo lavorare su un altro foglio excel, poi finisce che non so più che cosa è aggiornato e su che cosa devo contare e quindi poi i documenti non si parlano e questa serie di lavoro incrociato su due fronti diventa rischiosissimo, oltre che molto dispersivo in termini di efficienza.
+00:29:00 Barbara Tripodi
+possiamo prenderci il tempo che serve, possiamo capire, tu sai meglio di me quali sono i passaggi importanti, a me sembra di avere le idee chiare su quello che mi serve, però poi non so come tradurlo informaticamente, ma per quello ci sei tu. Dicevo, la visualizzazione che mi hai fatto vedere prima può essere interessante purché, Esista la possibilità, nel momento in cui io apro la scheda dedicata a quella determinata funzione, io la possa comunque continuare ad aggiungere, modificare, aggiungere al campo o che perché possono venir fuori esigenze diverse nel tempo che magari in questa fase non sono prevedibili.
+00:29:45 Barbara Tripodi
+Quindi se c'è una struttura aperta questo sai tu, se a che livello si può, si può fare. Sì, allora in ogni caso io ho bisogno di vedere dei dati aggregati. non dello scibile di ogni singolo allievo, ma rispetto a determinate cose, forse ne avevamo già parlato. C'è una parte anagrafica, c'è una parte contabile di quello che l'allievo ha comprato, che poi è connessa a tutta la fatturazione e a tutto il recupero crediti e quindi devo poter verificare se.
+00:30:24 Barbara Tripodi
+Quei costi sono stati coperti, se in che se è in ritardo, se non è in ritardo devo poter fare dei solleciti di massa? Devo poter fare degli invii di rate di massa di massa oppure no? Nel senso che scuola semplice finisco perché sennò faccio casino. Poi mi serve ad esempio nella parte alla parte anagrafica e una volta stabiliti i prodotti, cioè i corsi comprati dal tale allievo. Questo tutto ciò va riassunto in un contratto.
+00:30:56 Barbara Tripodi
+Io devo poter mandare un contratto che l'allievo visualizza e che accetta e io devo poter verificare se il contratto gli è stato mandato. Se questo contratto è stato visualizzato con 1 1 immediata visualizzazione però. Quindi l'anagrafica, l'anagrafica, la lista di prodotti che poi hanno un impatto economico e questa è una fase.
+00:31:27 Barbara Tripodi
+Poi c'è la fase contabile che va avanti tutto l'anno e non ci lavoro più io. O meglio, se la gente mi chiede quanto devo io vado nel suo prospetto economico e gli dico, tu hai comprato questo e questo e quest'altro, la prima rata è a posto, mi devi ancora pagare il libro no? Poi in un. futuro eventuale, possiamo eventualmente ragionare sul fatto che l'allievo acceda a una propria area personale, però è futuribile questa cosa, si potrebbe pensare.
+00:31:59 Barbara Tripodi
+Dopodiché inizia tutta la parte didattica e nel momento in cui inizia la parte didattica c'è questo calendario delle lezioni, c'è l'utilizzo dello spazio, c'è un conto orario per gli insegnanti che si genera, C'è un countdown di lezioni che va ad esaurirsi e quindi corsi che si disattivano perché si sono esauriti oppure che sono ancora in corso e da lì ho bisogno, per organizzare didatticamente queste persone, di una serie di elementi che li contraddistinguano, quindi il corso, il livello.
+00:32:43 Barbara Tripodi
+Il giorno la cosa cioè quindi tutta una serie di informazioni che mi consente di aggregarli lo devo fare manualmente, non mi aspetto che il gestizionale lo faccia, però questi campi mi servono perché gli allievi di pianoforte non sono tutti uguali e quindi devo poterli categorizzare o sottocategorizzare a loro volta. Per cui se io faccio l'orchestra, l'orchestra base è composta dagli allievi che vanno dal livello 1 al livello 3. Prendo tutti quelli che fanno violino, livello 1, livello 3 e che hanno effettivamente comprato quel prodotto, perché quelli che non l'hanno comprato rimangono categorizzati, glielo posso proporre però, e se non lo comprano allora non ne tengo conto.
+00:33:33 Barbara Tripodi
+E quindi li filtro secondo quelli che hanno aderito a quel progetto lì e che quindi lo hanno pagato. Allora questi qua li devo convocare a queste prove che si stabilizzano con un calendario che abbiamo definito già di 12 date in un anno col concerto. E però questo calendario deve essere passibile di aggiustamenti orari, perché non è possibile farlo a priori. e quindi li devo poter convocare ognuno al proprio orario.
+00:34:05 Barbara Tripodi
+E questa cosa mi porta via praticamente settimanalmente, giornate per stare attenta a non sbagliare che tutti dicevano gli orari eccetera. Lo stesso gli insegnanti devono poter prendere le presenze perché sulla stessa stesso gruppone, che in questo caso sono le prove d'orchestra, magari ci sono, Due insegnanti una volta, quattro insegnanti un'altra volta, cioè uno di loro deve prendere le presenze e non sono necessariamente le stesse persone, quindi devono poter avere accesso a questa, a questa cosa qua.
+00:34:40 Barbara Tripodi
+Io devo poter monitorare se l'allievo frequenta o non frequenta, perché è una cosa che faccio di continuo, perché non ha pagato, perché non ha pagato, sta venendo, è venuto e quindi ho bisogno di questo riscontro. Ok, allo stesso tempo l'allievo che mi chiede l'attestato. per i crediti scolastici, nel momento in cui è iscritto al corso uno, al corso due o al corso tre, esattamente come questi corsi sviluppano un conto orario per l'insegnante, forse potrebbero sviluppare un conto orario personale che si riferisce solo a una piccola parte degli allievi, quindi mentalmente me lo posso fare per i fatti miei, ma immagino che si possa fare e posso generare un attestato di frequenza, ad esempio.
+00:35:30 Barbara Tripodi
+Quindi dalla organizzazione didattica ci deve essere la possibilità di comunicare, spero in maniera automatizzata, via mail, per quello che riguarda le fatture eccetera eccetera. Però per quello che riguarda le convocazioni, il meccanismo dell'email, soprattutto perché arrivano queste comunicazioni direttamente ai ragazzi, agli adolescenti, la mail non è efficace. Quindi ho bisogno di comunicare con un doppio canale, quello ufficiale delle mail per il contratto e per tutto il resto e quello invece più diretto che può essere l's MSO quello che vuoi.
+00:36:11 Barbara Tripodi
+Qualcuno go lì mi proponeva la APP in cui ogni allievo c'ha il proprio calendario, ma insomma mi interessa relativamente, perché se poi l'APP la usano tutti o non la usano tutti, la differenza è quella. E poi categorizzare gli insegnanti in soci e non soci, visto che siamo una cooperativa, poter stabilire compensi differenziati per gli insegnanti, soci, non soci o funzioni particolari, quindi poter aggiungere.
+00:36:53 Barbara Tripodi
+al semplice conto orario anche delle voci forfettarie che io stabilisco a posteriori.
+00:37:00 Paolo Mistretta
+Il cosiddetto soci o non soci poi hai fatto un'altra differenziazione che non voglio perdermi.
+00:37:06 Barbara Tripodi
+Per progetti ad esempio. Per funzioni. Io posso stabilire di dare all'insegnante tal dei tali che sia socio o meno, La supervisione di un determinato progetto che non si sviluppa con un conto orario ma ha un forfait che è stato stabilito ad esempio, quindi poter aggiungere al conto di ogni singolo insegnante una personalizzazione del valore orario delle lezioni, ma anche voci forfettarie aggiuntive.
+00:37:43 Barbara Tripodi
+Insomma di poter forzare in qualche modo questo conteggio in positivo ma anche in negativo. Perché se quella lezione te la devo togliere perché tu hai segnato la presenza ma di fatto non l'hai fatta, lo devo poter fare.
+00:38:10 Paolo Mistretta
+In tutto questo, in termini di storico, ti interessa qualcosa? Perché al momento immagino che con Excel tu non possa tener traccia delle modifiche che hai fatto rispetto a qualcosa.
+00:38:21 Barbara Tripodi
+No, diciamo che ovviamente.
+00:38:27 Paolo Mistretta
+Te l'ho detto perché. Scusa, te l'ho detto perché se di solito diciamo l'assegnazione di uno slot temporale, Quindi un giorno io se ce l'ho pieno ce l'ho pieno, se ce l'ho vuoto ce l'ho vuoto, può non interessarmi. Invece quello che hai detto tu è leggermente diverso, perché se io prenoto e poi tolgo ho bisogno di sapere che è stata tolta, quindi era stata prenotata ma poi tolta. Questa per esempio è uno storico di fatto no? Poi queste piccole sfumature magari le possiamo vedere anche dopo, tanto lo storico si aggiunge.
+00:39:01 Barbara Tripodi
+Poi allora l'allievo si iscrive a 33 settimane, l'insegnante segna. 32 presenze. L'insegnante viene pagato per una lezione regolare, viene pagato ugualmente anche se la lezione l'allievo è assente e l'allievo paga ugualmente se si è iscritto a un corso regolare. Però l'allievo può chiedere un recupero, ad esempio, non è dovuto, ma l'insegnante decide di farglielo e glielo fa in un momento diverso dalla lezione concordata.
+00:39:37 Barbara Tripodi
+E quindi occupa un'Aula. Siccome gli insegnanti sono 22, se fanno tutti così e io non lo so, si sovrappongono. Quindi l'insegnante può verificare, ad esempio, se c'è un'Aula libera, chiedere il permesso di utilizzare quell'Aula come fa adesso e parla per ragioni sue, d'accordo? Questa cosa gli viene concessa su autorizzazione. Diverso è la situazione del pacchetto delle lezioni libere che dicevamo prima.
+00:40:10 Barbara Tripodi
+L'allievo compra 5 lezioni da mezz'ora. Io concordo, la prima metto d'accordo l'insegnante e l'allievo la fanno. Questa lezione gliela metto in orario. Dopodiché l'insegnante è libero di piazzare se ha un buco, se c'ha un'altro orario disponibile questa lezione in un'altro momento oppure in un'altro orario e da quel momento in poi se la vede direttamente con l'allievo. Quindi mi segna quando ha fatto questa lezione, perché deve mettere la presenza?
+00:40:41 Barbara Tripodi
+Perché io vedo che di 5 lezioni io ne ho concordata una, ma poi che l'allievo sta esaurendo questo pacchetto di lezioni, quindi ha finito. E l'insegnante spesso capita che va avanti a fare lezione perché non c'è collegamento diretto tra la parte amministrativa e la parte didattica. Quindi prendono un appuntamento e io se non vado lì a chiedergli ma quante lezioni gli hai fatto? Se non vado a controllare i registri cartacei non so a che punto sono arrivati, mentre l'insegnante ha modo di capire se ha segnato le presenze.
+00:41:16 Barbara Tripodi
+e viene pagato solo se assegna le presenze, cosa che lo costringe a compilare il registro e quella lezione è attiva, quel corso è attivo ancora per due lezioni e poi si chiude, quindi sarà interesse suo a dire all'allievo contatta la segreteria per acquistare altre cinque lezioni.
+00:41:38 Speaker 2
+Ok.
+00:41:46 Paolo Mistretta
+Va bene, quindi noi avevamo già scritto un po' di cose a suo tempo, adesso abbiamo preso appunti, poi le metto in bella perché magari le avevamo scritte anche all'interno di altre macro sezioni.
+00:41:59 Barbara Tripodi
+A me i supplenti, gli insegnanti hanno bisogno spessissimo di essere sostituiti. Il supplente deve poter avere accesso al registro elettronico, ovviamente con un account provvisorio, o deve poter avere accesso al registro di quell'insegnante senza necessariamente visualizzare lo storico di quell'insegnante. Non so se si possa, o quantomeno se si tratta soltanto di semplici presenze e non c'è dentro nient'altro.
+00:42:35 Barbara Tripodi
+può anche visualizzare tutto il registro purché non ci siano dati economici, ma l'insegnante non vede dati economici, cioè non c'è un conteggio economico, anzi meglio che non ci sia.
+00:42:44 Paolo Mistretta
+No infatti, ma poi comunque quelle sono sfumature che poi eventualmente se serve aggiungere si fa, tanto il dato c'è dall'altra parte. La visualizzazione della gestione delle lezioni e delle presenze, degli orari è a sé stante.
+00:43:01 Barbara Tripodi
+Sì, relativamente, nel senso che l'allievo compra quella lezione, quella lezione va pagata all'insegnante oppure al supplente, quindi io ho un prospetto di previsione dell'insegnante che io mando agli insegnanti, per cui quando io ho il database che si è riempito di tutti gli allievi attivi che hanno 333231 lezioni per uno io. Quando mando i contratti agli insegnanti, cioè gli mando i contratti con l'incarico, ma poi gli mando un prospetto di previsione, gli dico, questo è il tuo conteggio di tutto l'anno ad oggi, dopodiché man mano che c'è una togli o metti perché arrivano altri allievi, si tolgono allievi, ti assenti oppure tu stesso fai la supplenza del collega.
+00:43:53 Barbara Tripodi
+Il tuo conto orario si aggiorna manualmente in questo momento di tutte queste voci, OK, io non ho bisogno che l'insegnante sia pagato al centesimo del giorno perché io in questo momento, per semplicità e per abbreviare il processo, faccio una previsione e. Pacco e concordo con l'insegnante, quanti pagamenti vuole avere nel corso dell'anno, cioè quello che vuole essere pagato tutti i mesi, quello che vuole essere pagato due volte all'anno, quello ogni tre mesi, quello solo a giugno, a fine anno, dipende anche dagli importi.
+00:44:31 Barbara Tripodi
+Quindi concordo il numero di pagamenti che vuol fare, prendo la cifra che in quel momento nel suo conto c'è e la divido in parti uguali secondo il numero di pagamenti che vuole. Procedo a mandargli dei conteggi, glieli mando io perché loro non sono capaci. Gli mando dei conteggi leggermente sotto di me arrotondati per difetto e poi l'ultimo pagamento. Dopo che l'insegnante ha fatto tutte le sue verifiche, va a saldo.
+00:45:03 Barbara Tripodi
+Quindi la questione dei supplenti è molto frequente. Noi abbiamo una cosa come tre supplenti alla settimana. Spesso più supplenti nella stessa giornata. Quindi è tutto un leva e metti. Quindi metti al supplente e togli all'insegnante.
+00:45:20 Paolo Mistretta
+Ma questa parte di supplenza la fa l'amministrazione o tu prevedi che possa essere, fatta direttamente da. no perché l'insegnante assente non lo sa chi è che può essere il supplente. 
+00:45:33 Barbara Tripodi
+L'insegnante assente o procura direttamente il contatto ma il resto viene gestito dalla segreteria per cui il supplente arriva, compila, ecco.
+00:45:45 Paolo Mistretta
+Il form per gli insegnanti è.
+00:45:48 Barbara Tripodi
+Interessante perché è quello che gli chiediamo.
+00:45:52 Paolo Mistretta
+No la cosa che mi. diciamo.
+00:45:55 Barbara Tripodi
+Che va a compilare l'anagrafica, degli insegnanti.
+00:45:58 Paolo Mistretta
+La cosa che mi dà degli elementi interessanti anche a livello di progettazione è da capire poi per tutte le funzionalità quante volte c'è l'intervento del gestionale, perché ti faccio un esempio. Tu dici "contatta la segreteria", però se lui avesse la sua pagina con il calendario e sa che quella lezione va in supplenza, lui potrebbe cliccare sulla lezione e scrivere, "sarò assente" o premere un pulsante. Questo potrebbe far partire una mail all'amministrazione.
+00:46:30 Paolo Mistretta
+Poi uno lo chiama anche, no? Però noi possiamo, dobbiamo anzi pensare, secondo me, in maniera cautelativa. Nel senso, noi dovremmo innanzitutto pensare ai dati, cioè alle informazioni che permettono a un utente che guarda di sapere come gestire la situazione. Poi le comunicazioni, gli automatismi li mettiamo di volta in volta, cioè non li stabiliremo nelle prime sezioni. Perché? Perché magari se no ci perdiamo in funzionalità. Perché io magari poi ti farò delle proposte, vuoi questa cosa qui che fa così e tu mi dirai "sì, non me ne faccio niente" oppure "ok bella, facciamola".
+00:47:07 Paolo Mistretta
+Però ogni volta che introduciamo una necessità rallentiamo su un altro fronte. Perché io comunque al momento sviluppo da solo, non ho 3-4 persone. Poi se servirà magari mi farò dare una mano eventualmente. al momento direi che possiamo gestircela noi. Quindi ok, io ti dico delle cose che mi hai detto, vedo delle complessità chiaramente per tutti gli intrecci e le cose che ci sono, però io farei con te un lavoro. Allora intanto chiaramente diciamo che stai un pochettino gonfiando quello che era già la precedente richiesta, quindi è chiaro che poi i costi saranno più alti.
+00:47:48 Paolo Mistretta
+A dirti il vero questo primo preventivo che ti avevo fatto a suo tempo era comunque un preventivo di favore. Potrei riuscire a tenerlo comunque intorno a questa cifra, però ti dico con la variabilità e la complessità che c'è sono comunque stime di massima, nel senso che non spenderai 10.000 euro però secondo me questo prodotto potrebbe essere anche da 7 o 8. Non mi ricordo che scontistica gli aveva fatto, infatti a suo tempo, adesso le metto le scontistiche all'interno, all'interno dei preventivi, così non mi dimentico più.
+00:48:21 Paolo Mistretta
+Però comunque quello che possiamo fare ora per diciamo darci una pianificazione è capire se queste cose che ho scritto sono ancora valide, ti tornano, quindi ci mettiamo qui a un 20 minuti, se hai ancora tempo, perché sennò ci guardiamo queste cose che ho scritto, te le leggo ad alta voce, ce le guardiamo per bene e vediamo se sono ancora sensate, se manca qualcosa, se c'è qualcosa da aggiungere. E poi per quanto mi riguarda, al di là che possa cambiare un po' il prezzo, non posso proprio partire subito, OK, però se l'idea è quella di partire a gennaio e tu mi confermi che vuoi partire, io ti chiederei comunque l'anticipo perché così consolidiamo a livello formale la cosa.
+00:49:08 Paolo Mistretta
+E poi io adesso mi metterò comunque a iniziare a instradare le prime cose, la prima struttura e le prime tabelle. Niente di complesso che richieda il tuo intervento. Però poi da gennaio iniziamo a pianificare delle giornate in cui ci possiamo sentire che queste. Diciamo che di solito la mia capacità di produzione, cioè la capacità di darti qualcosa di nuovo o comunque di fare avanzamenti. tendenzialmente è di due settimane, perché dipende dalle cose che mi capitano come progetti, quindi in due settimane sicuramente ci sono avanzamenti.
+00:49:45 Paolo Mistretta
+Non è detto che tipo gestione delle utenze sia una cosa che si conclude in due settimane, dipende da quante funzioni leghiamo a quella cosa, quindi si faranno dei pezzi in base alle tue necessità e queste necessità le, capiamo adesso in maniera un po' macro e poi da gennaio andremo ad approfondire ogni sezione. Magari ogni volta ti farò vedere un pezzo, ti dirò così ti va bene, così non ti va bene e piano piano andremo avanti. Poi se avrai impedimenti di qualche tipo eventualmente ti manderò delle immagini, ti manderò delle descrizioni e quando hai tempo mi rispondi.
+00:50:21 Barbara Tripodi
+Va bene. Io vorrei capire. Quali sono le fasi cioè per imbarcarmi in questa operazione? Ci sono. C'è anche la possibilità che non sia io a seguirla ma sia un'altra persona. E quindi vorrei capire, magari tu ci devi ragionare ancora. Insomma vorrei capire quali sono le varie fasi.
+00:50:55 Barbara Tripodi
+Io, come dire, avendo avuto a che fare con questi qua, in qualche modo mi ero fatta una mia, una mia tabella di marcia, o quantomeno quello che a me serve, la fase zero, la fase uno.
+00:51:06 Paolo Mistretta
+Sì, questo è un'ottima cosa. Se già c'hai un'idea di questo è molto meglio, perché possiamo orientare lo sviluppo, perché è chiaro che se tu mi dici non ho, non ho nessuna necessità, io partirei dalle anagrafiche, no, inizio a inserire le anagrafiche, faccio, ma se tu mi dici no, voglio partire dal magazzino. Partiamo dal magazzino, cioè non c'è problema. Tu che fasi hai in mente. 
+00:51:30 Barbara Tripodi
+Allora ti dico, vado a prendere quella che era, adesso devo cercarlo, quello che era il mio schema, cioè quello che a me serve come primo passaggio quando un allievo mette piede qua dentro. E che io gli mandi un link con le informazioni di primo contatto e quindi si era detto che questo link potrebbe essere instradato dal sito. Che poi so benissimo che è un sito vecchio, quindi anche quello è un'altra questione.
+00:52:06 Barbara Tripodi
+E quindi aspetta che cerco sì. Dai Ciao, allora c'è quindi i primi dati devo metterla a posto?
+00:52:41 Barbara Tripodi
+Allora qui c'era la. Anche questa la faccenda di semplificare, nel senso che noi avevamo chiesto, e questo li aveva mandati abbastanza in palla. Avevo chiesto di avere l'anagrafica del primo genitore e del secondo di genitore. Mi senti? Aspetta, chiudo qua.
+00:53:21 Barbara Tripodi
+Grazie, perché no? Ci ho incastrato su a più cose adesso questa cosa. Dunque noi abbiamo bisogno di avere a che fare con II due genitori per ragioni diverse, a volte sono separati. A volte uno ti dice scrivete a me questo, non a tizio quell'altro. Insomma, ci sono situazioni di questo genere per cui noi tendenzialmente sappiamo se dobbiamo rivolgerci all'uno o all'altro.
+00:53:54 Barbara Tripodi
+Trattandosi di bambini, l'anagrafica del secondo genitore dobbiamo averla. Se uno sta male e uno mi non mi risponde, devo poter chiamare il padre per dire piuttosto che la madre. Però a livello di contratto non necessariamente dobbiamo avere la firma di tutti e due, anche se il nostro avvocato ci aveva detto che legalmente quando iscrivi un minore ci vuole l'autorizzazione eccetera, questa cosa che noi non facevamo.
+00:54:27 Barbara Tripodi
+Quindi abbiamo cominciato a richiedere la firma del primo genitore, prima del secondo genitore. Oppure firma del primo genitore con dichiarazione che ti assume, si assume la responsabilità di firmare anche per conto del secondo. OK, però ecco, va prevista un minimo questa possibilità. Poi ad esempio c'è la questione.
+00:54:55 Paolo Mistretta
+OK, se vuoi allora Dimmi tutto, poi magari ti faccio delle domande dai così tieni il filo.
+00:55:00 Barbara Tripodi
+Sulla questione poi nessuno l'ha mai controllata. Però in una scuola pubblica se tu mandi qualcuno a ritirare tuo figlio, se è minore di 14 anni, devi dare una delega alla persona che lo viene con il documento d'identità. Adesso io sinceramente non voglio neanche appesantire, anche perché noi non abbiamo un usciere che sta lì e controlla i documenti delle persone che entrano, per cui. L'abbiamo messa nel contratto.
+00:55:31 Barbara Tripodi
+Qualcuno in maniera scrupolosa si attiene anche a questa richiesta, ma per se fosse noi non la controlliamo comunque, quindi sarei sarei per semplificare. E anche il ragazzino che va via sotto i 14 anni va a casa da solo, noi non è che abbiamo la possibilità in quel momento che sta uscendo dalla porta di andare a prendere il contratto e verificare se effettivamente può uscire da solo oppure no. I genitori ce lo dicono, è vero anche che fino adesso facciamo le corna, nessuno è stato tirato sotto da una macchina, dovesse capitare mai una roba del genere.
+00:56:12 Barbara Tripodi
+Potremmo avere una responsabilità in questo senso, però io non so se le strutture private hanno questo livello di attenzione nei confronti dei minori.
+00:56:24 Paolo Mistretta
+Comunque è in pratica tu mi stai dicendo scusami, in pratica tu mi stai dicendo quelle che sono le informazioni che rilevate al primo contratto, al primo contatto. e che poi devi vedere in maniera rapida a livello di segreteria cioè se un bambino ti arriva tu apri il suo profilo e vedi le cose. Questo mi stai dicendo. 
+00:56:43 Barbara Tripodi
+Un minimo sì. Se un bambino mi arriva sì, devo avere un campo note.
+00:56:51 Paolo Mistretta
+Allora questa cosa del mandare link con informazioni per contatto mi ricordo abbastanza che ne avevamo parlato però non mi ricordo se mi avevi dato poi, le informazioni, se sono solo queste, cioè primo genitore, secondo genitore.
+00:57:04 Barbara Tripodi
+No, no, no, le abbiamo messe a posto, le abbiamo messe a posto queste. Sto cercando di capire come semplificare.
+00:57:13 Paolo Mistretta
+Poi la semplificazione la faccio io, cioè nel senso che ti dico guarda che le posso mettere tutte, perché tu. allora il campo note, ok, è una cosa che, Di solito io disincentivo, cioè il campo note, perché poi la gente lo USA come vuole e non va bene. O meglio, va anche bene se noi stiamo dicendo che abbiamo bisogno di qualcosa che il gestionale non sta tracciando. Quindi temporaneamente il campo note può essere anche a supporto di una mancanza applicativa.
+00:57:45 Paolo Mistretta
+Oppure può essere una cosa effettivamente necessaria, tipo questo qua mi comunica che ha l'ansia, nel coso non c'è scritto che ha l'ansia, metto il bambino ansioso. 
+00:57:52 Barbara Tripodi
+Dove la metto? Sì, ma non solo, anche quando un genitore è particolarmente spinoso o problematico oppure quando i bambini hanno delle problematiche di ritardo, cioè qualche cosa devi poter mettere.
+00:58:06 Paolo Mistretta
+Esatto, quindi bisogna però attenzione, Che cosa? Che cosa mi serve dirti a me da programmatore? Mi serve dirti quando poi tu vuoi chiedere qualcosa al gestionale. OK, se è una nota è facile che viene perduta nei filtri, perché se io gli dico adesso con l'intelligenza artificiale magari si può uscirne. Però il punto è che se tu poi metti se uno scrive ritardo mentale e l'altro scrive DSA. a voglia a ricordarti che avevi scritto DSA dentro un coso, quindi.
+00:58:37 Barbara Tripodi
+No, però io ho nel nostro database vari campi noti, a seconda della sezione in cui mi trovo, per cui la nota di primo contatto è quella che mi serve perché non conosco le persone, tipo "ha studiato due anni pianoforte e adesso vuole cambiare strumento". Poi quella informazione non mi serve più e rimane là, per cui c'è una nota, Rispetto alle informazioni di primo contatto, dopodiché c'è una nota didattica, no?
+00:59:07 Barbara Tripodi
+Quindi è un bambino iperattivo, non può stare a lezione insieme agli altri perché mi serve per fare delle altre cose. Oppure madre pazza, suo figlio è un genio di questo genere? No, perché ti fa capire con chi hai a che fare, no? E quindi devi prendere con le molle certe certe persone. Comunque allora Ricapitolando, perché ti sto sto? Sono disordinata nell'esporti le cose. Le informazioni di primo contatto è quello che uno devo mettere insieme quando uno mi fa una telefonata.
+00:59:42 Barbara Tripodi
+Quindi se c'è un campo sul un form sul sito che io posso indirizzare. O la gente mi scrive direttamente dal sito, però le cose, le informazioni che mi arrivano dal sito sono già in qualche modo minimamente categorizzate, perché in questo momento c'è. una richiesta generica di messaggio e il più delle volte la gente non scrive nemmeno per quale età è interessato. Quale strumento ti interessa? Vorrei avere informazioni, punto. Di che tipo? Cioè che cosa ti interessa. 
+01:00:14 Paolo Mistretta
+Ma tu aspetta, ma questo link di primo contatto, no? Perchè io me lo stavo immaginando così, tu? Io lo farei dal gestionale comunque, non andrei a toccare il sito, poi nel caso vediamo se arricchire il sito con quello che già sul gestionale abbiamo fatto, ma.
+01:00:28 Barbara Tripodi
+Il primo contatto può anche passare da lì perché è come dire.
+01:00:32 Paolo Mistretta
+Ma il primo contatto è lo studente che ti scrive a te oppure.
+01:00:35 Barbara Tripodi
+Nuovo, nuovo.
+01:00:37 Paolo Mistretta
+Ok, quindi il link perché parli di link quando parli di primo contatto. 
+01:00:41 Barbara Tripodi
+Perché quando arrivano, quando chiamano io gli chiedo la data di nascita dell'allievo. 
+01:00:49 Speaker 2
+Ok.
+01:00:50 Barbara Tripodi
+A che cosa è interessato? E poi mi faccio dire un po' di cose, quindi telefono e mail della persona che mi sta che mi sta chiamando, quindi telefono mail nome dell'allievo quindi non mi non mi interessa il nome del genitore in quella fase nome dell'allievo data di nascita perché lo categorizzo no? E poi un campo note dove segno che ne so, ha fatto due anni di pianoforte, vuole fare il giro di strumenti, vuole fare questo, vuole fare quello. Questo me lo segno.
+01:01:21 Paolo Mistretta
+Se questa fosse operatività, no, tu dovresti andare in una sezione che è che è o crea nuovo studente o crea primo contatto. Si può anche fare come funzionalità, no. 
+01:01:36 Barbara Tripodi
+Sì, nel senso che queste persone sono lì nel limbo, dopodiché può essere che diventino clienti e allora si assumono.
+01:01:44 Paolo Mistretta
+Se mi ricordo di questa cosa.
+01:01:46 Barbara Tripodi
+Oppure rimangono nella mia mailing list che è quella che ho gigantesca e quindi me li tengo, per cui questi dati me li tengo, va bene e rimangono molto generici. Dopodiché quella persona diventa un cliente, io la richiamo, fisso le prove, lui viene, partecipa, sceglie uno strumento. A quel punto. Passa un mese e io ho completato la vendita, quindi lo indirizzo al tal corso, al tal strumento. Allora comincio a chiedergli una serie di dati ulteriori, si iscrive e per farmi un contratto?
+01:02:24 Barbara Tripodi
+Allora so che ha bisogno di un violino della tal misura. So che magari gli devo procurare io o che gli devo noleggiare, ad esempio, e allora vado a vedere se in magazzino ho uno strumento di quel tipo oppure se glielo devo ordinare nuovo. Gli mando un contratto in cui gli chiedo tutto, dati fiscali di ogni tipo, che mi compila lui, che vale come contratto, in cui c'è il mio regolamento, tutte le accettazioni della privacy, tutto.
+01:02:55 Paolo Mistretta
+Io però voglio capire.
+01:02:55 Barbara Tripodi
+Però io in quel contratto gli ho scritto a quale corso, quindi cioè l'allievo non produce un contratto autonomamente perché io ho bisogno di questa fase cuscinetto che è l'operazione della vendita in cui io l'ho indirizzato al tal corso. Gli ho proposto l'orchestra ma l'orchestra non la vuole fare, quindi io gli mando un modello, un link precompilato o che ne so. Non so come possiamo fare. In cui c'è il corso di violino base con laboratorio con l'orchestra.
+01:03:33 Barbara Tripodi
+A quel punto, stabilito giorno orario di lezione, ti dico, la tua lezione comincia il giorno tale. E di conseguenza si genera un conto, un ponteggio per cui mi devi la prima rata, la seconda rata, con queste scadenze, con questi tempi accetti il regolamento e si cominciano le lezioni. Quindi contratto e fattura si generano in questa fase. O meglio, la fattura si genera nel momento in cui l'allievo ha accettato il contratto, la proposta di iscrizione, diciamo così.
+01:04:12 Barbara Tripodi
+Io ti mando la mia proposta, tu l'accetti e quindi fatte la fattura.
+01:04:18 Paolo Mistretta
+OK, però questo link di primo contatto è un'altra, cioè non è il link di primo contatto questo no. 
+01:04:23 Barbara Tripodi
+Quindi no, questo è l'ultimo che ti sto dicendo e già è quello. Quindi ho già i dati dei vecchi iscritti che posso utilizzare e quindi ti mando un link precompilato che tu puoi integrare, puoi modificare, puoi decidere no, non mandarlo qua. Ho cambiato mail, ho cambiato lavoro, quello mi aggiorni i tuoi dati. Quindi io per la gran parte su 300 allievi 200 ce li ho già, quindi questi 200 dati non te li sto a richiedere un'altra volta.
+01:04:59 Barbara Tripodi
+Ti chiedo di aggiornare questi dati. e però ti chiedo di accettare la mia proposta. Magari l'allievo è passato da un corso base a un corso intermedio rispetto all'anno precedente oppure i costi sono diversi perché ho aumentato le rette.
+01:05:18 Paolo Mistretta
+Allora ti dico qui il problema è non c'è problema nel senso qui io devo capire bene qual è la parte che vuoi che il gestionale si accolli. Perché, ti faccio l'esempio, se lo studente ti contattasse da un form, ok, tu avresti già le informazioni, parte delle informazioni. Quindi tu dovresti andare, sei tu che devi andare nel gestionale, inserire questa voce e compilare quei dati che ha ricevuto magari via mail, ok?
+01:05:49 Paolo Mistretta
+E' un'operatività come un'altra, cioè ci deve stare bene che sia così.
+01:05:52 Barbara Tripodi
+Sì, ma tanto lo facciamo già.
+01:05:54 Paolo Mistretta
+Esatto. Quindi non c'è nessun link di primo contatto, nel senso. Quello che potrebbe essere fatto per migliorare questo pezzo è che quando una persona ti contatta dal sito, dal Form gestionale, adesso vediamo cos'è gli viene in automatico risposto. Questa risposta automatica Compila questo Form per poter accedere a informazioni e lì è lui che Compila. Quindi non sei tu che compili, ma è lui che Compila. Il problema è un'altro. Il problema è un'altro che se noi facciamo una o l'altra tra le due.
+01:06:28 Paolo Mistretta
+è sempre più importante avere quella sul gestionale. Quindi la prima, per dirti della roadmap, no? Per dirti di come fare le cose, la prima è sempre avere qualcosa che il gestionale fa a disposizione degli utenti amministratori. Poi se questa funzione la vogliamo esportare e farla autocompilare da qualcun altro, poi la facciamo in modo che sia possibile. Però all'inizio deve esserci sempre un'operatività gestionale, perché l'utente per fare le cose deve essere una un'attività limitata, pagare e dire se c'è o non c'è una lezione.
+01:07:02 Paolo Mistretta
+Cioè le funzioni dell'utente dovrebbero essere limitate a singole cose, ma l'amministrazione ha una ha una cosa un po' più espansa, quindi secondo me arriva il REI. Intanto come prima fase, quella di generare le informazioni che ci servono per arrivare dal primo contatto all'iscrizione.
+01:07:20 Barbara Tripodi
+Sì, però tieni conto che al primo contatto non gli sto a chiedere il codice fiscale.
+01:07:26 Paolo Mistretta
+Infatti è proprio questo il punto. Esatto, noi abbiamo un'anagrafica completa e quando fai il primo contatto per me, se posso consigliare io a livello tecnico farei che quello lì è un utente guest, cioè un utente non iscritto, OK, quindi rimane comunque nella fetta delle utenze dei clienti diciamo. Dei clienti e avrà un Flag che è primo contatto o comunque che non è iscritto, che non è studente, che non è niente. OKE avrà tutti i campi compilati, soltanto quelli che ti servono come primo contatto.
+01:07:59 Paolo Mistretta
+No, non c'è 1 1 sezione particolare del sito, c'è un qualcosa che va a pescare dai clienti e dice ti faccio vedere solo quello che è il quello che è compilato di quello studente lì. Che non è ancora studente.
+01:08:15 Barbara Tripodi
+Io ho in realtà tre tipologie, il luogo di cui non ho nulla, il preiscritto dell'anno precedente di cui ho tutto e che so già che cosa si preiscrive, per cui devo solo rinnovare l'iscrizione, rimandargli le tempistiche e le quote. ma so tutto, e poi invece ho il vecchio iscritto che la preiscrizione non l'ha fatta, per cui ho tutta la sua parte anagrafica, tendenzialmente ho anche l'idea del corso che farà, ma va riverificato se fa o non fa l'iscrizione.
+01:08:56 Paolo Mistretta
+Il che significa che, Anche lì o si manda un link con scritto vuoi fare? Vuoi estendere per l'anno prossimo? Oppure c'è una sezione che ti permette a te di dire OK, questo qui è stato iscritto l'anno scorso, c'è un pulsante rinnova che fa esattamente la stessa cosa, oppure c'è un pulsante che ti permette di portarlo nell'anno nell'anno dopo, perché poi c'è anche questa questione degli anni, giusto? Se non mi ricordo male. 
+01:09:23 Barbara Tripodi
+Perché noi abbiamo l'esercizio che coincide con l'anno scolastico che va dal 1 settembre al 31 agosto e quindi io non ho non posso avere migliaia di nomi fra i piedi, ho bisogno di lavorare con una lista di nomi, anche perché gli omonimi si non si contano di persone che sono operativi e attivi in quello esercizio, oppure quelli che io chiamo interessati. Di gente che magari sono vecchi scritti, che nel frattempo si è aggiunto il fratello piccolo, oppure di gente che è tornata, quindi io vado a ripescare.
+01:10:00 Barbara Tripodi
+dei dati che ho già, ma semplicemente li categorizzo diversamente, per cui sono interessati a questo esercizio e quindi li aggiorno, li rinfresco perché la data di ultimo contatto mi dà, me li porta, come dire, più in primo piano. Per cui io su questi clienti ho sempre una data di ultimo contatto, sia gli ultimi operativi che sono attivi, sia sui vecchi. Per cui quando mi chiama qualcuno sempre più spesso è gente che noi conosciamo già.
+01:10:36 Barbara Tripodi
+Che torna o che ha altri familiari. 
+01:10:39 Paolo Mistretta
+Ti faccio una domanda che mi viene in mente: ma il database attuale adesso tu stai usando questo sito o stai usando ancora il database. 
+01:10:46 Barbara Tripodi
+No, no, questo è inutilizzabile perché non siamo mai andati oltre. L'anagrafica non l'hanno mai importata, ci ho provato io, ma.
+01:10:56 Paolo Mistretta
+Non è operativo. Infatti perché io farei, come sempre come roadmap, tu mi hai chiesto le fasi, no? Io farei tutte le anagrafiche, perché io ho ancora una versione del tuo DB che ho guardato in questi giorni.
+01:11:09 Barbara Tripodi
+Quindi poi l'abbiamo anche un po' aggiornata.
+01:11:11 Paolo Mistretta
+Esatto, magari poi me ne mandi una nuova perché è molto importante per me poter partire dal tuo DB perché paradossalmente io ti potrei fare anche una proposta. Che potrebbe essere tutelativa sempre per i tempi. Ed è questa, no? Vista anche la tua necessità di fare questa prima fase, di dividere il lavoro in fasi. Se io riuscissi a portare il tuo DB più o meno com'è, OK, in una versione gestionale più o meno come hanno fatto quelli di scuola? Semplice no?
+01:11:41 Paolo Mistretta
+Potremmo incominciare ad avere una idea dei dati e delle interazioni che questi dati hanno, che per te è ovvia. Perché? Cioè ci sei su. 
+01:11:50 Barbara Tripodi
+Però, ma allora il DB ha delle dispersioni terribili. 
+01:11:53 Paolo Mistretta
+No, ma il DB lo sistemo io, non ti preoccupare.
+01:11:56 Barbara Tripodi
+Cioè il DB lo metto io nella forma giusta, però sì, ma quello ci penso io.
+01:12:02 Paolo Mistretta
+Infatti questo passaggio ci dà un vantaggio operativo, perché noi possiamo buttar giù una serie di idee e vedere un po' di schermate. Anche in maniera, come posso dire, in maniera molto più rapida rispetto a non avere nulla. Abbiamo i dati, abbiamo il pregresso, magari riusciamo a recuperare anche qualche dato vecchio, quindi possiamo fare già qualcosa che come funzionalità è già pronta paradossalmente. Certo, ci vorrà un po' per farlo, però.
+01:12:26 Barbara Tripodi
+In questo momento io avevo aggiunto nel gestionale l'anagrafica del secondo genitore che non c'era. Ma perché sembrava che dovesse esserci lì? Dobbiamo ragionare se è il caso di inserire anche questa parte qua. Quindi abbiamo l'anagrafica del secondo genitore e avevo aggiunto giorno Aula ora proprio perché questo doveva essere importato per essere collegato a un registro elettronico, quindi quella roba lì non c'era.
+01:12:59 Paolo Mistretta
+Proviamo a fare quindi un lavoro, visto che c'è un database pronto che magari ti chiederò di inviarmi. Proviamo a fare invece un di nuovo quel discorso della delle fasi? No, perché qua c'ho tante funzioni che però dai tuoi discorsi non vengono molto toccate. No, non è quello il punto che tu hai un'idea, no, però a me serve collocarla nel posto giusto.
+01:13:22 Barbara Tripodi
+Allora qui dopo il primo contatto, dopodiché analisi. Siamo noi che completiamo questa richiesta semplice con una serie di informazioni, perché l'allievo è venuto, ha scelto il violino, quindi io lo categorizzo col violino, lo categorizzo come principiante, l'età ce l'ho già e quindi posso elaborare la proposta. So che vuole o non vuole fare l'orchestra perché gli ho già proposto tutta una serie di possibilità e quindi a quel punto gli mando una proposta oraria che non è ancora definitiva perché lo ricontatto e gli mando una serie di possibilità che vengono più o meno accettate finché alla fine non ho la visione definitiva di quello che sarà l'inizio del corso.
+01:14:19 Barbara Tripodi
+Il giorno preciso, l'orario preciso, la classe precisa, l'insegnante preciso eccetera eccetera. In quella fase gli mando il contratto. Nel contratto c'è scritto tutto ciò, anche se non c'è nel contratto scritto giorno, Aula eccetera, ma c'è solo la data di inizio del corso, c'è il valore che si determina per un multiplo del valore X del corso per tot settimane. E ci sono le tre scadenze delle tre rate, sempre che vogliamo continuare a ragionare di tre rate.
+01:14:50 Barbara Tripodi
+Perché ti dico come è organizzato scuola? Semplice, mentre un'altro concorrente. La gente che avevo contattato partiva come noi dal valore unitario della lezione e quindi una volta stabilito il calendario con la sospensione delle lezioni che io ho, il mio calendario ce l'ho, quindi sono 33 giorni, 33 martedì, 33 lunedì e quindi le sospensioni sono messe strategicamente in maniera tale che se ti iscrivi a partire dalla data tal dei tali.
+01:15:23 Barbara Tripodi
+Tu avrai quel numero di lezioni, se ti scrivi più avanti ne avrai di meno. Scuola semplice radina così, invece da quella data in avanti tu hai non 1.000 € perché la prima lezione è andata, ma 995 no, per dire, perché la prima lezione non c'è, non l'hai fatta. Dopodiché tu concordi con il cliente, in quante rate l'allievo vuole suddividere questo debito? OK.
+01:15:53 Barbara Tripodi
+e il gestionale le spalma temporalmente e manda in automatico gli invii, che tu stabilisci che siano mandati un mese prima della scadenza, due settimane prima della scadenza, eccetera eccetera. Lo stesso i solleciti. Abbiamo avuto un problema in questo senso, nel senso che quando un allievo, noi diamo la possibilità all'allievo di ritirarsi dal corso. Quindi se tu mi firmi il contratto per tutto l'anno, io nel contratto ti dico che tu se mi avvisi 30 giorni prima della scadenza successiva ti puoi ritirare.
+01:16:36 Barbara Tripodi
+Quindi quando un allievo si ritira sono pochissimi, nel senso che stiamo parlando di una dozzina di persone su 300, quindi lo zero virgola. 5% quindi eventualmente è una situazione che possiamo modificare manualmente se il sistema lo vuoi impostare in questo modo, quindi io non ho necessariamente in quella giornata di scadenza del trimestre tutti gli invii delle fatture, tutti in contemporanea perché il sistema in maniera fluida.
+01:17:06 Barbara Tripodi
+Una volta che si sono spalmate tutte le iscrizioni e che sono state tutte concordate, per cui se in fase di vendita io stabilisco che tu fai il violino il martedì, ho anche concordato con te che vuoi pagare in un'unica soluzione o in due o in cinque o quello che ti pare. Va bene? Adesso questa l'avevo vissuta come una pubblicazione, ma in realtà, ragionandoci meglio, se è il sistema che manda in maniera automatizzata gli invii dei periodi successivi, e io ho stabilito che vanno sollecitati dopo tot e così via, ed eventualmente ho forzato manualmente il fatto di non mandare il sollecito a Pinco Pallo perché mi ha avvisato che magari ha bisogno di più tempo, perché anche questa è un'altra cosa, allora.
+01:17:58 Barbara Tripodi
+il problema, cioè non sono io a dover gestire DMV, ma è il gestionale che lo fa. Io posso eventualmente monitorare questa cosa. Con il sistema che abbiamo noi invece adesso tutto il mondo si allinea sulle tre rate, quindi quando tu ti iscrivi all'inizio della rata, hai la rata per intero, io ti mando la rata per intero, quando ti iscrivi a metà hai mezza rata, ma mettiamo il caso che tu ti iscrivi nelle ultime due settimane della prima rata, è un pò ridicolo che gli andiamo a chiedere le due lezioncine e ci limitiamo a quella, quando invece quello scampolo della prima rata potrebbe essere rateizzato diversamente, con scadenze differenti.
+01:18:42 Barbara Tripodi
+Mi segui. 
+01:18:43 Paolo Mistretta
+Sì, più o meno. Nel senso che quindi te quale preferisci? Perché noi possiamo fare quello che vogliamo, nel senso secondo me, perché tu parli di questi sono i corsi, I corsi? Regolari. Sono corsi regolari, quindi partono con un po' di studenti e uno arriva dopo. Questo stai dicendo. 
+01:19:05 Barbara Tripodi
+Si. Io terrei il valore unitario della lezione, cioè il valore settimanale della lezione, perché se uno va via prima, sa che ha pagato fino lì.
+01:19:16 Paolo Mistretta
+Eh si, quello ha un senso.
+01:19:19 Barbara Tripodi
+Quindi terrei questo perché mi viene più comodo. Non necessariamente le rate devono essere tre. E non necessariamente devono coincidere. Quindi il contratto dobbiamo stabilire temporalmente queste. Cioè se ci sono 33 settimane e tu ti iscrivi a 20 settimane, io posso decidere di farti pagare 10 e 10 e quindi queste 10 e 10 si allineano col calendario al giorno X fino al giorno XY con la scadenza anticipata della seconda rata.
+01:19:56 Paolo Mistretta
+Sì, sto pensando se. non sia ancora più semplice, però forse è quello che hai detto, nel senso che se io so qual è il totale del costo, perché tu. 
+01:20:14 Barbara Tripodi
+Poi le divido io, metto 11 di qua, 10 di là.
+01:20:16 Paolo Mistretta
+No, quello che sto pensando è che a livello di gestione l'importante. perché cos'è che complica la faccenda? Quando le informazioni, All'interno del gestionale no, sono vincolate al passato. Faccio un esempio, se uno ha già pagato e poi cambia qualcosa, non dobbiamo ricordarci di quello che ha già fatto, perché se ha già pagato qualcosa e si disiscrive non deve più pagare niente. Se ha cambiato delle lezioni, la rata.
+01:20:50 Paolo Mistretta
+Gliela diamo lo stesso o gliela spostiamo. 
+01:20:52 Barbara Tripodi
+Questo è quello che capita di continuo, ma lo facciamo manualmente. Cioè tu hai già pagato, mi dai correttamente la disdetta, arrivi fino alla fine del trimestre e ci salutiamo. Il più delle volte quelli che si ritirano non rispettano la scadenza. Oppure si iscrivono al trimestre, dopo due settimane cambiano idea, non hanno ancora pagato e quindi non hanno nessuna intenzione di pagarti tutto il trimestre.
+01:21:27 Barbara Tripodi
+Allora tu mi dici vabbè, pagami almeno le due lezioni che hai fatto e quello lo devi poter forzare manualmente. Oppure io ho pagato il corso da 60 minuti. Da 30 minuti e aggiungo, va bene, ti faccio, ti mando la differenza, ma se io riduco che può succedere, allora io ho un credito che mi avanza e ti chiedo, il credito lo vuoi tenere? Vuoi che te lo restituisca? Il più delle volte se vanno avanti, quindi è semplicemente uno sfasamento fra quello che hanno pagato e quello che il corso è stato.
+01:22:03 Barbara Tripodi
+Allora cosa succede? Che io tengo traccia nel mio database di quello che il corso uno era che era previsto che il corso uno durasse 33 settimane da uncerto.in poi cambio il corso uno non esiste più o lo tengo limitato a tre settimane e poi da quella data in poi parte il corso due che invece è configurato diversamente se tu hai già pagato. io avrò un credito che va a pagare, che va compensato e che va a pagare la differenza e poi ti chiederò quello che manca.
+01:22:38 Barbara Tripodi
+Non sto a rimandarti il contratto di nuovo per un aggiornamento di questo tipo, però sono cose che tu mi hai detto per iscritto o per telefono che io ho segnato, E quindi io sul database posso vedere questo storico a questo? Se ti riferisci a questo sì, questo ho bisogno di tenerne traccia.
+01:22:57 Paolo Mistretta
+Sì, no, sto pensando che forse questa cosa qua forse è una delle più complesse al momento come prima fase, no? Cioè nella prima fase, perché il sistema di rateizzazioni e di pagamenti di solito è un sistema che ha delle regole che vanno stabilite a priori, no? Però se tu poi Se però tu introduci anche il concetto di cambio corso, cioè se tu poi vuoi forzare perché tu è quello che hai fatto, hai forzato il corso a un'altro corso, perché così tieni, tieni separate le due cose, no, perché non hai un prodotto che ti segue.
+01:23:28 Paolo Mistretta
+Invece la verità è che la verità è che la rata non è relativa al corso, ma è relativa allo studente, cioè è lo studente che gestisce, capito? Quindi se noi pensiamo bene che. la storia dello studente relativa a quel corso può variare, il corso forse non devi più toccarlo, cioè il corso è un insieme di ore e di costi di orario e i pagamenti invece fanno un passaggio a sé stante.
+01:23:59 Paolo Mistretta
+Quindi cosa significa? Che se tu sai sempre quanto ha pagato e sai sempre quanto ti deve, in mezzo a quante ore ha fatto, In mezzo a queste due cose si può valutare di tenere traccia sullo studente di quello che ti deve e di come ti accordi con lui, capito? E il corso quindi poi rimane indipendente.
+01:24:19 Barbara Tripodi
+Ma aggiungo che non è mai ideale e corrispondente la cosa perché lo studente spesso e volentieri paga in maniera non corrispondente al corso. Quindi tu prendi un pagamento e questo pagamento è parziale oppure in eccesso? Spesso invertono le cifre, oppure lo pagano due volte. Quindi tu devi comunque prevedere la possibilità di avere un debito o un credito.
+01:24:44 Paolo Mistretta
+Esatto. Secondo me noi dovremmo fare proprio questa cosa. Cioè, al di là che magari è quello che intendevi, io sto solo cercando di visualizzarlo.
+01:24:53 Barbara Tripodi
+Allora noi, per questa ragione, facciamo una fattura elettronica. mi è scoppiato il mal di testa. una fattura elettronica. Solo a pagamento avvenuto proprio perché sennò diventiamo scemi. Quindi mandiamo o una proforma o un banalissimo avviso di pagamento con un testo mail. Questo puoi deciderlo tu come ti viene più comodo. Diciamo che la proforma è la cosa più corretta, ma abbiamo un sacco di proforma che poi non vengono finalizzate perché nel frattempo le cose sono cambiate.
+01:25:29 Barbara Tripodi
+In ogni caso noi dobbiamo fatturare quello che è stato pagato.
+01:25:32 Paolo Mistretta
+Allora, su fatture elettroniche e proforme c'è un tema un po' caldo, nel senso. voi avete già un gestionale amministrativo con cui fare. 
+01:25:40 Barbara Tripodi
+Si, però lo vorremmo mollare.
+01:25:42 Paolo Mistretta
+Ok, quindi tu stai dicendo. ecco, questa è una cosa che complica. al di là del fatto che lo faremo su di voi, quindi non dobbiamo prevedere, Come se penso a quelli che uso io che hanno anche il codice ateco da specificare, no? Cioè al di là che poi quello che serve lo valutiamo, però ecco tutto il sistema amministrativo che diventa un sistema amministrativo integrato. Ha un peso non indifferente questa cosa, però se lo facciamo.
+01:26:10 Barbara Tripodi
+Ti rendi conto che il software che utilizziamo, che è Zucchetti, fa solo ed esclusivamente le fatture e le manda allo SDI, non fa nient'altro. Noi non abbiamo la possibilità di vedere niente, neanche riepiloghi di quello che è fatturato, niente, niente.
+01:26:29 Paolo Mistretta
+OK allora diciamo che io avendo un po' anche un sistema uso un sistema online fatto molto bene che è quello di flextax, quindi posso ispirarmi da quello per darti anche una cosa abbastanza funzionale, moderna. Però mi limiterei effettivamente a fare AA darti un'area in cui tu puoi creare eventualmente anche fatture o gestire le fatturazioni. Diciamo che da come lo stiamo impostando sarebbe un'area è più è più facile che sarà un'area visualizzativa. Poi chiaramente potrei andare a modificare. Faccio un esempio, se io emetto una fattura solo al pagamento avvenuto vuol dire che il pagamento è avvenuto come?
+01:27:11 Paolo Mistretta
+Quindi devo tenere traccia del pagamento sul gestionale, è avvenuto tramite contanti, tramite bancomat, tramite cose. A quel punto ci sarà la classica casellina invia fattura elettronica. Quando lo fai devi essere sicuro che quello che hai ricevuto è corretto, perché poi. 
+01:27:27 Barbara Tripodi
+Ma questo lo facciamo già noi abbiamo un file cassa e banca per cui facciamo un'importazione dall'estratto conto in CSV in CSV la buttiamo dentro questo file dove ci sono tutte le formuline di riporto del mese precedente e poi abbiamo un file cassa per cui se metto la Bo se metto la C poi ho tutti i riepiloghi di quello che. entrato per banca e quello che è entrato per cassa mensilmente, quindi ho questi Excel sempre prodotti da me con queste con queste formule varie e dopodiché però Laura deve andare a prendere il bonifico di Tizio Caio e segnare che sul gestionale, sul nostro database, Tizio Caio ha pagato quella cifra.
+01:28:14 Barbara Tripodi
+A volte se uno c'ha tre figli fa un pagamento alla cavolo e, ed è lei a spaccare che deve 300 per uno, 200 per l'altro e magari il terzo rimane scoperto. Quindi va a chiudere i conti di quello che può e quindi fattura quei due come completati e magari fa una fattura di acconto sul corso del terzo figlio che invece non è saldato per intero.
+01:28:42 Paolo Mistretta
+E vabbè tanto se poi la fatturazione sarà interna, avremo modo di migliorare anche magari qualche aspetto.
+01:28:50 Barbara Tripodi
+Si poi che ne so Satispay, queste cose qui. Mi avevano proposto quello di Blue Cloud di fare anche nell'invio delle fatture, di mettere il pulsante "paga ora" eccetera, però in questo momento hanno delle commissioni troppo alte.
+01:29:07 Paolo Mistretta
+Il fatto è quello, che devi considerare quello.
+01:29:12 Barbara Tripodi
+Noi adesso nella mail della fattura, il codice QR del Satispay perché quello ci costa solo un euro e quindi per facilitare alcune cose se ci sono dei meccanismi tipo quello lo facciamo. Lo comunichiamo più che altro, non è automatizzato, però Satispay finisce comunque sull'estratto conto quindi poi lo ritroviamo quando andiamo a importare l'estratto conto.
+01:29:40 Paolo Mistretta
+Poi su Satispay magari visto che sono piuttosto bravi magari Magari troviamo anche qualche integrazione, qualche notifica di ritorno sui pagamenti. Vediamo se c'è qualcosa che ti permette di vederlo, magari anche in real time, perché di solito dall'APP tu non c'entra l'APP.
+01:29:56 Barbara Tripodi
+Esatto, il problema di. è che se ci paga la mamma che si è registrata come ciccia bubu noi non sappiamo di chi cacchio è questo pagamento.
+01:30:10 Paolo Mistretta
+E infatti bisognerebbe mettere l'account di Satispay dentro l'anagrafica e a quel punto capire se Satispay attraverso un codice di utenza è in grado di vedere i pagamenti. Metti la scuola e poi, percepisci gli eventi. Bisogna vedere se lo fanno perché sai sono dati comunque particolarmente.
+01:30:34 Barbara Tripodi
+Capita, avevamo il mistero di queste due rate pagate non si sapeva bene da chi. Facendo una rapida indagine l'abbiamo beccato. Non è quello.
+01:30:45 Paolo Mistretta
+Ok, quindi comunque allora qui abbiamo un po' poi detto un po' di cose però di fatto come fasi.
+01:30:55 Barbara Tripodi
+Come fase zero, fase una che è quella dell'anagrafica e quindi della creazione dei corsi e quindi delle rate che abbiamo detto possono essere tre. Cioè tu puoi fare in modo che io ho stabilito che l'allievo fa lezione il martedì alle 5 a partire dal giorno 20 ottobre. D'accordo, dal 20 ottobre io so. Da calendario che ci sono 25 settimane e io concordo con il cliente che quelle 25 settimane le suddivido in due rate o tre rate e quindi imposto il numero di settimane nella prima, nella seconda e nella terza che di conseguenza vanno a generare una corrispondenza di date.
+01:31:40 Barbara Tripodi
+Questo devi dirmi tu se è troppo incasinato.
+01:31:44 Paolo Mistretta
+Allora, detto così è un po' incasinato, però ti dico. Nel momento in cui. cioè io faccio un po' più fatica a visualizzare adesso perché non ho fatto l'indagine dettagliata dei dati, no? Però nel momento in cui, se andiamo per concetto, nel momento in cui tu hai un'iscrizione, io mi aspetto che, appunto, tu sai quali sono le ore di lezione, no? E quindi sai le date, il periodo esatto, ma a te non ti interessa.
+01:32:17 Paolo Mistretta
+Cioè secondo me non ti deve interessare quando, nel senso che se tu sai che il corso dura 33.
+01:32:23 Barbara Tripodi
+Anni in realtà sì, perché se lo collego al registro elettronico il quando è tutt'uno, cioè è quello anche un po' il punto, no? Nel senso che l'allievo si iscrive. A quell'appuntamento che genera quel conto orario per l'insegnante e genera uno scalo di quella lezione sul suo conteggio totale complessivo.
+01:32:45 Paolo Mistretta
+Esatto, però io banalmente mi aspetto in una sezione che tu potresti anche mettere 123 rate, cioè proprio mettere 123 rate.
+01:32:56 Barbara Tripodi
+Esatto. Però mentre Scuolasemplice ha semplicemente preso i mille euro e li ha divisi in tre parti uguali, che quindi viene 333,33 euro. Questo possiamo stabilire che va bene e poi il caso di quello che si ritira, che sono la dozzina che si ritira in un anno, lo gestiamo, perché se tu ti ritiri mi avrai pagato, un quarto della lezione che hai fatto e io ti devo chiedere i 10 euro in più, cosa sgradevole, però lo gestisco.
+01:33:30 Barbara Tripodi
+Se stiamo parlando di 15 persone lo gestisco. È una possibilità. Per la gran parte delle persone sarà un modo come un altro di avere le rate tutte uguali e di non avere il problema, quindi potrebbe non esserlo un problema. non è bello per quelli che si ritirano, però del resto se uno si ritira me lo deve dire prima, quindi quella cosa la gestiamo noi.
+01:33:55 Paolo Mistretta
+Infatti dico le rate sono tutte uguali, perché il fatto di avere un periodo fisso, che è quello del corso, è invece variabile quello che fa l'utente, quello che fa lo studente, perché se non si presenta, se si ritira così. Quello che voglio dire è che nella situazione ideale, l'esempio che hai fatto tu di 100 diviso 3 per dire, in realtà, Cioè, non ci interessa il corso in sé, ma quando lui si ritira, quando lui fa. cioè a che punto è arrivato nel percorso.
+01:34:26 Paolo Mistretta
+Perché mettiamo caso che lui non ha mai pagato niente, no? E si trova a dover. il sistema mi dice semplicemente quanto deve pagare, che sono 33,333 no? Ma se lui, faccio un esempio, non paga la prima rata. Ritarda e poi ti paga la seconda rata. Di fatto ti sta pagando due rate di cui una maggiorata. Cioè non so come dire, se tu avessi impostato il sistema a due rate, OK, tu non hai la necessità di dire che una rata costa di più dell'altra.
+01:35:00 Paolo Mistretta
+Tu sei sempre, cioè tu la vedi sempre in maniera proporzionale, no? La rata che gli vuoi dare. 
+01:35:05 Barbara Tripodi
+Ma io non capisco questa tua esigenza di far corrispondere, perché io penso che l'incrocio su quello che entra e di quello che dovrebbe entrare possa tranquillamente avvenire manualmente. Quindi se. io sul sistema ho che tu mi devi dare 900 euro e tu me ne hai dati mille, io segno che tu hai 100 euro di credito. Dopodiché sono io che a quel punto ti chiederò: vuoi che ti faccia una nota di credito o mi lasci l'acconto per il prossimo anno?
+01:35:35 Barbara Tripodi
+E' una cosa che succede. 90 su 100 la gente dice "no no, tienimela come acconto per il prossimo anno". Allora io faccio una voce per cui quel credito mi va di competenza nell'esercizio successivo. Lo posso fare, quindi siccome questo incrocio va fatto manualmente, va fatto manualmente, io non ho la necessità di automatizzarla questa cosa, quindi non mi farei.
+01:36:03 Paolo Mistretta
+Sì, più che altro perché ci sono tante variazioni o comunque situazioni, anche perché tu hai parlato di nota di credito, ma se non ha ancora pagato non gli fai la nota di credito, quindi. 
+01:36:12 Barbara Tripodi
+Cioè nel senso, se non ho ancora pagato devo fare un recupero crediti e ho bisogno di quegli strumenti del recupero crediti. A me basta che ci sia corrispondenza fra quello che hai sottoscritto nel contratto, perché nel contratto ho evidenziato lo schema di quello che abbiamo stabilito a parole secondo gli accordi che precedono l'avvio del corso. Quindi due rate, 5 rate, quello che sia quindi. Se è possibile che il numero delle rate sia variabile e che quindi sia temporalmente ben scandito, per cui mi paghi anche mensilmente se vuoi.
+01:36:53 Barbara Tripodi
+Mensilmente a quel punto ti dico, guarda, sei indietro di tre mesi, mi devi tre rate da un mese, però a quel punto quel mese lì io lo calendarizzo con esattezza per cui così come inserisco che mi paghi +4444E4 lezioni. Automaticamente quelle quattro lezioni che sono collegate al calendario, per cui sono quattro martedì operativi. Se ci sono le vacanze di Natale di mezzo, le quattro lezioni finiranno al di là delle vacanze di Natale.
+01:37:28 Barbara Tripodi
+OK, però questo devi dirmelo tu che cosa? Altrimenti io evito. Di organizzare le rate in questo modo e le forzo per cui faccio i conti e vedo quante ne mancano fino a Natale e faccio in modo che. Le cose coincidano con un calendario sensato, anche se abbiamo evitato in questi anni di far coincidere la scadenza con Natale, perché poi chi s'è visto s'è visto, alla ripresa spariscono e quindi noi in realtà la prima rata la facciamo finire a Sant'Ambrogio in maniera strategica.
+01:38:06 Barbara Tripodi
+Che poi un po' di gente è convinta che la prima rata arrivi fino a Natale, ma poi glielo ricordiamo tranquillamente senza problemi, ma proprio perché noi vogliamo l'incasso della seconda rata prima di Natale.
+01:38:17 Paolo Mistretta
+Ecco, quindi qua può essere il punto che il gestionale può avere necessità di essere costruito in un certo modo piuttosto che in un altro, perché se io ti dico che sono tre rate, Se ti dico che sono tre rate, non solo dividi in tre il prezzo, ma dividi in tre i periodi. Quindi se tu hai 33 settimane vuol dire che ogni quanto esatto. Quindi se tu poi vuoi una rata che viene pagata prima perché non combacia per qualche ragione con le festività, perché il sistema si potrebbe portare avanti in automatico?
+01:38:50 Paolo Mistretta
+No, perché lui dice, anzi, a dire il vero il sistema può anche non guardarli i weekend può dire è vero che tu. Fai la lezione. O meglio, potremmo pensare, questo potrebbe essere un automatismo interessante, che lui calcola le settimane sulla base delle ore effettuate effettivamente. Cioè cosa voglio dire? Che se io se lui scrive oggi è che giorno è? Vediamo, oggi è giovedì, OK? Se il ragazzo inizia lunedì, OK, il sistema potrebbe pensare, come hai detto tu prima di calcolare la settimana da lunedì.
+01:39:26 Paolo Mistretta
+E quindi ti calcola poi le quattro settimane che quindi se una rata ti combacia in un.in cui te non sta bene, cosa facciamo? La facciamo? Facciamo in modo che tu puoi spostare di un qualche data prima o ti no. 
+01:39:40 Barbara Tripodi
+Allora tutto dipende. Tutto dipende se io devo intervenire nell'inviare le fatture in maniera massiva. Allora non posso avere il problema di mandare 350 rate in giornate tutte diverse. 
+01:39:57 Paolo Mistretta
+No, sarebbe automatico, te lo dico già.
+01:40:00 Barbara Tripodi
+Esatto, allora se c'è un minimo di automatismo, salvo quelle 4 5 che io blocco perché quello è finito in ospedale, non gli mando il Sollecito, non gli mando la rata perché non sta venendo a lezione ed è una situazione da chiarire. Quindi io sospendo, devo poter intervenire sull'evitare che ci siano degli automatismi, quindi questo è quello che io posso monitorare, ma se io vedo che i pagamenti stanno seguendo il flusso, quindi sono in regola. Certo, OK, io avrò una serie di evidenze di cose che sono in regola o che sono che non sono in regola.
+01:40:37 Barbara Tripodi
+Le cose che devo poter vedere sono i contratti e i pagamenti e la copertura delle rate, cioè a corso già iniziato. Io devo poter verificare che tizio è in regola coi pagamenti oppure che non è in regola. Dopodiché io sensibilmente stabilisco. Di mandare un Sollecito entro un tempo accettabile, il primo, il secondo in un in un con un'altro tono, il terzo magari glielo rimando in maniera serrata.
+01:41:08 Barbara Tripodi
+Nel momento in cui tu, come è successo, hai fatto tutta la prima rata e non mi paghi da tre mesi, io non ti faccio neanche mettere piede a scuola per l'inizio della seconda rata e ti ho scritto. Questa sarà l'ultima lezione della prima rata che non mi hai ancora pagato. Se non arriva il pagamento ci vediamo costretti a sospendere il corso. Hanno pagato all'istante. Per cui io ho bisogno.
+01:41:38 Paolo Mistretta
+Allora non ci sono grossi problemi. Cioè questa cosa delle rate ha sicuramente le sue complessità, magari cose che poi emergeranno anche in fase di lavorazione, però secondo me è fattibile, cioè anche perché se lo basiamo su un conto semplice, che siano due, che siano tre, che siano 7 rate, lui le divide.
+01:41:54 Barbara Tripodi
+Perché poi io posso stabilire sensibilmente che magari anziché metterti 111111. Siccome all'inizio c'è l'iscrizione, il costo dei violini, il costo dei libri, io posso fare in modo che la prima rata sia più leggera proprio perché abbia i costi iniziali più alti e che magari ci siano 12 settimane sulla seconda o sulla terza, cioè lo decido io e lo concordo con te, l'importante è che io abbia l'evidenza perché io ho un calendario, quindi le vedo dove arrivano le settimane.
+01:42:27 Barbara Tripodi
+che io abbia l'evidenza di questo calendario. 
+01:42:29 Paolo Mistretta
+Sì sì, quello c'è, quello lo mettiamo. Aspetta che qua mi tolgo un paio di cosette che sennò non vedo niente. Ok.
+01:42:39 Barbara Tripodi
+Scusami, prendo sta roba di mal di testa, ci metto un secondo. Arrivo.
+01:43:10 Speaker 2
+Eccomi.
+01:43:13 Paolo Mistretta
+Quindi scusami, quindi abbiamo detto che come fasi tu prevedi: primo contatto, proposta del corso, iscrizione, con le variabili.
+01:43:27 Barbara Tripodi
+Contratto fondamentale, cioè senza il contratto sottoscritto e che in qualche caso presuppone anche una integrazione dei dati fiscali che magari a noi mancano, noi non possiamo fare il resto.
+01:43:47 Paolo Mistretta
+Ma tu, per essere sicuro, la proposta la fai col contratto?
+01:43:54 Barbara Tripodi
+No, il contratto lo faccio, scusami, manca un pezzo. Data di primo contatto, ok, cosa vuoi fare, ci vieni a conoscere, eccetera. Secondo contatto, ti chiedo di indicarmi tutta la tua disponibilità oraria. Sulla base di quello elaboro una proposta definitiva, ti comunico il

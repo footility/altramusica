@@ -1,0 +1,43 @@
+═══════════════════════════════════════════════════════════════
+  COMANDI DA ESEGUIRE NEL TERMINALE PER COMPLETARE IL SETUP
+═══════════════════════════════════════════════════════════════
+
+Copia e incolla questi comandi uno alla volta nel terminale:
+
+1. Vai nella directory del progetto:
+   cd /Users/mistre/develop/gestionale-laltramusica
+
+2. Linka Valet (ti chiederà la password sudo):
+   valet link gestionale.altramusica
+
+3. Abilita HTTPS (ti chiederà la password sudo):
+   valet secure gestionale.altramusica
+
+4. Crea il database MySQL (ti chiederà la password MySQL):
+   mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS gestionale_altramusica CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+   
+   Quando richiesto, inserisci la password: Freelancer2024!
+   
+   Se la password non funziona, prova:
+   mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS gestionale_altramusica CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;"
+   (e inserisci la password corretta quando richiesto)
+
+5. Esegui le migrations:
+   php artisan migrate
+
+6. Verifica che tutto funzioni:
+   valet links | grep gestionale
+   
+   Apri nel browser:
+   https://gestionale.altramusica.test
+
+═══════════════════════════════════════════════════════════════
+
+NOTA: Il file .env è già configurato correttamente con:
+- DB_DATABASE=gestionale_altramusica
+- DB_USERNAME=root
+- DB_PASSWORD=Freelancer2024!
+- APP_URL=https://gestionale.altramusica.test
+
+Se la password MySQL non funziona, modifica il file .env con la password corretta.
+

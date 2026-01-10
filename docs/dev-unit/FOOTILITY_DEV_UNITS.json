@@ -1,0 +1,3520 @@
+{
+    "project_id": 13,
+    "dev_units": [
+        {
+            "activity_index": 0,
+            "activity_title": "Studenti - CRUD Completo",
+            "dev_units": {
+                "db_campi": 64,
+                "db_relazioni": 10,
+                "crud": 7,
+                "workflow": 2,
+                "ui_form": 35,
+                "ui_lista": 28,
+                "ui_stampa": 0,
+                "total": 146
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella students",
+                    "description": "Modello Database Studenti: Migration tabella students",
+                    "dev_units": {
+                        "db_campi": 64
+                    }
+                },
+                {
+                    "title": "Relazioni Student → AcademicYear",
+                    "description": "Modello Database Studenti: Relazioni Student → AcademicYear",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Student → Guardian (many-to-many)",
+                    "description": "Modello Database Studenti: Relazioni Student → Guardian (many-to-many)",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Student → Enrollment",
+                    "description": "Modello Database Studenti: Relazioni Student → Enrollment",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Student → Contract",
+                    "description": "Modello Database Studenti: Relazioni Student → Contract",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Student → Invoice",
+                    "description": "Modello Database Studenti: Relazioni Student → Invoice",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Student → StudentAvailability",
+                    "description": "Modello Database Studenti: Relazioni Student → StudentAvailability",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Student → StudentLevel",
+                    "description": "Modello Database Studenti: Relazioni Student → StudentLevel",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Student → InstrumentRental",
+                    "description": "Modello Database Studenti: Relazioni Student → InstrumentRental",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Student → ExtraActivityEnrollment",
+                    "description": "Modello Database Studenti: Relazioni Student → ExtraActivityEnrollment",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Student → Communication",
+                    "description": "Modello Database Studenti: Relazioni Student → Communication",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "StudentController::index",
+                    "description": "CRUD Controller Studenti: StudentController::index",
+                    "dev_units": {
+                        "crud": 1
+                    }
+                },
+                {
+                    "title": "StudentController::create",
+                    "description": "CRUD Controller Studenti: StudentController::create",
+                    "dev_units": {
+                        "crud": 1
+                    }
+                },
+                {
+                    "title": "StudentController::store",
+                    "description": "CRUD Controller Studenti: StudentController::store",
+                    "dev_units": {
+                        "crud": 1
+                    }
+                },
+                {
+                    "title": "StudentController::show",
+                    "description": "CRUD Controller Studenti: StudentController::show",
+                    "dev_units": {
+                        "crud": 1
+                    }
+                },
+                {
+                    "title": "StudentController::edit",
+                    "description": "CRUD Controller Studenti: StudentController::edit",
+                    "dev_units": {
+                        "crud": 1
+                    }
+                },
+                {
+                    "title": "StudentController::update",
+                    "description": "CRUD Controller Studenti: StudentController::update",
+                    "dev_units": {
+                        "crud": 1
+                    }
+                },
+                {
+                    "title": "StudentController::destroy",
+                    "description": "CRUD Controller Studenti: StudentController::destroy",
+                    "dev_units": {
+                        "crud": 1
+                    }
+                },
+                {
+                    "title": "Import dati da db 2025-26 gestionale.ods",
+                    "description": "Workflow Import ODS: Import dati da db 2025-26 gestionale.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Validazione dati importati",
+                    "description": "Workflow Import ODS: Validazione dati importati",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form anagrafica base (15 campi)",
+                    "description": "UI Form Studenti: Form anagrafica base (15 campi)",
+                    "dev_units": {
+                        "ui_form": 15
+                    }
+                },
+                {
+                    "title": "Form disponibilità (9 campi)",
+                    "description": "UI Form Studenti: Form disponibilità (9 campi)",
+                    "dev_units": {
+                        "ui_form": 9
+                    }
+                },
+                {
+                    "title": "Form livelli (4 campi)",
+                    "description": "UI Form Studenti: Form livelli (4 campi)",
+                    "dev_units": {
+                        "ui_form": 4
+                    }
+                },
+                {
+                    "title": "Form orchestra\/coro (7 campi)",
+                    "description": "UI Form Studenti: Form orchestra\/coro (7 campi)",
+                    "dev_units": {
+                        "ui_form": 7
+                    }
+                },
+                {
+                    "title": "Colonne lista (20 colonne)",
+                    "description": "UI Lista Studenti: Colonne lista (20 colonne)",
+                    "dev_units": {
+                        "ui_lista": 20
+                    }
+                },
+                {
+                    "title": "Filtri ricerca (8 filtri)",
+                    "description": "UI Lista Studenti: Filtri ricerca (8 filtri)",
+                    "dev_units": {
+                        "ui_lista": 8
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 1,
+            "activity_title": "Genitori\/Tutori - CRUD Completo",
+            "dev_units": {
+                "db_campi": 22,
+                "db_relazioni": 2,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 22,
+                "ui_lista": 16,
+                "ui_stampa": 0,
+                "total": 70
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella guardians",
+                    "description": "Modello Database Genitori: Migration tabella guardians",
+                    "dev_units": {
+                        "db_campi": 22
+                    }
+                },
+                {
+                    "title": "Migration tabella pivot student_guardian",
+                    "description": "Modello Database Genitori: Migration tabella pivot student_guardian",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Guardian → Communication",
+                    "description": "Modello Database Genitori: Relazioni Guardian → Communication",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "GuardianController CRUD completo",
+                    "description": "CRUD Controller Genitori: GuardianController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import genitori da db 2025-26 gestionale.ods",
+                    "description": "Workflow Import ODS: Import genitori da db 2025-26 gestionale.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form genitori (22 campi)",
+                    "description": "UI Form e Lista Genitori: Form genitori (22 campi)",
+                    "dev_units": {
+                        "ui_form": 22
+                    }
+                },
+                {
+                    "title": "Lista genitori (16 elementi)",
+                    "description": "UI Form e Lista Genitori: Lista genitori (16 elementi)",
+                    "dev_units": {
+                        "ui_lista": 16
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 2,
+            "activity_title": "Docenti - CRUD Completo",
+            "dev_units": {
+                "db_campi": 28,
+                "db_relazioni": 3,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 25,
+                "ui_lista": 22,
+                "ui_stampa": 0,
+                "total": 86
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella teachers",
+                    "description": "Modello Database Docenti: Migration tabella teachers",
+                    "dev_units": {
+                        "db_campi": 28
+                    }
+                },
+                {
+                    "title": "Relazioni Teacher → Course",
+                    "description": "Modello Database Docenti: Relazioni Teacher → Course",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Teacher → Lesson",
+                    "description": "Modello Database Docenti: Relazioni Teacher → Lesson",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Teacher → TeacherHour",
+                    "description": "Modello Database Docenti: Relazioni Teacher → TeacherHour",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "TeacherController CRUD completo",
+                    "description": "CRUD Controller Docenti: TeacherController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import docenti da dati lavoratori 25-26.ods",
+                    "description": "Workflow Import ODS: Import docenti da dati lavoratori 25-26.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form docenti (25 campi)",
+                    "description": "UI Form e Lista Docenti: Form docenti (25 campi)",
+                    "dev_units": {
+                        "ui_form": 25
+                    }
+                },
+                {
+                    "title": "Lista docenti (22 elementi)",
+                    "description": "UI Form e Lista Docenti: Lista docenti (22 elementi)",
+                    "dev_units": {
+                        "ui_lista": 22
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 3,
+            "activity_title": "Anno Scolastico - CRUD Completo",
+            "dev_units": {
+                "db_campi": 11,
+                "db_relazioni": 2,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 8,
+                "ui_lista": 10,
+                "ui_stampa": 0,
+                "total": 39
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella academic_years",
+                    "description": "Modello Database Anno Scolastico: Migration tabella academic_years",
+                    "dev_units": {
+                        "db_campi": 11
+                    }
+                },
+                {
+                    "title": "Relazioni AcademicYear → Student",
+                    "description": "Modello Database Anno Scolastico: Relazioni AcademicYear → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni AcademicYear → Invoice",
+                    "description": "Modello Database Anno Scolastico: Relazioni AcademicYear → Invoice",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "AcademicYearController CRUD completo",
+                    "description": "CRUD Controller Anno Scolastico: AcademicYearController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Metodo setActive per anno corrente",
+                    "description": "Workflow Switch Anno Corrente: Metodo setActive per anno corrente",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form anno scolastico (8 campi)",
+                    "description": "UI Form e Lista Anno Scolastico: Form anno scolastico (8 campi)",
+                    "dev_units": {
+                        "ui_form": 8
+                    }
+                },
+                {
+                    "title": "Lista anni scolastici (10 elementi)",
+                    "description": "UI Form e Lista Anno Scolastico: Lista anni scolastici (10 elementi)",
+                    "dev_units": {
+                        "ui_lista": 10
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 4,
+            "activity_title": "Disponibilità Studenti - CRUD Completo",
+            "dev_units": {
+                "db_campi": 13,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 10,
+                "ui_lista": 14,
+                "ui_stampa": 0,
+                "total": 46
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella student_availability",
+                    "description": "Modello Database Disponibilità Studenti: Migration tabella student_availability",
+                    "dev_units": {
+                        "db_campi": 13
+                    }
+                },
+                {
+                    "title": "Relazioni StudentAvailability → Student",
+                    "description": "Modello Database Disponibilità Studenti: Relazioni StudentAvailability → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "StudentAvailabilityController CRUD completo",
+                    "description": "CRUD Controller Disponibilità Studenti: StudentAvailabilityController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import disponibilità da db 2025-26 gestionale.ods (colonne P-X)",
+                    "description": "Workflow Import ODS: Import disponibilità da db 2025-26 gestionale.ods (colonne P-X)",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form disponibilità (10 campi)",
+                    "description": "UI Form e Lista Disponibilità Studenti: Form disponibilità (10 campi)",
+                    "dev_units": {
+                        "ui_form": 10
+                    }
+                },
+                {
+                    "title": "Lista disponibilità (14 elementi)",
+                    "description": "UI Form e Lista Disponibilità Studenti: Lista disponibilità (14 elementi)",
+                    "dev_units": {
+                        "ui_lista": 14
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 5,
+            "activity_title": "Disponibilità Docenti - CRUD Completo",
+            "dev_units": {
+                "db_campi": 13,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 10,
+                "ui_lista": 14,
+                "ui_stampa": 0,
+                "total": 46
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella teacher_availability",
+                    "description": "Modello Database Disponibilità Docenti: Migration tabella teacher_availability",
+                    "dev_units": {
+                        "db_campi": 13
+                    }
+                },
+                {
+                    "title": "Relazioni TeacherAvailability → Teacher",
+                    "description": "Modello Database Disponibilità Docenti: Relazioni TeacherAvailability → Teacher",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "TeacherAvailabilityController CRUD completo",
+                    "description": "CRUD Controller Disponibilità Docenti: TeacherAvailabilityController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import disponibilità da dati lavoratori 25-26.ods",
+                    "description": "Workflow Import ODS: Import disponibilità da dati lavoratori 25-26.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form disponibilità docenti (10 campi)",
+                    "description": "UI Form e Lista Disponibilità Docenti: Form disponibilità docenti (10 campi)",
+                    "dev_units": {
+                        "ui_form": 10
+                    }
+                },
+                {
+                    "title": "Lista disponibilità docenti (14 elementi)",
+                    "description": "UI Form e Lista Disponibilità Docenti: Lista disponibilità docenti (14 elementi)",
+                    "dev_units": {
+                        "ui_lista": 14
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 6,
+            "activity_title": "Calendario Lezioni - CRUD Completo",
+            "dev_units": {
+                "db_campi": 13,
+                "db_relazioni": 3,
+                "crud": 7,
+                "workflow": 2,
+                "ui_form": 10,
+                "ui_lista": 15,
+                "ui_stampa": 0,
+                "total": 50
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella calendar_lessons",
+                    "description": "Modello Database Calendario Lezioni: Migration tabella calendar_lessons",
+                    "dev_units": {
+                        "db_campi": 13
+                    }
+                },
+                {
+                    "title": "Relazioni CalendarLesson → Course",
+                    "description": "Modello Database Calendario Lezioni: Relazioni CalendarLesson → Course",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni CalendarLesson → Teacher",
+                    "description": "Modello Database Calendario Lezioni: Relazioni CalendarLesson → Teacher",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni CalendarLesson → Classroom",
+                    "description": "Modello Database Calendario Lezioni: Relazioni CalendarLesson → Classroom",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "CalendarController CRUD completo",
+                    "description": "CRUD Controller Calendario Lezioni: CalendarController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import calendario da Calendario 2025-26.ods",
+                    "description": "Workflow Calendario: Import calendario da Calendario 2025-26.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Generazione calendario automatico",
+                    "description": "Workflow Calendario: Generazione calendario automatico",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form calendario (10 campi)",
+                    "description": "UI Form e Lista Calendario Lezioni: Form calendario (10 campi)",
+                    "dev_units": {
+                        "ui_form": 10
+                    }
+                },
+                {
+                    "title": "Lista calendario (15 elementi)",
+                    "description": "UI Form e Lista Calendario Lezioni: Lista calendario (15 elementi)",
+                    "dev_units": {
+                        "ui_lista": 15
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 7,
+            "activity_title": "Sospensioni Calendario - CRUD Completo",
+            "dev_units": {
+                "db_campi": 9,
+                "db_relazioni": 0,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 6,
+                "ui_lista": 13,
+                "ui_stampa": 0,
+                "total": 36
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella calendar_suspensions",
+                    "description": "Modello Database Sospensioni: Migration tabella calendar_suspensions",
+                    "dev_units": {
+                        "db_campi": 9
+                    }
+                },
+                {
+                    "title": "CalendarController::suspensions CRUD completo",
+                    "description": "CRUD Controller Sospensioni: CalendarController::suspensions CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import sospensioni da Calendario 2025-26.ods",
+                    "description": "Workflow Import ODS: Import sospensioni da Calendario 2025-26.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form sospensioni (6 campi)",
+                    "description": "UI Form e Lista Sospensioni: Form sospensioni (6 campi)",
+                    "dev_units": {
+                        "ui_form": 6
+                    }
+                },
+                {
+                    "title": "Lista sospensioni (13 elementi)",
+                    "description": "UI Form e Lista Sospensioni: Lista sospensioni (13 elementi)",
+                    "dev_units": {
+                        "ui_lista": 13
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 8,
+            "activity_title": "Tipi Corso - CRUD Completo",
+            "dev_units": {
+                "db_campi": 12,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 12,
+                "ui_lista": 7,
+                "ui_stampa": 0,
+                "total": 40
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella course_types",
+                    "description": "Modello Database Tipi Corso: Migration tabella course_types",
+                    "dev_units": {
+                        "db_campi": 12
+                    }
+                },
+                {
+                    "title": "Relazioni CourseType → Course",
+                    "description": "Modello Database Tipi Corso: Relazioni CourseType → Course",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "CourseTypeController CRUD completo",
+                    "description": "CRUD Controller Tipi Corso: CourseTypeController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import tipi corso da ODS",
+                    "description": "Workflow Import ODS: Import tipi corso da ODS",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form tipi corso (12 campi)",
+                    "description": "UI Form e Lista Tipi Corso: Form tipi corso (12 campi)",
+                    "dev_units": {
+                        "ui_form": 12
+                    }
+                },
+                {
+                    "title": "Lista tipi corso (7 elementi)",
+                    "description": "UI Form e Lista Tipi Corso: Lista tipi corso (7 elementi)",
+                    "dev_units": {
+                        "ui_lista": 7
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 9,
+            "activity_title": "Corsi - CRUD Completo",
+            "dev_units": {
+                "db_campi": 18,
+                "db_relazioni": 3,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 15,
+                "ui_lista": 22,
+                "ui_stampa": 0,
+                "total": 66
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella courses",
+                    "description": "Modello Database Corsi: Migration tabella courses",
+                    "dev_units": {
+                        "db_campi": 18
+                    }
+                },
+                {
+                    "title": "Relazioni Course → CourseType",
+                    "description": "Modello Database Corsi: Relazioni Course → CourseType",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Course → Teacher",
+                    "description": "Modello Database Corsi: Relazioni Course → Teacher",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Course → Enrollment",
+                    "description": "Modello Database Corsi: Relazioni Course → Enrollment",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "CourseController CRUD completo",
+                    "description": "CRUD Controller Corsi: CourseController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import corsi da ODS",
+                    "description": "Workflow Import ODS: Import corsi da ODS",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form corsi (15 campi)",
+                    "description": "UI Form e Lista Corsi: Form corsi (15 campi)",
+                    "dev_units": {
+                        "ui_form": 15
+                    }
+                },
+                {
+                    "title": "Lista corsi (22 elementi)",
+                    "description": "UI Form e Lista Corsi: Lista corsi (22 elementi)",
+                    "dev_units": {
+                        "ui_lista": 22
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 10,
+            "activity_title": "Iscrizioni - CRUD Completo",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 2,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 12,
+                "ui_lista": 18,
+                "ui_stampa": 0,
+                "total": 55
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella enrollments",
+                    "description": "Modello Database Iscrizioni: Migration tabella enrollments",
+                    "dev_units": {
+                        "db_campi": 15
+                    }
+                },
+                {
+                    "title": "Relazioni Enrollment → Student",
+                    "description": "Modello Database Iscrizioni: Relazioni Enrollment → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Enrollment → Course",
+                    "description": "Modello Database Iscrizioni: Relazioni Enrollment → Course",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "EnrollmentController CRUD completo",
+                    "description": "CRUD Controller Iscrizioni: EnrollmentController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import iscrizioni da db 2025-26 gestionale.ods (colonne I, K, L)",
+                    "description": "Workflow Import ODS: Import iscrizioni da db 2025-26 gestionale.ods (colonne I, K, L)",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form iscrizioni (12 campi)",
+                    "description": "UI Form e Lista Iscrizioni: Form iscrizioni (12 campi)",
+                    "dev_units": {
+                        "ui_form": 12
+                    }
+                },
+                {
+                    "title": "Lista iscrizioni (18 elementi)",
+                    "description": "UI Form e Lista Iscrizioni: Lista iscrizioni (18 elementi)",
+                    "dev_units": {
+                        "ui_lista": 18
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 11,
+            "activity_title": "Contratti - CRUD Completo",
+            "dev_units": {
+                "db_campi": 28,
+                "db_relazioni": 3,
+                "crud": 7,
+                "workflow": 2,
+                "ui_form": 25,
+                "ui_lista": 21,
+                "ui_stampa": 0,
+                "total": 86
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella contracts",
+                    "description": "Modello Database Contratti: Migration tabella contracts",
+                    "dev_units": {
+                        "db_campi": 28
+                    }
+                },
+                {
+                    "title": "Relazioni Contract → Student",
+                    "description": "Modello Database Contratti: Relazioni Contract → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Contract → Course",
+                    "description": "Modello Database Contratti: Relazioni Contract → Course",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Contract → Invoice",
+                    "description": "Modello Database Contratti: Relazioni Contract → Invoice",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "ContractController CRUD completo",
+                    "description": "CRUD Controller Contratti: ContractController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import contratti da Db Contratti 25-26.ods",
+                    "description": "Workflow Import ODS: Import contratti da Db Contratti 25-26.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Import colonna D (Contratto) da db 2025-26 gestionale.ods",
+                    "description": "Workflow Import ODS: Import colonna D (Contratto) da db 2025-26 gestionale.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form contratti (25 campi)",
+                    "description": "UI Form e Lista Contratti: Form contratti (25 campi)",
+                    "dev_units": {
+                        "ui_form": 25
+                    }
+                },
+                {
+                    "title": "Lista contratti (21 elementi)",
+                    "description": "UI Form e Lista Contratti: Lista contratti (21 elementi)",
+                    "dev_units": {
+                        "ui_lista": 21
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 12,
+            "activity_title": "Fatture - CRUD Completo",
+            "dev_units": {
+                "db_campi": 18,
+                "db_relazioni": 3,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 15,
+                "ui_lista": 20,
+                "ui_stampa": 0,
+                "total": 64
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella invoices",
+                    "description": "Modello Database Fatture: Migration tabella invoices",
+                    "dev_units": {
+                        "db_campi": 18
+                    }
+                },
+                {
+                    "title": "Relazioni Invoice → Student",
+                    "description": "Modello Database Fatture: Relazioni Invoice → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Invoice → InvoiceItem",
+                    "description": "Modello Database Fatture: Relazioni Invoice → InvoiceItem",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Invoice → Payment",
+                    "description": "Modello Database Fatture: Relazioni Invoice → Payment",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "InvoiceController CRUD completo",
+                    "description": "CRUD Controller Fatture: InvoiceController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import fatture da Db Contabile 2025-26.ods (fatture corsi)",
+                    "description": "Workflow Import ODS: Import fatture da Db Contabile 2025-26.ods (fatture corsi)",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form fatture (15 campi)",
+                    "description": "UI Form e Lista Fatture: Form fatture (15 campi)",
+                    "dev_units": {
+                        "ui_form": 15
+                    }
+                },
+                {
+                    "title": "Lista fatture (20 elementi)",
+                    "description": "UI Form e Lista Fatture: Lista fatture (20 elementi)",
+                    "dev_units": {
+                        "ui_lista": 20
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 13,
+            "activity_title": "Fatture Accessori - CRUD Completo",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 12,
+                "ui_lista": 17,
+                "ui_stampa": 0,
+                "total": 53
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella invoice_items",
+                    "description": "Modello Database Fatture Accessori: Migration tabella invoice_items",
+                    "dev_units": {
+                        "db_campi": 15
+                    }
+                },
+                {
+                    "title": "Relazioni InvoiceItem → Invoice",
+                    "description": "Modello Database Fatture Accessori: Relazioni InvoiceItem → Invoice",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "InvoiceItemController CRUD completo",
+                    "description": "CRUD Controller Fatture Accessori: InvoiceItemController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import fatture accessori da Db Contabile 2025-26.ods",
+                    "description": "Workflow Import ODS: Import fatture accessori da Db Contabile 2025-26.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form fatture accessori (12 campi)",
+                    "description": "UI Form e Lista Fatture Accessori: Form fatture accessori (12 campi)",
+                    "dev_units": {
+                        "ui_form": 12
+                    }
+                },
+                {
+                    "title": "Lista fatture accessori (17 elementi)",
+                    "description": "UI Form e Lista Fatture Accessori: Lista fatture accessori (17 elementi)",
+                    "dev_units": {
+                        "ui_lista": 17
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 14,
+            "activity_title": "Pagamenti - CRUD Completo",
+            "dev_units": {
+                "db_campi": 13,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 10,
+                "ui_lista": 16,
+                "ui_stampa": 0,
+                "total": 48
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella payments",
+                    "description": "Modello Database Pagamenti: Migration tabella payments",
+                    "dev_units": {
+                        "db_campi": 13
+                    }
+                },
+                {
+                    "title": "Relazioni Payment → Invoice",
+                    "description": "Modello Database Pagamenti: Relazioni Payment → Invoice",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "PaymentController CRUD completo",
+                    "description": "CRUD Controller Pagamenti: PaymentController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import pagamenti da Db Contabile 2025-26.ods e colonna B (Pagato) da db 2025-26 gestionale.ods",
+                    "description": "Workflow Import ODS: Import pagamenti da Db Contabile 2025-26.ods e colonna B (Pagato) da db 2025-26 gestionale.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form pagamenti (10 campi)",
+                    "description": "UI Form e Lista Pagamenti: Form pagamenti (10 campi)",
+                    "dev_units": {
+                        "ui_form": 10
+                    }
+                },
+                {
+                    "title": "Lista pagamenti (16 elementi)",
+                    "description": "UI Form e Lista Pagamenti: Lista pagamenti (16 elementi)",
+                    "dev_units": {
+                        "ui_lista": 16
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 15,
+            "activity_title": "Livelli Studenti - CRUD Completo",
+            "dev_units": {
+                "db_campi": 11,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 8,
+                "ui_lista": 13,
+                "ui_stampa": 0,
+                "total": 41
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella student_levels",
+                    "description": "Modello Database Livelli Studenti: Migration tabella student_levels",
+                    "dev_units": {
+                        "db_campi": 11
+                    }
+                },
+                {
+                    "title": "Relazioni StudentLevel → Student",
+                    "description": "Modello Database Livelli Studenti: Relazioni StudentLevel → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "StudentLevelController CRUD completo",
+                    "description": "CRUD Controller Livelli Studenti: StudentLevelController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import livelli da db 2025-26 gestionale.ods (colonne AI-AL)",
+                    "description": "Workflow Import ODS: Import livelli da db 2025-26 gestionale.ods (colonne AI-AL)",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form livelli (8 campi)",
+                    "description": "UI Form e Lista Livelli Studenti: Form livelli (8 campi)",
+                    "dev_units": {
+                        "ui_form": 8
+                    }
+                },
+                {
+                    "title": "Lista livelli (13 elementi)",
+                    "description": "UI Form e Lista Livelli Studenti: Lista livelli (13 elementi)",
+                    "dev_units": {
+                        "ui_lista": 13
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 16,
+            "activity_title": "Esami - CRUD Completo",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 12,
+                "ui_lista": 18,
+                "ui_stampa": 0,
+                "total": 54
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella exams",
+                    "description": "Modello Database Esami: Migration tabella exams",
+                    "dev_units": {
+                        "db_campi": 15
+                    }
+                },
+                {
+                    "title": "Relazioni Exam → Student",
+                    "description": "Modello Database Esami: Relazioni Exam → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "ExamController CRUD completo",
+                    "description": "CRUD Controller Esami: ExamController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import esami da Db Accessori 2025-26.ods",
+                    "description": "Workflow Import ODS: Import esami da Db Accessori 2025-26.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form esami (12 campi)",
+                    "description": "UI Form e Lista Esami: Form esami (12 campi)",
+                    "dev_units": {
+                        "ui_form": 12
+                    }
+                },
+                {
+                    "title": "Lista esami (18 elementi)",
+                    "description": "UI Form e Lista Esami: Lista esami (18 elementi)",
+                    "dev_units": {
+                        "ui_lista": 18
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 17,
+            "activity_title": "Orchestra\/Coro - CRUD Completo",
+            "dev_units": {
+                "db_campi": 13,
+                "db_relazioni": 2,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 10,
+                "ui_lista": 14,
+                "ui_stampa": 0,
+                "total": 47
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella extra_activities",
+                    "description": "Modello Database Orchestra\/Coro: Migration tabella extra_activities",
+                    "dev_units": {
+                        "db_campi": 6
+                    }
+                },
+                {
+                    "title": "Migration tabella extra_activity_enrollments",
+                    "description": "Modello Database Orchestra\/Coro: Migration tabella extra_activity_enrollments",
+                    "dev_units": {
+                        "db_campi": 7
+                    }
+                },
+                {
+                    "title": "Relazioni ExtraActivityEnrollment → Student",
+                    "description": "Modello Database Orchestra\/Coro: Relazioni ExtraActivityEnrollment → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni ExtraActivityEnrollment → ExtraActivity",
+                    "description": "Modello Database Orchestra\/Coro: Relazioni ExtraActivityEnrollment → ExtraActivity",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "ExtraActivityController CRUD completo",
+                    "description": "CRUD Controller Orchestra\/Coro: ExtraActivityController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import orchestra\/coro da db 2025-26 gestionale.ods (colonne AM-AS)",
+                    "description": "Workflow Import ODS: Import orchestra\/coro da db 2025-26 gestionale.ods (colonne AM-AS)",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form orchestra\/coro (10 campi)",
+                    "description": "UI Form e Lista Orchestra\/Coro: Form orchestra\/coro (10 campi)",
+                    "dev_units": {
+                        "ui_form": 10
+                    }
+                },
+                {
+                    "title": "Lista orchestra\/coro (14 elementi)",
+                    "description": "UI Form e Lista Orchestra\/Coro: Lista orchestra\/coro (14 elementi)",
+                    "dev_units": {
+                        "ui_lista": 14
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 18,
+            "activity_title": "Strumenti - CRUD Completo",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 15,
+                "ui_lista": 11,
+                "ui_stampa": 0,
+                "total": 50
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella instruments",
+                    "description": "Modello Database Strumenti: Migration tabella instruments",
+                    "dev_units": {
+                        "db_campi": 15
+                    }
+                },
+                {
+                    "title": "Relazioni Instrument → InstrumentRental",
+                    "description": "Modello Database Strumenti: Relazioni Instrument → InstrumentRental",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "InstrumentController CRUD completo",
+                    "description": "CRUD Controller Strumenti: InstrumentController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import strumenti da Db Accessori 2025-26.ods",
+                    "description": "Workflow Import ODS: Import strumenti da Db Accessori 2025-26.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form strumenti (15 campi)",
+                    "description": "UI Form e Lista Strumenti: Form strumenti (15 campi)",
+                    "dev_units": {
+                        "ui_form": 15
+                    }
+                },
+                {
+                    "title": "Lista strumenti (11 elementi)",
+                    "description": "UI Form e Lista Strumenti: Lista strumenti (11 elementi)",
+                    "dev_units": {
+                        "ui_lista": 11
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 19,
+            "activity_title": "Noleggi Strumenti - CRUD Completo",
+            "dev_units": {
+                "db_campi": 18,
+                "db_relazioni": 2,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 15,
+                "ui_lista": 16,
+                "ui_stampa": 0,
+                "total": 59
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella instrument_rentals",
+                    "description": "Modello Database Noleggi Strumenti: Migration tabella instrument_rentals",
+                    "dev_units": {
+                        "db_campi": 18
+                    }
+                },
+                {
+                    "title": "Relazioni InstrumentRental → Student",
+                    "description": "Modello Database Noleggi Strumenti: Relazioni InstrumentRental → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni InstrumentRental → Instrument",
+                    "description": "Modello Database Noleggi Strumenti: Relazioni InstrumentRental → Instrument",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "InstrumentRentalController CRUD completo",
+                    "description": "CRUD Controller Noleggi Strumenti: InstrumentRentalController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import noleggi da db 2025-26 gestionale.ods (colonne Y-AH) e Db Accessori 2025-26.ods",
+                    "description": "Workflow Import ODS: Import noleggi da db 2025-26 gestionale.ods (colonne Y-AH) e Db Accessori 2025-26.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form noleggi (15 campi)",
+                    "description": "UI Form e Lista Noleggi Strumenti: Form noleggi (15 campi)",
+                    "dev_units": {
+                        "ui_form": 15
+                    }
+                },
+                {
+                    "title": "Lista noleggi (16 elementi)",
+                    "description": "UI Form e Lista Noleggi Strumenti: Lista noleggi (16 elementi)",
+                    "dev_units": {
+                        "ui_lista": 16
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 20,
+            "activity_title": "Accessori - CRUD Completo",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 12,
+                "ui_lista": 17,
+                "ui_stampa": 0,
+                "total": 53
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella accessories",
+                    "description": "Modello Database Accessori: Migration tabella accessories",
+                    "dev_units": {
+                        "db_campi": 15
+                    }
+                },
+                {
+                    "title": "Relazioni Accessory → Student",
+                    "description": "Modello Database Accessori: Relazioni Accessory → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "AccessoryController CRUD completo",
+                    "description": "CRUD Controller Accessori: AccessoryController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import accessori 1-7 da Db Accessori 2025-26.ods",
+                    "description": "Workflow Import ODS: Import accessori 1-7 da Db Accessori 2025-26.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form accessori (12 campi)",
+                    "description": "UI Form e Lista Accessori: Form accessori (12 campi)",
+                    "dev_units": {
+                        "ui_form": 12
+                    }
+                },
+                {
+                    "title": "Lista accessori (17 elementi)",
+                    "description": "UI Form e Lista Accessori: Lista accessori (17 elementi)",
+                    "dev_units": {
+                        "ui_lista": 17
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 21,
+            "activity_title": "Libri - CRUD Completo",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 2,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 12,
+                "ui_lista": 17,
+                "ui_stampa": 0,
+                "total": 54
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella books",
+                    "description": "Modello Database Libri: Migration tabella books",
+                    "dev_units": {
+                        "db_campi": 8
+                    }
+                },
+                {
+                    "title": "Migration tabella book_distributions",
+                    "description": "Modello Database Libri: Migration tabella book_distributions",
+                    "dev_units": {
+                        "db_campi": 7
+                    }
+                },
+                {
+                    "title": "Relazioni BookDistribution → Student",
+                    "description": "Modello Database Libri: Relazioni BookDistribution → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni BookDistribution → Book",
+                    "description": "Modello Database Libri: Relazioni BookDistribution → Book",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "BookController CRUD completo",
+                    "description": "CRUD Controller Libri: BookController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import libri 1-15 da Db Accessori 2025-26.ods",
+                    "description": "Workflow Import ODS: Import libri 1-15 da Db Accessori 2025-26.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form libri (12 campi)",
+                    "description": "UI Form e Lista Libri: Form libri (12 campi)",
+                    "dev_units": {
+                        "ui_form": 12
+                    }
+                },
+                {
+                    "title": "Lista libri (17 elementi)",
+                    "description": "UI Form e Lista Libri: Lista libri (17 elementi)",
+                    "dev_units": {
+                        "ui_lista": 17
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 22,
+            "activity_title": "Contratti Docenti - CRUD Completo",
+            "dev_units": {
+                "db_campi": 18,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 15,
+                "ui_lista": 17,
+                "ui_stampa": 0,
+                "total": 59
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella teacher_contracts",
+                    "description": "Modello Database Contratti Docenti: Migration tabella teacher_contracts",
+                    "dev_units": {
+                        "db_campi": 18
+                    }
+                },
+                {
+                    "title": "Relazioni TeacherContract → Teacher",
+                    "description": "Modello Database Contratti Docenti: Relazioni TeacherContract → Teacher",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "TeacherContractController CRUD completo",
+                    "description": "CRUD Controller Contratti Docenti: TeacherContractController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import contratti docenti da dati lavoratori 25-26.ods",
+                    "description": "Workflow Import ODS: Import contratti docenti da dati lavoratori 25-26.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form contratti docenti (15 campi)",
+                    "description": "UI Form e Lista Contratti Docenti: Form contratti docenti (15 campi)",
+                    "dev_units": {
+                        "ui_form": 15
+                    }
+                },
+                {
+                    "title": "Lista contratti docenti (17 elementi)",
+                    "description": "UI Form e Lista Contratti Docenti: Lista contratti docenti (17 elementi)",
+                    "dev_units": {
+                        "ui_lista": 17
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 23,
+            "activity_title": "Conto Orario Docenti - CRUD Completo",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 12,
+                "ui_lista": 14,
+                "ui_stampa": 0,
+                "total": 50
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella teacher_hours",
+                    "description": "Modello Database Conto Orario Docenti: Migration tabella teacher_hours",
+                    "dev_units": {
+                        "db_campi": 15
+                    }
+                },
+                {
+                    "title": "Relazioni TeacherHour → Teacher",
+                    "description": "Modello Database Conto Orario Docenti: Relazioni TeacherHour → Teacher",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "TeacherHourController CRUD completo",
+                    "description": "CRUD Controller Conto Orario Docenti: TeacherHourController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Import conto orario da dati lavoratori 25-26.ods e colonna C (Conto orario) da db 2025-26 gestionale.ods",
+                    "description": "Workflow Import ODS: Import conto orario da dati lavoratori 25-26.ods e colonna C (Conto orario) da db 2025-26 gestionale.ods",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form conto orario (12 campi)",
+                    "description": "UI Form e Lista Conto Orario Docenti: Form conto orario (12 campi)",
+                    "dev_units": {
+                        "ui_form": 12
+                    }
+                },
+                {
+                    "title": "Lista conto orario (14 elementi)",
+                    "description": "UI Form e Lista Conto Orario Docenti: Lista conto orario (14 elementi)",
+                    "dev_units": {
+                        "ui_lista": 14
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 24,
+            "activity_title": "Gestione Utenze Avanzata",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 3,
+                "crud": 7,
+                "workflow": 2,
+                "ui_form": 15,
+                "ui_lista": 16,
+                "ui_stampa": 0,
+                "total": 60
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella users (estesa)",
+                    "description": "Modello Database Utenze: Migration tabella users (estesa)",
+                    "dev_units": {
+                        "db_campi": 8
+                    }
+                },
+                {
+                    "title": "Migration tabella roles",
+                    "description": "Modello Database Utenze: Migration tabella roles",
+                    "dev_units": {
+                        "db_campi": 4
+                    }
+                },
+                {
+                    "title": "Migration tabella permissions",
+                    "description": "Modello Database Utenze: Migration tabella permissions",
+                    "dev_units": {
+                        "db_campi": 3
+                    }
+                },
+                {
+                    "title": "Relazioni User → Role",
+                    "description": "Modello Database Utenze: Relazioni User → Role",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Role → Permission",
+                    "description": "Modello Database Utenze: Relazioni Role → Permission",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni User → Permission (dirette)",
+                    "description": "Modello Database Utenze: Relazioni User → Permission (dirette)",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "UserController CRUD completo",
+                    "description": "CRUD Controller Utenze: UserController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Assegnazione ruoli agli utenti",
+                    "description": "Workflow Gestione Ruoli: Assegnazione ruoli agli utenti",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Gestione permessi granulari",
+                    "description": "Workflow Gestione Ruoli: Gestione permessi granulari",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form utenti (15 campi)",
+                    "description": "UI Form e Lista Utenze: Form utenti (15 campi)",
+                    "dev_units": {
+                        "ui_form": 15
+                    }
+                },
+                {
+                    "title": "Lista utenti con filtri ruoli (16 elementi)",
+                    "description": "UI Form e Lista Utenze: Lista utenti con filtri ruoli (16 elementi)",
+                    "dev_units": {
+                        "ui_lista": 16
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 25,
+            "activity_title": "Controllo Accessi Granulare",
+            "dev_units": {
+                "db_campi": 10,
+                "db_relazioni": 2,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 0,
+                "ui_lista": 0,
+                "ui_stampa": 0,
+                "total": 40
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella permission_routes",
+                    "description": "Middleware Permessi: Migration tabella permission_routes",
+                    "dev_units": {
+                        "db_campi": 10
+                    }
+                },
+                {
+                    "title": "Relazioni Permission → Route",
+                    "description": "Middleware Permessi: Relazioni Permission → Route",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni User → Permission (check)",
+                    "description": "Middleware Permessi: Relazioni User → Permission (check)",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Middleware CheckPermission",
+                    "description": "Middleware Permessi: Middleware CheckPermission",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Policies Laravel per modelli",
+                    "description": "Middleware Permessi: Policies Laravel per modelli",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 26,
+            "activity_title": "Workflow Contratti Avanzato",
+            "dev_units": {
+                "db_campi": 8,
+                "db_relazioni": 1,
+                "crud": 0,
+                "workflow": 4,
+                "ui_form": 0,
+                "ui_lista": 15,
+                "ui_stampa": 0,
+                "total": 50
+            },
+            "subtasks": [
+                {
+                    "title": "Migration aggiunta campi tracking (token, sent_at, signed_at, etc.)",
+                    "description": "Modello Database Workflow Contratti: Migration aggiunta campi tracking (token, sent_at, signed_at, etc.)",
+                    "dev_units": {
+                        "db_campi": 8
+                    }
+                },
+                {
+                    "title": "Relazioni Contract → ContractHistory",
+                    "description": "Modello Database Workflow Contratti: Relazioni Contract → ContractHistory",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Generazione token univoco",
+                    "description": "Workflow Invio\/Firma: Generazione token univoco",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Invio email con link firma",
+                    "description": "Workflow Invio\/Firma: Invio email con link firma",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Tracking stato contratto",
+                    "description": "Workflow Invio\/Firma: Tracking stato contratto",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Firma digitale\/elettronica",
+                    "description": "Workflow Invio\/Firma: Firma digitale\/elettronica",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Lista tracking contratti (15 elementi)",
+                    "description": "UI Lista Tracking Contratti: Lista tracking contratti (15 elementi)",
+                    "dev_units": {
+                        "ui_lista": 15
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 27,
+            "activity_title": "Modelli Contratto",
+            "dev_units": {
+                "db_campi": 10,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 10,
+                "ui_lista": 11,
+                "ui_stampa": 0,
+                "total": 40
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella contract_templates",
+                    "description": "Modello Database Modelli Contratto: Migration tabella contract_templates",
+                    "dev_units": {
+                        "db_campi": 10
+                    }
+                },
+                {
+                    "title": "Relazioni ContractTemplate → Contract",
+                    "description": "Modello Database Modelli Contratto: Relazioni ContractTemplate → Contract",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "ContractTemplateController CRUD completo",
+                    "description": "CRUD Controller Modelli Contratto: ContractTemplateController CRUD completo",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Editor template con variabili ({{student_name}}, etc.)",
+                    "description": "Workflow Editor Template: Editor template con variabili ({{student_name}}, etc.)",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form modelli (10 campi)",
+                    "description": "UI Form e Lista Modelli Contratto: Form modelli (10 campi)",
+                    "dev_units": {
+                        "ui_form": 10
+                    }
+                },
+                {
+                    "title": "Lista modelli (11 elementi)",
+                    "description": "UI Form e Lista Modelli Contratto: Lista modelli (11 elementi)",
+                    "dev_units": {
+                        "ui_lista": 11
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 28,
+            "activity_title": "Generazione PDF Contratti",
+            "dev_units": {
+                "db_campi": 0,
+                "db_relazioni": 0,
+                "crud": 0,
+                "workflow": 1,
+                "ui_form": 0,
+                "ui_lista": 0,
+                "ui_stampa": 49,
+                "total": 50
+            },
+            "subtasks": [
+                {
+                    "title": "Integrazione libreria PDF (DomPDF\/Snappy)",
+                    "description": "Workflow Generazione PDF: Integrazione libreria PDF (DomPDF\/Snappy)",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Template Blade per PDF contratto",
+                    "description": "UI Stampa PDF Contratti: Template Blade per PDF contratto",
+                    "dev_units": {
+                        "ui_stampa": 25
+                    }
+                },
+                {
+                    "title": "Sostituzione variabili nel template",
+                    "description": "UI Stampa PDF Contratti: Sostituzione variabili nel template",
+                    "dev_units": {
+                        "ui_stampa": 12
+                    }
+                },
+                {
+                    "title": "Download PDF e preview",
+                    "description": "UI Stampa PDF Contratti: Download PDF e preview",
+                    "dev_units": {
+                        "ui_stampa": 12
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 29,
+            "activity_title": "Invio Email Contratti",
+            "dev_units": {
+                "db_campi": 5,
+                "db_relazioni": 1,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 0,
+                "ui_lista": 0,
+                "ui_stampa": 0,
+                "total": 30
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella email_logs",
+                    "description": "Modello Database Email Tracking: Migration tabella email_logs",
+                    "dev_units": {
+                        "db_campi": 5
+                    }
+                },
+                {
+                    "title": "Relazioni EmailLog → Contract",
+                    "description": "Modello Database Email Tracking: Relazioni EmailLog → Contract",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Template email con link firma",
+                    "description": "Workflow Invio Email: Template email con link firma",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Invio email via Laravel Mail\/Queue",
+                    "description": "Workflow Invio Email: Invio email via Laravel Mail\/Queue",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 30,
+            "activity_title": "Fatturazione da Contratti",
+            "dev_units": {
+                "db_campi": 8,
+                "db_relazioni": 2,
+                "crud": 0,
+                "workflow": 3,
+                "ui_form": 0,
+                "ui_lista": 15,
+                "ui_stampa": 0,
+                "total": 50
+            },
+            "subtasks": [
+                {
+                    "title": "Migration campi collegamento contratto-fattura",
+                    "description": "Workflow Generazione Fatture: Migration campi collegamento contratto-fattura",
+                    "dev_units": {
+                        "db_campi": 8
+                    }
+                },
+                {
+                    "title": "Relazioni Invoice → Contract",
+                    "description": "Workflow Generazione Fatture: Relazioni Invoice → Contract",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Invoice → Student",
+                    "description": "Workflow Generazione Fatture: Relazioni Invoice → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Job Queue generazione fatture",
+                    "description": "Workflow Generazione Fatture: Job Queue generazione fatture",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Calcolo importi da contratto",
+                    "description": "Workflow Generazione Fatture: Calcolo importi da contratto",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Validazione dati fattura",
+                    "description": "Workflow Generazione Fatture: Validazione dati fattura",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Lista fatture (15 elementi)",
+                    "description": "UI Lista Fatture Generate: Lista fatture (15 elementi)",
+                    "dev_units": {
+                        "ui_lista": 15
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 31,
+            "activity_title": "Piani Pagamento",
+            "dev_units": {
+                "db_campi": 10,
+                "db_relazioni": 2,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 10,
+                "ui_lista": 0,
+                "ui_stampa": 0,
+                "total": 40
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella payment_plans",
+                    "description": "Modello Database Piani Pagamento: Migration tabella payment_plans",
+                    "dev_units": {
+                        "db_campi": 10
+                    }
+                },
+                {
+                    "title": "Relazioni PaymentPlan → Invoice",
+                    "description": "Modello Database Piani Pagamento: Relazioni PaymentPlan → Invoice",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni PaymentPlan → Payment",
+                    "description": "Modello Database Piani Pagamento: Relazioni PaymentPlan → Payment",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Calcolo rate automatico",
+                    "description": "Workflow Gestione Rate: Calcolo rate automatico",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Gestione scadenze rate",
+                    "description": "Workflow Gestione Rate: Gestione scadenze rate",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form piani (10 campi)",
+                    "description": "UI Form Piani Pagamento: Form piani (10 campi)",
+                    "dev_units": {
+                        "ui_form": 10
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 32,
+            "activity_title": "Generazione PDF Fatture",
+            "dev_units": {
+                "db_campi": 0,
+                "db_relazioni": 0,
+                "crud": 0,
+                "workflow": 1,
+                "ui_form": 0,
+                "ui_lista": 0,
+                "ui_stampa": 29,
+                "total": 30
+            },
+            "subtasks": [
+                {
+                    "title": "Template Blade PDF fattura",
+                    "description": "Workflow Generazione PDF Fatture: Template Blade PDF fattura",
+                    "dev_units": {
+                        "ui_stampa": 20
+                    }
+                },
+                {
+                    "title": "Download PDF fattura",
+                    "description": "Workflow Generazione PDF Fatture: Download PDF fattura",
+                    "dev_units": {
+                        "ui_stampa": 9
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 33,
+            "activity_title": "Automazioni Solleciti",
+            "dev_units": {
+                "db_campi": 8,
+                "db_relazioni": 2,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 0,
+                "ui_lista": 10,
+                "ui_stampa": 0,
+                "total": 40
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella reminders",
+                    "description": "Modello Database Solleciti: Migration tabella reminders",
+                    "dev_units": {
+                        "db_campi": 8
+                    }
+                },
+                {
+                    "title": "Relazioni Reminder → Invoice",
+                    "description": "Modello Database Solleciti: Relazioni Reminder → Invoice",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Reminder → Student",
+                    "description": "Modello Database Solleciti: Relazioni Reminder → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Job schedulato controllo scadenze",
+                    "description": "Workflow Automazioni: Job schedulato controllo scadenze",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Invio solleciti automatici",
+                    "description": "Workflow Automazioni: Invio solleciti automatici",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Lista solleciti (10 elementi)",
+                    "description": "UI Lista Solleciti: Lista solleciti (10 elementi)",
+                    "dev_units": {
+                        "ui_lista": 10
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 34,
+            "activity_title": "Recupero Crediti",
+            "dev_units": {
+                "db_campi": 8,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 8,
+                "ui_lista": 5,
+                "ui_stampa": 0,
+                "total": 30
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella credit_recoveries",
+                    "description": "Modello Database Recupero Crediti: Migration tabella credit_recoveries",
+                    "dev_units": {
+                        "db_campi": 8
+                    }
+                },
+                {
+                    "title": "Relazioni CreditRecovery → Invoice",
+                    "description": "Modello Database Recupero Crediti: Relazioni CreditRecovery → Invoice",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "CreditRecoveryController CRUD",
+                    "description": "CRUD Controller Recupero Crediti: CreditRecoveryController CRUD",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Workflow recupero crediti",
+                    "description": "Workflow Recupero: Workflow recupero crediti",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form recupero (8 campi)",
+                    "description": "UI Form e Lista: Form recupero (8 campi)",
+                    "dev_units": {
+                        "ui_form": 8
+                    }
+                },
+                {
+                    "title": "Lista recuperi (5 elementi)",
+                    "description": "UI Form e Lista: Lista recuperi (5 elementi)",
+                    "dev_units": {
+                        "ui_lista": 5
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 35,
+            "activity_title": "Integrazione SDI Fatturazione Elettronica",
+            "dev_units": {
+                "db_campi": 10,
+                "db_relazioni": 1,
+                "crud": 0,
+                "workflow": 3,
+                "ui_form": 0,
+                "ui_lista": 15,
+                "ui_stampa": 0,
+                "total": 80
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella sdi_submissions",
+                    "description": "Modello Database SDI: Migration tabella sdi_submissions",
+                    "dev_units": {
+                        "db_campi": 10
+                    }
+                },
+                {
+                    "title": "Relazioni SdiSubmission → Invoice",
+                    "description": "Modello Database SDI: Relazioni SdiSubmission → Invoice",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Generazione XML fattura elettronica",
+                    "description": "Workflow Integrazione SDI: Generazione XML fattura elettronica",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Invio a SDI via API",
+                    "description": "Workflow Integrazione SDI: Invio a SDI via API",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Ricezione notifiche SDI",
+                    "description": "Workflow Integrazione SDI: Ricezione notifiche SDI",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Lista invii SDI (15 elementi)",
+                    "description": "UI Lista Invii SDI: Lista invii SDI (15 elementi)",
+                    "dev_units": {
+                        "ui_lista": 15
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 36,
+            "activity_title": "Integrazione Cassetto Fiscale",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 2,
+                "crud": 0,
+                "workflow": 3,
+                "ui_form": 0,
+                "ui_lista": 20,
+                "ui_stampa": 0,
+                "total": 100
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella fiscal_categories",
+                    "description": "Modello Database Cassetto Fiscale: Migration tabella fiscal_categories",
+                    "dev_units": {
+                        "db_campi": 8
+                    }
+                },
+                {
+                    "title": "Migration tabella fiscal_transactions",
+                    "description": "Modello Database Cassetto Fiscale: Migration tabella fiscal_transactions",
+                    "dev_units": {
+                        "db_campi": 7
+                    }
+                },
+                {
+                    "title": "Relazioni FiscalTransaction → Invoice",
+                    "description": "Modello Database Cassetto Fiscale: Relazioni FiscalTransaction → Invoice",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni FiscalTransaction → FiscalCategory",
+                    "description": "Modello Database Cassetto Fiscale: Relazioni FiscalTransaction → FiscalCategory",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Sincronizzazione categorie fiscali",
+                    "description": "Workflow Integrazione: Sincronizzazione categorie fiscali",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Categorizzazione automatica transazioni",
+                    "description": "Workflow Integrazione: Categorizzazione automatica transazioni",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Export dati per cassetto fiscale",
+                    "description": "Workflow Integrazione: Export dati per cassetto fiscale",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Lista transazioni (20 elementi)",
+                    "description": "UI Lista Transazioni Fiscali: Lista transazioni (20 elementi)",
+                    "dev_units": {
+                        "ui_lista": 20
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 37,
+            "activity_title": "Fornitori",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 2,
+                "crud": 7,
+                "workflow": 0,
+                "ui_form": 15,
+                "ui_lista": 11,
+                "ui_stampa": 0,
+                "total": 50
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella suppliers",
+                    "description": "Modello Database Fornitori: Migration tabella suppliers",
+                    "dev_units": {
+                        "db_campi": 15
+                    }
+                },
+                {
+                    "title": "Relazioni Supplier → Invoice (fornitore)",
+                    "description": "Modello Database Fornitori: Relazioni Supplier → Invoice (fornitore)",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Supplier → Payment",
+                    "description": "Modello Database Fornitori: Relazioni Supplier → Payment",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "SupplierController CRUD",
+                    "description": "CRUD Controller Fornitori: SupplierController CRUD",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Form fornitori (15 campi)",
+                    "description": "UI Form e Lista Fornitori: Form fornitori (15 campi)",
+                    "dev_units": {
+                        "ui_form": 15
+                    }
+                },
+                {
+                    "title": "Lista fornitori (11 elementi)",
+                    "description": "UI Form e Lista Fornitori: Lista fornitori (11 elementi)",
+                    "dev_units": {
+                        "ui_lista": 11
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 38,
+            "activity_title": "Primo Contatto Pubblico",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 2,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 15,
+                "ui_lista": 12,
+                "ui_stampa": 0,
+                "total": 60
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella prospects",
+                    "description": "Modello Database Prospect: Migration tabella prospects",
+                    "dev_units": {
+                        "db_campi": 15
+                    }
+                },
+                {
+                    "title": "Relazioni Prospect → Course (interesse)",
+                    "description": "Modello Database Prospect: Relazioni Prospect → Course (interesse)",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni Prospect → Student (conversione)",
+                    "description": "Modello Database Prospect: Relazioni Prospect → Student (conversione)",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "ProspectController CRUD",
+                    "description": "CRUD Controller Prospect: ProspectController CRUD",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Generazione token link precompilato",
+                    "description": "Workflow Link Precompilati: Generazione token link precompilato",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form pubblico primo contatto (15 campi)",
+                    "description": "UI Form Pubblico e Lista Admin: Form pubblico primo contatto (15 campi)",
+                    "dev_units": {
+                        "ui_form": 15
+                    }
+                },
+                {
+                    "title": "Lista prospect admin (12 elementi)",
+                    "description": "UI Form Pubblico e Lista Admin: Lista prospect admin (12 elementi)",
+                    "dev_units": {
+                        "ui_lista": 12
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 39,
+            "activity_title": "Conversione Prospect → Studente",
+            "dev_units": {
+                "db_campi": 0,
+                "db_relazioni": 1,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 0,
+                "ui_lista": 0,
+                "ui_stampa": 0,
+                "total": 30
+            },
+            "subtasks": [
+                {
+                    "title": "Relazioni Prospect → Student",
+                    "description": "Workflow Conversione: Relazioni Prospect → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Validazione e conversione dati",
+                    "description": "Workflow Conversione: Validazione e conversione dati",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Notifica conversione completata",
+                    "description": "Workflow Conversione: Notifica conversione completata",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 40,
+            "activity_title": "Preiscrizioni",
+            "dev_units": {
+                "db_campi": 12,
+                "db_relazioni": 2,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 12,
+                "ui_lista": 17,
+                "ui_stampa": 0,
+                "total": 50
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella pre_enrollments",
+                    "description": "Modello Database Preiscrizioni: Migration tabella pre_enrollments",
+                    "dev_units": {
+                        "db_campi": 12
+                    }
+                },
+                {
+                    "title": "Relazioni PreEnrollment → Student",
+                    "description": "Modello Database Preiscrizioni: Relazioni PreEnrollment → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni PreEnrollment → Course",
+                    "description": "Modello Database Preiscrizioni: Relazioni PreEnrollment → Course",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "PreEnrollmentController CRUD",
+                    "description": "CRUD Controller Preiscrizioni: PreEnrollmentController CRUD",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Workflow approvazione",
+                    "description": "Workflow Approvazione: Workflow approvazione",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form preiscrizioni (12 campi)",
+                    "description": "UI Form e Lista Preiscrizioni: Form preiscrizioni (12 campi)",
+                    "dev_units": {
+                        "ui_form": 12
+                    }
+                },
+                {
+                    "title": "Lista preiscrizioni (17 elementi)",
+                    "description": "UI Form e Lista Preiscrizioni: Lista preiscrizioni (17 elementi)",
+                    "dev_units": {
+                        "ui_lista": 17
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 41,
+            "activity_title": "Proposta Oraria Avanzata",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 3,
+                "crud": 7,
+                "workflow": 3,
+                "ui_form": 15,
+                "ui_lista": 20,
+                "ui_stampa": 0,
+                "total": 80
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella schedule_proposals",
+                    "description": "Modello Database Proposte Orarie: Migration tabella schedule_proposals",
+                    "dev_units": {
+                        "db_campi": 15
+                    }
+                },
+                {
+                    "title": "Relazioni ScheduleProposal → Student",
+                    "description": "Modello Database Proposte Orarie: Relazioni ScheduleProposal → Student",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni ScheduleProposal → Course",
+                    "description": "Modello Database Proposte Orarie: Relazioni ScheduleProposal → Course",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Relazioni ScheduleProposal → Teacher",
+                    "description": "Modello Database Proposte Orarie: Relazioni ScheduleProposal → Teacher",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "ScheduleProposalController CRUD",
+                    "description": "CRUD Controller Proposte: ScheduleProposalController CRUD",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Algoritmo matching disponibilità",
+                    "description": "Workflow Algoritmo Matching: Algoritmo matching disponibilità",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Generazione proposte multiple",
+                    "description": "Workflow Algoritmo Matching: Generazione proposte multiple",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Validazione conflitti orari",
+                    "description": "Workflow Algoritmo Matching: Validazione conflitti orari",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form proposte (15 campi)",
+                    "description": "UI Form e Lista Proposte: Form proposte (15 campi)",
+                    "dev_units": {
+                        "ui_form": 15
+                    }
+                },
+                {
+                    "title": "Lista proposte (20 elementi)",
+                    "description": "UI Form e Lista Proposte: Lista proposte (20 elementi)",
+                    "dev_units": {
+                        "ui_lista": 20
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 42,
+            "activity_title": "Accettazione\/Rifiuto Proposte",
+            "dev_units": {
+                "db_campi": 5,
+                "db_relazioni": 1,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 0,
+                "ui_lista": 10,
+                "ui_stampa": 0,
+                "total": 30
+            },
+            "subtasks": [
+                {
+                    "title": "Migration campi status proposta",
+                    "description": "Workflow Accettazione\/Rifiuto: Migration campi status proposta",
+                    "dev_units": {
+                        "db_campi": 5
+                    }
+                },
+                {
+                    "title": "Relazioni ScheduleProposal → Enrollment",
+                    "description": "Workflow Accettazione\/Rifiuto: Relazioni ScheduleProposal → Enrollment",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Workflow accettazione proposta",
+                    "description": "Workflow Accettazione\/Rifiuto: Workflow accettazione proposta",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Notifiche accettazione\/rifiuto",
+                    "description": "Workflow Accettazione\/Rifiuto: Notifiche accettazione\/rifiuto",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Lista proposte (10 elementi)",
+                    "description": "UI Lista Proposte da Gestire: Lista proposte (10 elementi)",
+                    "dev_units": {
+                        "ui_lista": 10
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 43,
+            "activity_title": "Registro Elettronico Avanzato",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 5,
+                "crud": 7,
+                "workflow": 2,
+                "ui_form": 15,
+                "ui_lista": 24,
+                "ui_stampa": 0,
+                "total": 70
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella lesson_records",
+                    "description": "Modello Database Registro: Migration tabella lesson_records",
+                    "dev_units": {
+                        "db_campi": 15
+                    }
+                },
+                {
+                    "title": "Relazioni multiple (Student, Course, Teacher, etc.)",
+                    "description": "Modello Database Registro: Relazioni multiple (Student, Course, Teacher, etc.)",
+                    "dev_units": {
+                        "db_relazioni": 5
+                    }
+                },
+                {
+                    "title": "LessonRecordController CRUD",
+                    "description": "CRUD Controller Registro: LessonRecordController CRUD",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Autenticazione docenti",
+                    "description": "Workflow Accesso Docenti: Autenticazione docenti",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Permessi accesso registro",
+                    "description": "Workflow Accesso Docenti: Permessi accesso registro",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form registro (15 campi)",
+                    "description": "UI Form e Lista Registro: Form registro (15 campi)",
+                    "dev_units": {
+                        "ui_form": 15
+                    }
+                },
+                {
+                    "title": "Lista registro (24 elementi)",
+                    "description": "UI Form e Lista Registro: Lista registro (24 elementi)",
+                    "dev_units": {
+                        "ui_lista": 24
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 44,
+            "activity_title": "Presenze Avanzate",
+            "dev_units": {
+                "db_campi": 12,
+                "db_relazioni": 3,
+                "crud": 7,
+                "workflow": 2,
+                "ui_form": 12,
+                "ui_lista": 18,
+                "ui_stampa": 0,
+                "total": 60
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella attendances",
+                    "description": "Modello Database Presenze: Migration tabella attendances",
+                    "dev_units": {
+                        "db_campi": 12
+                    }
+                },
+                {
+                    "title": "Relazioni Attendance → Student, Lesson, Teacher",
+                    "description": "Modello Database Presenze: Relazioni Attendance → Student, Lesson, Teacher",
+                    "dev_units": {
+                        "db_relazioni": 3
+                    }
+                },
+                {
+                    "title": "AttendanceController CRUD",
+                    "description": "CRUD Controller Presenze: AttendanceController CRUD",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Gestione recuperi lezioni",
+                    "description": "Workflow Recuperi\/Supplenze: Gestione recuperi lezioni",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Gestione supplenze",
+                    "description": "Workflow Recuperi\/Supplenze: Gestione supplenze",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form presenze (12 campi)",
+                    "description": "UI Form e Lista Presenze: Form presenze (12 campi)",
+                    "dev_units": {
+                        "ui_form": 12
+                    }
+                },
+                {
+                    "title": "Lista presenze (18 elementi)",
+                    "description": "UI Form e Lista Presenze: Lista presenze (18 elementi)",
+                    "dev_units": {
+                        "ui_lista": 18
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 45,
+            "activity_title": "Recuperi Lezioni",
+            "dev_units": {
+                "db_campi": 12,
+                "db_relazioni": 3,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 12,
+                "ui_lista": 19,
+                "ui_stampa": 0,
+                "total": 50
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella lesson_recoveries",
+                    "description": "Modello Database Recuperi: Migration tabella lesson_recoveries",
+                    "dev_units": {
+                        "db_campi": 12
+                    }
+                },
+                {
+                    "title": "Relazioni LessonRecovery → Student, Lesson, Teacher",
+                    "description": "Modello Database Recuperi: Relazioni LessonRecovery → Student, Lesson, Teacher",
+                    "dev_units": {
+                        "db_relazioni": 3
+                    }
+                },
+                {
+                    "title": "Pianificazione recuperi",
+                    "description": "Workflow Gestione Recuperi: Pianificazione recuperi",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Validazione recuperi",
+                    "description": "Workflow Gestione Recuperi: Validazione recuperi",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form recuperi (12 campi)",
+                    "description": "UI Form e Lista Recuperi: Form recuperi (12 campi)",
+                    "dev_units": {
+                        "ui_form": 12
+                    }
+                },
+                {
+                    "title": "Lista recuperi (19 elementi)",
+                    "description": "UI Form e Lista Recuperi: Lista recuperi (19 elementi)",
+                    "dev_units": {
+                        "ui_lista": 19
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 46,
+            "activity_title": "Gestione Supplenti",
+            "dev_units": {
+                "db_campi": 12,
+                "db_relazioni": 3,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 0,
+                "ui_lista": 15,
+                "ui_stampa": 0,
+                "total": 50
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella substitutes",
+                    "description": "Modello Database Supplenti: Migration tabella substitutes",
+                    "dev_units": {
+                        "db_campi": 12
+                    }
+                },
+                {
+                    "title": "Relazioni Substitute → Teacher, Lesson, Course",
+                    "description": "Modello Database Supplenti: Relazioni Substitute → Teacher, Lesson, Course",
+                    "dev_units": {
+                        "db_relazioni": 3
+                    }
+                },
+                {
+                    "title": "Creazione account provvisori",
+                    "description": "Workflow Account Provvisori: Creazione account provvisori",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Gestione permessi supplenti",
+                    "description": "Workflow Account Provvisori: Gestione permessi supplenti",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Lista supplenti (15 elementi)",
+                    "description": "UI Lista Supplenti: Lista supplenti (15 elementi)",
+                    "dev_units": {
+                        "ui_lista": 15
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 47,
+            "activity_title": "Conto Orario Docenti Avanzato",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 3,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 0,
+                "ui_lista": 20,
+                "ui_stampa": 15,
+                "total": 70
+            },
+            "subtasks": [
+                {
+                    "title": "Migration campi avanzati conto orario",
+                    "description": "Modello Database Conto Orario Avanzato: Migration campi avanzati conto orario",
+                    "dev_units": {
+                        "db_campi": 15
+                    }
+                },
+                {
+                    "title": "Relazioni TeacherHour → Attendance, Lesson, Teacher",
+                    "description": "Modello Database Conto Orario Avanzato: Relazioni TeacherHour → Attendance, Lesson, Teacher",
+                    "dev_units": {
+                        "db_relazioni": 3
+                    }
+                },
+                {
+                    "title": "Calcolo ore da presenze",
+                    "description": "Workflow Calcolo Automatico: Calcolo ore da presenze",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Calcolo bonus\/forfait",
+                    "description": "Workflow Calcolo Automatico: Calcolo bonus\/forfait",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Lista conto orario (20 elementi)",
+                    "description": "UI Lista e Stampa Conto Orario: Lista conto orario (20 elementi)",
+                    "dev_units": {
+                        "ui_lista": 20
+                    }
+                },
+                {
+                    "title": "Stampa conto orario PDF",
+                    "description": "UI Lista e Stampa Conto Orario: Stampa conto orario PDF",
+                    "dev_units": {
+                        "ui_stampa": 15
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 48,
+            "activity_title": "Configurazione Compensi Docenti",
+            "dev_units": {
+                "db_campi": 10,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 0,
+                "ui_form": 10,
+                "ui_lista": 12,
+                "ui_stampa": 0,
+                "total": 40
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella teacher_compensations",
+                    "description": "Modello Database Compensi: Migration tabella teacher_compensations",
+                    "dev_units": {
+                        "db_campi": 10
+                    }
+                },
+                {
+                    "title": "Relazioni TeacherCompensation → Teacher",
+                    "description": "Modello Database Compensi: Relazioni TeacherCompensation → Teacher",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "TeacherCompensationController CRUD",
+                    "description": "CRUD Controller Compensi: TeacherCompensationController CRUD",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Form compensi (10 campi)",
+                    "description": "UI Form e Lista Compensi: Form compensi (10 campi)",
+                    "dev_units": {
+                        "ui_form": 10
+                    }
+                },
+                {
+                    "title": "Lista compensi (12 elementi)",
+                    "description": "UI Form e Lista Compensi: Lista compensi (12 elementi)",
+                    "dev_units": {
+                        "ui_lista": 12
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 49,
+            "activity_title": "Comunicazioni Evolute",
+            "dev_units": {
+                "db_campi": 15,
+                "db_relazioni": 3,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 0,
+                "ui_lista": 0,
+                "ui_stampa": 0,
+                "total": 80
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella communications",
+                    "description": "Modello Database Comunicazioni: Migration tabella communications",
+                    "dev_units": {
+                        "db_campi": 15
+                    }
+                },
+                {
+                    "title": "Relazioni Communication → Student, Guardian, Teacher",
+                    "description": "Modello Database Comunicazioni: Relazioni Communication → Student, Guardian, Teacher",
+                    "dev_units": {
+                        "db_relazioni": 3
+                    }
+                },
+                {
+                    "title": "Integrazione email\/SMS\/WhatsApp",
+                    "description": "Workflow Multi-Canale: Integrazione email\/SMS\/WhatsApp",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Gestione code invio",
+                    "description": "Workflow Multi-Canale: Gestione code invio",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 50,
+            "activity_title": "Template Comunicazioni",
+            "dev_units": {
+                "db_campi": 10,
+                "db_relazioni": 1,
+                "crud": 7,
+                "workflow": 1,
+                "ui_form": 10,
+                "ui_lista": 14,
+                "ui_stampa": 0,
+                "total": 50
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella communication_templates",
+                    "description": "Modello Database Template: Migration tabella communication_templates",
+                    "dev_units": {
+                        "db_campi": 10
+                    }
+                },
+                {
+                    "title": "Relazioni CommunicationTemplate → Communication",
+                    "description": "Modello Database Template: Relazioni CommunicationTemplate → Communication",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "CommunicationTemplateController CRUD",
+                    "description": "CRUD Controller Template: CommunicationTemplateController CRUD",
+                    "dev_units": {
+                        "crud": 7
+                    }
+                },
+                {
+                    "title": "Editor template con variabili",
+                    "description": "Workflow Editor Template: Editor template con variabili",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form template (10 campi)",
+                    "description": "UI Form e Lista Template: Form template (10 campi)",
+                    "dev_units": {
+                        "ui_form": 10
+                    }
+                },
+                {
+                    "title": "Lista template (14 elementi)",
+                    "description": "UI Form e Lista Template: Lista template (14 elementi)",
+                    "dev_units": {
+                        "ui_lista": 14
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 51,
+            "activity_title": "Integrazione SMS\/WhatsApp",
+            "dev_units": {
+                "db_campi": 8,
+                "db_relazioni": 1,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 0,
+                "ui_lista": 0,
+                "ui_stampa": 0,
+                "total": 60
+            },
+            "subtasks": [
+                {
+                    "title": "Migration tabella sms_whatsapp_logs",
+                    "description": "Modello Database SMS\/WhatsApp: Migration tabella sms_whatsapp_logs",
+                    "dev_units": {
+                        "db_campi": 8
+                    }
+                },
+                {
+                    "title": "Relazioni SmsWhatsappLog → Communication",
+                    "description": "Modello Database SMS\/WhatsApp: Relazioni SmsWhatsappLog → Communication",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Integrazione API Twilio",
+                    "description": "Workflow Integrazione Twilio: Integrazione API Twilio",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Gestione invio SMS\/WhatsApp",
+                    "description": "Workflow Integrazione Twilio: Gestione invio SMS\/WhatsApp",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 52,
+            "activity_title": "Attività Extra Evolute",
+            "dev_units": {
+                "db_campi": 8,
+                "db_relazioni": 1,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 8,
+                "ui_lista": 0,
+                "ui_stampa": 0,
+                "total": 40
+            },
+            "subtasks": [
+                {
+                    "title": "Migration campi avanzati",
+                    "description": "Modello Database Attività Extra Evolute: Migration campi avanzati",
+                    "dev_units": {
+                        "db_campi": 8
+                    }
+                },
+                {
+                    "title": "Relazioni ExtraActivity → Enrollment",
+                    "description": "Modello Database Attività Extra Evolute: Relazioni ExtraActivity → Enrollment",
+                    "dev_units": {
+                        "db_relazioni": 1
+                    }
+                },
+                {
+                    "title": "Workflow iscrizioni avanzate",
+                    "description": "Workflow Gestione Avanzata: Workflow iscrizioni avanzate",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Gestione convocazioni",
+                    "description": "Workflow Gestione Avanzata: Gestione convocazioni",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Form attività extra (8 campi)",
+                    "description": "UI Form Attività Extra: Form attività extra (8 campi)",
+                    "dev_units": {
+                        "ui_form": 8
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 53,
+            "activity_title": "Generazione Attestati PDF",
+            "dev_units": {
+                "db_campi": 0,
+                "db_relazioni": 0,
+                "crud": 0,
+                "workflow": 1,
+                "ui_form": 0,
+                "ui_lista": 0,
+                "ui_stampa": 39,
+                "total": 40
+            },
+            "subtasks": [
+                {
+                    "title": "Template PDF attestato",
+                    "description": "Workflow Generazione Attestati: Template PDF attestato",
+                    "dev_units": {
+                        "ui_stampa": 25
+                    }
+                },
+                {
+                    "title": "Generazione e download PDF",
+                    "description": "Workflow Generazione Attestati: Generazione e download PDF",
+                    "dev_units": {
+                        "ui_stampa": 14
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 54,
+            "activity_title": "Reportistica Avanzata",
+            "dev_units": {
+                "db_campi": 0,
+                "db_relazioni": 0,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 0,
+                "ui_lista": 0,
+                "ui_stampa": 98,
+                "total": 100
+            },
+            "subtasks": [
+                {
+                    "title": "Query aggregazioni dati",
+                    "description": "Workflow Reportistica: Query aggregazioni dati",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Generazione grafici (Chart.js)",
+                    "description": "Workflow Reportistica: Generazione grafici (Chart.js)",
+                    "dev_units": {
+                        "ui_stampa": 50
+                    }
+                },
+                {
+                    "title": "Confronti multi-anno",
+                    "description": "Workflow Reportistica: Confronti multi-anno",
+                    "dev_units": {
+                        "ui_stampa": 30
+                    }
+                },
+                {
+                    "title": "Export report PDF\/Excel",
+                    "description": "Workflow Reportistica: Export report PDF\/Excel",
+                    "dev_units": {
+                        "ui_stampa": 18
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 55,
+            "activity_title": "Flusso di Cassa",
+            "dev_units": {
+                "db_campi": 0,
+                "db_relazioni": 0,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 0,
+                "ui_lista": 0,
+                "ui_stampa": 68,
+                "total": 70
+            },
+            "subtasks": [
+                {
+                    "title": "Calcolo aggregazioni entrate\/uscite",
+                    "description": "Workflow Flusso di Cassa: Calcolo aggregazioni entrate\/uscite",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Visualizzazione grafico flusso",
+                    "description": "Workflow Flusso di Cassa: Visualizzazione grafico flusso",
+                    "dev_units": {
+                        "ui_stampa": 40
+                    }
+                },
+                {
+                    "title": "Export flusso cassa",
+                    "description": "Workflow Flusso di Cassa: Export flusso cassa",
+                    "dev_units": {
+                        "ui_stampa": 28
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 56,
+            "activity_title": "Export Excel\/CSV Personalizzato",
+            "dev_units": {
+                "db_campi": 0,
+                "db_relazioni": 0,
+                "crud": 0,
+                "workflow": 1,
+                "ui_form": 0,
+                "ui_lista": 0,
+                "ui_stampa": 49,
+                "total": 50
+            },
+            "subtasks": [
+                {
+                    "title": "Builder query personalizzate",
+                    "description": "Workflow Export Personalizzato: Builder query personalizzate",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Export Excel (Laravel Excel)",
+                    "description": "Workflow Export Personalizzato: Export Excel (Laravel Excel)",
+                    "dev_units": {
+                        "ui_stampa": 25
+                    }
+                },
+                {
+                    "title": "Export CSV",
+                    "description": "Workflow Export Personalizzato: Export CSV",
+                    "dev_units": {
+                        "ui_stampa": 24
+                    }
+                }
+            ]
+        },
+        {
+            "activity_index": 57,
+            "activity_title": "Statistiche Dashboard",
+            "dev_units": {
+                "db_campi": 0,
+                "db_relazioni": 0,
+                "crud": 0,
+                "workflow": 2,
+                "ui_form": 0,
+                "ui_lista": 0,
+                "ui_stampa": 58,
+                "total": 60
+            },
+            "subtasks": [
+                {
+                    "title": "Calcolo statistiche real-time",
+                    "description": "Workflow Dashboard: Calcolo statistiche real-time",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Aggiornamento automatico dati",
+                    "description": "Workflow Dashboard: Aggiornamento automatico dati",
+                    "dev_units": {
+                        "workflow": 1
+                    }
+                },
+                {
+                    "title": "Widget dashboard (grafici, KPI)",
+                    "description": "Workflow Dashboard: Widget dashboard (grafici, KPI)",
+                    "dev_units": {
+                        "ui_stampa": 58
+                    }
+                }
+            ]
+        }
+    ],
+    "summary": {
+        "total_activities": 58,
+        "total_dev_units": 3228
+    }
+}
