@@ -19,6 +19,8 @@ ed è aderente ai dati presenti in `docs/materiale cliente/`.
 - `10_MODULO_ANAGRAFICA_E_DISPONIBILITA.md`
 - `11_STATISTICHE_STORICHE.md`
 - `12_DOCUMENTI_E_MODELLI_CONTRATTI.md`
+- `13_COPERTURA_CODICE_VS_ASIS.md`
+- `14_FASE2_OTTIMIZZAZIONI_E_ALLEGGERIMENTO_OPERATIVO.md`
 
 ## Allegati sorgenti
 
