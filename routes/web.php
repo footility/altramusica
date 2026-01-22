@@ -9,12 +9,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// Teacher routes
-Route::middleware(['auth'])->prefix('teacher')->name('teacher.')->group(function () {
-    Route::get('register', [\App\Http\Controllers\Teacher\RegisterController::class, 'index'])->name('register.index');
-    Route::get('register/{lesson}', [\App\Http\Controllers\Teacher\RegisterController::class, 'show'])->name('register.show');
-    Route::post('register/{lesson}/attendance', [\App\Http\Controllers\Teacher\RegisterController::class, 'updateAttendance'])->name('register.attendance');
-});
+// NOTE (Fase 1): rimosse le rotte "teacher/register" (registro docente) perché non AS-IS.
 
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -39,22 +34,12 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::resource('students', \App\Http\Controllers\Admin\StudentController::class);
     Route::resource('student-availability', \App\Http\Controllers\Admin\StudentAvailabilityController::class);
     Route::resource('teacher-availability', \App\Http\Controllers\Admin\TeacherAvailabilityController::class);
-    Route::resource('first-contacts', \App\Http\Controllers\Admin\FirstContactController::class)->only(['index', 'show']);
-    Route::post('first-contacts/{firstContact}/convert', [\App\Http\Controllers\Admin\FirstContactController::class, 'convert'])->name('first-contacts.convert');
-    Route::post('first-contacts/{firstContact}/dismiss', [\App\Http\Controllers\Admin\FirstContactController::class, 'dismiss'])->name('first-contacts.dismiss');
-    Route::get('first-contacts/{firstContact}/generate-link', [\App\Http\Controllers\Admin\FirstContactController::class, 'generateLink'])->name('first-contacts.generate-link');
-    Route::resource('schedule-proposals', \App\Http\Controllers\Admin\ScheduleProposalController::class);
-    Route::post('schedule-proposals/{scheduleProposal}/accept', [\App\Http\Controllers\Admin\ScheduleProposalController::class, 'accept'])->name('schedule-proposals.accept');
-    Route::post('schedule-proposals/{scheduleProposal}/reject', [\App\Http\Controllers\Admin\ScheduleProposalController::class, 'reject'])->name('schedule-proposals.reject');
-    Route::resource('communications', \App\Http\Controllers\Admin\CommunicationController::class);
-    Route::get('communications/bulk/create', [\App\Http\Controllers\Admin\CommunicationController::class, 'bulk'])->name('communications.bulk');
-    Route::post('communications/bulk', [\App\Http\Controllers\Admin\CommunicationController::class, 'sendBulk'])->name('communications.send-bulk');
-    Route::resource('attendances', \App\Http\Controllers\Admin\AttendanceController::class)->only(['index', 'show', 'edit', 'update', 'destroy']);
-    Route::resource('teacher-hours', \App\Http\Controllers\Admin\TeacherHourController::class)->only(['index', 'show']);
-    Route::post('teacher-hours/calculate', [\App\Http\Controllers\Admin\TeacherHourController::class, 'calculate'])->name('teacher-hours.calculate');
-    Route::post('teacher-hours/calculate-all', [\App\Http\Controllers\Admin\TeacherHourController::class, 'calculateAll'])->name('teacher-hours.calculate-all');
-    Route::post('teacher-hours/{teacherHour}/approve', [\App\Http\Controllers\Admin\TeacherHourController::class, 'approve'])->name('teacher-hours.approve');
-    Route::post('teacher-hours/{teacherHour}/mark-paid', [\App\Http\Controllers\Admin\TeacherHourController::class, 'markAsPaid'])->name('teacher-hours.mark-paid');
+    // NOTE (Fase 1): rimosse rotte extra non AS-IS:
+    // - first-contacts (primo contatto evolutivo)
+    // - schedule-proposals (proposte orarie evolutive)
+    // - communications (comunicazioni evolutive)
+    // - attendances (registro/presenze evolutivo)
+    // - teacher-hours (conto ore evolutivo)
     Route::resource('guardians', \App\Http\Controllers\Admin\GuardianController::class);
     Route::resource('teachers', \App\Http\Controllers\Admin\TeacherController::class);
     Route::resource('courses', \App\Http\Controllers\Admin\CourseController::class);
@@ -70,7 +55,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::post('contracts/{contract}/send', [\App\Http\Controllers\Admin\ContractController::class, 'send'])->name('contracts.send');
     Route::post('contracts/{contract}/sign', [\App\Http\Controllers\Admin\ContractController::class, 'sign'])->name('contracts.sign');
     Route::resource('exams', \App\Http\Controllers\Admin\ExamController::class);
-    Route::resource('extra-activities', \App\Http\Controllers\Admin\ExtraActivityController::class);
+    // NOTE (Fase 1): rimosso extra-activities (evolutivo, non AS-IS).
     Route::resource('classrooms', \App\Http\Controllers\Admin\ClassroomController::class);
 
     // AS-IS missing CRUDs (Fase 1)

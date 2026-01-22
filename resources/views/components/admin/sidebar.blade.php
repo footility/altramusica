@@ -133,12 +133,6 @@
                     'active' => request()->routeIs('admin.accounting.*'),
                 ],
                 [
-                    'label' => 'Conto Orario',
-                    'icon' => 'bi-clock-history',
-                    'route' => 'admin.teacher-hours.index',
-                    'active' => request()->routeIs('admin.teacher-hours.*'),
-                ],
-                [
                     'label' => 'Strumenti',
                     'icon' => 'bi-music-note',
                     'route' => 'admin.instruments.index',
@@ -155,35 +149,6 @@
                     'icon' => 'bi-folder2-open',
                     'route' => 'admin.documents.index',
                     'active' => request()->routeIs('admin.documents.*'),
-                ],
-            ],
-        ],
-        [
-            'label' => 'Extra (non AS-IS)',
-            'items' => [
-                [
-                    'label' => 'Primi Contatti',
-                    'icon' => 'bi-envelope-heart',
-                    'route' => 'admin.first-contacts.index',
-                    'active' => request()->routeIs('admin.first-contacts.*'),
-                ],
-                [
-                    'label' => 'Proposte Orarie',
-                    'icon' => 'bi-calendar-check',
-                    'route' => 'admin.schedule-proposals.index',
-                    'active' => request()->routeIs('admin.schedule-proposals.*'),
-                ],
-                [
-                    'label' => 'Comunicazioni',
-                    'icon' => 'bi-envelope',
-                    'route' => 'admin.communications.index',
-                    'active' => request()->routeIs('admin.communications.*'),
-                ],
-                [
-                    'label' => 'Attività Extra',
-                    'icon' => 'bi-music-note-beamed',
-                    'route' => 'admin.extra-activities.index',
-                    'active' => request()->routeIs('admin.extra-activities.*'),
                 ],
             ],
         ],
