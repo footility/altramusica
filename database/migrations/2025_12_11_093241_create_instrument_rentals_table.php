@@ -15,6 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('student_id')->constrained()->onDelete('cascade');
             $table->foreignId('instrument_id')->constrained()->onDelete('restrict');
+            // Year-scoped (Master vs Annual): rentals belong to an academic year
+            // Column only here (academic_years table is created later); FK is added in academic_years migration.
+            $table->unsignedBigInteger('academic_year_id')->nullable()->index();
             $table->date('start_date');
             $table->date('end_date')->nullable();
             $table->decimal('monthly_fee', 10, 2)->default(0);
