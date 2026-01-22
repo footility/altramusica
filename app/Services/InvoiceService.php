@@ -53,6 +53,8 @@ class InvoiceService
         foreach ($contract->student->enrollments()->where('academic_year_id', $contract->academic_year_id)->get() as $enrollment) {
             InvoiceItem::create([
                 'invoice_id' => $invoice->id,
+                'item_type' => 'enrollment',
+                'item_id' => $enrollment->id,
                 'description' => "Corso: {$enrollment->course->name}",
                 'quantity' => 1,
                 'unit_price' => $enrollment->total_amount,
@@ -66,35 +68,29 @@ class InvoiceService
     /**
      * Crea piano di pagamento con rate
      */
-    public function createPaymentPlan(Invoice $invoice, int $numberOfInstallments, Carbon $firstDueDate = null): PaymentPlan
+    public function createPaymentPlan(Invoice $invoice, int $numberOfInstallments, Carbon $firstDueDate = null)
     {
         $firstDueDate = $firstDueDate ?? now()->addDays(30);
         $installmentAmount = $invoice->total_amount / $numberOfInstallments;
 
-        $plan = PaymentPlan::create([
-            'invoice_id' => $invoice->id,
-            'number_of_installments' => $numberOfInstallments,
-            'total_amount' => $invoice->total_amount,
-            'status' => 'active',
-        ]);
-
-        // Crea le rate
+        // In questo progetto `payment_plans` rappresenta le singole rate (non un "piano" aggregato).
+        // Crea quindi N record PaymentPlan (rata) collegati alla fattura.
         for ($i = 0; $i < $numberOfInstallments; $i++) {
             $dueDate = $firstDueDate->copy()->addMonths($i);
             $amount = ($i === $numberOfInstallments - 1) 
                 ? $invoice->total_amount - ($installmentAmount * ($numberOfInstallments - 1)) // Ultima rata con resto
                 : $installmentAmount;
 
-            Payment::create([
+            PaymentPlan::create([
                 'invoice_id' => $invoice->id,
-                'payment_plan_id' => $plan->id,
+                'installment_number' => $i + 1,
                 'amount' => $amount,
                 'due_date' => $dueDate,
                 'status' => 'pending',
             ]);
         }
 
-        return $plan;
+        return;
     }
 
     /**
@@ -107,8 +103,30 @@ class InvoiceService
             'amount' => $amount,
             'payment_date' => $paymentDate ?? now(),
             'payment_method' => $method,
-            'status' => 'completed',
         ]);
+
+        // Collega in modo semplice il pagamento alle rate più vecchie (MVP, senza parziali)
+        $remaining = $amount;
+        $installments = $invoice->paymentPlans()
+            ->whereIn('status', ['pending', 'overdue'])
+            ->orderBy('due_date')
+            ->get();
+
+        foreach ($installments as $installment) {
+            if ($remaining <= 0) {
+                break;
+            }
+
+            // MVP: consideriamo pagamenti che coprono intere rate
+            if ($remaining + 0.00001 >= (float) $installment->amount) {
+                $installment->update([
+                    'status' => 'paid',
+                    'paid_date' => $payment->payment_date,
+                    'payment_id' => $payment->id,
+                ]);
+                $remaining -= (float) $installment->amount;
+            }
+        }
 
         // Aggiorna stato fattura se completamente pagata
         if ($invoice->remaining_amount <= 0) {
