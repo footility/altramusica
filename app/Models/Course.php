@@ -32,8 +32,9 @@ class Course extends Model
     protected $casts = [
         'start_date' => 'date',
         'end_date' => 'date',
-        'time_start' => 'datetime',
-        'time_end' => 'datetime',
+        // columns are TIME; keep as string (H:i:s) to avoid Carbon date portion surprises
+        'time_start' => 'string',
+        'time_end' => 'string',
         'max_students' => 'integer',
         'current_students' => 'integer',
         'price_per_lesson' => 'decimal:2',
