@@ -62,6 +62,7 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::resource('invoices', \App\Http\Controllers\Admin\InvoiceController::class);
     Route::post('invoices/{invoice}/payment-plan', [\App\Http\Controllers\Admin\InvoiceController::class, 'createPaymentPlan'])->name('invoices.payment-plan');
     Route::post('invoices/{invoice}/payment', [\App\Http\Controllers\Admin\InvoiceController::class, 'recordPayment'])->name('invoices.payment');
+    Route::get('payment-plans', [\App\Http\Controllers\Admin\PaymentPlanController::class, 'index'])->name('payment-plans.index');
     Route::post('contracts/{contract}/create-invoice', [\App\Http\Controllers\Admin\InvoiceController::class, 'createFromContract'])->name('contracts.create-invoice');
     Route::resource('instruments', \App\Http\Controllers\Admin\InstrumentController::class);
     Route::resource('contracts', \App\Http\Controllers\Admin\ContractController::class);

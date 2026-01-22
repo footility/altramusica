@@ -121,6 +121,12 @@
                     'active' => request()->routeIs('admin.invoices.*'),
                 ],
                 [
+                    'label' => 'Scadenzario Rate',
+                    'icon' => 'bi-calendar-check',
+                    'route' => 'admin.payment-plans.index',
+                    'active' => request()->routeIs('admin.payment-plans.*'),
+                ],
+                [
                     'label' => 'Conto Orario',
                     'icon' => 'bi-clock-history',
                     'route' => 'admin.teacher-hours.index',
