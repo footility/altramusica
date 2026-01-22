@@ -12,34 +12,12 @@ class Course extends Model
 
     protected $fillable = [
         'course_type_id',
-        'teacher_id',
         'code',
         'name',
         'description',
-        'start_date',
-        'end_date',
-        'day_of_week',
-        'time_start',
-        'time_end',
-        'max_students',
-        'current_students',
-        'status',
-        'price_per_lesson',
-        'lessons_per_week',
-        'weeks_per_year',
     ];
 
     protected $casts = [
-        'start_date' => 'date',
-        'end_date' => 'date',
-        // columns are TIME; keep as string (H:i:s) to avoid Carbon date portion surprises
-        'time_start' => 'string',
-        'time_end' => 'string',
-        'max_students' => 'integer',
-        'current_students' => 'integer',
-        'price_per_lesson' => 'decimal:2',
-        'lessons_per_week' => 'integer',
-        'weeks_per_year' => 'integer',
     ];
 
     // Relationships
@@ -48,29 +26,29 @@ class Course extends Model
         return $this->belongsTo(CourseType::class);
     }
 
-    public function teacher()
+    public function offerings()
     {
-        return $this->belongsTo(Teacher::class);
+        return $this->hasMany(CourseOffering::class);
     }
 
     public function enrollments()
     {
-        return $this->hasMany(Enrollment::class);
-    }
-
-    public function lessons()
-    {
-        return $this->hasMany(Lesson::class);
+        return $this->hasManyThrough(
+            Enrollment::class,
+            CourseOffering::class,
+            'course_id',          // course_offerings.course_id
+            'course_offering_id', // enrollments.course_offering_id
+            'id',                 // courses.id
+            'id'                  // course_offerings.id
+        );
     }
 
     // Scopes
+    // NOTE: lo status è sull'offerta annuale (CourseOffering), non sul catalogo (Course).
     public function scopeActive($query)
     {
-        return $query->where('status', 'active');
-    }
-
-    public function scopePlanned($query)
-    {
-        return $query->where('status', 'planned');
+        return $query->whereHas('offerings', function ($q) {
+            $q->where('status', 'active');
+        });
     }
 }

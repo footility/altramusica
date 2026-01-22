@@ -46,6 +46,12 @@ return new class extends Migration
             $table->foreignId('academic_year_id')->nullable()->after('id')->constrained()->nullOnDelete();
         });
 
+        if (Schema::hasTable('course_offerings') && Schema::hasColumn('course_offerings', 'academic_year_id')) {
+            Schema::table('course_offerings', function (Blueprint $table) {
+                $table->foreign('academic_year_id')->references('id')->on('academic_years')->nullOnDelete();
+            });
+        }
+
         Schema::table('contracts', function (Blueprint $table) {
             $table->foreignId('academic_year_id')->nullable()->after('id')->constrained()->nullOnDelete();
         });
@@ -105,6 +111,13 @@ return new class extends Migration
         if (Schema::hasTable('enrollments') && Schema::hasColumn('enrollments', 'academic_year_id')) {
             $this->dropAcademicYearForeignKeyIfExists('enrollments');
             Schema::table('enrollments', function (Blueprint $table) {
+                $table->dropColumn('academic_year_id');
+            });
+        }
+
+        if (Schema::hasTable('course_offerings') && Schema::hasColumn('course_offerings', 'academic_year_id')) {
+            $this->dropAcademicYearForeignKeyIfExists('course_offerings');
+            Schema::table('course_offerings', function (Blueprint $table) {
                 $table->dropColumn('academic_year_id');
             });
         }

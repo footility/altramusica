@@ -22,6 +22,13 @@ return new class extends Migration
             $table->text('notes')->nullable();
             $table->timestamps();
         });
+
+        // Add FK on course_offerings.classroom_id (table created earlier)
+        if (Schema::hasTable('course_offerings') && Schema::hasColumn('course_offerings', 'classroom_id')) {
+            Schema::table('course_offerings', function (Blueprint $table) {
+                $table->foreign('classroom_id')->references('id')->on('classrooms')->nullOnDelete();
+            });
+        }
     }
 
     /**
@@ -29,6 +36,16 @@ return new class extends Migration
      */
     public function down(): void
     {
+        if (Schema::hasTable('course_offerings') && Schema::hasColumn('course_offerings', 'classroom_id')) {
+            // best-effort: drop FK if exists
+            try {
+                Schema::table('course_offerings', function (Blueprint $table) {
+                    $table->dropForeign(['classroom_id']);
+                });
+            } catch (\Throwable $e) {
+                // ignore
+            }
+        }
         Schema::dropIfExists('classrooms');
     }
 };

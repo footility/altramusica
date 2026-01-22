@@ -9,6 +9,7 @@ use App\Models\StudentAvailability;
 use App\Models\Instrument;
 use App\Models\Enrollment;
 use App\Models\Course;
+use App\Models\CourseOffering;
 use App\Models\CourseType;
 use App\Models\Teacher;
 use App\Models\AcademicYear;
@@ -16,9 +17,13 @@ use App\Models\InstrumentRental;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
 
 class CompleteDataSeeder extends Seeder
 {
+    private int $debugEnrollmentsShown = 0;
+    private int $debugEnrollmentsErrorsShown = 0;
+
     /**
      * Importa TUTTI i dati dal file ODS principale
      */
@@ -112,8 +117,7 @@ class CompleteDataSeeder extends Seeder
                     $stats['orchestra']++;
                     
                     // 5. Importa Iscrizioni Corsi
-                    $this->importEnrollments($student, $sheet, $row, $headerMap, $academicYear);
-                    $stats['enrollments']++;
+                    $stats['enrollments'] += $this->importEnrollments($student, $sheet, $row, $headerMap, $academicYear);
                     
                     if ($row % 50 == 0) {
                         $this->command->info("  Processate {$row} righe...");
@@ -129,7 +133,7 @@ class CompleteDataSeeder extends Seeder
             $this->command->info("  - Disponibilità: {$stats['availability']}");
             $this->command->info("  - Strumenti: {$stats['instruments']}");
             $this->command->info("  - Orchestra/Coro: {$stats['orchestra']}");
-            $this->command->info("  - Iscrizioni: {$stats['enrollments']}");
+            $this->command->info("  - Iscrizioni (create): {$stats['enrollments']}");
             
         } catch (\Exception $e) {
             $this->command->error("Errore: " . $e->getMessage());
@@ -141,7 +145,21 @@ class CompleteDataSeeder extends Seeder
     {
         if (!$col) return null;
         try {
-            $value = $sheet->getCell($col . $row)->getValue();
+            $cell = $sheet->getCell($col . $row);
+            $value = $cell->getValue();
+
+            // Se è formula o vuoto, prova getCalculatedValue
+            if ($value === null || $value === '' || (is_string($value) && str_starts_with(trim($value), '='))) {
+                try {
+                    $calc = $cell->getCalculatedValue();
+                    if ($calc !== null && $calc !== '') {
+                        $value = $calc;
+                    }
+                } catch (\Throwable $e) {
+                    // ignore
+                }
+            }
+
             return $value !== null ? trim((string)$value) : null;
         } catch (\Exception $e) {
             return null;
@@ -277,6 +295,7 @@ class CompleteDataSeeder extends Seeder
     protected function importEnrollments($student, $sheet, $row, $headerMap, $academicYear)
     {
         $created = 0;
+        $seen = 0;
         
         // Importa Corso 1, 2, 3
         for ($courseNum = 1; $courseNum <= 3; $courseNum++) {
@@ -294,6 +313,11 @@ class CompleteDataSeeder extends Seeder
             $sigla = $this->getCellValue($sheet, $row, $siglaCol);
             
             if (empty($sigla)) continue;
+            $seen++;
+            if ($this->debugEnrollmentsShown < 5) {
+                $this->command->warn("DEBUG enrollments: riga {$row} corso {$courseNum} sigla='{$sigla}'");
+                $this->debugEnrollmentsShown++;
+            }
             
             // Colonne descrizione: CD per corso 1, CY per corso 2, DS per corso 3
             $descCol = $headerMap["descrizione corso {$courseNum}"] ?? null;
@@ -321,9 +345,14 @@ class CompleteDataSeeder extends Seeder
             $dataInizio = $this->getCellValue($sheet, $row, $dataInizioCol);
             
             // Trova o crea tipo corso
+            $courseTypeName = $tipologia ?: 'Standard';
+            $courseTypeCode = strtoupper(Str::slug($courseTypeName, '_'));
+            if ($courseTypeCode === '') {
+                $courseTypeCode = 'STANDARD';
+            }
             $courseType = CourseType::firstOrCreate(
-                ['name' => $tipologia ?? 'Standard'],
-                ['description' => $tipologia ?? 'Corso standard']
+                ['code' => $courseTypeCode],
+                ['name' => $courseTypeName, 'description' => $courseTypeName]
             );
             
             // Trova docente
@@ -341,9 +370,18 @@ class CompleteDataSeeder extends Seeder
                 ],
                 [
                     'course_type_id' => $courseType->id,
-                    'teacher_id' => $teacher?->id,
                     'name' => $descrizione ?? $sigla,
                     'description' => $descrizione,
+                ]
+            );
+
+            $offering = CourseOffering::firstOrCreate(
+                [
+                    'course_id' => $course->id,
+                    'academic_year_id' => $academicYear->id,
+                ],
+                [
+                    'teacher_id' => $teacher?->id,
                     'day_of_week' => $this->parseDayOfWeek($giorno),
                     'time_start' => $this->parseTime($ora),
                     'start_date' => $this->parseDate($dataInizio) ?? $academicYear->start_date,
@@ -357,7 +395,7 @@ class CompleteDataSeeder extends Seeder
                 $enrollment = Enrollment::firstOrCreate(
                     [
                         'student_id' => $student->id,
-                        'course_id' => $course->id,
+                        'course_offering_id' => $offering->id,
                     ],
                     [
                         'academic_year_id' => $academicYear->id,
@@ -370,8 +408,10 @@ class CompleteDataSeeder extends Seeder
                     $created++;
                 }
             } catch (\Exception $e) {
-                // Log errore ma continua
-                // Ignora errori silenziosamente
+                if ($this->debugEnrollmentsErrorsShown < 10) {
+                    $this->command->warn("DEBUG enrollments ERROR riga {$row} corso {$courseNum}: " . $e->getMessage());
+                    $this->debugEnrollmentsErrorsShown++;
+                }
             }
         }
         
@@ -416,7 +456,8 @@ class CompleteDataSeeder extends Seeder
         if (preg_match('/(\d{1,2}):?(\d{2})?/', $value, $matches)) {
             $hour = (int)$matches[1];
             $min = isset($matches[2]) ? (int)$matches[2] : 0;
-            return Carbon::createFromTime($hour, $min);
+            // TIME column expects HH:MM:SS
+            return sprintf('%02d:%02d:00', $hour, $min);
         }
         
         return null;

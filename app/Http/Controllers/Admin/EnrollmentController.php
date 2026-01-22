@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Enrollment;
 use App\Models\Student;
 use App\Models\Course;
+use App\Models\CourseOffering;
 use App\Models\AcademicYear;
 use App\Services\EnrollmentService;
 use App\Services\AcademicYearService;
@@ -45,35 +46,43 @@ class EnrollmentController extends Controller
             $query->where('student_id', $request->student_id);
         }
 
-        if ($request->has('course_id')) {
-            $query->where('course_id', $request->course_id);
+        if ($request->has('course_offering_id')) {
+            $query->where('course_offering_id', $request->course_offering_id);
         }
 
         if ($request->has('status')) {
             $query->where('status', $request->status);
         }
 
-        $enrollments = $query->with(['student', 'course', 'academicYear'])
+        $enrollments = $query->with(['student', 'courseOffering.course', 'academicYear'])
             ->orderBy('enrollment_date', 'desc')
             ->paginate(20);
 
         $students = Student::orderBy('last_name')->orderBy('first_name')->get();
-        $courses = Course::active()->orderBy('name')->get();
+        $offeringsQuery = CourseOffering::with(['course'])->orderBy('id', 'desc');
+        if ($currentYear) {
+            $offeringsQuery->where('academic_year_id', $currentYear->id);
+        }
+        $courseOfferings = $offeringsQuery->get();
         $years = AcademicYear::orderBy('start_date', 'desc')->get();
 
-        return view('admin.enrollments.index', compact('enrollments', 'students', 'courses', 'years', 'currentYear'));
+        return view('admin.enrollments.index', compact('enrollments', 'students', 'courseOfferings', 'years', 'currentYear'));
     }
 
     public function create(Request $request)
     {
         $currentYear = $this->academicYearService->getCurrent();
         $students = Student::orderBy('last_name')->orderBy('first_name')->get();
-        $courses = Course::active()->orderBy('name')->get();
+        $offeringsQuery = CourseOffering::with(['course'])->orderBy('id', 'desc');
+        if ($currentYear) {
+            $offeringsQuery->where('academic_year_id', $currentYear->id);
+        }
+        $courseOfferings = $offeringsQuery->get();
         $years = AcademicYear::orderBy('start_date', 'desc')->get();
 
         $preselectedStudent = $request->get('student_id') ? Student::find($request->get('student_id')) : null;
 
-        return view('admin.enrollments.create', compact('students', 'courses', 'years', 'currentYear', 'preselectedStudent'));
+        return view('admin.enrollments.create', compact('students', 'courseOfferings', 'years', 'currentYear', 'preselectedStudent'));
     }
 
     public function store(Request $request)
@@ -81,7 +90,7 @@ class EnrollmentController extends Controller
         $validated = $request->validate([
             'academic_year_id' => 'nullable|exists:academic_years,id',
             'student_id' => 'required|exists:students,id',
-            'course_id' => 'required|exists:courses,id',
+            'course_offering_id' => 'required|exists:course_offerings,id',
             'enrollment_date' => 'required|date',
             'start_date' => 'required|date',
             'end_date' => 'required|date|after_or_equal:start_date',
@@ -105,17 +114,17 @@ class EnrollmentController extends Controller
 
     public function show(Enrollment $enrollment)
     {
-        $enrollment->load(['student', 'course', 'academicYear']);
+        $enrollment->load(['student', 'courseOffering.course', 'academicYear']);
         return view('admin.enrollments.show', compact('enrollment'));
     }
 
     public function edit(Enrollment $enrollment)
     {
-        $enrollment->load(['student', 'course', 'academicYear']);
+        $enrollment->load(['student', 'courseOffering.course', 'academicYear']);
         $students = Student::orderBy('last_name')->orderBy('first_name')->get();
-        $courses = Course::active()->orderBy('name')->get();
+        $courseOfferings = CourseOffering::with(['course'])->orderBy('id', 'desc')->get();
         $years = AcademicYear::orderBy('start_date', 'desc')->get();
-        return view('admin.enrollments.edit', compact('enrollment', 'students', 'courses', 'years'));
+        return view('admin.enrollments.edit', compact('enrollment', 'students', 'courseOfferings', 'years'));
     }
 
     public function update(Request $request, Enrollment $enrollment)
@@ -123,7 +132,7 @@ class EnrollmentController extends Controller
         $validated = $request->validate([
             'academic_year_id' => 'nullable|exists:academic_years,id',
             'student_id' => 'required|exists:students,id',
-            'course_id' => 'required|exists:courses,id',
+            'course_offering_id' => 'required|exists:course_offerings,id',
             'enrollment_date' => 'required|date',
             'start_date' => 'required|date',
             'end_date' => 'required|date|after_or_equal:start_date',

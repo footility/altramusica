@@ -5,7 +5,12 @@
 
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2>Elenco Corsi</h2>
+    <div>
+        <h2 class="mb-0">Elenco Corsi (anno)</h2>
+        @if(isset($currentYear))
+            <small class="text-muted">Anno corrente: {{ $currentYear?->name ?? '-' }}</small>
+        @endif
+    </div>
     <a href="{{ route('admin.courses.create') }}" class="btn btn-primary">
         <i class="bi bi-plus-circle"></i> Nuovo Corso
     </a>
@@ -26,17 +31,17 @@
         <x-admin.data-table 
             :items="$courses"
             :columns="[
-                ['key' => 'name', 'label' => 'Nome'],
-                ['key' => 'courseType.name', 'label' => 'Tipo', 'relation' => 'courseType'],
+                ['key' => 'course.name', 'label' => 'Nome'],
+                ['key' => 'course.courseType.name', 'label' => 'Tipo'],
                 ['key' => 'teacher.full_name', 'label' => 'Docente', 'relation' => 'teacher'],
                 ['key' => 'day_of_week', 'label' => 'Giorno'],
                 ['key' => 'enrollments_count', 'label' => 'Iscritti'],
                 ['key' => 'status', 'label' => 'Stato', 'format' => 'badge'],
             ]"
             :actions="[
-                ['type' => 'show', 'route' => 'admin.courses.show'],
-                ['type' => 'edit', 'route' => 'admin.courses.edit'],
-                ['type' => 'delete', 'route' => 'admin.courses.destroy'],
+                ['type' => 'show', 'route' => 'admin.courses.show', 'param' => 'course'],
+                ['type' => 'edit', 'route' => 'admin.courses.edit', 'param' => 'course'],
+                ['type' => 'delete', 'route' => 'admin.courses.destroy', 'param' => 'course'],
             ]"
         />
     </div>

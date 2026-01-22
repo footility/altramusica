@@ -10,6 +10,12 @@
             @csrf
             @method('PUT')
 
+            @if(isset($currentYear))
+                <div class="alert alert-light border">
+                    <strong>Anno:</strong> {{ $currentYear?->name ?? '-' }}
+                </div>
+            @endif
+
             <x-admin.form-field 
                 name="course_type_id" 
                 label="Tipo Corso" 
@@ -24,7 +30,7 @@
                 label="Docente" 
                 type="select"
                 :options="$teachers->pluck('full_name', 'id')->toArray()"
-                value="{{ old('teacher_id', $course->teacher_id) }}"
+                value="{{ old('teacher_id', $offering?->teacher_id) }}"
                 placeholder="Seleziona docente (opzionale)"
             />
 
@@ -59,7 +65,7 @@
                         name="start_date" 
                         label="Data Inizio" 
                         type="date"
-                        value="{{ old('start_date', $course->start_date?->format('Y-m-d')) }}"
+                        value="{{ old('start_date', $offering?->start_date?->format('Y-m-d')) }}"
                     />
                 </div>
                 <div class="col-md-4">
@@ -67,7 +73,7 @@
                         name="end_date" 
                         label="Data Fine" 
                         type="date"
-                        value="{{ old('end_date', $course->end_date?->format('Y-m-d')) }}"
+                        value="{{ old('end_date', $offering?->end_date?->format('Y-m-d')) }}"
                     />
                 </div>
                 <div class="col-md-4">
@@ -84,7 +90,7 @@
                             'saturday' => 'Sabato',
                             'sunday' => 'Domenica',
                         ]"
-                        value="{{ old('day_of_week', $course->day_of_week) }}"
+                        value="{{ old('day_of_week', $offering?->day_of_week) }}"
                         required
                     />
                 </div>
@@ -96,7 +102,7 @@
                         name="time_start" 
                         label="Ora Inizio" 
                         type="time"
-                        value="{{ old('time_start', $course->time_start?->format('H:i')) }}"
+                        value="{{ old('time_start', $offering?->time_start) }}"
                     />
                 </div>
                 <div class="col-md-4">
@@ -104,7 +110,7 @@
                         name="time_end" 
                         label="Ora Fine" 
                         type="time"
-                        value="{{ old('time_end', $course->time_end?->format('H:i')) }}"
+                        value="{{ old('time_end', $offering?->time_end) }}"
                     />
                 </div>
                 <div class="col-md-4">
@@ -112,7 +118,7 @@
                         name="max_students" 
                         label="Numero Massimo Studenti" 
                         type="number"
-                        value="{{ old('max_students', $course->max_students) }}"
+                        value="{{ old('max_students', $offering?->max_students) }}"
                     />
                 </div>
             </div>
@@ -124,7 +130,7 @@
                         label="Prezzo per Lezione (€)" 
                         type="number"
                         step="0.01"
-                        value="{{ old('price_per_lesson', $course->price_per_lesson) }}"
+                        value="{{ old('price_per_lesson', $offering?->price_per_lesson) }}"
                         required
                     />
                 </div>
@@ -133,7 +139,7 @@
                         name="lessons_per_week" 
                         label="Lezioni per Settimana" 
                         type="number"
-                        value="{{ old('lessons_per_week', $course->lessons_per_week) }}"
+                        value="{{ old('lessons_per_week', $offering?->lessons_per_week) }}"
                         required
                     />
                 </div>
@@ -142,7 +148,7 @@
                         name="weeks_per_year" 
                         label="Settimane per Anno" 
                         type="number"
-                        value="{{ old('weeks_per_year', $course->weeks_per_year) }}"
+                        value="{{ old('weeks_per_year', $offering?->weeks_per_year) }}"
                     />
                 </div>
             </div>
@@ -157,7 +163,7 @@
                     'completed' => 'Completato',
                     'cancelled' => 'Cancellato',
                 ]"
-                value="{{ old('status', $course->status) }}"
+                value="{{ old('status', $offering?->status) }}"
                 required
             />
 

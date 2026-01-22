@@ -3,7 +3,7 @@
 namespace App\Services;
 
 use App\Models\Enrollment;
-use App\Models\Course;
+use App\Models\CourseOffering;
 use App\Models\Student;
 use App\Models\AcademicYear;
 use App\Services\CalendarService;
@@ -23,23 +23,23 @@ class EnrollmentService
      */
     public function calculateTotalCost(Enrollment $enrollment): float
     {
-        $course = $enrollment->course;
+        $offering = $enrollment->courseOffering;
         $academicYear = $enrollment->academicYear ?? AcademicYear::getCurrent();
         
-        if (!$academicYear || !$course) {
+        if (!$academicYear || !$offering) {
             return 0;
         }
 
         // Calcola numero di settimane
         $weeks = $this->calendarService->countWeeksForDay(
             $academicYear,
-            $course->day_of_week,
+            $offering->day_of_week,
             $enrollment->start_date,
             $enrollment->end_date
         );
 
         // Calcola costo totale
-        $totalCost = $weeks * $course->price_per_lesson * $course->lessons_per_week;
+        $totalCost = $weeks * $offering->price_per_lesson * $offering->lessons_per_week;
 
         // Applica sconti
         if ($enrollment->discount_percentage) {

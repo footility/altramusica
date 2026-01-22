@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('enrollments', function (Blueprint $table) {
             $table->id();
             $table->foreignId('student_id')->constrained()->onDelete('cascade');
-            $table->foreignId('course_id')->constrained()->onDelete('restrict');
+            // Fase 1 (Master vs Annuale): enrollment punta al corso dell'anno (CourseOffering)
+            $table->foreignId('course_offering_id')->constrained('course_offerings')->onDelete('restrict');
             $table->date('enrollment_date');
             $table->date('start_date');
             $table->date('end_date')->nullable();

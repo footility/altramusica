@@ -19,7 +19,7 @@
                 ['name' => 'search', 'type' => 'text', 'placeholder' => 'Cerca studente...', 'width' => 3],
                 ['name' => 'academic_year_id', 'type' => 'select', 'options' => $years->pluck('name', 'id')->toArray(), 'placeholder' => 'Tutti gli anni', 'width' => 3, 'value' => $currentYear?->id],
                 ['name' => 'student_id', 'type' => 'select', 'options' => $students->pluck('full_name', 'id')->toArray(), 'placeholder' => 'Tutti gli studenti', 'width' => 3],
-                ['name' => 'course_id', 'type' => 'select', 'options' => $courses->pluck('name', 'id')->toArray(), 'placeholder' => 'Tutti i corsi', 'width' => 3],
+                ['name' => 'course_offering_id', 'type' => 'select', 'options' => $courseOfferings->mapWithKeys(fn($o) => [$o->id => ($o->course?->name ?? 'Corso')])->toArray(), 'placeholder' => 'Tutti i corsi', 'width' => 3],
                 ['name' => 'status', 'type' => 'select', 'options' => ['active' => 'Attiva', 'completed' => 'Completata', 'cancelled' => 'Cancellata'], 'placeholder' => 'Tutti gli stati', 'width' => 3],
             ]"
         />
@@ -28,7 +28,7 @@
             :items="$enrollments"
             :columns="[
                 ['key' => 'student.full_name', 'label' => 'Studente', 'relation' => 'student'],
-                ['key' => 'course.name', 'label' => 'Corso', 'relation' => 'course'],
+                ['key' => 'courseOffering.course.name', 'label' => 'Corso', 'relation' => 'courseOffering'],
                 ['key' => 'academicYear.name', 'label' => 'Anno', 'relation' => 'academicYear'],
                 ['key' => 'enrollment_date', 'label' => 'Data Iscrizione', 'format' => 'date'],
                 ['key' => 'start_date', 'label' => 'Data Inizio', 'format' => 'date'],

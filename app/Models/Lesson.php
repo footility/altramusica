@@ -10,7 +10,7 @@ class Lesson extends Model
     use HasFactory;
 
     protected $fillable = [
-        'course_id',
+        'course_offering_id',
         'teacher_id',
         'substitute_teacher_id',
         'date',
@@ -22,15 +22,29 @@ class Lesson extends Model
 
     protected $casts = [
         'date' => 'date',
-        'time_start' => 'datetime',
-        'time_end' => 'datetime',
+        // TIME columns -> string
+        'time_start' => 'string',
+        'time_end' => 'string',
         'completed' => 'boolean',
     ];
 
     // Relationships
+    public function courseOffering()
+    {
+        return $this->belongsTo(CourseOffering::class, 'course_offering_id');
+    }
+
     public function course()
     {
-        return $this->belongsTo(Course::class);
+        // Compatibilità: lesson->course (catalogo) tramite offering
+        return $this->hasOneThrough(
+            Course::class,
+            CourseOffering::class,
+            'id',                 // course_offerings.id
+            'id',                 // courses.id
+            'course_offering_id', // lessons.course_offering_id
+            'course_id'           // course_offerings.course_id
+        );
     }
 
     public function teacher()
@@ -73,8 +87,15 @@ class Lesson extends Model
         if (!$this->time_start || !$this->time_end) {
             return null;
         }
-        
-        return $this->time_start->diffInMinutes($this->time_end);
+
+        // time_start/time_end are strings like "17:00:00"
+        try {
+            $start = \Carbon\Carbon::createFromFormat('H:i:s', $this->time_start);
+            $end = \Carbon\Carbon::createFromFormat('H:i:s', $this->time_end);
+            return $start->diffInMinutes($end);
+        } catch (\Throwable $e) {
+            return null;
+        }
     }
 
     public function markAsCompleted()

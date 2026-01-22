@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('lessons', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('course_id')->constrained()->onDelete('cascade');
+            // Fase 1 (Master vs Annuale): lezione legata al corso dell'anno (CourseOffering)
+            $table->foreignId('course_offering_id')->constrained('course_offerings')->onDelete('cascade');
             $table->foreignId('teacher_id')->constrained()->onDelete('cascade');
             $table->foreignId('substitute_teacher_id')->nullable()->constrained('teachers')->onDelete('set null');
             // classroom_id aggiunto in migration successiva
@@ -24,7 +25,7 @@ return new class extends Migration
             $table->boolean('completed')->default(false);
             $table->timestamps();
             
-            $table->index(['course_id', 'date']);
+            $table->index(['course_offering_id', 'date']);
             $table->index(['teacher_id', 'date']);
         });
     }

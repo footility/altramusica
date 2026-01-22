@@ -11,6 +11,11 @@
                 <h5>Informazioni Corso</h5>
             </div>
             <div class="card-body">
+                @if(isset($currentYear))
+                    <div class="alert alert-light border mb-3">
+                        <strong>Anno:</strong> {{ $currentYear?->name ?? '-' }}
+                    </div>
+                @endif
                 <dl class="row">
                     <dt class="col-sm-3">Nome:</dt>
                     <dd class="col-sm-9">{{ $course->name }}</dd>
@@ -19,47 +24,47 @@
                     <dd class="col-sm-9">{{ $course->courseType->name ?? '-' }}</dd>
 
                     <dt class="col-sm-3">Docente:</dt>
-                    <dd class="col-sm-9">{{ $course->teacher->full_name ?? '-' }}</dd>
+                    <dd class="col-sm-9">{{ $offering?->teacher?->full_name ?? '-' }}</dd>
 
                     <dt class="col-sm-3">Giorno:</dt>
-                    <dd class="col-sm-9">{{ ucfirst($course->day_of_week) }}</dd>
+                    <dd class="col-sm-9">{{ $offering?->day_of_week ? ucfirst($offering->day_of_week) : '-' }}</dd>
 
                     <dt class="col-sm-3">Orario:</dt>
                     <dd class="col-sm-9">
-                        @if($course->time_start && $course->time_end)
-                            {{ $course->time_start->format('H:i') }} - {{ $course->time_end->format('H:i') }}
+                        @if($offering?->time_start && $offering?->time_end)
+                            {{ $offering->time_start }} - {{ $offering->time_end }}
                         @else
                             -
                         @endif
                     </dd>
 
                     <dt class="col-sm-3">Prezzo per Lezione:</dt>
-                    <dd class="col-sm-9">€ {{ number_format($course->price_per_lesson, 2, ',', '.') }}</dd>
+                    <dd class="col-sm-9">€ {{ number_format((float) ($offering?->price_per_lesson ?? 0), 2, ',', '.') }}</dd>
 
                     <dt class="col-sm-3">Lezioni per Settimana:</dt>
-                    <dd class="col-sm-9">{{ $course->lessons_per_week }}</dd>
+                    <dd class="col-sm-9">{{ $offering?->lessons_per_week ?? '-' }}</dd>
 
                     <dt class="col-sm-3">Stato:</dt>
                     <dd class="col-sm-9">
-                        <span class="badge bg-{{ $course->status == 'active' ? 'success' : 'secondary' }}">
-                            {{ ucfirst($course->status) }}
+                        <span class="badge bg-{{ ($offering?->status ?? null) == 'active' ? 'success' : 'secondary' }}">
+                            {{ $offering?->status ? ucfirst($offering->status) : '-' }}
                         </span>
                     </dd>
                 </dl>
             </div>
         </div>
 
-        @if($course->enrollments->count() > 0)
+        @if(($offering?->enrollments?->count() ?? 0) > 0)
         <div class="card">
             <div class="card-header">
-                <h5>Iscrizioni ({{ $course->enrollments->count() }})</h5>
+                <h5>Iscrizioni ({{ $offering->enrollments->count() }})</h5>
             </div>
             <div class="card-body">
                 <x-admin.data-table 
-                    :items="$course->enrollments"
+                    :items="$offering->enrollments"
                     :columns="[
-                        ['key' => 'student.first_name', 'label' => 'Nome', 'relation' => 'student'],
-                        ['key' => 'student.last_name', 'label' => 'Cognome', 'relation' => 'student'],
+                        ['key' => 'student.first_name', 'label' => 'Nome'],
+                        ['key' => 'student.last_name', 'label' => 'Cognome'],
                         ['key' => 'start_date', 'label' => 'Data Inizio', 'format' => 'date'],
                         ['key' => 'status', 'label' => 'Stato', 'format' => 'badge'],
                     ]"

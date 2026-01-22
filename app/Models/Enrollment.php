@@ -12,7 +12,7 @@ class Enrollment extends Model
     protected $fillable = [
         'academic_year_id',
         'student_id',
-        'course_id',
+        'course_offering_id',
         'enrollment_date',
         'start_date',
         'end_date',
@@ -44,7 +44,20 @@ class Enrollment extends Model
 
     public function course()
     {
-        return $this->belongsTo(Course::class);
+        // Compatibilità: enrollment->course (catalogo) tramite offering
+        return $this->hasOneThrough(
+            Course::class,
+            CourseOffering::class,
+            'id',            // course_offerings.id
+            'id',            // courses.id
+            'course_offering_id', // enrollments.course_offering_id
+            'course_id'      // course_offerings.course_id
+        );
+    }
+
+    public function courseOffering()
+    {
+        return $this->belongsTo(CourseOffering::class, 'course_offering_id');
     }
 
     public function scopeActive($query)

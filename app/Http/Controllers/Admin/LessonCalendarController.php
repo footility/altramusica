@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Lesson;
-use App\Models\Course;
+use App\Models\CourseOffering;
 use App\Models\Teacher;
 use App\Models\Classroom;
 use App\Models\AcademicYear;
@@ -34,11 +34,14 @@ class LessonCalendarController extends Controller
         $year = AcademicYear::findOrFail($yearId);
 
         $teachers = Teacher::active()->orderBy('last_name')->orderBy('first_name')->get();
-        $courses = Course::active()->orderBy('name')->get();
+        $courseOfferings = CourseOffering::with(['course'])
+            ->where('academic_year_id', $year->id)
+            ->orderByDesc('id')
+            ->get();
         $classrooms = Classroom::available()->orderBy('name')->get();
         $years = AcademicYear::orderBy('start_date', 'desc')->get();
 
-        return view('admin.lessons.calendar', compact('year', 'years', 'teachers', 'courses', 'classrooms'));
+        return view('admin.lessons.calendar', compact('year', 'years', 'teachers', 'courseOfferings', 'classrooms'));
     }
 
     public function events(Request $request)
@@ -47,7 +50,7 @@ class LessonCalendarController extends Controller
         $start = $request->get('start');
         $end = $request->get('end');
         $teacherId = $request->get('teacher_id');
-        $courseId = $request->get('course_id');
+        $courseOfferingId = $request->get('course_offering_id');
         $classroomId = $request->get('classroom_id');
 
         if (!$yearId) {
@@ -59,13 +62,9 @@ class LessonCalendarController extends Controller
             return response()->json([]);
         }
 
-        $query = Lesson::with(['course', 'teacher', 'classroom'])
-            ->whereHas('course', function($q) use ($yearId) {
-                $q->whereHas('enrollments', function($eq) use ($yearId) {
-                    $eq->whereHas('student', function($sq) use ($yearId) {
-                        $sq->where('academic_year_id', $yearId);
-                    });
-                });
+        $query = Lesson::with(['courseOffering.course', 'teacher', 'classroom'])
+            ->whereHas('courseOffering', function ($q) use ($yearId) {
+                $q->where('academic_year_id', $yearId);
             })
             ->where('date', '>=', $start)
             ->where('date', '<=', $end);
@@ -74,8 +73,8 @@ class LessonCalendarController extends Controller
             $query->where('teacher_id', $teacherId);
         }
 
-        if ($courseId) {
-            $query->where('course_id', $courseId);
+        if ($courseOfferingId) {
+            $query->where('course_offering_id', $courseOfferingId);
         }
 
         if ($classroomId) {
@@ -86,7 +85,7 @@ class LessonCalendarController extends Controller
 
         $events = [];
         foreach ($lessons as $lesson) {
-            $title = $lesson->course->name ?? 'Lezione';
+            $title = $lesson->courseOffering?->course?->name ?? 'Lezione';
             if ($lesson->teacher) {
                 $title .= ' - ' . $lesson->teacher->last_name;
             }
@@ -100,8 +99,8 @@ class LessonCalendarController extends Controller
             $events[] = [
                 'id' => 'lesson-' . $lesson->id,
                 'title' => $title,
-                'start' => $lesson->date->format('Y-m-d') . 'T' . $lesson->time_start->format('H:i:s'),
-                'end' => $lesson->date->format('Y-m-d') . 'T' . $lesson->time_end->format('H:i:s'),
+                'start' => $lesson->date->format('Y-m-d') . 'T' . ($lesson->time_start ?? '00:00:00'),
+                'end' => $lesson->date->format('Y-m-d') . 'T' . ($lesson->time_end ?? '00:00:00'),
                 'backgroundColor' => $color,
                 'borderColor' => $color,
                 'textColor' => '#fff',
@@ -110,7 +109,7 @@ class LessonCalendarController extends Controller
                 'extendedProps' => [
                     'type' => 'lesson',
                     'lesson_id' => $lesson->id,
-                    'course_id' => $lesson->course_id,
+                    'course_offering_id' => $lesson->course_offering_id,
                     'teacher_id' => $lesson->teacher_id,
                     'classroom_id' => $lesson->classroom_id,
                     'completed' => $lesson->completed,

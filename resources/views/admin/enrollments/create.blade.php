@@ -27,11 +27,11 @@
             />
 
             <x-admin.form-field 
-                name="course_id" 
-                label="Corso" 
+                name="course_offering_id" 
+                label="Corso (anno)" 
                 type="select"
-                :options="$courses->pluck('name', 'id')->toArray()"
-                value="{{ old('course_id') }}"
+                :options="$courseOfferings->mapWithKeys(fn($o) => [$o->id => (($o->course?->name ?? 'Corso') . ' (' . ($o->academicYear?->slug ?? '')) . ')'])->toArray()"
+                value="{{ old('course_offering_id') }}"
                 required
             />
 

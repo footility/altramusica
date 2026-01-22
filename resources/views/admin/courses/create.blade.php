@@ -8,6 +8,11 @@
     <div class="card-body">
         <form action="{{ route('admin.courses.store') }}" method="POST">
             @csrf
+            @if(isset($currentYear))
+                <div class="alert alert-light border">
+                    <strong>Anno:</strong> {{ $currentYear?->name ?? '-' }}
+                </div>
+            @endif
 
             <x-admin.form-field 
                 name="course_type_id" 

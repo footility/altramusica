@@ -37,10 +37,10 @@
             </div>
             <div class="col-md-3">
                 <label class="form-label">Corso</label>
-                <select name="course_id" id="course_id" class="form-select" onchange="updateCalendar()">
+                <select name="course_offering_id" id="course_offering_id" class="form-select" onchange="updateCalendar()">
                     <option value="">Tutti i corsi</option>
-                    @foreach($courses as $c)
-                        <option value="{{ $c->id }}">{{ $c->name }}</option>
+                    @foreach($courseOfferings as $o)
+                        <option value="{{ $o->id }}">{{ $o->course?->name ?? 'Corso' }}</option>
                     @endforeach
                 </select>
             </div>
@@ -89,11 +89,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             
             var teacherId = document.getElementById('teacher_id')?.value;
-            var courseId = document.getElementById('course_id')?.value;
+            var courseOfferingId = document.getElementById('course_offering_id')?.value;
             var classroomId = document.getElementById('classroom_id')?.value;
             
             if (teacherId) params.append('teacher_id', teacherId);
-            if (courseId) params.append('course_id', courseId);
+            if (courseOfferingId) params.append('course_offering_id', courseOfferingId);
             if (classroomId) params.append('classroom_id', classroomId);
             
             fetch('{{ route("admin.lessons.calendar.events") }}?' + params.toString())

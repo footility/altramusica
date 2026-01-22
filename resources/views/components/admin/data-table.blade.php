@@ -15,15 +15,18 @@
                 <tr>
                     @foreach($columns as $column)
                         <td>
+                            @php
+                                $rawValue = data_get($item, $column['key'] ?? null);
+                            @endphp
                             @if(isset($column['format']) && $column['format'] === 'date')
-                                {{ $item->{$column['key']} ? $item->{$column['key']}->format('d/m/Y') : '-' }}
+                                {{ $rawValue ? $rawValue->format('d/m/Y') : '-' }}
                             @elseif(isset($column['format']) && $column['format'] === 'datetime')
-                                {{ $item->{$column['key']} ? $item->{$column['key']}->format('d/m/Y H:i') : '-' }}
+                                {{ $rawValue ? $rawValue->format('d/m/Y H:i') : '-' }}
                             @elseif(isset($column['format']) && $column['format'] === 'currency')
-                                € {{ number_format($item->{$column['key']}, 2, ',', '.') }}
+                                € {{ number_format((float) $rawValue, 2, ',', '.') }}
                             @elseif(isset($column['format']) && $column['format'] === 'badge')
                                 @php
-                                    $value = $item->{$column['key']};
+                                    $value = $rawValue;
                                     $isBool = is_bool($value);
                                 @endphp
                                 @if($isBool)
@@ -35,10 +38,8 @@
                                         {{ $value }}
                                     </span>
                                 @endif
-                            @elseif(isset($column['relation']))
-                                {{ $item->{$column['relation']}->{$column['key']} ?? '-' }}
                             @else
-                                {{ $item->{$column['key']} ?? '-' }}
+                                {{ $rawValue ?? '-' }}
                             @endif
                         </td>
                     @endforeach
@@ -46,16 +47,20 @@
                         <td class="text-end">
                             <div class="btn-group" role="group">
                                 @foreach($actions as $action)
+                                    @php
+                                        $actionParam = isset($action['param']) ? data_get($item, $action['param']) : $item;
+                                        $actionParam = $actionParam ?: $item;
+                                    @endphp
                                     @if($action['type'] === 'show')
-                                        <a href="{{ route($action['route'], $item) }}" class="btn btn-sm btn-outline-info" title="Visualizza">
+                                        <a href="{{ route($action['route'], $actionParam) }}" class="btn btn-sm btn-outline-info" title="Visualizza">
                                             <i class="bi bi-eye"></i>
                                         </a>
                                     @elseif($action['type'] === 'edit')
-                                        <a href="{{ route($action['route'], $item) }}" class="btn btn-sm btn-outline-primary" title="Modifica">
+                                        <a href="{{ route($action['route'], $actionParam) }}" class="btn btn-sm btn-outline-primary" title="Modifica">
                                             <i class="bi bi-pencil"></i>
                                         </a>
                                     @elseif($action['type'] === 'delete')
-                                        <form action="{{ route($action['route'], $item) }}" method="POST" class="d-inline" onsubmit="return confirm('{{ $action['confirm'] ?? 'Sei sicuro?' }}');">
+                                        <form action="{{ route($action['route'], $actionParam) }}" method="POST" class="d-inline" onsubmit="return confirm('{{ $action['confirm'] ?? 'Sei sicuro?' }}');">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-sm btn-outline-danger" title="Elimina">
