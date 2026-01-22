@@ -12,6 +12,7 @@ class InstrumentRental extends Model
     protected $fillable = [
         'student_id',
         'instrument_id',
+        'academic_year_id',
         'start_date',
         'end_date',
         'monthly_fee',
@@ -38,6 +39,11 @@ class InstrumentRental extends Model
     public function instrument()
     {
         return $this->belongsTo(Instrument::class);
+    }
+
+    public function academicYear()
+    {
+        return $this->belongsTo(AcademicYear::class);
     }
 
     public function scopeActive($query)

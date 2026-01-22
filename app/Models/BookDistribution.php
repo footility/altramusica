@@ -12,6 +12,7 @@ class BookDistribution extends Model
     protected $fillable = [
         'student_id',
         'book_id',
+        'academic_year_id',
         'course_id',
         'distribution_date',
         'quantity',
@@ -37,5 +38,10 @@ class BookDistribution extends Model
     public function course()
     {
         return $this->belongsTo(Course::class);
+    }
+
+    public function academicYear()
+    {
+        return $this->belongsTo(AcademicYear::class);
     }
 }
