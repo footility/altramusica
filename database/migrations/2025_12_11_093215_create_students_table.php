@@ -27,6 +27,7 @@ return new class extends Migration
             $table->text('admin_notes')->nullable();
             $table->boolean('privacy_consent')->default(false);
             $table->boolean('photo_consent')->default(false);
+            $table->date('last_contact_date')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });
