@@ -127,6 +127,12 @@
                     'active' => request()->routeIs('admin.payment-plans.*'),
                 ],
                 [
+                    'label' => 'Crediti/Debiti',
+                    'icon' => 'bi-cash-coin',
+                    'route' => 'admin.accounting.balances',
+                    'active' => request()->routeIs('admin.accounting.*'),
+                ],
+                [
                     'label' => 'Conto Orario',
                     'icon' => 'bi-clock-history',
                     'route' => 'admin.teacher-hours.index',
