@@ -80,6 +80,18 @@
                     'active' => request()->routeIs('admin.exams.*'),
                 ],
                 [
+                    'label' => 'Libri',
+                    'icon' => 'bi-journal-bookmark',
+                    'route' => 'admin.books.index',
+                    'active' => request()->routeIs('admin.books.*'),
+                ],
+                [
+                    'label' => 'Distribuzioni Libri',
+                    'icon' => 'bi-journal-arrow-up',
+                    'route' => 'admin.book-distributions.index',
+                    'active' => request()->routeIs('admin.book-distributions.*'),
+                ],
+                [
                     'label' => 'Disponibilità Studenti',
                     'icon' => 'bi-clock',
                     'route' => 'admin.student-availability.index',

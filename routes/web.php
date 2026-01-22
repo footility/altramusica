@@ -70,4 +70,8 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::resource('exams', \App\Http\Controllers\Admin\ExamController::class);
     Route::resource('extra-activities', \App\Http\Controllers\Admin\ExtraActivityController::class);
     Route::resource('classrooms', \App\Http\Controllers\Admin\ClassroomController::class);
+
+    // AS-IS missing CRUDs (Fase 1)
+    Route::resource('books', \App\Http\Controllers\Admin\BookController::class);
+    Route::resource('book-distributions', \App\Http\Controllers\Admin\BookDistributionController::class);
 });
