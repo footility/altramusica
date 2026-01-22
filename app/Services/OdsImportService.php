@@ -108,7 +108,10 @@ class OdsImportService
                 // Cerca studente esistente
                 $student = null;
                 if (!empty($studentData['tax_code'])) {
-                    $student = Student::where('tax_code', $studentData['tax_code'])->first();
+                    // Fase 1 (Master vs Annuale con Student annuale): deduplica SOLO nell'anno corrente
+                    $student = Student::where('tax_code', $studentData['tax_code'])
+                        ->where('academic_year_id', $academicYear->id)
+                        ->first();
                 }
                 
                 if (!$student && !empty($studentData['first_name']) && !empty($studentData['last_name'])) {
@@ -190,6 +193,10 @@ class OdsImportService
         $firstContactDate = !empty($data['first_contact_date']) 
             ? $this->parseDate($data['first_contact_date']) 
             : null;
+
+        $lastContactDate = !empty($data['last_contact_date'])
+            ? $this->parseDate($data['last_contact_date'])
+            : null;
         
         // Nota: address, postal_code, city, phone, email non sono nella tabella students
         // Questi dati vanno nei genitori o in una tabella separata
@@ -214,6 +221,7 @@ class OdsImportService
             'tax_code' => !empty($data['tax_code']) ? strtoupper($data['tax_code']) : null,
             'status' => $status,
             'how_know_us' => $data['source'] ?? null,
+            'last_contact_date' => $lastContactDate,
             'notes' => $notes,
         ];
     }

@@ -25,6 +25,12 @@ class AvailabilitySeeder extends Seeder
         }
 
         try {
+            $academicYear = \App\Models\AcademicYear::where('is_active', true)->first();
+            if (!$academicYear) {
+                $this->command->error("Nessun anno accademico attivo trovato");
+                return;
+            }
+
             $spreadsheet = IOFactory::load($filePath);
             $sheet = $spreadsheet->getSheet(0);
             
@@ -73,19 +79,23 @@ class AvailabilitySeeder extends Seeder
                     $cf = trim($cf);
                     
                     if (!empty($cf)) {
-                        $student = Student::where('tax_code', strtoupper($cf))->first();
+                        $student = Student::where('tax_code', strtoupper($cf))
+                            ->where('academic_year_id', $academicYear->id)
+                            ->first();
                     }
                     
                     if (!$student && !empty($cognome) && !empty($nome)) {
                         // Prova match esatto
                         $student = Student::whereRaw('LOWER(last_name) = ?', [strtolower($cognome)])
                             ->whereRaw('LOWER(first_name) = ?', [strtolower($nome)])
+                            ->where('academic_year_id', $academicYear->id)
                             ->first();
                         
                         // Se non trovato, prova match parziale
                         if (!$student) {
                             $student = Student::whereRaw('LOWER(last_name) LIKE ?', ['%' . strtolower($cognome) . '%'])
                                 ->whereRaw('LOWER(first_name) LIKE ?', ['%' . strtolower($nome) . '%'])
+                                ->where('academic_year_id', $academicYear->id)
                                 ->first();
                         }
                     }

@@ -248,6 +248,7 @@ class CompleteDataSeeder extends Seeder
                     'instrument_id' => $instrument->id,
                 ],
                 [
+                    'academic_year_id' => $student->academic_year_id,
                     'start_date' => now(),
                     'monthly_fee' => 0, // Da calcolare
                     'status' => 'active',
