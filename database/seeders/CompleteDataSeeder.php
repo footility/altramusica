@@ -7,8 +7,6 @@ use App\Models\Student;
 use App\Models\StudentLevel;
 use App\Models\StudentAvailability;
 use App\Models\Instrument;
-use App\Models\ExtraActivity;
-use App\Models\ExtraActivityEnrollment;
 use App\Models\Enrollment;
 use App\Models\Course;
 use App\Models\CourseType;
@@ -259,43 +257,21 @@ class CompleteDataSeeder extends Seeder
     
     protected function importOrchestraCoro($student, $sheet, $row, $headerMap, $academicYear)
     {
-        // Orchestra 1
+        // FASE 1: l'ODS contiene campi orchestra/coro, ma la gestione "attività extra" è fuori scope.
+        // Qui registriamo l'informazione in modo non strutturato nelle note dello studente per non perdere dati in import.
         $orch1 = $this->getCellValue($sheet, $row, $headerMap['orch 1'] ?? null);
-        if (!empty($orch1)) {
-            $this->enrollInExtraActivity($student, $orch1, 'orchestra', $sheet, $row, $headerMap, $academicYear);
-        }
-        
-        // Coro
         $coro = $this->getCellValue($sheet, $row, $headerMap['coro'] ?? null);
-        if (!empty($coro)) {
-            $this->enrollInExtraActivity($student, $coro, 'choir', $sheet, $row, $headerMap, $academicYear);
+
+        $tags = [];
+        if (!empty($orch1)) $tags[] = "Orchestra: {$orch1}";
+        if (!empty($coro)) $tags[] = "Coro: {$coro}";
+
+        if (!empty($tags)) {
+            $existing = trim((string) ($student->notes ?? ''));
+            $append = implode(' | ', $tags);
+            $student->notes = $existing ? ($existing . ' | ' . $append) : $append;
+            $student->save();
         }
-    }
-    
-    protected function enrollInExtraActivity($student, $activityName, $type, $sheet, $row, $headerMap, $academicYear)
-    {
-        $activity = ExtraActivity::firstOrCreate(
-            [
-                'name' => $activityName,
-                'type' => $type,
-            ],
-            [
-                'start_date' => $academicYear->start_date,
-                'end_date' => $academicYear->end_date,
-                'status' => 'active',
-            ]
-        );
-        
-        ExtraActivityEnrollment::firstOrCreate(
-            [
-                'student_id' => $student->id,
-                'extra_activity_id' => $activity->id,
-            ],
-            [
-                'enrollment_date' => now(),
-                'status' => 'active',
-            ]
-        );
     }
     
     protected function importEnrollments($student, $sheet, $row, $headerMap, $academicYear)

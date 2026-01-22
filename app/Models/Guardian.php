@@ -42,10 +42,7 @@ class Guardian extends Model
             ->withTimestamps();
     }
 
-    public function communications()
-    {
-        return $this->hasMany(Communication::class);
-    }
+    // NOTE (Fase 1): rimosse relazioni verso moduli extra non AS-IS (comunicazioni).
 
     // Accessors
     public function getFullNameAttribute()

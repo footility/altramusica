@@ -48,10 +48,7 @@ class Lesson extends Model
         return $this->belongsTo(Classroom::class);
     }
 
-    public function attendances()
-    {
-        return $this->hasMany(Attendance::class);
-    }
+    // NOTE (Fase 1): rimosse relazioni verso moduli extra non AS-IS (presenze).
 
     // Scopes
     public function scopeCompleted($query)

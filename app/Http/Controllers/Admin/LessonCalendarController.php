@@ -59,7 +59,7 @@ class LessonCalendarController extends Controller
             return response()->json([]);
         }
 
-        $query = Lesson::with(['course', 'teacher', 'classroom', 'attendances'])
+        $query = Lesson::with(['course', 'teacher', 'classroom'])
             ->whereHas('course', function($q) use ($yearId) {
                 $q->whereHas('enrollments', function($eq) use ($yearId) {
                     $eq->whereHas('student', function($sq) use ($yearId) {
@@ -94,11 +94,8 @@ class LessonCalendarController extends Controller
                 $title .= ' (' . $lesson->classroom->code . ')';
             }
             
-            // Colore in base allo stato
+            // Colore in base allo stato (Fase 1: niente presenze/assenze)
             $color = $lesson->completed ? '#6c757d' : '#007bff';
-            if ($lesson->attendances->where('status', 'absent')->count() > 0) {
-                $color = '#dc3545'; // Rosso se ci sono assenti
-            }
             
             $events[] = [
                 'id' => 'lesson-' . $lesson->id,
@@ -108,7 +105,8 @@ class LessonCalendarController extends Controller
                 'backgroundColor' => $color,
                 'borderColor' => $color,
                 'textColor' => '#fff',
-                'url' => route('teacher.register.show', $lesson->id),
+                // NOTE (Fase 1): rimosso registro docente (teacher.register.*). Non forniamo link click.
+                'url' => null,
                 'extendedProps' => [
                     'type' => 'lesson',
                     'lesson_id' => $lesson->id,
@@ -116,7 +114,7 @@ class LessonCalendarController extends Controller
                     'teacher_id' => $lesson->teacher_id,
                     'classroom_id' => $lesson->classroom_id,
                     'completed' => $lesson->completed,
-                    'attendances_count' => $lesson->attendances->count(),
+                    'attendances_count' => null,
                 ]
             ];
         }

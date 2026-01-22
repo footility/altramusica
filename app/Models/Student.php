@@ -89,15 +89,7 @@ class Student extends Model
         return $this->hasMany(StudentLevel::class);
     }
 
-    public function communications()
-    {
-        return $this->hasMany(Communication::class);
-    }
-
-    public function attendances()
-    {
-        return $this->hasMany(Attendance::class);
-    }
+    // NOTE (Fase 1): rimosse relazioni verso moduli extra non AS-IS (comunicazioni/presenze).
 
     public function documents()
     {

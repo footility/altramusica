@@ -39,10 +39,7 @@ class Teacher extends Model
         return $this->hasMany(Course::class);
     }
 
-    public function extraActivities()
-    {
-        return $this->hasMany(ExtraActivity::class);
-    }
+    // NOTE (Fase 1): rimosse relazioni verso moduli extra non AS-IS (attività extra).
 
     public function availability()
     {
