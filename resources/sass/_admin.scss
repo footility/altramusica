@@ -1,0 +1,99 @@
+// Admin shell (Bootstrap 5 light)
+
+.admin-body {
+  background: $body-bg;
+}
+
+.admin-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+}
+
+.admin-sidebar {
+  width: 280px;
+  flex: 0 0 auto;
+  background: #fff;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-sidebar__header {
+  padding: 1rem 1rem 0.75rem 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.admin-sidebar__logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: $primary;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  flex: 0 0 auto;
+}
+
+.admin-sidebar__brand {
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.admin-sidebar__subtitle {
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.admin-sidebar__content {
+  padding: 0.75rem 0.75rem 1rem 0.75rem;
+  overflow: auto;
+}
+
+.admin-nav-section {
+  padding: 0.5rem 0.5rem 0.25rem 0.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.admin-sidebar .nav-link {
+  color: rgba(0, 0, 0, 0.78);
+  border-radius: 10px;
+  padding: 0.55rem 0.6rem;
+}
+
+.admin-sidebar .nav-link:hover {
+  background: rgba(13, 110, 253, 0.06);
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.admin-sidebar .nav-link.active {
+  background: rgba(13, 110, 253, 0.12);
+  color: rgba(0, 0, 0, 0.92);
+  font-weight: 600;
+}
+
+.admin-main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.admin-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.admin-topbar__title {
+  font-weight: 600;
+}
+
