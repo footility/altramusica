@@ -21,6 +21,7 @@ ed è aderente ai dati presenti in `docs/materiale cliente/`.
 - `12_DOCUMENTI_E_MODELLI_CONTRATTI.md`
 - `13_COPERTURA_CODICE_VS_ASIS.md`
 - `14_FASE2_OTTIMIZZAZIONI_E_ALLEGGERIMENTO_OPERATIVO.md`
+- `15_ATTIVITA_FASE2_FOOTILITY.md`
 
 ## Allegati sorgenti
 
