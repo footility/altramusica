@@ -1,0 +1,5505 @@
+{
+  "A00": {
+    "footility_activity_id": 2859,
+    "title": "Caricamento dati iniziali dai fogli esistenti",
+    "files": [
+      "app/Console/Commands/ImportOdsData.php",
+      "app/Services/OdsImportService.php",
+      "database/seeders/AcademicYearSeeder.php",
+      "database/seeders/AdminSeeder.php",
+      "database/seeders/AvailabilitySeeder.php",
+      "database/seeders/CalendarSeeder.php",
+      "database/seeders/ClassroomSeeder.php",
+      "database/seeders/CompleteDataSeeder.php",
+      "database/seeders/ContractSeeder.php",
+      "database/seeders/DatabaseSeeder.php",
+      "database/seeders/ExamSeeder.php",
+      "database/seeders/GuardianSeeder.php",
+      "database/seeders/InstrumentSeeder.php",
+      "database/seeders/InvoiceSeeder.php",
+      "database/seeders/OdsDataSeeder.php",
+      "database/seeders/StudentSeeder.php",
+      "database/seeders/TeacherSeeder.php",
+      "resources/views/components/admin/sidebar.blade.php",
+      "routes/web.php"
+    ],
+    "file_to_devunit_ids": {
+      "app/Console/Commands/ImportOdsData.php": [],
+      "app/Services/OdsImportService.php": [],
+      "database/seeders/AcademicYearSeeder.php": [
+        134200
+      ],
+      "database/seeders/AdminSeeder.php": [
+        134201
+      ],
+      "database/seeders/AvailabilitySeeder.php": [
+        134203,
+        134204,
+        134202
+      ],
+      "database/seeders/CalendarSeeder.php": [
+        134205
+      ],
+      "database/seeders/ClassroomSeeder.php": [
+        134206
+      ],
+      "database/seeders/CompleteDataSeeder.php": [
+        134208,
+        134213,
+        134210,
+        134214,
+        134209,
+        134212,
+        134211,
+        134219,
+        134218,
+        134215,
+        134217,
+        134216,
+        134207
+      ],
+      "database/seeders/ContractSeeder.php": [
+        134222,
+        134223,
+        134221,
+        134220
+      ],
+      "database/seeders/DatabaseSeeder.php": [
+        134224
+      ],
+      "database/seeders/ExamSeeder.php": [
+        134225
+      ],
+      "database/seeders/GuardianSeeder.php": [
+        134226
+      ],
+      "database/seeders/InstrumentSeeder.php": [
+        134229,
+        134228,
+        134227
+      ],
+      "database/seeders/InvoiceSeeder.php": [
+        134500,
+        134499,
+        134230
+      ],
+      "database/seeders/OdsDataSeeder.php": [
+        134231
+      ],
+      "database/seeders/StudentSeeder.php": [
+        134232
+      ],
+      "database/seeders/TeacherSeeder.php": [
+        134236,
+        134235,
+        134237,
+        134234,
+        134233
+      ],
+      "resources/views/components/admin/sidebar.blade.php": [
+        134496,
+        134497,
+        134498,
+        134495,
+        134494
+      ],
+      "routes/web.php": []
+    },
+    "devunits": [
+      {
+        "id": 134200,
+        "category": "be_logic",
+        "semantic_path": "AcademicYear/Run/run",
+        "source_file_path": "database/seeders/AcademicYearSeeder.php"
+      },
+      {
+        "id": 134201,
+        "category": "be_logic",
+        "semantic_path": "Admin/Run/run",
+        "source_file_path": "database/seeders/AdminSeeder.php"
+      },
+      {
+        "id": 134203,
+        "category": "be_logic",
+        "semantic_path": "Availability/CellValue/getCellValue",
+        "source_file_path": "database/seeders/AvailabilitySeeder.php"
+      },
+      {
+        "id": 134204,
+        "category": "be_logic",
+        "semantic_path": "Availability/ExcelTimeToTime/excelTimeToTime",
+        "source_file_path": "database/seeders/AvailabilitySeeder.php"
+      },
+      {
+        "id": 134202,
+        "category": "be_logic",
+        "semantic_path": "Availability/Run/run",
+        "source_file_path": "database/seeders/AvailabilitySeeder.php"
+      },
+      {
+        "id": 134205,
+        "category": "be_logic",
+        "semantic_path": "Calendar/Run/run",
+        "source_file_path": "database/seeders/CalendarSeeder.php"
+      },
+      {
+        "id": 134206,
+        "category": "be_logic",
+        "semantic_path": "Classroom/Run/run",
+        "source_file_path": "database/seeders/ClassroomSeeder.php"
+      },
+      {
+        "id": 134208,
+        "category": "be_logic",
+        "semantic_path": "CompleteData/CellValue/getCellValue",
+        "source_file_path": "database/seeders/CompleteDataSeeder.php"
+      },
+      {
+        "id": 134213,
+        "category": "be_logic",
+        "semantic_path": "CompleteData/EnrollInExtraActivity/enrollInExtraActivity",
+        "source_file_path": "database/seeders/CompleteDataSeeder.php"
+      },
+      {
+        "id": 134210,
+        "category": "be_logic",
+        "semantic_path": "CompleteData/ImportAvailabilityFromOds/importAvailabilityFromOds",
+        "source_file_path": "database/seeders/CompleteDataSeeder.php"
+      },
+      {
+        "id": 134214,
+        "category": "be_logic",
+        "semantic_path": "CompleteData/ImportEnrollments/importEnrollments",
+        "source_file_path": "database/seeders/CompleteDataSeeder.php"
+      },
+      {
+        "id": 134209,
+        "category": "be_logic",
+        "semantic_path": "CompleteData/ImportLevels/importLevels",
+        "source_file_path": "database/seeders/CompleteDataSeeder.php"
+      },
+      {
+        "id": 134212,
+        "category": "be_logic",
+        "semantic_path": "CompleteData/ImportOrchestraCoro/importOrchestraCoro",
+        "source_file_path": "database/seeders/CompleteDataSeeder.php"
+      },
+      {
+        "id": 134211,
+        "category": "be_logic",
+        "semantic_path": "CompleteData/ImportStudentInstrument/importStudentInstrument",
+        "source_file_path": "database/seeders/CompleteDataSeeder.php"
+      },
+      {
+        "id": 134219,
+        "category": "be_logic",
+        "semantic_path": "CompleteData/ParseDate/parseDate",
+        "source_file_path": "database/seeders/CompleteDataSeeder.php"
+      },
+      {
+        "id": 134218,
+        "category": "be_logic",
+        "semantic_path": "CompleteData/ParseDayOfWeek/parseDayOfWeek",
+        "source_file_path": "database/seeders/CompleteDataSeeder.php"
+      },
+      {
+        "id": 134215,
+        "category": "be_logic",
+        "semantic_path": "CompleteData/ParseLevel/parseLevel",
+        "source_file_path": "database/seeders/CompleteDataSeeder.php"
+      },
+      {
+        "id": 134217,
+        "category": "be_logic",
+        "semantic_path": "CompleteData/ParseTime/parseTime",
+        "source_file_path": "database/seeders/CompleteDataSeeder.php"
+      },
+      {
+        "id": 134216,
+        "category": "be_logic",
+        "semantic_path": "CompleteData/ParseTimeRange/parseTimeRange",
+        "source_file_path": "database/seeders/CompleteDataSeeder.php"
+      },
+      {
+        "id": 134207,
+        "category": "be_logic",
+        "semantic_path": "CompleteData/Run/run",
+        "source_file_path": "database/seeders/CompleteDataSeeder.php"
+      },
+      {
+        "id": 134222,
+        "category": "be_logic",
+        "semantic_path": "Contract/NormalizeContractData/normalizeContractData",
+        "source_file_path": "database/seeders/ContractSeeder.php"
+      },
+      {
+        "id": 134223,
+        "category": "be_logic",
+        "semantic_path": "Contract/ParseDate/parseDate",
+        "source_file_path": "database/seeders/ContractSeeder.php"
+      },
+      {
+        "id": 134221,
+        "category": "be_logic",
+        "semantic_path": "Contract/ReadRowByMap/readRowByMap",
+        "source_file_path": "database/seeders/ContractSeeder.php"
+      },
+      {
+        "id": 134220,
+        "category": "be_logic",
+        "semantic_path": "Contract/Run/run",
+        "source_file_path": "database/seeders/ContractSeeder.php"
+      },
+      {
+        "id": 134224,
+        "category": "be_logic",
+        "semantic_path": "Database/Run/run",
+        "source_file_path": "database/seeders/DatabaseSeeder.php"
+      },
+      {
+        "id": 134225,
+        "category": "be_logic",
+        "semantic_path": "Exam/Run/run",
+        "source_file_path": "database/seeders/ExamSeeder.php"
+      },
+      {
+        "id": 134226,
+        "category": "be_logic",
+        "semantic_path": "Guardian/Run/run",
+        "source_file_path": "database/seeders/GuardianSeeder.php"
+      },
+      {
+        "id": 134229,
+        "category": "be_logic",
+        "semantic_path": "Instrument/ImportFromAccessori/importFromAccessori",
+        "source_file_path": "database/seeders/InstrumentSeeder.php"
+      },
+      {
+        "id": 134228,
+        "category": "be_logic",
+        "semantic_path": "Instrument/ImportFromGestionale/importFromGestionale",
+        "source_file_path": "database/seeders/InstrumentSeeder.php"
+      },
+      {
+        "id": 134227,
+        "category": "be_logic",
+        "semantic_path": "Instrument/Run/run",
+        "source_file_path": "database/seeders/InstrumentSeeder.php"
+      },
+      {
+        "id": 134500,
+        "category": "be_logic",
+        "semantic_path": "Invoice/ParseDateValue/parseDateValue",
+        "source_file_path": "database/seeders/InvoiceSeeder.php"
+      },
+      {
+        "id": 134499,
+        "category": "be_logic",
+        "semantic_path": "Invoice/ParseMoney/parseMoney",
+        "source_file_path": "database/seeders/InvoiceSeeder.php"
+      },
+      {
+        "id": 134230,
+        "category": "be_logic",
+        "semantic_path": "Invoice/Run/run",
+        "source_file_path": "database/seeders/InvoiceSeeder.php"
+      },
+      {
+        "id": 134231,
+        "category": "be_logic",
+        "semantic_path": "OdsData/Run/run",
+        "source_file_path": "database/seeders/OdsDataSeeder.php"
+      },
+      {
+        "id": 134232,
+        "category": "be_logic",
+        "semantic_path": "Student/Run/run",
+        "source_file_path": "database/seeders/StudentSeeder.php"
+      },
+      {
+        "id": 134236,
+        "category": "be_logic",
+        "semantic_path": "Teacher/BuildNotes/buildNotes",
+        "source_file_path": "database/seeders/TeacherSeeder.php"
+      },
+      {
+        "id": 134235,
+        "category": "be_logic",
+        "semantic_path": "Teacher/NormalizeTeacherData/normalizeTeacherData",
+        "source_file_path": "database/seeders/TeacherSeeder.php"
+      },
+      {
+        "id": 134237,
+        "category": "be_logic",
+        "semantic_path": "Teacher/ParseDate/parseDate",
+        "source_file_path": "database/seeders/TeacherSeeder.php"
+      },
+      {
+        "id": 134234,
+        "category": "be_logic",
+        "semantic_path": "Teacher/ReadRowByMap/readRowByMap",
+        "source_file_path": "database/seeders/TeacherSeeder.php"
+      },
+      {
+        "id": 134233,
+        "category": "be_logic",
+        "semantic_path": "Teacher/Run/run",
+        "source_file_path": "database/seeders/TeacherSeeder.php"
+      },
+      {
+        "id": 134496,
+        "category": "ui_layout",
+        "semantic_path": "Item/Active/active",
+        "source_file_path": "resources/views/components/admin/sidebar.blade.php"
+      },
+      {
+        "id": 134497,
+        "category": "ui_layout",
+        "semantic_path": "Item/Icon/icon",
+        "source_file_path": "resources/views/components/admin/sidebar.blade.php"
+      },
+      {
+        "id": 134498,
+        "category": "ui_layout",
+        "semantic_path": "Item/Label/label",
+        "source_file_path": "resources/views/components/admin/sidebar.blade.php"
+      },
+      {
+        "id": 134495,
+        "category": "ui_layout",
+        "semantic_path": "Section/Items/items",
+        "source_file_path": "resources/views/components/admin/sidebar.blade.php"
+      },
+      {
+        "id": 134494,
+        "category": "ui_layout",
+        "semantic_path": "Section/Label/label",
+        "source_file_path": "resources/views/components/admin/sidebar.blade.php"
+      }
+    ],
+    "counts": {
+      "files": 19,
+      "devunits": 45,
+      "files_without_devunits": 3
+    }
+  },
+  "A01": {
+    "footility_activity_id": 2838,
+    "title": "Anagrafiche Studenti",
+    "files": [
+      "app/Http/Controllers/Admin/StudentController.php",
+      "app/Models/Student.php",
+      "database/migrations/2025_12_11_093215_create_students_table.php",
+      "resources/views/admin/students/create.blade.php",
+      "resources/views/admin/students/edit.blade.php",
+      "resources/views/admin/students/index.blade.php",
+      "resources/views/admin/students/show.blade.php"
+    ],
+    "file_to_devunit_ids": {
+      "app/Http/Controllers/Admin/StudentController.php": [
+        133568,
+        133573,
+        133571,
+        133574,
+        133567,
+        133570,
+        133569,
+        133572
+      ],
+      "app/Models/Student.php": [
+        133955,
+        133971,
+        133970,
+        133972,
+        133984,
+        133977,
+        133976,
+        133973,
+        133974,
+        133981,
+        133987,
+        133975,
+        133983,
+        133986,
+        133982,
+        133985,
+        133980,
+        133979,
+        133978,
+        133956,
+        133967,
+        133964,
+        133969,
+        133966,
+        133962,
+        133968,
+        133958,
+        133963,
+        133959,
+        133960,
+        133961,
+        133965,
+        133957
+      ],
+      "database/migrations/2025_12_11_093215_create_students_table.php": [
+        134085,
+        134087,
+        134084,
+        134086
+      ],
+      "resources/views/admin/students/create.blade.php": [],
+      "resources/views/admin/students/edit.blade.php": [],
+      "resources/views/admin/students/index.blade.php": [],
+      "resources/views/admin/students/show.blade.php": [
+        134356,
+        134355,
+        134358,
+        134360,
+        134354,
+        134357,
+        134359
+      ]
+    },
+    "devunits": [
+      {
+        "id": 133568,
+        "category": "be_logic",
+        "semantic_path": "Student/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/StudentController.php"
+      },
+      {
+        "id": 133573,
+        "category": "be_logic",
+        "semantic_path": "Student/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/StudentController.php"
+      },
+      {
+        "id": 133571,
+        "category": "be_logic",
+        "semantic_path": "Student/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/StudentController.php"
+      },
+      {
+        "id": 133574,
+        "category": "be_logic",
+        "semantic_path": "Student/Export/export",
+        "source_file_path": "app/Http/Controllers/Admin/StudentController.php"
+      },
+      {
+        "id": 133567,
+        "category": "be_logic",
+        "semantic_path": "Student/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/StudentController.php"
+      },
+      {
+        "id": 133570,
+        "category": "be_logic",
+        "semantic_path": "Student/Show/show",
+        "source_file_path": "app/Http/Controllers/Admin/StudentController.php"
+      },
+      {
+        "id": 133569,
+        "category": "be_logic",
+        "semantic_path": "Student/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/StudentController.php"
+      },
+      {
+        "id": 133572,
+        "category": "be_logic",
+        "semantic_path": "Student/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/StudentController.php"
+      },
+      {
+        "id": 133955,
+        "category": "be_logic",
+        "semantic_path": "Student/FullName/getFullNameAttribute",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133971,
+        "category": "be_logic",
+        "semantic_path": "Student/ScopeActive/scopeActive",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133970,
+        "category": "be_logic",
+        "semantic_path": "Student/ScopeEnrolled/scopeEnrolled",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133972,
+        "category": "data",
+        "semantic_path": "Student/AcademicYearId/academic_year_id",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133984,
+        "category": "data",
+        "semantic_path": "Student/AdminNotes/admin_notes",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133977,
+        "category": "data",
+        "semantic_path": "Student/Age/age",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133976,
+        "category": "data",
+        "semantic_path": "Student/BirthDate/birth_date",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133973,
+        "category": "data",
+        "semantic_path": "Student/Code/code",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133974,
+        "category": "data",
+        "semantic_path": "Student/FirstName/first_name",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133981,
+        "category": "data",
+        "semantic_path": "Student/HowKnowUs/how_know_us",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133987,
+        "category": "data",
+        "semantic_path": "Student/LastContactDate/last_contact_date",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133975,
+        "category": "data",
+        "semantic_path": "Student/LastName/last_name",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133983,
+        "category": "data",
+        "semantic_path": "Student/Notes/notes",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133986,
+        "category": "data",
+        "semantic_path": "Student/PhotoConsent/photo_consent",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133982,
+        "category": "data",
+        "semantic_path": "Student/Preferences/preferences",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133985,
+        "category": "data",
+        "semantic_path": "Student/PrivacyConsent/privacy_consent",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133980,
+        "category": "data",
+        "semantic_path": "Student/SchoolOrigin/school_origin",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133979,
+        "category": "data",
+        "semantic_path": "Student/Status/status",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133978,
+        "category": "data",
+        "semantic_path": "Student/TaxCode/tax_code",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133956,
+        "category": "data_relation",
+        "semantic_path": "Student/_AcademicYear/academicYear",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133967,
+        "category": "data_relation",
+        "semantic_path": "Student/_Enrollment/attendances",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133964,
+        "category": "data_relation",
+        "semantic_path": "Student/_Enrollment/availability",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133969,
+        "category": "data_relation",
+        "semantic_path": "Student/_Enrollment/bookDistributions",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133966,
+        "category": "data_relation",
+        "semantic_path": "Student/_Enrollment/communications",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133962,
+        "category": "data_relation",
+        "semantic_path": "Student/_Enrollment/contracts",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133968,
+        "category": "data_relation",
+        "semantic_path": "Student/_Enrollment/documents",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133958,
+        "category": "data_relation",
+        "semantic_path": "Student/_Enrollment/enrollments",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133963,
+        "category": "data_relation",
+        "semantic_path": "Student/_Enrollment/exams",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133959,
+        "category": "data_relation",
+        "semantic_path": "Student/_Enrollment/extraActivityEnrollments",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133960,
+        "category": "data_relation",
+        "semantic_path": "Student/_Enrollment/instrumentRentals",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133961,
+        "category": "data_relation",
+        "semantic_path": "Student/_Enrollment/invoices",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133965,
+        "category": "data_relation",
+        "semantic_path": "Student/_Enrollment/levels",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 133957,
+        "category": "data_relation",
+        "semantic_path": "Student/_Guardian/guardians",
+        "source_file_path": "app/Models/Student.php"
+      },
+      {
+        "id": 134085,
+        "category": "data",
+        "semantic_path": "Student/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093215_create_students_table.php"
+      },
+      {
+        "id": 134087,
+        "category": "data",
+        "semantic_path": "Student/DeletedAt/deleted_at",
+        "source_file_path": "database/migrations/2025_12_11_093215_create_students_table.php"
+      },
+      {
+        "id": 134084,
+        "category": "data",
+        "semantic_path": "Student/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093215_create_students_table.php"
+      },
+      {
+        "id": 134086,
+        "category": "data",
+        "semantic_path": "Student/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093215_create_students_table.php"
+      },
+      {
+        "id": 134356,
+        "category": "ui_layout",
+        "semantic_path": "Guardian/IsBillingContact/is_billing_contact",
+        "source_file_path": "resources/views/admin/students/show.blade.php"
+      },
+      {
+        "id": 134355,
+        "category": "ui_layout",
+        "semantic_path": "Guardian/IsPrimary/is_primary",
+        "source_file_path": "resources/views/admin/students/show.blade.php"
+      },
+      {
+        "id": 134358,
+        "category": "ui_layout",
+        "semantic_path": "Student/AcademicYear/academicYear",
+        "source_file_path": "resources/views/admin/students/show.blade.php"
+      },
+      {
+        "id": 134360,
+        "category": "ui_layout",
+        "semantic_path": "Student/Enrollments/enrollments",
+        "source_file_path": "resources/views/admin/students/show.blade.php"
+      },
+      {
+        "id": 134354,
+        "category": "ui_layout",
+        "semantic_path": "Student/Format/format",
+        "source_file_path": "resources/views/admin/students/show.blade.php"
+      },
+      {
+        "id": 134357,
+        "category": "ui_layout",
+        "semantic_path": "Student/FullName/full_name",
+        "source_file_path": "resources/views/admin/students/show.blade.php"
+      },
+      {
+        "id": 134359,
+        "category": "ui_layout",
+        "semantic_path": "Student/Guardians/guardians",
+        "source_file_path": "resources/views/admin/students/show.blade.php"
+      }
+    ],
+    "counts": {
+      "files": 7,
+      "devunits": 52,
+      "files_without_devunits": 3
+    }
+  },
+  "A02": {
+    "footility_activity_id": 2839,
+    "title": "Genitori/Tutori",
+    "files": [
+      "app/Http/Controllers/Admin/GuardianController.php",
+      "app/Models/Guardian.php",
+      "database/migrations/2025_12_11_093224_create_guardians_table.php",
+      "database/migrations/2025_12_11_093226_create_student_guardian_table.php",
+      "resources/views/admin/guardians/create.blade.php",
+      "resources/views/admin/guardians/edit.blade.php",
+      "resources/views/admin/guardians/index.blade.php",
+      "resources/views/admin/guardians/show.blade.php"
+    ],
+    "file_to_devunit_ids": {
+      "app/Http/Controllers/Admin/GuardianController.php": [
+        133529,
+        133534,
+        133532,
+        133528,
+        133531,
+        133530,
+        133533
+      ],
+      "app/Models/Guardian.php": [
+        133815,
+        133816,
+        133817,
+        133833,
+        133826,
+        133827,
+        133828,
+        133829,
+        133834,
+        133836,
+        133830,
+        133831,
+        133832,
+        133820,
+        133821,
+        133824,
+        133825,
+        133835,
+        133837,
+        133823,
+        133822,
+        133819,
+        133818
+      ],
+      "database/migrations/2025_12_11_093224_create_guardians_table.php": [
+        134089,
+        134088,
+        134090
+      ],
+      "database/migrations/2025_12_11_093226_create_student_guardian_table.php": [
+        134097,
+        134094,
+        134096,
+        134092,
+        134091,
+        134095,
+        134093,
+        134098
+      ],
+      "resources/views/admin/guardians/create.blade.php": [],
+      "resources/views/admin/guardians/edit.blade.php": [
+        134326
+      ],
+      "resources/views/admin/guardians/index.blade.php": [],
+      "resources/views/admin/guardians/show.blade.php": [
+        134327,
+        134328
+      ]
+    },
+    "devunits": [
+      {
+        "id": 133529,
+        "category": "be_logic",
+        "semantic_path": "Guardian/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/GuardianController.php"
+      },
+      {
+        "id": 133534,
+        "category": "be_logic",
+        "semantic_path": "Guardian/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/GuardianController.php"
+      },
+      {
+        "id": 133532,
+        "category": "be_logic",
+        "semantic_path": "Guardian/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/GuardianController.php"
+      },
+      {
+        "id": 133528,
+        "category": "be_logic",
+        "semantic_path": "Guardian/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/GuardianController.php"
+      },
+      {
+        "id": 133531,
+        "category": "be_logic",
+        "semantic_path": "Guardian/Show/show",
+        "source_file_path": "app/Http/Controllers/Admin/GuardianController.php"
+      },
+      {
+        "id": 133530,
+        "category": "be_logic",
+        "semantic_path": "Guardian/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/GuardianController.php"
+      },
+      {
+        "id": 133533,
+        "category": "be_logic",
+        "semantic_path": "Guardian/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/GuardianController.php"
+      },
+      {
+        "id": 133815,
+        "category": "be_logic",
+        "semantic_path": "Guardian/FullName/getFullNameAttribute",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133816,
+        "category": "be_logic",
+        "semantic_path": "Guardian/PrimaryEmail/getPrimaryEmailAttribute",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133817,
+        "category": "be_logic",
+        "semantic_path": "Guardian/PrimaryPhone/getPrimaryPhoneAttribute",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133833,
+        "category": "data",
+        "semantic_path": "Guardian/Address/address",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133826,
+        "category": "data",
+        "semantic_path": "Guardian/Cell1/cell_1",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133827,
+        "category": "data",
+        "semantic_path": "Guardian/Cell2/cell_2",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133828,
+        "category": "data",
+        "semantic_path": "Guardian/Cell3/cell_3",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133829,
+        "category": "data",
+        "semantic_path": "Guardian/Cell4/cell_4",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133834,
+        "category": "data",
+        "semantic_path": "Guardian/City/city",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133836,
+        "category": "data",
+        "semantic_path": "Guardian/Country/country",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133830,
+        "category": "data",
+        "semantic_path": "Guardian/Email1/email_1",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133831,
+        "category": "data",
+        "semantic_path": "Guardian/Email2/email_2",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133832,
+        "category": "data",
+        "semantic_path": "Guardian/Email3/email_3",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133820,
+        "category": "data",
+        "semantic_path": "Guardian/FirstName/first_name",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133821,
+        "category": "data",
+        "semantic_path": "Guardian/LastName/last_name",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133824,
+        "category": "data",
+        "semantic_path": "Guardian/PhoneHome/phone_home",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133825,
+        "category": "data",
+        "semantic_path": "Guardian/PhoneWork/phone_work",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133835,
+        "category": "data",
+        "semantic_path": "Guardian/PostalCode/postal_code",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133837,
+        "category": "data",
+        "semantic_path": "Guardian/PrivacyConsent/privacy_consent",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133823,
+        "category": "data",
+        "semantic_path": "Guardian/Relationship/relationship",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133822,
+        "category": "data",
+        "semantic_path": "Guardian/TaxCode/tax_code",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133819,
+        "category": "data_relation",
+        "semantic_path": "Guardian/_Communication/communications",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 133818,
+        "category": "data_relation",
+        "semantic_path": "Guardian/_Student/students",
+        "source_file_path": "app/Models/Guardian.php"
+      },
+      {
+        "id": 134089,
+        "category": "data",
+        "semantic_path": "Guardian/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093224_create_guardians_table.php"
+      },
+      {
+        "id": 134088,
+        "category": "data",
+        "semantic_path": "Guardian/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093224_create_guardians_table.php"
+      },
+      {
+        "id": 134090,
+        "category": "data",
+        "semantic_path": "Guardian/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093224_create_guardians_table.php"
+      },
+      {
+        "id": 134097,
+        "category": "data",
+        "semantic_path": "StudentGuardian/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093226_create_student_guardian_table.php"
+      },
+      {
+        "id": 134094,
+        "category": "data",
+        "semantic_path": "StudentGuardian/GuardianId/guardian_id",
+        "source_file_path": "database/migrations/2025_12_11_093226_create_student_guardian_table.php"
+      },
+      {
+        "id": 134096,
+        "category": "data",
+        "semantic_path": "StudentGuardian/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093226_create_student_guardian_table.php"
+      },
+      {
+        "id": 134092,
+        "category": "data",
+        "semantic_path": "StudentGuardian/IsBillingContact/is_billing_contact",
+        "source_file_path": "database/migrations/2025_12_11_093226_create_student_guardian_table.php"
+      },
+      {
+        "id": 134091,
+        "category": "data",
+        "semantic_path": "StudentGuardian/IsPrimary/is_primary",
+        "source_file_path": "database/migrations/2025_12_11_093226_create_student_guardian_table.php"
+      },
+      {
+        "id": 134095,
+        "category": "data",
+        "semantic_path": "StudentGuardian/RelationshipType/relationship_type",
+        "source_file_path": "database/migrations/2025_12_11_093226_create_student_guardian_table.php"
+      },
+      {
+        "id": 134093,
+        "category": "data",
+        "semantic_path": "StudentGuardian/StudentId/student_id",
+        "source_file_path": "database/migrations/2025_12_11_093226_create_student_guardian_table.php"
+      },
+      {
+        "id": 134098,
+        "category": "data",
+        "semantic_path": "StudentGuardian/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093226_create_student_guardian_table.php"
+      },
+      {
+        "id": 134326,
+        "category": "ui_layout",
+        "semantic_path": "Guardian/Pluck/pluck",
+        "source_file_path": "resources/views/admin/guardians/edit.blade.php"
+      },
+      {
+        "id": 134327,
+        "category": "ui_layout",
+        "semantic_path": "Guardian/FullName/full_name",
+        "source_file_path": "resources/views/admin/guardians/show.blade.php"
+      },
+      {
+        "id": 134328,
+        "category": "ui_layout",
+        "semantic_path": "Guardian/Students/students",
+        "source_file_path": "resources/views/admin/guardians/show.blade.php"
+      }
+    ],
+    "counts": {
+      "files": 8,
+      "devunits": 44,
+      "files_without_devunits": 2
+    }
+  },
+  "A03": {
+    "footility_activity_id": 2840,
+    "title": "Corsi e Iscrizioni",
+    "files": [
+      "app/Http/Controllers/Admin/CourseController.php",
+      "app/Http/Controllers/Admin/EnrollmentController.php",
+      "app/Models/Course.php",
+      "app/Models/CourseType.php",
+      "app/Models/Enrollment.php",
+      "database/migrations/2025_12_11_093229_create_course_types_table.php",
+      "database/migrations/2025_12_11_093231_create_courses_table.php",
+      "database/migrations/2025_12_11_093236_create_enrollments_table.php",
+      "database/migrations/2025_12_11_093239_create_extra_activity_enrollments_table.php",
+      "resources/views/admin/courses/create.blade.php",
+      "resources/views/admin/courses/edit.blade.php",
+      "resources/views/admin/courses/index.blade.php",
+      "resources/views/admin/courses/show.blade.php",
+      "resources/views/admin/enrollments/create.blade.php",
+      "resources/views/admin/enrollments/edit.blade.php",
+      "resources/views/admin/enrollments/index.blade.php",
+      "resources/views/admin/enrollments/show.blade.php"
+    ],
+    "file_to_devunit_ids": {
+      "app/Http/Controllers/Admin/CourseController.php": [
+        133495,
+        133500,
+        133498,
+        133494,
+        133497,
+        133496,
+        133499
+      ],
+      "app/Http/Controllers/Admin/EnrollmentController.php": [
+        133503,
+        133508,
+        133506,
+        133502,
+        133505,
+        133504,
+        133507
+      ],
+      "app/Models/Course.php": [
+        133702,
+        133703,
+        133706,
+        133704,
+        133715,
+        133711,
+        133708,
+        133710,
+        133718,
+        133714,
+        133707,
+        133717,
+        133709,
+        133716,
+        133705,
+        133713,
+        133712,
+        133719,
+        133698,
+        133699,
+        133700,
+        133701
+      ],
+      "app/Models/CourseType.php": [
+        133721,
+        133731,
+        133722,
+        133724,
+        133725,
+        133726,
+        133723,
+        133729,
+        133727,
+        133730,
+        133728,
+        133720
+      ],
+      "app/Models/Enrollment.php": [
+        133753,
+        133754,
+        133756,
+        133763,
+        133762,
+        133759,
+        133757,
+        133761,
+        133758,
+        133760,
+        133755,
+        133764,
+        133751,
+        133752,
+        133750
+      ],
+      "database/migrations/2025_12_11_093229_create_course_types_table.php": [
+        134103,
+        134102,
+        134104
+      ],
+      "database/migrations/2025_12_11_093231_create_courses_table.php": [
+        134106,
+        134108,
+        134105,
+        134107
+      ],
+      "database/migrations/2025_12_11_093236_create_enrollments_table.php": [
+        134110,
+        134109,
+        134111
+      ],
+      "database/migrations/2025_12_11_093239_create_extra_activity_enrollments_table.php": [
+        134116,
+        134115,
+        134117
+      ],
+      "resources/views/admin/courses/create.blade.php": [
+        134286,
+        134287
+      ],
+      "resources/views/admin/courses/edit.blade.php": [],
+      "resources/views/admin/courses/index.blade.php": [],
+      "resources/views/admin/courses/show.blade.php": [
+        134290,
+        134289,
+        134288
+      ],
+      "resources/views/admin/enrollments/create.blade.php": [
+        134297
+      ],
+      "resources/views/admin/enrollments/edit.blade.php": [
+        134298
+      ],
+      "resources/views/admin/enrollments/index.blade.php": [],
+      "resources/views/admin/enrollments/show.blade.php": [
+        134299,
+        134300
+      ]
+    },
+    "devunits": [
+      {
+        "id": 133495,
+        "category": "be_logic",
+        "semantic_path": "Course/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/CourseController.php"
+      },
+      {
+        "id": 133500,
+        "category": "be_logic",
+        "semantic_path": "Course/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/CourseController.php"
+      },
+      {
+        "id": 133498,
+        "category": "be_logic",
+        "semantic_path": "Course/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/CourseController.php"
+      },
+      {
+        "id": 133494,
+        "category": "be_logic",
+        "semantic_path": "Course/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/CourseController.php"
+      },
+      {
+        "id": 133497,
+        "category": "be_logic",
+        "semantic_path": "Course/Show/show",
+        "source_file_path": "app/Http/Controllers/Admin/CourseController.php"
+      },
+      {
+        "id": 133496,
+        "category": "be_logic",
+        "semantic_path": "Course/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/CourseController.php"
+      },
+      {
+        "id": 133499,
+        "category": "be_logic",
+        "semantic_path": "Course/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/CourseController.php"
+      },
+      {
+        "id": 133503,
+        "category": "be_logic",
+        "semantic_path": "Enrollment/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/EnrollmentController.php"
+      },
+      {
+        "id": 133508,
+        "category": "be_logic",
+        "semantic_path": "Enrollment/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/EnrollmentController.php"
+      },
+      {
+        "id": 133506,
+        "category": "be_logic",
+        "semantic_path": "Enrollment/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/EnrollmentController.php"
+      },
+      {
+        "id": 133502,
+        "category": "be_logic",
+        "semantic_path": "Enrollment/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/EnrollmentController.php"
+      },
+      {
+        "id": 133505,
+        "category": "be_logic",
+        "semantic_path": "Enrollment/Show/show",
+        "source_file_path": "app/Http/Controllers/Admin/EnrollmentController.php"
+      },
+      {
+        "id": 133504,
+        "category": "be_logic",
+        "semantic_path": "Enrollment/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/EnrollmentController.php"
+      },
+      {
+        "id": 133507,
+        "category": "be_logic",
+        "semantic_path": "Enrollment/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/EnrollmentController.php"
+      },
+      {
+        "id": 133702,
+        "category": "be_logic",
+        "semantic_path": "Course/ScopeActive/scopeActive",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133703,
+        "category": "be_logic",
+        "semantic_path": "Course/ScopePlanned/scopePlanned",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133706,
+        "category": "data",
+        "semantic_path": "Course/Code/code",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133704,
+        "category": "data",
+        "semantic_path": "Course/CourseTypeId/course_type_id",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133715,
+        "category": "data",
+        "semantic_path": "Course/CurrentStudents/current_students",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133711,
+        "category": "data",
+        "semantic_path": "Course/DayOfWeek/day_of_week",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133708,
+        "category": "data",
+        "semantic_path": "Course/Description/description",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133710,
+        "category": "data",
+        "semantic_path": "Course/EndDate/end_date",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133718,
+        "category": "data",
+        "semantic_path": "Course/LessonsPerWeek/lessons_per_week",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133714,
+        "category": "data",
+        "semantic_path": "Course/MaxStudents/max_students",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133707,
+        "category": "data",
+        "semantic_path": "Course/Name/name",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133717,
+        "category": "data",
+        "semantic_path": "Course/PricePerLesson/price_per_lesson",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133709,
+        "category": "data",
+        "semantic_path": "Course/StartDate/start_date",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133716,
+        "category": "data",
+        "semantic_path": "Course/Status/status",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133705,
+        "category": "data",
+        "semantic_path": "Course/TeacherId/teacher_id",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133713,
+        "category": "data",
+        "semantic_path": "Course/TimeEnd/time_end",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133712,
+        "category": "data",
+        "semantic_path": "Course/TimeStart/time_start",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133719,
+        "category": "data",
+        "semantic_path": "Course/WeeksPerYear/weeks_per_year",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133698,
+        "category": "data_relation",
+        "semantic_path": "Course/_CourseType/courseType",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133699,
+        "category": "data_relation",
+        "semantic_path": "Course/_CourseType/teacher",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133700,
+        "category": "data_relation",
+        "semantic_path": "Course/_Enrollment/enrollments",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133701,
+        "category": "data_relation",
+        "semantic_path": "Course/_Enrollment/lessons",
+        "source_file_path": "app/Models/Course.php"
+      },
+      {
+        "id": 133721,
+        "category": "be_logic",
+        "semantic_path": "CourseType/ScopeActive/scopeActive",
+        "source_file_path": "app/Models/CourseType.php"
+      },
+      {
+        "id": 133731,
+        "category": "data",
+        "semantic_path": "CourseType/Active/active",
+        "source_file_path": "app/Models/CourseType.php"
+      },
+      {
+        "id": 133722,
+        "category": "data",
+        "semantic_path": "CourseType/Code/code",
+        "source_file_path": "app/Models/CourseType.php"
+      },
+      {
+        "id": 133724,
+        "category": "data",
+        "semantic_path": "CourseType/Description/description",
+        "source_file_path": "app/Models/CourseType.php"
+      },
+      {
+        "id": 133725,
+        "category": "data",
+        "semantic_path": "CourseType/DurationMinutes/duration_minutes",
+        "source_file_path": "app/Models/CourseType.php"
+      },
+      {
+        "id": 133726,
+        "category": "data",
+        "semantic_path": "CourseType/MaxStudents/max_students",
+        "source_file_path": "app/Models/CourseType.php"
+      },
+      {
+        "id": 133723,
+        "category": "data",
+        "semantic_path": "CourseType/Name/name",
+        "source_file_path": "app/Models/CourseType.php"
+      },
+      {
+        "id": 133729,
+        "category": "data",
+        "semantic_path": "CourseType/PriceAnnual/price_annual",
+        "source_file_path": "app/Models/CourseType.php"
+      },
+      {
+        "id": 133727,
+        "category": "data",
+        "semantic_path": "CourseType/PriceFull/price_full",
+        "source_file_path": "app/Models/CourseType.php"
+      },
+      {
+        "id": 133730,
+        "category": "data",
+        "semantic_path": "CourseType/PriceMonthly/price_monthly",
+        "source_file_path": "app/Models/CourseType.php"
+      },
+      {
+        "id": 133728,
+        "category": "data",
+        "semantic_path": "CourseType/PriceReduced/price_reduced",
+        "source_file_path": "app/Models/CourseType.php"
+      },
+      {
+        "id": 133720,
+        "category": "data_relation",
+        "semantic_path": "CourseType/_Course/courses",
+        "source_file_path": "app/Models/CourseType.php"
+      },
+      {
+        "id": 133753,
+        "category": "be_logic",
+        "semantic_path": "Enrollment/ScopeActive/scopeActive",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 133754,
+        "category": "data",
+        "semantic_path": "Enrollment/AcademicYearId/academic_year_id",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 133756,
+        "category": "data",
+        "semantic_path": "Enrollment/CourseId/course_id",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 133763,
+        "category": "data",
+        "semantic_path": "Enrollment/DiscountAmount/discount_amount",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 133762,
+        "category": "data",
+        "semantic_path": "Enrollment/DiscountPercentage/discount_percentage",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 133759,
+        "category": "data",
+        "semantic_path": "Enrollment/EndDate/end_date",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 133757,
+        "category": "data",
+        "semantic_path": "Enrollment/EnrollmentDate/enrollment_date",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 133761,
+        "category": "data",
+        "semantic_path": "Enrollment/Notes/notes",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 133758,
+        "category": "data",
+        "semantic_path": "Enrollment/StartDate/start_date",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 133760,
+        "category": "data",
+        "semantic_path": "Enrollment/Status/status",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 133755,
+        "category": "data",
+        "semantic_path": "Enrollment/StudentId/student_id",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 133764,
+        "category": "data",
+        "semantic_path": "Enrollment/TotalAmount/total_amount",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 133751,
+        "category": "data_relation",
+        "semantic_path": "Enrollment/_Student/academicYear",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 133752,
+        "category": "data_relation",
+        "semantic_path": "Enrollment/_Student/course",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 133750,
+        "category": "data_relation",
+        "semantic_path": "Enrollment/_Student/student",
+        "source_file_path": "app/Models/Enrollment.php"
+      },
+      {
+        "id": 134103,
+        "category": "data",
+        "semantic_path": "CourseType/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093229_create_course_types_table.php"
+      },
+      {
+        "id": 134102,
+        "category": "data",
+        "semantic_path": "CourseType/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093229_create_course_types_table.php"
+      },
+      {
+        "id": 134104,
+        "category": "data",
+        "semantic_path": "CourseType/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093229_create_course_types_table.php"
+      },
+      {
+        "id": 134106,
+        "category": "data",
+        "semantic_path": "Course/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093231_create_courses_table.php"
+      },
+      {
+        "id": 134108,
+        "category": "data",
+        "semantic_path": "Course/DeletedAt/deleted_at",
+        "source_file_path": "database/migrations/2025_12_11_093231_create_courses_table.php"
+      },
+      {
+        "id": 134105,
+        "category": "data",
+        "semantic_path": "Course/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093231_create_courses_table.php"
+      },
+      {
+        "id": 134107,
+        "category": "data",
+        "semantic_path": "Course/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093231_create_courses_table.php"
+      },
+      {
+        "id": 134110,
+        "category": "data",
+        "semantic_path": "Enrollment/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093236_create_enrollments_table.php"
+      },
+      {
+        "id": 134109,
+        "category": "data",
+        "semantic_path": "Enrollment/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093236_create_enrollments_table.php"
+      },
+      {
+        "id": 134111,
+        "category": "data",
+        "semantic_path": "Enrollment/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093236_create_enrollments_table.php"
+      },
+      {
+        "id": 134116,
+        "category": "data",
+        "semantic_path": "ExtraActivityEnrollment/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093239_create_extra_activity_enrollments_table.php"
+      },
+      {
+        "id": 134115,
+        "category": "data",
+        "semantic_path": "ExtraActivityEnrollment/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093239_create_extra_activity_enrollments_table.php"
+      },
+      {
+        "id": 134117,
+        "category": "data",
+        "semantic_path": "ExtraActivityEnrollment/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093239_create_extra_activity_enrollments_table.php"
+      },
+      {
+        "id": 134286,
+        "category": "ui_layout",
+        "semantic_path": "CourseType/Pluck/pluck",
+        "source_file_path": "resources/views/admin/courses/create.blade.php"
+      },
+      {
+        "id": 134287,
+        "category": "ui_layout",
+        "semantic_path": "Teacher/Pluck/pluck",
+        "source_file_path": "resources/views/admin/courses/create.blade.php"
+      },
+      {
+        "id": 134290,
+        "category": "ui_layout",
+        "semantic_path": "Course/Enrollments/enrollments",
+        "source_file_path": "resources/views/admin/courses/show.blade.php"
+      },
+      {
+        "id": 134289,
+        "category": "ui_layout",
+        "semantic_path": "Course/Format/format",
+        "source_file_path": "resources/views/admin/courses/show.blade.php"
+      },
+      {
+        "id": 134288,
+        "category": "ui_layout",
+        "semantic_path": "Course/FullName/full_name",
+        "source_file_path": "resources/views/admin/courses/show.blade.php"
+      },
+      {
+        "id": 134297,
+        "category": "ui_layout",
+        "semantic_path": "Course/Pluck/pluck",
+        "source_file_path": "resources/views/admin/enrollments/create.blade.php"
+      },
+      {
+        "id": 134298,
+        "category": "ui_layout",
+        "semantic_path": "Enrollment/Format/format",
+        "source_file_path": "resources/views/admin/enrollments/edit.blade.php"
+      },
+      {
+        "id": 134299,
+        "category": "ui_layout",
+        "semantic_path": "Enrollment/FullName/full_name",
+        "source_file_path": "resources/views/admin/enrollments/show.blade.php"
+      },
+      {
+        "id": 134300,
+        "category": "ui_layout",
+        "semantic_path": "Enrollment/Name/name",
+        "source_file_path": "resources/views/admin/enrollments/show.blade.php"
+      }
+    ],
+    "counts": {
+      "files": 17,
+      "devunits": 85,
+      "files_without_devunits": 3
+    }
+  },
+  "A04": {
+    "footility_activity_id": 2841,
+    "title": "Contratti Studenti",
+    "files": [
+      "app/Http/Controllers/Admin/ContractController.php",
+      "app/Models/Contract.php",
+      "database/migrations/2025_12_11_093250_create_contracts_table.php",
+      "database/migrations/2025_12_17_165137_add_token_to_contracts_table.php",
+      "resources/views/admin/contracts/create.blade.php",
+      "resources/views/admin/contracts/edit.blade.php",
+      "resources/views/admin/contracts/index.blade.php",
+      "resources/views/admin/contracts/show.blade.php"
+    ],
+    "file_to_devunit_ids": {
+      "app/Http/Controllers/Admin/ContractController.php": [
+        133486,
+        133491,
+        133489,
+        133485,
+        133492,
+        133488,
+        133493,
+        133487,
+        133490
+      ],
+      "app/Models/Contract.php": [
+        133685,
+        133684,
+        133686,
+        133688,
+        133691,
+        133696,
+        133693,
+        133694,
+        133690,
+        133692,
+        133687,
+        133695,
+        133697,
+        133689,
+        133681,
+        133682,
+        133683
+      ],
+      "database/migrations/2025_12_11_093250_create_contracts_table.php": [
+        134134,
+        134136,
+        134133,
+        134135
+      ],
+      "database/migrations/2025_12_17_165137_add_token_to_contracts_table.php": [],
+      "resources/views/admin/contracts/create.blade.php": [
+        134282
+      ],
+      "resources/views/admin/contracts/edit.blade.php": [
+        134283
+      ],
+      "resources/views/admin/contracts/index.blade.php": [],
+      "resources/views/admin/contracts/show.blade.php": [
+        134284,
+        134285
+      ]
+    },
+    "devunits": [
+      {
+        "id": 133486,
+        "category": "be_logic",
+        "semantic_path": "Contract/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/ContractController.php"
+      },
+      {
+        "id": 133491,
+        "category": "be_logic",
+        "semantic_path": "Contract/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/ContractController.php"
+      },
+      {
+        "id": 133489,
+        "category": "be_logic",
+        "semantic_path": "Contract/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/ContractController.php"
+      },
+      {
+        "id": 133485,
+        "category": "be_logic",
+        "semantic_path": "Contract/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/ContractController.php"
+      },
+      {
+        "id": 133492,
+        "category": "be_logic",
+        "semantic_path": "Contract/Send/send",
+        "source_file_path": "app/Http/Controllers/Admin/ContractController.php"
+      },
+      {
+        "id": 133488,
+        "category": "be_logic",
+        "semantic_path": "Contract/Show/show",
+        "source_file_path": "app/Http/Controllers/Admin/ContractController.php"
+      },
+      {
+        "id": 133493,
+        "category": "be_logic",
+        "semantic_path": "Contract/Sign/sign",
+        "source_file_path": "app/Http/Controllers/Admin/ContractController.php"
+      },
+      {
+        "id": 133487,
+        "category": "be_logic",
+        "semantic_path": "Contract/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/ContractController.php"
+      },
+      {
+        "id": 133490,
+        "category": "be_logic",
+        "semantic_path": "Contract/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/ContractController.php"
+      },
+      {
+        "id": 133685,
+        "category": "be_logic",
+        "semantic_path": "Contract/ScopeExpired/scopeExpired",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133684,
+        "category": "be_logic",
+        "semantic_path": "Contract/ScopeSigned/scopeSigned",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133686,
+        "category": "data",
+        "semantic_path": "Contract/AcademicYearId/academic_year_id",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133688,
+        "category": "data",
+        "semantic_path": "Contract/ContractNumber/contract_number",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133691,
+        "category": "data",
+        "semantic_path": "Contract/EndDate/end_date",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133696,
+        "category": "data",
+        "semantic_path": "Contract/Notes/notes",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133693,
+        "category": "data",
+        "semantic_path": "Contract/SentDate/sent_date",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133694,
+        "category": "data",
+        "semantic_path": "Contract/SignedDate/signed_date",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133690,
+        "category": "data",
+        "semantic_path": "Contract/StartDate/start_date",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133692,
+        "category": "data",
+        "semantic_path": "Contract/Status/status",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133687,
+        "category": "data",
+        "semantic_path": "Contract/StudentId/student_id",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133695,
+        "category": "data",
+        "semantic_path": "Contract/Terms/terms",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133697,
+        "category": "data",
+        "semantic_path": "Contract/Token/token",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133689,
+        "category": "data",
+        "semantic_path": "Contract/Type/type",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133681,
+        "category": "data_relation",
+        "semantic_path": "Contract/_AcademicYear/academicYear",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133682,
+        "category": "data_relation",
+        "semantic_path": "Contract/_AcademicYear/student",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 133683,
+        "category": "data_relation",
+        "semantic_path": "Contract/_Document/documents",
+        "source_file_path": "app/Models/Contract.php"
+      },
+      {
+        "id": 134134,
+        "category": "data",
+        "semantic_path": "Contract/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093250_create_contracts_table.php"
+      },
+      {
+        "id": 134136,
+        "category": "data",
+        "semantic_path": "Contract/DeletedAt/deleted_at",
+        "source_file_path": "database/migrations/2025_12_11_093250_create_contracts_table.php"
+      },
+      {
+        "id": 134133,
+        "category": "data",
+        "semantic_path": "Contract/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093250_create_contracts_table.php"
+      },
+      {
+        "id": 134135,
+        "category": "data",
+        "semantic_path": "Contract/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093250_create_contracts_table.php"
+      },
+      {
+        "id": 134282,
+        "category": "ui_layout",
+        "semantic_path": "Student/Pluck/pluck",
+        "source_file_path": "resources/views/admin/contracts/create.blade.php"
+      },
+      {
+        "id": 134283,
+        "category": "ui_layout",
+        "semantic_path": "Contract/Format/format",
+        "source_file_path": "resources/views/admin/contracts/edit.blade.php"
+      },
+      {
+        "id": 134284,
+        "category": "ui_layout",
+        "semantic_path": "Contract/FullName/full_name",
+        "source_file_path": "resources/views/admin/contracts/show.blade.php"
+      },
+      {
+        "id": 134285,
+        "category": "ui_layout",
+        "semantic_path": "Contract/Name/name",
+        "source_file_path": "resources/views/admin/contracts/show.blade.php"
+      }
+    ],
+    "counts": {
+      "files": 8,
+      "devunits": 34,
+      "files_without_devunits": 2
+    }
+  },
+  "A05": {
+    "footility_activity_id": 2842,
+    "title": "Contabilita Corsi",
+    "files": [
+      "app/Http/Controllers/Admin/AccountingReportController.php",
+      "app/Http/Controllers/Admin/InvoiceController.php",
+      "app/Http/Controllers/Admin/PaymentPlanController.php",
+      "app/Models/CreditNote.php",
+      "app/Models/Invoice.php",
+      "app/Models/InvoiceItem.php",
+      "app/Models/Payment.php",
+      "app/Models/PaymentPlan.php",
+      "app/Services/InvoiceService.php",
+      "database/migrations/2025_12_11_093252_create_invoices_table.php",
+      "database/migrations/2025_12_11_093257_create_invoice_items_table.php",
+      "database/migrations/2025_12_11_093259_create_payments_table.php",
+      "database/migrations/2025_12_11_093301_create_payment_plans_table.php",
+      "database/migrations/2025_12_11_093303_create_credit_notes_table.php",
+      "database/seeders/InvoiceSeeder.php",
+      "resources/views/admin/accounting/balances.blade.php",
+      "resources/views/admin/invoices/create.blade.php",
+      "resources/views/admin/invoices/edit.blade.php",
+      "resources/views/admin/invoices/index.blade.php",
+      "resources/views/admin/invoices/show.blade.php",
+      "resources/views/admin/payment-plans/index.blade.php"
+    ],
+    "file_to_devunit_ids": {
+      "app/Http/Controllers/Admin/AccountingReportController.php": [
+        134407
+      ],
+      "app/Http/Controllers/Admin/InvoiceController.php": [
+        133543,
+        133545,
+        133550,
+        133549,
+        133547,
+        133542,
+        133551,
+        133546,
+        133544,
+        133548
+      ],
+      "app/Http/Controllers/Admin/PaymentPlanController.php": [
+        134436
+      ],
+      "app/Models/CreditNote.php": [
+        133736,
+        133735,
+        133734,
+        133733,
+        133738,
+        133737,
+        133732
+      ],
+      "app/Models/Invoice.php": [
+        133865,
+        133866,
+        133874,
+        133873,
+        133875,
+        133881,
+        133879,
+        133878,
+        133877,
+        133886,
+        133885,
+        133884,
+        133876,
+        133880,
+        133882,
+        133883,
+        133867,
+        133868,
+        133872,
+        133869,
+        133871,
+        133870
+      ],
+      "app/Models/InvoiceItem.php": [
+        133891,
+        133894,
+        133888,
+        133890,
+        133889,
+        133892,
+        133895,
+        133893,
+        133887
+      ],
+      "app/Models/Payment.php": [
+        133917,
+        133915,
+        133920,
+        133918,
+        133916,
+        133919,
+        133914
+      ],
+      "app/Models/PaymentPlan.php": [
+        133924,
+        133923,
+        133928,
+        133927,
+        133926,
+        133925,
+        133930,
+        133931,
+        133929,
+        133921,
+        133922
+      ],
+      "app/Services/InvoiceService.php": [],
+      "database/migrations/2025_12_11_093252_create_invoices_table.php": [
+        134138,
+        134140,
+        134137,
+        134139
+      ],
+      "database/migrations/2025_12_11_093257_create_invoice_items_table.php": [
+        134142,
+        134141,
+        134143
+      ],
+      "database/migrations/2025_12_11_093259_create_payments_table.php": [
+        134145,
+        134144,
+        134146
+      ],
+      "database/migrations/2025_12_11_093301_create_payment_plans_table.php": [
+        134148,
+        134147,
+        134149
+      ],
+      "database/migrations/2025_12_11_093303_create_credit_notes_table.php": [
+        134151,
+        134150,
+        134152
+      ],
+      "database/seeders/InvoiceSeeder.php": [
+        134500,
+        134499,
+        134230
+      ],
+      "resources/views/admin/accounting/balances.blade.php": [
+        134444,
+        134442,
+        134445,
+        134443,
+        134446
+      ],
+      "resources/views/admin/invoices/create.blade.php": [],
+      "resources/views/admin/invoices/edit.blade.php": [
+        134331
+      ],
+      "resources/views/admin/invoices/index.blade.php": [],
+      "resources/views/admin/invoices/show.blade.php": [
+        134332,
+        134333,
+        134334,
+        134336,
+        134335
+      ],
+      "resources/views/admin/payment-plans/index.blade.php": [
+        134492,
+        134490,
+        134491,
+        134489,
+        134493,
+        134488
+      ]
+    },
+    "devunits": [
+      {
+        "id": 134407,
+        "category": "be_logic",
+        "semantic_path": "AccountingReport/Balances/balances",
+        "source_file_path": "app/Http/Controllers/Admin/AccountingReportController.php"
+      },
+      {
+        "id": 133543,
+        "category": "be_logic",
+        "semantic_path": "Invoice/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/InvoiceController.php"
+      },
+      {
+        "id": 133545,
+        "category": "be_logic",
+        "semantic_path": "Invoice/CreateFromContract/createFromContract",
+        "source_file_path": "app/Http/Controllers/Admin/InvoiceController.php"
+      },
+      {
+        "id": 133550,
+        "category": "be_logic",
+        "semantic_path": "Invoice/CreatePaymentPlan/createPaymentPlan",
+        "source_file_path": "app/Http/Controllers/Admin/InvoiceController.php"
+      },
+      {
+        "id": 133549,
+        "category": "be_logic",
+        "semantic_path": "Invoice/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/InvoiceController.php"
+      },
+      {
+        "id": 133547,
+        "category": "be_logic",
+        "semantic_path": "Invoice/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/InvoiceController.php"
+      },
+      {
+        "id": 133542,
+        "category": "be_logic",
+        "semantic_path": "Invoice/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/InvoiceController.php"
+      },
+      {
+        "id": 133551,
+        "category": "be_logic",
+        "semantic_path": "Invoice/RecordPayment/recordPayment",
+        "source_file_path": "app/Http/Controllers/Admin/InvoiceController.php"
+      },
+      {
+        "id": 133546,
+        "category": "be_logic",
+        "semantic_path": "Invoice/Show/show",
+        "source_file_path": "app/Http/Controllers/Admin/InvoiceController.php"
+      },
+      {
+        "id": 133544,
+        "category": "be_logic",
+        "semantic_path": "Invoice/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/InvoiceController.php"
+      },
+      {
+        "id": 133548,
+        "category": "be_logic",
+        "semantic_path": "Invoice/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/InvoiceController.php"
+      },
+      {
+        "id": 134436,
+        "category": "be_logic",
+        "semantic_path": "PaymentPlan/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/PaymentPlanController.php"
+      },
+      {
+        "id": 133736,
+        "category": "data",
+        "semantic_path": "CreditNote/Amount/amount",
+        "source_file_path": "app/Models/CreditNote.php"
+      },
+      {
+        "id": 133735,
+        "category": "data",
+        "semantic_path": "CreditNote/CreditNoteDate/credit_note_date",
+        "source_file_path": "app/Models/CreditNote.php"
+      },
+      {
+        "id": 133734,
+        "category": "data",
+        "semantic_path": "CreditNote/CreditNoteNumber/credit_note_number",
+        "source_file_path": "app/Models/CreditNote.php"
+      },
+      {
+        "id": 133733,
+        "category": "data",
+        "semantic_path": "CreditNote/InvoiceId/invoice_id",
+        "source_file_path": "app/Models/CreditNote.php"
+      },
+      {
+        "id": 133738,
+        "category": "data",
+        "semantic_path": "CreditNote/Notes/notes",
+        "source_file_path": "app/Models/CreditNote.php"
+      },
+      {
+        "id": 133737,
+        "category": "data",
+        "semantic_path": "CreditNote/Reason/reason",
+        "source_file_path": "app/Models/CreditNote.php"
+      },
+      {
+        "id": 133732,
+        "category": "data_relation",
+        "semantic_path": "CreditNote/_Invoice/invoice",
+        "source_file_path": "app/Models/CreditNote.php"
+      },
+      {
+        "id": 133865,
+        "category": "be_logic",
+        "semantic_path": "Invoice/PaidAmount/getPaidAmountAttribute",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133866,
+        "category": "be_logic",
+        "semantic_path": "Invoice/RemainingAmount/getRemainingAmountAttribute",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133874,
+        "category": "be_logic",
+        "semantic_path": "Invoice/ScopeOverdue/scopeOverdue",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133873,
+        "category": "be_logic",
+        "semantic_path": "Invoice/ScopePaid/scopePaid",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133875,
+        "category": "data",
+        "semantic_path": "Invoice/AcademicYearId/academic_year_id",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133881,
+        "category": "data",
+        "semantic_path": "Invoice/DiscountAmount/discount_amount",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133879,
+        "category": "data",
+        "semantic_path": "Invoice/DueDate/due_date",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133878,
+        "category": "data",
+        "semantic_path": "Invoice/InvoiceDate/invoice_date",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133877,
+        "category": "data",
+        "semantic_path": "Invoice/InvoiceNumber/invoice_number",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133886,
+        "category": "data",
+        "semantic_path": "Invoice/Notes/notes",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133885,
+        "category": "data",
+        "semantic_path": "Invoice/PaymentTerms/payment_terms",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133884,
+        "category": "data",
+        "semantic_path": "Invoice/Status/status",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133876,
+        "category": "data",
+        "semantic_path": "Invoice/StudentId/student_id",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133880,
+        "category": "data",
+        "semantic_path": "Invoice/Subtotal/subtotal",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133882,
+        "category": "data",
+        "semantic_path": "Invoice/TaxAmount/tax_amount",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133883,
+        "category": "data",
+        "semantic_path": "Invoice/TotalAmount/total_amount",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133867,
+        "category": "data_relation",
+        "semantic_path": "Invoice/_AcademicYear/academicYear",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133868,
+        "category": "data_relation",
+        "semantic_path": "Invoice/_AcademicYear/student",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133872,
+        "category": "data_relation",
+        "semantic_path": "Invoice/_InvoiceItem/creditNotes",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133869,
+        "category": "data_relation",
+        "semantic_path": "Invoice/_InvoiceItem/items",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133871,
+        "category": "data_relation",
+        "semantic_path": "Invoice/_InvoiceItem/paymentPlans",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133870,
+        "category": "data_relation",
+        "semantic_path": "Invoice/_InvoiceItem/payments",
+        "source_file_path": "app/Models/Invoice.php"
+      },
+      {
+        "id": 133891,
+        "category": "data",
+        "semantic_path": "InvoiceItem/Description/description",
+        "source_file_path": "app/Models/InvoiceItem.php"
+      },
+      {
+        "id": 133894,
+        "category": "data",
+        "semantic_path": "InvoiceItem/DiscountPercentage/discount_percentage",
+        "source_file_path": "app/Models/InvoiceItem.php"
+      },
+      {
+        "id": 133888,
+        "category": "data",
+        "semantic_path": "InvoiceItem/InvoiceId/invoice_id",
+        "source_file_path": "app/Models/InvoiceItem.php"
+      },
+      {
+        "id": 133890,
+        "category": "data",
+        "semantic_path": "InvoiceItem/ItemId/item_id",
+        "source_file_path": "app/Models/InvoiceItem.php"
+      },
+      {
+        "id": 133889,
+        "category": "data",
+        "semantic_path": "InvoiceItem/ItemType/item_type",
+        "source_file_path": "app/Models/InvoiceItem.php"
+      },
+      {
+        "id": 133892,
+        "category": "data",
+        "semantic_path": "InvoiceItem/Quantity/quantity",
+        "source_file_path": "app/Models/InvoiceItem.php"
+      },
+      {
+        "id": 133895,
+        "category": "data",
+        "semantic_path": "InvoiceItem/TotalPrice/total_price",
+        "source_file_path": "app/Models/InvoiceItem.php"
+      },
+      {
+        "id": 133893,
+        "category": "data",
+        "semantic_path": "InvoiceItem/UnitPrice/unit_price",
+        "source_file_path": "app/Models/InvoiceItem.php"
+      },
+      {
+        "id": 133887,
+        "category": "data_relation",
+        "semantic_path": "InvoiceItem/_Invoice/invoice",
+        "source_file_path": "app/Models/InvoiceItem.php"
+      },
+      {
+        "id": 133917,
+        "category": "data",
+        "semantic_path": "Payment/Amount/amount",
+        "source_file_path": "app/Models/Payment.php"
+      },
+      {
+        "id": 133915,
+        "category": "data",
+        "semantic_path": "Payment/InvoiceId/invoice_id",
+        "source_file_path": "app/Models/Payment.php"
+      },
+      {
+        "id": 133920,
+        "category": "data",
+        "semantic_path": "Payment/Notes/notes",
+        "source_file_path": "app/Models/Payment.php"
+      },
+      {
+        "id": 133918,
+        "category": "data",
+        "semantic_path": "Payment/Payment/payment_method",
+        "source_file_path": "app/Models/Payment.php"
+      },
+      {
+        "id": 133916,
+        "category": "data",
+        "semantic_path": "Payment/PaymentDate/payment_date",
+        "source_file_path": "app/Models/Payment.php"
+      },
+      {
+        "id": 133919,
+        "category": "data",
+        "semantic_path": "Payment/ReferenceNumber/reference_number",
+        "source_file_path": "app/Models/Payment.php"
+      },
+      {
+        "id": 133914,
+        "category": "data_relation",
+        "semantic_path": "Payment/_Invoice/invoice",
+        "source_file_path": "app/Models/Payment.php"
+      },
+      {
+        "id": 133924,
+        "category": "be_logic",
+        "semantic_path": "PaymentPlan/ScopeOverdue/scopeOverdue",
+        "source_file_path": "app/Models/PaymentPlan.php"
+      },
+      {
+        "id": 133923,
+        "category": "be_logic",
+        "semantic_path": "PaymentPlan/ScopePending/scopePending",
+        "source_file_path": "app/Models/PaymentPlan.php"
+      },
+      {
+        "id": 133928,
+        "category": "data",
+        "semantic_path": "PaymentPlan/Amount/amount",
+        "source_file_path": "app/Models/PaymentPlan.php"
+      },
+      {
+        "id": 133927,
+        "category": "data",
+        "semantic_path": "PaymentPlan/DueDate/due_date",
+        "source_file_path": "app/Models/PaymentPlan.php"
+      },
+      {
+        "id": 133926,
+        "category": "data",
+        "semantic_path": "PaymentPlan/InstallmentNumber/installment_number",
+        "source_file_path": "app/Models/PaymentPlan.php"
+      },
+      {
+        "id": 133925,
+        "category": "data",
+        "semantic_path": "PaymentPlan/InvoiceId/invoice_id",
+        "source_file_path": "app/Models/PaymentPlan.php"
+      },
+      {
+        "id": 133930,
+        "category": "data",
+        "semantic_path": "PaymentPlan/PaidDate/paid_date",
+        "source_file_path": "app/Models/PaymentPlan.php"
+      },
+      {
+        "id": 133931,
+        "category": "data",
+        "semantic_path": "PaymentPlan/PaymentId/payment_id",
+        "source_file_path": "app/Models/PaymentPlan.php"
+      },
+      {
+        "id": 133929,
+        "category": "data",
+        "semantic_path": "PaymentPlan/Status/status",
+        "source_file_path": "app/Models/PaymentPlan.php"
+      },
+      {
+        "id": 133921,
+        "category": "data_relation",
+        "semantic_path": "PaymentPlan/_Invoice/invoice",
+        "source_file_path": "app/Models/PaymentPlan.php"
+      },
+      {
+        "id": 133922,
+        "category": "data_relation",
+        "semantic_path": "PaymentPlan/_Invoice/payment",
+        "source_file_path": "app/Models/PaymentPlan.php"
+      },
+      {
+        "id": 134138,
+        "category": "data",
+        "semantic_path": "Invoice/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093252_create_invoices_table.php"
+      },
+      {
+        "id": 134140,
+        "category": "data",
+        "semantic_path": "Invoice/DeletedAt/deleted_at",
+        "source_file_path": "database/migrations/2025_12_11_093252_create_invoices_table.php"
+      },
+      {
+        "id": 134137,
+        "category": "data",
+        "semantic_path": "Invoice/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093252_create_invoices_table.php"
+      },
+      {
+        "id": 134139,
+        "category": "data",
+        "semantic_path": "Invoice/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093252_create_invoices_table.php"
+      },
+      {
+        "id": 134142,
+        "category": "data",
+        "semantic_path": "InvoiceItem/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093257_create_invoice_items_table.php"
+      },
+      {
+        "id": 134141,
+        "category": "data",
+        "semantic_path": "InvoiceItem/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093257_create_invoice_items_table.php"
+      },
+      {
+        "id": 134143,
+        "category": "data",
+        "semantic_path": "InvoiceItem/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093257_create_invoice_items_table.php"
+      },
+      {
+        "id": 134145,
+        "category": "data",
+        "semantic_path": "Payment/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093259_create_payments_table.php"
+      },
+      {
+        "id": 134144,
+        "category": "data",
+        "semantic_path": "Payment/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093259_create_payments_table.php"
+      },
+      {
+        "id": 134146,
+        "category": "data",
+        "semantic_path": "Payment/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093259_create_payments_table.php"
+      },
+      {
+        "id": 134148,
+        "category": "data",
+        "semantic_path": "PaymentPlan/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093301_create_payment_plans_table.php"
+      },
+      {
+        "id": 134147,
+        "category": "data",
+        "semantic_path": "PaymentPlan/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093301_create_payment_plans_table.php"
+      },
+      {
+        "id": 134149,
+        "category": "data",
+        "semantic_path": "PaymentPlan/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093301_create_payment_plans_table.php"
+      },
+      {
+        "id": 134151,
+        "category": "data",
+        "semantic_path": "CreditNote/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093303_create_credit_notes_table.php"
+      },
+      {
+        "id": 134150,
+        "category": "data",
+        "semantic_path": "CreditNote/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093303_create_credit_notes_table.php"
+      },
+      {
+        "id": 134152,
+        "category": "data",
+        "semantic_path": "CreditNote/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093303_create_credit_notes_table.php"
+      },
+      {
+        "id": 134500,
+        "category": "be_logic",
+        "semantic_path": "Invoice/ParseDateValue/parseDateValue",
+        "source_file_path": "database/seeders/InvoiceSeeder.php"
+      },
+      {
+        "id": 134499,
+        "category": "be_logic",
+        "semantic_path": "Invoice/ParseMoney/parseMoney",
+        "source_file_path": "database/seeders/InvoiceSeeder.php"
+      },
+      {
+        "id": 134230,
+        "category": "be_logic",
+        "semantic_path": "Invoice/Run/run",
+        "source_file_path": "database/seeders/InvoiceSeeder.php"
+      },
+      {
+        "id": 134444,
+        "category": "ui_layout",
+        "semantic_path": "R/FirstName/first_name",
+        "source_file_path": "resources/views/admin/accounting/balances.blade.php"
+      },
+      {
+        "id": 134442,
+        "category": "ui_layout",
+        "semantic_path": "R/InvoicedTotal/invoiced_total",
+        "source_file_path": "resources/views/admin/accounting/balances.blade.php"
+      },
+      {
+        "id": 134445,
+        "category": "ui_layout",
+        "semantic_path": "R/LastName/last_name",
+        "source_file_path": "resources/views/admin/accounting/balances.blade.php"
+      },
+      {
+        "id": 134443,
+        "category": "ui_layout",
+        "semantic_path": "R/PaidTotal/paid_total",
+        "source_file_path": "resources/views/admin/accounting/balances.blade.php"
+      },
+      {
+        "id": 134446,
+        "category": "ui_layout",
+        "semantic_path": "R/TaxCode/tax_code",
+        "source_file_path": "resources/views/admin/accounting/balances.blade.php"
+      },
+      {
+        "id": 134331,
+        "category": "ui_layout",
+        "semantic_path": "Invoice/Format/format",
+        "source_file_path": "resources/views/admin/invoices/edit.blade.php"
+      },
+      {
+        "id": 134332,
+        "category": "ui_layout",
+        "semantic_path": "Invoice/FullName/full_name",
+        "source_file_path": "resources/views/admin/invoices/show.blade.php"
+      },
+      {
+        "id": 134333,
+        "category": "ui_layout",
+        "semantic_path": "Invoice/Name/name",
+        "source_file_path": "resources/views/admin/invoices/show.blade.php"
+      },
+      {
+        "id": 134334,
+        "category": "ui_layout",
+        "semantic_path": "Invoice/PaidAmount/paid_amount",
+        "source_file_path": "resources/views/admin/invoices/show.blade.php"
+      },
+      {
+        "id": 134336,
+        "category": "ui_layout",
+        "semantic_path": "Invoice/Payments/payments",
+        "source_file_path": "resources/views/admin/invoices/show.blade.php"
+      },
+      {
+        "id": 134335,
+        "category": "ui_layout",
+        "semantic_path": "Invoice/RemainingAmount/remaining_amount",
+        "source_file_path": "resources/views/admin/invoices/show.blade.php"
+      },
+      {
+        "id": 134492,
+        "category": "ui_layout",
+        "semantic_path": "Inst/Amount/amount",
+        "source_file_path": "resources/views/admin/payment-plans/index.blade.php"
+      },
+      {
+        "id": 134490,
+        "category": "ui_layout",
+        "semantic_path": "Inst/DueDate/due_date",
+        "source_file_path": "resources/views/admin/payment-plans/index.blade.php"
+      },
+      {
+        "id": 134491,
+        "category": "ui_layout",
+        "semantic_path": "Inst/Invoice/invoice",
+        "source_file_path": "resources/views/admin/payment-plans/index.blade.php"
+      },
+      {
+        "id": 134489,
+        "category": "ui_layout",
+        "semantic_path": "Inst/InvoiceNumber/invoice_number",
+        "source_file_path": "resources/views/admin/payment-plans/index.blade.php"
+      },
+      {
+        "id": 134493,
+        "category": "ui_layout",
+        "semantic_path": "Inst/PaidDate/paid_date",
+        "source_file_path": "resources/views/admin/payment-plans/index.blade.php"
+      },
+      {
+        "id": 134488,
+        "category": "ui_layout",
+        "semantic_path": "Inst/Student/student",
+        "source_file_path": "resources/views/admin/payment-plans/index.blade.php"
+      }
+    ],
+    "counts": {
+      "files": 21,
+      "devunits": 104,
+      "files_without_devunits": 3
+    }
+  },
+  "A06": {
+    "footility_activity_id": 2843,
+    "title": "Contabilita Accessori/Noleggi/Cauzioni",
+    "files": [
+      "app/Http/Controllers/Admin/InstrumentRentalController.php",
+      "app/Models/InstrumentRental.php",
+      "resources/views/admin/instrument-rentals/create.blade.php",
+      "resources/views/admin/instrument-rentals/edit.blade.php",
+      "resources/views/admin/instrument-rentals/index.blade.php",
+      "resources/views/admin/instrument-rentals/show.blade.php"
+    ],
+    "file_to_devunit_ids": {
+      "app/Http/Controllers/Admin/InstrumentRentalController.php": [
+        134430,
+        134435,
+        134433,
+        134429,
+        134432,
+        134431,
+        134434
+      ],
+      "app/Models/InstrumentRental.php": [
+        133854,
+        134440,
+        133860,
+        133858,
+        133856,
+        133859,
+        133864,
+        133863,
+        133862,
+        133857,
+        133861,
+        133855,
+        134439,
+        133853,
+        133852
+      ],
+      "resources/views/admin/instrument-rentals/create.blade.php": [
+        134470,
+        134471,
+        134472,
+        134469,
+        134468
+      ],
+      "resources/views/admin/instrument-rentals/edit.blade.php": [],
+      "resources/views/admin/instrument-rentals/index.blade.php": [],
+      "resources/views/admin/instrument-rentals/show.blade.php": [
+        134476,
+        134484,
+        134482,
+        134474,
+        134480,
+        134477,
+        134483,
+        134473,
+        134487,
+        134486,
+        134485,
+        134478,
+        134481,
+        134479,
+        134475
+      ]
+    },
+    "devunits": [
+      {
+        "id": 134430,
+        "category": "be_logic",
+        "semantic_path": "InstrumentRental/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/InstrumentRentalController.php"
+      },
+      {
+        "id": 134435,
+        "category": "be_logic",
+        "semantic_path": "InstrumentRental/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/InstrumentRentalController.php"
+      },
+      {
+        "id": 134433,
+        "category": "be_logic",
+        "semantic_path": "InstrumentRental/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/InstrumentRentalController.php"
+      },
+      {
+        "id": 134429,
+        "category": "be_logic",
+        "semantic_path": "InstrumentRental/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/InstrumentRentalController.php"
+      },
+      {
+        "id": 134432,
+        "category": "be_logic",
+        "semantic_path": "InstrumentRental/Show/show",
+        "source_file_path": "app/Http/Controllers/Admin/InstrumentRentalController.php"
+      },
+      {
+        "id": 134431,
+        "category": "be_logic",
+        "semantic_path": "InstrumentRental/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/InstrumentRentalController.php"
+      },
+      {
+        "id": 134434,
+        "category": "be_logic",
+        "semantic_path": "InstrumentRental/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/InstrumentRentalController.php"
+      },
+      {
+        "id": 133854,
+        "category": "be_logic",
+        "semantic_path": "InstrumentRental/ScopeActive/scopeActive",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 134440,
+        "category": "data",
+        "semantic_path": "InstrumentRental/AcademicYearId/academic_year_id",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 133860,
+        "category": "data",
+        "semantic_path": "InstrumentRental/Deposit/deposit",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 133858,
+        "category": "data",
+        "semantic_path": "InstrumentRental/EndDate/end_date",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 133856,
+        "category": "data",
+        "semantic_path": "InstrumentRental/InstrumentId/instrument_id",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 133859,
+        "category": "data",
+        "semantic_path": "InstrumentRental/MonthlyFee/monthly_fee",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 133864,
+        "category": "data",
+        "semantic_path": "InstrumentRental/Notes/notes",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 133863,
+        "category": "data",
+        "semantic_path": "InstrumentRental/ReturnCondition/return_condition",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 133862,
+        "category": "data",
+        "semantic_path": "InstrumentRental/ReturnDate/return_date",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 133857,
+        "category": "data",
+        "semantic_path": "InstrumentRental/StartDate/start_date",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 133861,
+        "category": "data",
+        "semantic_path": "InstrumentRental/Status/status",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 133855,
+        "category": "data",
+        "semantic_path": "InstrumentRental/StudentId/student_id",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 134439,
+        "category": "data_relation",
+        "semantic_path": "InstrumentRental/_Student/academicYear",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 133853,
+        "category": "data_relation",
+        "semantic_path": "InstrumentRental/_Student/instrument",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 133852,
+        "category": "data_relation",
+        "semantic_path": "InstrumentRental/_Student/student",
+        "source_file_path": "app/Models/InstrumentRental.php"
+      },
+      {
+        "id": 134470,
+        "category": "ui_layout",
+        "semantic_path": "I/Brand/brand",
+        "source_file_path": "resources/views/admin/instrument-rentals/create.blade.php"
+      },
+      {
+        "id": 134471,
+        "category": "ui_layout",
+        "semantic_path": "I/Model/model",
+        "source_file_path": "resources/views/admin/instrument-rentals/create.blade.php"
+      },
+      {
+        "id": 134472,
+        "category": "ui_layout",
+        "semantic_path": "I/SerialNumber/serial_number",
+        "source_file_path": "resources/views/admin/instrument-rentals/create.blade.php"
+      },
+      {
+        "id": 134469,
+        "category": "ui_layout",
+        "semantic_path": "I/Type/type",
+        "source_file_path": "resources/views/admin/instrument-rentals/create.blade.php"
+      },
+      {
+        "id": 134468,
+        "category": "ui_layout",
+        "semantic_path": "Instrument/MapWithKeys/mapWithKeys",
+        "source_file_path": "resources/views/admin/instrument-rentals/create.blade.php"
+      },
+      {
+        "id": 134476,
+        "category": "ui_layout",
+        "semantic_path": "Rental/Brand/brand",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      },
+      {
+        "id": 134484,
+        "category": "ui_layout",
+        "semantic_path": "Rental/Deposit/deposit",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      },
+      {
+        "id": 134482,
+        "category": "ui_layout",
+        "semantic_path": "Rental/EndDate/end_date",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      },
+      {
+        "id": 134474,
+        "category": "ui_layout",
+        "semantic_path": "Rental/FullName/full_name",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      },
+      {
+        "id": 134480,
+        "category": "ui_layout",
+        "semantic_path": "Rental/Instrument/instrument",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      },
+      {
+        "id": 134477,
+        "category": "ui_layout",
+        "semantic_path": "Rental/Model/model",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      },
+      {
+        "id": 134483,
+        "category": "ui_layout",
+        "semantic_path": "Rental/MonthlyFee/monthly_fee",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      },
+      {
+        "id": 134473,
+        "category": "ui_layout",
+        "semantic_path": "Rental/Name/name",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      },
+      {
+        "id": 134487,
+        "category": "ui_layout",
+        "semantic_path": "Rental/Notes/notes",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      },
+      {
+        "id": 134486,
+        "category": "ui_layout",
+        "semantic_path": "Rental/ReturnCondition/return_condition",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      },
+      {
+        "id": 134485,
+        "category": "ui_layout",
+        "semantic_path": "Rental/ReturnDate/return_date",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      },
+      {
+        "id": 134478,
+        "category": "ui_layout",
+        "semantic_path": "Rental/SerialNumber/serial_number",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      },
+      {
+        "id": 134481,
+        "category": "ui_layout",
+        "semantic_path": "Rental/StartDate/start_date",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      },
+      {
+        "id": 134479,
+        "category": "ui_layout",
+        "semantic_path": "Rental/Student/student",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      },
+      {
+        "id": 134475,
+        "category": "ui_layout",
+        "semantic_path": "Rental/Type/type",
+        "source_file_path": "resources/views/admin/instrument-rentals/show.blade.php"
+      }
+    ],
+    "counts": {
+      "files": 6,
+      "devunits": 42,
+      "files_without_devunits": 2
+    }
+  },
+  "A07": {
+    "footility_activity_id": 2844,
+    "title": "Accessori/Noleggi/Libri/Esami",
+    "files": [
+      "app/Http/Controllers/Admin/BookController.php",
+      "app/Http/Controllers/Admin/BookDistributionController.php",
+      "app/Http/Controllers/Admin/ExamController.php",
+      "app/Http/Controllers/Admin/InstrumentController.php",
+      "app/Models/Book.php",
+      "app/Models/BookDistribution.php",
+      "app/Models/Exam.php",
+      "app/Models/Instrument.php",
+      "database/migrations/2025_12_11_093240_create_instruments_table.php",
+      "database/migrations/2025_12_11_093241_create_instrument_rentals_table.php",
+      "database/migrations/2025_12_11_093246_create_books_table.php",
+      "database/migrations/2025_12_11_093248_create_book_distributions_table.php",
+      "database/migrations/2025_12_11_093249_create_exams_table.php",
+      "database/migrations/2026_01_22_000001_add_academic_year_to_rentals_and_book_distributions.php",
+      "database/seeders/ExamSeeder.php",
+      "database/seeders/InstrumentSeeder.php",
+      "resources/views/admin/book-distributions/create.blade.php",
+      "resources/views/admin/book-distributions/edit.blade.php",
+      "resources/views/admin/book-distributions/index.blade.php",
+      "resources/views/admin/book-distributions/show.blade.php",
+      "resources/views/admin/books/create.blade.php",
+      "resources/views/admin/books/edit.blade.php",
+      "resources/views/admin/books/index.blade.php",
+      "resources/views/admin/books/show.blade.php",
+      "resources/views/admin/exams/create.blade.php",
+      "resources/views/admin/exams/edit.blade.php",
+      "resources/views/admin/exams/index.blade.php",
+      "resources/views/admin/exams/show.blade.php",
+      "resources/views/admin/instruments/create.blade.php",
+      "resources/views/admin/instruments/edit.blade.php",
+      "resources/views/admin/instruments/index.blade.php",
+      "resources/views/admin/instruments/show.blade.php"
+    ],
+    "file_to_devunit_ids": {
+      "app/Http/Controllers/Admin/BookController.php": [
+        134409,
+        134414,
+        134412,
+        134408,
+        134411,
+        134410,
+        134413
+      ],
+      "app/Http/Controllers/Admin/BookDistributionController.php": [
+        134416,
+        134421,
+        134419,
+        134415,
+        134418,
+        134417,
+        134420
+      ],
+      "app/Http/Controllers/Admin/ExamController.php": [
+        133510,
+        133515,
+        133513,
+        133509,
+        133512,
+        133511,
+        133514
+      ],
+      "app/Http/Controllers/Admin/InstrumentController.php": [
+        133536,
+        133541,
+        133539,
+        133535,
+        133538,
+        133537,
+        133540
+      ],
+      "app/Models/Book.php": [
+        133625,
+        133626,
+        133628,
+        133627,
+        133629,
+        133624,
+        133623
+      ],
+      "app/Models/BookDistribution.php": [
+        134438,
+        133634,
+        133635,
+        133636,
+        133638,
+        133637,
+        133633,
+        134437,
+        133631,
+        133632,
+        133630
+      ],
+      "app/Models/Exam.php": [
+        133775,
+        133770,
+        133767,
+        133774,
+        133768,
+        133776,
+        133771,
+        133772,
+        133773,
+        133766,
+        133769,
+        133765
+      ],
+      "app/Models/Instrument.php": [
+        133839,
+        133841,
+        133845,
+        133849,
+        133842,
+        133851,
+        133847,
+        133848,
+        133844,
+        133843,
+        133850,
+        133846,
+        133840,
+        133838
+      ],
+      "database/migrations/2025_12_11_093240_create_instruments_table.php": [
+        134119,
+        134118,
+        134120
+      ],
+      "database/migrations/2025_12_11_093241_create_instrument_rentals_table.php": [
+        134122,
+        134121,
+        134123
+      ],
+      "database/migrations/2025_12_11_093246_create_books_table.php": [
+        134125,
+        134124,
+        134126
+      ],
+      "database/migrations/2025_12_11_093248_create_book_distributions_table.php": [
+        134128,
+        134127,
+        134129
+      ],
+      "database/migrations/2025_12_11_093249_create_exams_table.php": [
+        134131,
+        134130,
+        134132
+      ],
+      "database/migrations/2026_01_22_000001_add_academic_year_to_rentals_and_book_distributions.php": [],
+      "database/seeders/ExamSeeder.php": [
+        134225
+      ],
+      "database/seeders/InstrumentSeeder.php": [
+        134229,
+        134228,
+        134227
+      ],
+      "resources/views/admin/book-distributions/create.blade.php": [
+        134447
+      ],
+      "resources/views/admin/book-distributions/edit.blade.php": [
+        134448,
+        134453,
+        134454,
+        134449,
+        134451,
+        134450,
+        134452
+      ],
+      "resources/views/admin/book-distributions/index.blade.php": [],
+      "resources/views/admin/book-distributions/show.blade.php": [
+        134459,
+        134456,
+        134455,
+        134458,
+        134457
+      ],
+      "resources/views/admin/books/create.blade.php": [],
+      "resources/views/admin/books/edit.blade.php": [],
+      "resources/views/admin/books/index.blade.php": [],
+      "resources/views/admin/books/show.blade.php": [
+        134460
+      ],
+      "resources/views/admin/exams/create.blade.php": [],
+      "resources/views/admin/exams/edit.blade.php": [
+        134301
+      ],
+      "resources/views/admin/exams/index.blade.php": [],
+      "resources/views/admin/exams/show.blade.php": [
+        134302
+      ],
+      "resources/views/admin/instruments/create.blade.php": [],
+      "resources/views/admin/instruments/edit.blade.php": [],
+      "resources/views/admin/instruments/index.blade.php": [],
+      "resources/views/admin/instruments/show.blade.php": [
+        134329,
+        134330
+      ]
+    },
+    "devunits": [
+      {
+        "id": 134409,
+        "category": "be_logic",
+        "semantic_path": "Book/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/BookController.php"
+      },
+      {
+        "id": 134414,
+        "category": "be_logic",
+        "semantic_path": "Book/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/BookController.php"
+      },
+      {
+        "id": 134412,
+        "category": "be_logic",
+        "semantic_path": "Book/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/BookController.php"
+      },
+      {
+        "id": 134408,
+        "category": "be_logic",
+        "semantic_path": "Book/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/BookController.php"
+      },
+      {
+        "id": 134411,
+        "category": "be_logic",
+        "semantic_path": "Book/Show/show",
+        "source_file_path": "app/Http/Controllers/Admin/BookController.php"
+      },
+      {
+        "id": 134410,
+        "category": "be_logic",
+        "semantic_path": "Book/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/BookController.php"
+      },
+      {
+        "id": 134413,
+        "category": "be_logic",
+        "semantic_path": "Book/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/BookController.php"
+      },
+      {
+        "id": 134416,
+        "category": "be_logic",
+        "semantic_path": "BookDistribution/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/BookDistributionController.php"
+      },
+      {
+        "id": 134421,
+        "category": "be_logic",
+        "semantic_path": "BookDistribution/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/BookDistributionController.php"
+      },
+      {
+        "id": 134419,
+        "category": "be_logic",
+        "semantic_path": "BookDistribution/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/BookDistributionController.php"
+      },
+      {
+        "id": 134415,
+        "category": "be_logic",
+        "semantic_path": "BookDistribution/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/BookDistributionController.php"
+      },
+      {
+        "id": 134418,
+        "category": "be_logic",
+        "semantic_path": "BookDistribution/Show/show",
+        "source_file_path": "app/Http/Controllers/Admin/BookDistributionController.php"
+      },
+      {
+        "id": 134417,
+        "category": "be_logic",
+        "semantic_path": "BookDistribution/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/BookDistributionController.php"
+      },
+      {
+        "id": 134420,
+        "category": "be_logic",
+        "semantic_path": "BookDistribution/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/BookDistributionController.php"
+      },
+      {
+        "id": 133510,
+        "category": "be_logic",
+        "semantic_path": "Exam/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/ExamController.php"
+      },
+      {
+        "id": 133515,
+        "category": "be_logic",
+        "semantic_path": "Exam/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/ExamController.php"
+      },
+      {
+        "id": 133513,
+        "category": "be_logic",
+        "semantic_path": "Exam/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/ExamController.php"
+      },
+      {
+        "id": 133509,
+        "category": "be_logic",
+        "semantic_path": "Exam/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/ExamController.php"
+      },
+      {
+        "id": 133512,
+        "category": "be_logic",
+        "semantic_path": "Exam/Show/show",
+        "source_file_path": "app/Http/Controllers/Admin/ExamController.php"
+      },
+      {
+        "id": 133511,
+        "category": "be_logic",
+        "semantic_path": "Exam/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/ExamController.php"
+      },
+      {
+        "id": 133514,
+        "category": "be_logic",
+        "semantic_path": "Exam/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/ExamController.php"
+      },
+      {
+        "id": 133536,
+        "category": "be_logic",
+        "semantic_path": "Instrument/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/InstrumentController.php"
+      },
+      {
+        "id": 133541,
+        "category": "be_logic",
+        "semantic_path": "Instrument/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/InstrumentController.php"
+      },
+      {
+        "id": 133539,
+        "category": "be_logic",
+        "semantic_path": "Instrument/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/InstrumentController.php"
+      },
+      {
+        "id": 133535,
+        "category": "be_logic",
+        "semantic_path": "Instrument/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/InstrumentController.php"
+      },
+      {
+        "id": 133538,
+        "category": "be_logic",
+        "semantic_path": "Instrument/Show/show",
+        "source_file_path": "app/Http/Controllers/Admin/InstrumentController.php"
+      },
+      {
+        "id": 133537,
+        "category": "be_logic",
+        "semantic_path": "Instrument/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/InstrumentController.php"
+      },
+      {
+        "id": 133540,
+        "category": "be_logic",
+        "semantic_path": "Instrument/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/InstrumentController.php"
+      },
+      {
+        "id": 133625,
+        "category": "data",
+        "semantic_path": "Book/Author/author",
+        "source_file_path": "app/Models/Book.php"
+      },
+      {
+        "id": 133626,
+        "category": "data",
+        "semantic_path": "Book/Bn/isbn",
+        "source_file_path": "app/Models/Book.php"
+      },
+      {
+        "id": 133628,
+        "category": "data",
+        "semantic_path": "Book/Price/price",
+        "source_file_path": "app/Models/Book.php"
+      },
+      {
+        "id": 133627,
+        "category": "data",
+        "semantic_path": "Book/Publisher/publisher",
+        "source_file_path": "app/Models/Book.php"
+      },
+      {
+        "id": 133629,
+        "category": "data",
+        "semantic_path": "Book/StockQuantity/stock_quantity",
+        "source_file_path": "app/Models/Book.php"
+      },
+      {
+        "id": 133624,
+        "category": "data",
+        "semantic_path": "Book/Title/title",
+        "source_file_path": "app/Models/Book.php"
+      },
+      {
+        "id": 133623,
+        "category": "data_relation",
+        "semantic_path": "Book/_BookDistribution/distributions",
+        "source_file_path": "app/Models/Book.php"
+      },
+      {
+        "id": 134438,
+        "category": "data",
+        "semantic_path": "BookDistribution/AcademicYearId/academic_year_id",
+        "source_file_path": "app/Models/BookDistribution.php"
+      },
+      {
+        "id": 133634,
+        "category": "data",
+        "semantic_path": "BookDistribution/BookId/book_id",
+        "source_file_path": "app/Models/BookDistribution.php"
+      },
+      {
+        "id": 133635,
+        "category": "data",
+        "semantic_path": "BookDistribution/CourseId/course_id",
+        "source_file_path": "app/Models/BookDistribution.php"
+      },
+      {
+        "id": 133636,
+        "category": "data",
+        "semantic_path": "BookDistribution/DistributionDate/distribution_date",
+        "source_file_path": "app/Models/BookDistribution.php"
+      },
+      {
+        "id": 133638,
+        "category": "data",
+        "semantic_path": "BookDistribution/PricePaid/price_paid",
+        "source_file_path": "app/Models/BookDistribution.php"
+      },
+      {
+        "id": 133637,
+        "category": "data",
+        "semantic_path": "BookDistribution/Quantity/quantity",
+        "source_file_path": "app/Models/BookDistribution.php"
+      },
+      {
+        "id": 133633,
+        "category": "data",
+        "semantic_path": "BookDistribution/StudentId/student_id",
+        "source_file_path": "app/Models/BookDistribution.php"
+      },
+      {
+        "id": 134437,
+        "category": "data_relation",
+        "semantic_path": "BookDistribution/_Student/academicYear",
+        "source_file_path": "app/Models/BookDistribution.php"
+      },
+      {
+        "id": 133631,
+        "category": "data_relation",
+        "semantic_path": "BookDistribution/_Student/book",
+        "source_file_path": "app/Models/BookDistribution.php"
+      },
+      {
+        "id": 133632,
+        "category": "data_relation",
+        "semantic_path": "BookDistribution/_Student/course",
+        "source_file_path": "app/Models/BookDistribution.php"
+      },
+      {
+        "id": 133630,
+        "category": "data_relation",
+        "semantic_path": "BookDistribution/_Student/student",
+        "source_file_path": "app/Models/BookDistribution.php"
+      },
+      {
+        "id": 133775,
+        "category": "data",
+        "semantic_path": "Exam/CertificateNumber/certificate_number",
+        "source_file_path": "app/Models/Exam.php"
+      },
+      {
+        "id": 133770,
+        "category": "data",
+        "semantic_path": "Exam/ExamDate/exam_date",
+        "source_file_path": "app/Models/Exam.php"
+      },
+      {
+        "id": 133767,
+        "category": "data",
+        "semantic_path": "Exam/ExamType/exam_type",
+        "source_file_path": "app/Models/Exam.php"
+      },
+      {
+        "id": 133774,
+        "category": "data",
+        "semantic_path": "Exam/Grade/grade",
+        "source_file_path": "app/Models/Exam.php"
+      },
+      {
+        "id": 133768,
+        "category": "data",
+        "semantic_path": "Exam/Level/level",
+        "source_file_path": "app/Models/Exam.php"
+      },
+      {
+        "id": 133776,
+        "category": "data",
+        "semantic_path": "Exam/Notes/notes",
+        "source_file_path": "app/Models/Exam.php"
+      },
+      {
+        "id": 133771,
+        "category": "data",
+        "semantic_path": "Exam/RegistrationDate/registration_date",
+        "source_file_path": "app/Models/Exam.php"
+      },
+      {
+        "id": 133772,
+        "category": "data",
+        "semantic_path": "Exam/RegistrationFee/registration_fee",
+        "source_file_path": "app/Models/Exam.php"
+      },
+      {
+        "id": 133773,
+        "category": "data",
+        "semantic_path": "Exam/Result/result",
+        "source_file_path": "app/Models/Exam.php"
+      },
+      {
+        "id": 133766,
+        "category": "data",
+        "semantic_path": "Exam/StudentId/student_id",
+        "source_file_path": "app/Models/Exam.php"
+      },
+      {
+        "id": 133769,
+        "category": "data",
+        "semantic_path": "Exam/Subject/subject",
+        "source_file_path": "app/Models/Exam.php"
+      },
+      {
+        "id": 133765,
+        "category": "data_relation",
+        "semantic_path": "Exam/_Student/student",
+        "source_file_path": "app/Models/Exam.php"
+      },
+      {
+        "id": 133839,
+        "category": "be_logic",
+        "semantic_path": "Instrument/ScopeAvailable/scopeAvailable",
+        "source_file_path": "app/Models/Instrument.php"
+      },
+      {
+        "id": 133841,
+        "category": "data",
+        "semantic_path": "Instrument/Brand/brand",
+        "source_file_path": "app/Models/Instrument.php"
+      },
+      {
+        "id": 133845,
+        "category": "data",
+        "semantic_path": "Instrument/Condition/condition",
+        "source_file_path": "app/Models/Instrument.php"
+      },
+      {
+        "id": 133849,
+        "category": "data",
+        "semantic_path": "Instrument/CurrentValue/current_value",
+        "source_file_path": "app/Models/Instrument.php"
+      },
+      {
+        "id": 133842,
+        "category": "data",
+        "semantic_path": "Instrument/Model/model",
+        "source_file_path": "app/Models/Instrument.php"
+      },
+      {
+        "id": 133851,
+        "category": "data",
+        "semantic_path": "Instrument/Notes/notes",
+        "source_file_path": "app/Models/Instrument.php"
+      },
+      {
+        "id": 133847,
+        "category": "data",
+        "semantic_path": "Instrument/PurchaseDate/purchase_date",
+        "source_file_path": "app/Models/Instrument.php"
+      },
+      {
+        "id": 133848,
+        "category": "data",
+        "semantic_path": "Instrument/PurchasePrice/purchase_price",
+        "source_file_path": "app/Models/Instrument.php"
+      },
+      {
+        "id": 133844,
+        "category": "data",
+        "semantic_path": "Instrument/SerialNumber/serial_number",
+        "source_file_path": "app/Models/Instrument.php"
+      },
+      {
+        "id": 133843,
+        "category": "data",
+        "semantic_path": "Instrument/Size/size",
+        "source_file_path": "app/Models/Instrument.php"
+      },
+      {
+        "id": 133850,
+        "category": "data",
+        "semantic_path": "Instrument/Status/status",
+        "source_file_path": "app/Models/Instrument.php"
+      },
+      {
+        "id": 133846,
+        "category": "data",
+        "semantic_path": "Instrument/Supplier/supplier",
+        "source_file_path": "app/Models/Instrument.php"
+      },
+      {
+        "id": 133840,
+        "category": "data",
+        "semantic_path": "Instrument/Type/type",
+        "source_file_path": "app/Models/Instrument.php"
+      },
+      {
+        "id": 133838,
+        "category": "data_relation",
+        "semantic_path": "Instrument/_InstrumentRental/rentals",
+        "source_file_path": "app/Models/Instrument.php"
+      },
+      {
+        "id": 134119,
+        "category": "data",
+        "semantic_path": "Instrument/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093240_create_instruments_table.php"
+      },
+      {
+        "id": 134118,
+        "category": "data",
+        "semantic_path": "Instrument/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093240_create_instruments_table.php"
+      },
+      {
+        "id": 134120,
+        "category": "data",
+        "semantic_path": "Instrument/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093240_create_instruments_table.php"
+      },
+      {
+        "id": 134122,
+        "category": "data",
+        "semantic_path": "InstrumentRental/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093241_create_instrument_rentals_table.php"
+      },
+      {
+        "id": 134121,
+        "category": "data",
+        "semantic_path": "InstrumentRental/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093241_create_instrument_rentals_table.php"
+      },
+      {
+        "id": 134123,
+        "category": "data",
+        "semantic_path": "InstrumentRental/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093241_create_instrument_rentals_table.php"
+      },
+      {
+        "id": 134125,
+        "category": "data",
+        "semantic_path": "Book/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093246_create_books_table.php"
+      },
+      {
+        "id": 134124,
+        "category": "data",
+        "semantic_path": "Book/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093246_create_books_table.php"
+      },
+      {
+        "id": 134126,
+        "category": "data",
+        "semantic_path": "Book/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093246_create_books_table.php"
+      },
+      {
+        "id": 134128,
+        "category": "data",
+        "semantic_path": "BookDistribution/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093248_create_book_distributions_table.php"
+      },
+      {
+        "id": 134127,
+        "category": "data",
+        "semantic_path": "BookDistribution/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093248_create_book_distributions_table.php"
+      },
+      {
+        "id": 134129,
+        "category": "data",
+        "semantic_path": "BookDistribution/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093248_create_book_distributions_table.php"
+      },
+      {
+        "id": 134131,
+        "category": "data",
+        "semantic_path": "Exam/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093249_create_exams_table.php"
+      },
+      {
+        "id": 134130,
+        "category": "data",
+        "semantic_path": "Exam/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093249_create_exams_table.php"
+      },
+      {
+        "id": 134132,
+        "category": "data",
+        "semantic_path": "Exam/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093249_create_exams_table.php"
+      },
+      {
+        "id": 134225,
+        "category": "be_logic",
+        "semantic_path": "Exam/Run/run",
+        "source_file_path": "database/seeders/ExamSeeder.php"
+      },
+      {
+        "id": 134229,
+        "category": "be_logic",
+        "semantic_path": "Instrument/ImportFromAccessori/importFromAccessori",
+        "source_file_path": "database/seeders/InstrumentSeeder.php"
+      },
+      {
+        "id": 134228,
+        "category": "be_logic",
+        "semantic_path": "Instrument/ImportFromGestionale/importFromGestionale",
+        "source_file_path": "database/seeders/InstrumentSeeder.php"
+      },
+      {
+        "id": 134227,
+        "category": "be_logic",
+        "semantic_path": "Instrument/Run/run",
+        "source_file_path": "database/seeders/InstrumentSeeder.php"
+      },
+      {
+        "id": 134447,
+        "category": "ui_layout",
+        "semantic_path": "Book/Pluck/pluck",
+        "source_file_path": "resources/views/admin/book-distributions/create.blade.php"
+      },
+      {
+        "id": 134448,
+        "category": "ui_layout",
+        "semantic_path": "Distribution/AcademicYearId/academic_year_id",
+        "source_file_path": "resources/views/admin/book-distributions/edit.blade.php"
+      },
+      {
+        "id": 134453,
+        "category": "ui_layout",
+        "semantic_path": "Distribution/BookId/book_id",
+        "source_file_path": "resources/views/admin/book-distributions/edit.blade.php"
+      },
+      {
+        "id": 134454,
+        "category": "ui_layout",
+        "semantic_path": "Distribution/CourseId/course_id",
+        "source_file_path": "resources/views/admin/book-distributions/edit.blade.php"
+      },
+      {
+        "id": 134449,
+        "category": "ui_layout",
+        "semantic_path": "Distribution/DistributionDate/distribution_date",
+        "source_file_path": "resources/views/admin/book-distributions/edit.blade.php"
+      },
+      {
+        "id": 134451,
+        "category": "ui_layout",
+        "semantic_path": "Distribution/PricePaid/price_paid",
+        "source_file_path": "resources/views/admin/book-distributions/edit.blade.php"
+      },
+      {
+        "id": 134450,
+        "category": "ui_layout",
+        "semantic_path": "Distribution/Quantity/quantity",
+        "source_file_path": "resources/views/admin/book-distributions/edit.blade.php"
+      },
+      {
+        "id": 134452,
+        "category": "ui_layout",
+        "semantic_path": "Distribution/StudentId/student_id",
+        "source_file_path": "resources/views/admin/book-distributions/edit.blade.php"
+      },
+      {
+        "id": 134459,
+        "category": "ui_layout",
+        "semantic_path": "Distribution/Book/book",
+        "source_file_path": "resources/views/admin/book-distributions/show.blade.php"
+      },
+      {
+        "id": 134456,
+        "category": "ui_layout",
+        "semantic_path": "Distribution/FullName/full_name",
+        "source_file_path": "resources/views/admin/book-distributions/show.blade.php"
+      },
+      {
+        "id": 134455,
+        "category": "ui_layout",
+        "semantic_path": "Distribution/Name/name",
+        "source_file_path": "resources/views/admin/book-distributions/show.blade.php"
+      },
+      {
+        "id": 134458,
+        "category": "ui_layout",
+        "semantic_path": "Distribution/Student/student",
+        "source_file_path": "resources/views/admin/book-distributions/show.blade.php"
+      },
+      {
+        "id": 134457,
+        "category": "ui_layout",
+        "semantic_path": "Distribution/Title/title",
+        "source_file_path": "resources/views/admin/book-distributions/show.blade.php"
+      },
+      {
+        "id": 134460,
+        "category": "ui_layout",
+        "semantic_path": "Book/Distributions/distributions",
+        "source_file_path": "resources/views/admin/books/show.blade.php"
+      },
+      {
+        "id": 134301,
+        "category": "ui_layout",
+        "semantic_path": "Exam/Format/format",
+        "source_file_path": "resources/views/admin/exams/edit.blade.php"
+      },
+      {
+        "id": 134302,
+        "category": "ui_layout",
+        "semantic_path": "Exam/FullName/full_name",
+        "source_file_path": "resources/views/admin/exams/show.blade.php"
+      },
+      {
+        "id": 134329,
+        "category": "ui_layout",
+        "semantic_path": "Instrument/Format/format",
+        "source_file_path": "resources/views/admin/instruments/show.blade.php"
+      },
+      {
+        "id": 134330,
+        "category": "ui_layout",
+        "semantic_path": "Instrument/Rentals/rentals",
+        "source_file_path": "resources/views/admin/instruments/show.blade.php"
+      }
+    ],
+    "counts": {
+      "files": 32,
+      "devunits": 109,
+      "files_without_devunits": 10
+    }
+  },
+  "A08": {
+    "footility_activity_id": 2845,
+    "title": "Docenti/Lavoratori",
+    "files": [
+      "app/Http/Controllers/Admin/TeacherAvailabilityController.php",
+      "app/Http/Controllers/Admin/TeacherController.php",
+      "app/Models/Teacher.php",
+      "app/Models/TeacherAvailability.php",
+      "database/migrations/2025_12_11_093228_create_teachers_table.php",
+      "database/migrations/2025_12_22_155901_create_teacher_availability_table.php",
+      "database/seeders/TeacherSeeder.php",
+      "resources/views/admin/teacher-availability/create.blade.php",
+      "resources/views/admin/teacher-availability/edit.blade.php",
+      "resources/views/admin/teacher-availability/index.blade.php",
+      "resources/views/admin/teachers/create.blade.php",
+      "resources/views/admin/teachers/edit.blade.php",
+      "resources/views/admin/teachers/index.blade.php",
+      "resources/views/admin/teachers/show.blade.php"
+    ],
+    "file_to_devunit_ids": {
+      "app/Http/Controllers/Admin/TeacherAvailabilityController.php": [
+        133576,
+        133580,
+        133578,
+        133575,
+        133577,
+        133579
+      ],
+      "app/Http/Controllers/Admin/TeacherController.php": [
+        133582,
+        133587,
+        133585,
+        133581,
+        133584,
+        133583,
+        133586
+      ],
+      "app/Models/Teacher.php": [
+        134003,
+        134008,
+        134019,
+        134015,
+        134016,
+        134014,
+        134010,
+        134017,
+        134011,
+        134018,
+        134013,
+        134012,
+        134009,
+        134007,
+        134005,
+        134006,
+        134004
+      ],
+      "app/Models/TeacherAvailability.php": [
+        134025,
+        134022,
+        134026,
+        134021,
+        134024,
+        134023,
+        134020
+      ],
+      "database/migrations/2025_12_11_093228_create_teachers_table.php": [
+        134100,
+        134099,
+        134101
+      ],
+      "database/migrations/2025_12_22_155901_create_teacher_availability_table.php": [
+        134179,
+        134178,
+        134180
+      ],
+      "database/seeders/TeacherSeeder.php": [
+        134236,
+        134235,
+        134237,
+        134234,
+        134233
+      ],
+      "resources/views/admin/teacher-availability/create.blade.php": [],
+      "resources/views/admin/teacher-availability/edit.blade.php": [
+        134361
+      ],
+      "resources/views/admin/teacher-availability/index.blade.php": [],
+      "resources/views/admin/teachers/create.blade.php": [],
+      "resources/views/admin/teachers/edit.blade.php": [],
+      "resources/views/admin/teachers/index.blade.php": [],
+      "resources/views/admin/teachers/show.blade.php": [
+        134375,
+        134373,
+        134374
+      ]
+    },
+    "devunits": [
+      {
+        "id": 133576,
+        "category": "be_logic",
+        "semantic_path": "TeacherAvailability/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/TeacherAvailabilityController.php"
+      },
+      {
+        "id": 133580,
+        "category": "be_logic",
+        "semantic_path": "TeacherAvailability/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/TeacherAvailabilityController.php"
+      },
+      {
+        "id": 133578,
+        "category": "be_logic",
+        "semantic_path": "TeacherAvailability/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/TeacherAvailabilityController.php"
+      },
+      {
+        "id": 133575,
+        "category": "be_logic",
+        "semantic_path": "TeacherAvailability/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/TeacherAvailabilityController.php"
+      },
+      {
+        "id": 133577,
+        "category": "be_logic",
+        "semantic_path": "TeacherAvailability/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/TeacherAvailabilityController.php"
+      },
+      {
+        "id": 133579,
+        "category": "be_logic",
+        "semantic_path": "TeacherAvailability/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/TeacherAvailabilityController.php"
+      },
+      {
+        "id": 133582,
+        "category": "be_logic",
+        "semantic_path": "Teacher/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/TeacherController.php"
+      },
+      {
+        "id": 133587,
+        "category": "be_logic",
+        "semantic_path": "Teacher/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/TeacherController.php"
+      },
+      {
+        "id": 133585,
+        "category": "be_logic",
+        "semantic_path": "Teacher/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/TeacherController.php"
+      },
+      {
+        "id": 133581,
+        "category": "be_logic",
+        "semantic_path": "Teacher/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/TeacherController.php"
+      },
+      {
+        "id": 133584,
+        "category": "be_logic",
+        "semantic_path": "Teacher/Show/show",
+        "source_file_path": "app/Http/Controllers/Admin/TeacherController.php"
+      },
+      {
+        "id": 133583,
+        "category": "be_logic",
+        "semantic_path": "Teacher/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/TeacherController.php"
+      },
+      {
+        "id": 133586,
+        "category": "be_logic",
+        "semantic_path": "Teacher/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/TeacherController.php"
+      },
+      {
+        "id": 134003,
+        "category": "be_logic",
+        "semantic_path": "Teacher/FullName/getFullNameAttribute",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134008,
+        "category": "be_logic",
+        "semantic_path": "Teacher/ScopeActive/scopeActive",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134019,
+        "category": "data",
+        "semantic_path": "Teacher/Active/active",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134015,
+        "category": "data",
+        "semantic_path": "Teacher/Address/address",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134016,
+        "category": "data",
+        "semantic_path": "Teacher/ContractType/contract_type",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134014,
+        "category": "data",
+        "semantic_path": "Teacher/Email/email",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134010,
+        "category": "data",
+        "semantic_path": "Teacher/FirstName/first_name",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134017,
+        "category": "data",
+        "semantic_path": "Teacher/HireDate/hire_date",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134011,
+        "category": "data",
+        "semantic_path": "Teacher/LastName/last_name",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134018,
+        "category": "data",
+        "semantic_path": "Teacher/Notes/notes",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134013,
+        "category": "data",
+        "semantic_path": "Teacher/Phone/phone",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134012,
+        "category": "data",
+        "semantic_path": "Teacher/TaxCode/tax_code",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134009,
+        "category": "data",
+        "semantic_path": "Teacher/UserId/user_id",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134007,
+        "category": "data_relation",
+        "semantic_path": "Teacher/_Course/availability",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134005,
+        "category": "data_relation",
+        "semantic_path": "Teacher/_Course/courses",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134006,
+        "category": "data_relation",
+        "semantic_path": "Teacher/_Course/extraActivities",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134004,
+        "category": "data_relation",
+        "semantic_path": "Teacher/_User/user",
+        "source_file_path": "app/Models/Teacher.php"
+      },
+      {
+        "id": 134025,
+        "category": "data",
+        "semantic_path": "TeacherAvailability/Available/available",
+        "source_file_path": "app/Models/TeacherAvailability.php"
+      },
+      {
+        "id": 134022,
+        "category": "data",
+        "semantic_path": "TeacherAvailability/DayOfWeek/day_of_week",
+        "source_file_path": "app/Models/TeacherAvailability.php"
+      },
+      {
+        "id": 134026,
+        "category": "data",
+        "semantic_path": "TeacherAvailability/Notes/notes",
+        "source_file_path": "app/Models/TeacherAvailability.php"
+      },
+      {
+        "id": 134021,
+        "category": "data",
+        "semantic_path": "TeacherAvailability/TeacherId/teacher_id",
+        "source_file_path": "app/Models/TeacherAvailability.php"
+      },
+      {
+        "id": 134024,
+        "category": "data",
+        "semantic_path": "TeacherAvailability/TimeEnd/time_end",
+        "source_file_path": "app/Models/TeacherAvailability.php"
+      },
+      {
+        "id": 134023,
+        "category": "data",
+        "semantic_path": "TeacherAvailability/TimeStart/time_start",
+        "source_file_path": "app/Models/TeacherAvailability.php"
+      },
+      {
+        "id": 134020,
+        "category": "data_relation",
+        "semantic_path": "TeacherAvailability/_Teacher/teacher",
+        "source_file_path": "app/Models/TeacherAvailability.php"
+      },
+      {
+        "id": 134100,
+        "category": "data",
+        "semantic_path": "Teacher/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093228_create_teachers_table.php"
+      },
+      {
+        "id": 134099,
+        "category": "data",
+        "semantic_path": "Teacher/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093228_create_teachers_table.php"
+      },
+      {
+        "id": 134101,
+        "category": "data",
+        "semantic_path": "Teacher/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093228_create_teachers_table.php"
+      },
+      {
+        "id": 134179,
+        "category": "data",
+        "semantic_path": "TeacherAvailability/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_22_155901_create_teacher_availability_table.php"
+      },
+      {
+        "id": 134178,
+        "category": "data",
+        "semantic_path": "TeacherAvailability/Id/id",
+        "source_file_path": "database/migrations/2025_12_22_155901_create_teacher_availability_table.php"
+      },
+      {
+        "id": 134180,
+        "category": "data",
+        "semantic_path": "TeacherAvailability/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_22_155901_create_teacher_availability_table.php"
+      },
+      {
+        "id": 134236,
+        "category": "be_logic",
+        "semantic_path": "Teacher/BuildNotes/buildNotes",
+        "source_file_path": "database/seeders/TeacherSeeder.php"
+      },
+      {
+        "id": 134235,
+        "category": "be_logic",
+        "semantic_path": "Teacher/NormalizeTeacherData/normalizeTeacherData",
+        "source_file_path": "database/seeders/TeacherSeeder.php"
+      },
+      {
+        "id": 134237,
+        "category": "be_logic",
+        "semantic_path": "Teacher/ParseDate/parseDate",
+        "source_file_path": "database/seeders/TeacherSeeder.php"
+      },
+      {
+        "id": 134234,
+        "category": "be_logic",
+        "semantic_path": "Teacher/ReadRowByMap/readRowByMap",
+        "source_file_path": "database/seeders/TeacherSeeder.php"
+      },
+      {
+        "id": 134233,
+        "category": "be_logic",
+        "semantic_path": "Teacher/Run/run",
+        "source_file_path": "database/seeders/TeacherSeeder.php"
+      },
+      {
+        "id": 134361,
+        "category": "ui_layout",
+        "semantic_path": "TeacherAvailability/Format/format",
+        "source_file_path": "resources/views/admin/teacher-availability/edit.blade.php"
+      },
+      {
+        "id": 134375,
+        "category": "ui_layout",
+        "semantic_path": "Teacher/Courses/courses",
+        "source_file_path": "resources/views/admin/teachers/show.blade.php"
+      },
+      {
+        "id": 134373,
+        "category": "ui_layout",
+        "semantic_path": "Teacher/FullName/full_name",
+        "source_file_path": "resources/views/admin/teachers/show.blade.php"
+      },
+      {
+        "id": 134374,
+        "category": "ui_layout",
+        "semantic_path": "Teacher/User/user",
+        "source_file_path": "resources/views/admin/teachers/show.blade.php"
+      }
+    ],
+    "counts": {
+      "files": 14,
+      "devunits": 52,
+      "files_without_devunits": 5
+    }
+  },
+  "A09": {
+    "footility_activity_id": 2846,
+    "title": "Calendario Annuale",
+    "files": [
+      "app/Http/Controllers/Admin/CalendarController.php",
+      "app/Http/Controllers/Admin/LessonCalendarController.php",
+      "app/Models/CalendarLesson.php",
+      "app/Models/CalendarSuspension.php",
+      "app/Models/Classroom.php",
+      "app/Models/Lesson.php",
+      "database/migrations/2025_12_17_164103_create_calendar_lessons_table.php",
+      "database/migrations/2025_12_17_164130_create_calendar_suspensions_table.php",
+      "database/migrations/2025_12_22_162047_create_lessons_table.php",
+      "database/migrations/2025_12_22_214057_create_classrooms_table.php",
+      "database/migrations/2025_12_22_214217_add_classroom_id_to_lessons_table.php",
+      "database/seeders/CalendarSeeder.php",
+      "resources/views/admin/calendar/create-suspension.blade.php",
+      "resources/views/admin/calendar/index.blade.php",
+      "resources/views/admin/lessons/calendar.blade.php"
+    ],
+    "file_to_devunit_ids": {
+      "app/Http/Controllers/Admin/CalendarController.php": [
+        133469,
+        133471,
+        133467,
+        133468,
+        133466,
+        133470
+      ],
+      "app/Http/Controllers/Admin/LessonCalendarController.php": [
+        133553,
+        133552
+      ],
+      "app/Models/CalendarLesson.php": [
+        133643,
+        133644,
+        133640,
+        133642,
+        133641,
+        133645,
+        133646,
+        133647,
+        133648,
+        133649,
+        133639
+      ],
+      "app/Models/CalendarSuspension.php": [
+        133652,
+        133651,
+        133653,
+        133656,
+        133654,
+        133657,
+        133655,
+        133650
+      ],
+      "app/Models/Classroom.php": [
+        133659,
+        133658,
+        133665,
+        133663,
+        133660,
+        133662,
+        133664,
+        133661,
+        133666
+      ],
+      "app/Models/Lesson.php": [
+        133896,
+        133905,
+        133902,
+        133904,
+        133903,
+        133913,
+        133906,
+        133909,
+        133912,
+        133908,
+        133907,
+        133911,
+        133910,
+        133901,
+        133900,
+        133897,
+        133899,
+        133898
+      ],
+      "database/migrations/2025_12_17_164103_create_calendar_lessons_table.php": [
+        134173,
+        134172,
+        134174
+      ],
+      "database/migrations/2025_12_17_164130_create_calendar_suspensions_table.php": [
+        134176,
+        134175,
+        134177
+      ],
+      "database/migrations/2025_12_22_162047_create_lessons_table.php": [
+        134188,
+        134187,
+        134189
+      ],
+      "database/migrations/2025_12_22_214057_create_classrooms_table.php": [
+        134197,
+        134196,
+        134198
+      ],
+      "database/migrations/2025_12_22_214217_add_classroom_id_to_lessons_table.php": [
+        134199
+      ],
+      "database/seeders/CalendarSeeder.php": [
+        134205
+      ],
+      "resources/views/admin/calendar/create-suspension.blade.php": [
+        134243
+      ],
+      "resources/views/admin/calendar/index.blade.php": [
+        134249,
+        134250,
+        134244,
+        134247,
+        134248,
+        134246,
+        134245
+      ],
+      "resources/views/admin/lessons/calendar.blade.php": [
+        134340,
+        134339,
+        134337,
+        134338
+      ]
+    },
+    "devunits": [
+      {
+        "id": 133469,
+        "category": "be_logic",
+        "semantic_path": "Calendar/CreateSuspension/createSuspension",
+        "source_file_path": "app/Http/Controllers/Admin/CalendarController.php"
+      },
+      {
+        "id": 133471,
+        "category": "be_logic",
+        "semantic_path": "Calendar/DestroySuspension/destroySuspension",
+        "source_file_path": "app/Http/Controllers/Admin/CalendarController.php"
+      },
+      {
+        "id": 133467,
+        "category": "be_logic",
+        "semantic_path": "Calendar/Events/events",
+        "source_file_path": "app/Http/Controllers/Admin/CalendarController.php"
+      },
+      {
+        "id": 133468,
+        "category": "be_logic",
+        "semantic_path": "Calendar/Generate/generate",
+        "source_file_path": "app/Http/Controllers/Admin/CalendarController.php"
+      },
+      {
+        "id": 133466,
+        "category": "be_logic",
+        "semantic_path": "Calendar/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/CalendarController.php"
+      },
+      {
+        "id": 133470,
+        "category": "be_logic",
+        "semantic_path": "Calendar/StoreSuspension/storeSuspension",
+        "source_file_path": "app/Http/Controllers/Admin/CalendarController.php"
+      },
+      {
+        "id": 133553,
+        "category": "be_logic",
+        "semantic_path": "LessonCalendar/Events/events",
+        "source_file_path": "app/Http/Controllers/Admin/LessonCalendarController.php"
+      },
+      {
+        "id": 133552,
+        "category": "be_logic",
+        "semantic_path": "LessonCalendar/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/LessonCalendarController.php"
+      },
+      {
+        "id": 133643,
+        "category": "be_logic",
+        "semantic_path": "CalendarLesson/ActiveDaysForYear/getActiveDaysForYear",
+        "source_file_path": "app/Models/CalendarLesson.php"
+      },
+      {
+        "id": 133644,
+        "category": "be_logic",
+        "semantic_path": "CalendarLesson/CountActiveWeeks/countActiveWeeks",
+        "source_file_path": "app/Models/CalendarLesson.php"
+      },
+      {
+        "id": 133640,
+        "category": "be_logic",
+        "semantic_path": "CalendarLesson/ScopeActive/scopeActive",
+        "source_file_path": "app/Models/CalendarLesson.php"
+      },
+      {
+        "id": 133642,
+        "category": "be_logic",
+        "semantic_path": "CalendarLesson/ScopeForDayOfWeek/scopeForDayOfWeek",
+        "source_file_path": "app/Models/CalendarLesson.php"
+      },
+      {
+        "id": 133641,
+        "category": "be_logic",
+        "semantic_path": "CalendarLesson/ScopeForYear/scopeForYear",
+        "source_file_path": "app/Models/CalendarLesson.php"
+      },
+      {
+        "id": 133645,
+        "category": "data",
+        "semantic_path": "CalendarLesson/AcademicYearId/academic_year_id",
+        "source_file_path": "app/Models/CalendarLesson.php"
+      },
+      {
+        "id": 133646,
+        "category": "data",
+        "semantic_path": "CalendarLesson/Date/date",
+        "source_file_path": "app/Models/CalendarLesson.php"
+      },
+      {
+        "id": 133647,
+        "category": "data",
+        "semantic_path": "CalendarLesson/DayOfWeek/day_of_week",
+        "source_file_path": "app/Models/CalendarLesson.php"
+      },
+      {
+        "id": 133648,
+        "category": "data",
+        "semantic_path": "CalendarLesson/IsActive/is_active",
+        "source_file_path": "app/Models/CalendarLesson.php"
+      },
+      {
+        "id": 133649,
+        "category": "data",
+        "semantic_path": "CalendarLesson/Notes/notes",
+        "source_file_path": "app/Models/CalendarLesson.php"
+      },
+      {
+        "id": 133639,
+        "category": "data_relation",
+        "semantic_path": "CalendarLesson/_AcademicYear/academicYear",
+        "source_file_path": "app/Models/CalendarLesson.php"
+      },
+      {
+        "id": 133652,
+        "category": "be_logic",
+        "semantic_path": "CalendarSuspension/DateInSuspension/isDateInSuspension",
+        "source_file_path": "app/Models/CalendarSuspension.php"
+      },
+      {
+        "id": 133651,
+        "category": "be_logic",
+        "semantic_path": "CalendarSuspension/ScopeForYear/scopeForYear",
+        "source_file_path": "app/Models/CalendarSuspension.php"
+      },
+      {
+        "id": 133653,
+        "category": "data",
+        "semantic_path": "CalendarSuspension/AcademicYearId/academic_year_id",
+        "source_file_path": "app/Models/CalendarSuspension.php"
+      },
+      {
+        "id": 133656,
+        "category": "data",
+        "semantic_path": "CalendarSuspension/EndDate/end_date",
+        "source_file_path": "app/Models/CalendarSuspension.php"
+      },
+      {
+        "id": 133654,
+        "category": "data",
+        "semantic_path": "CalendarSuspension/Name/name",
+        "source_file_path": "app/Models/CalendarSuspension.php"
+      },
+      {
+        "id": 133657,
+        "category": "data",
+        "semantic_path": "CalendarSuspension/Notes/notes",
+        "source_file_path": "app/Models/CalendarSuspension.php"
+      },
+      {
+        "id": 133655,
+        "category": "data",
+        "semantic_path": "CalendarSuspension/StartDate/start_date",
+        "source_file_path": "app/Models/CalendarSuspension.php"
+      },
+      {
+        "id": 133650,
+        "category": "data_relation",
+        "semantic_path": "CalendarSuspension/_AcademicYear/academicYear",
+        "source_file_path": "app/Models/CalendarSuspension.php"
+      },
+      {
+        "id": 133659,
+        "category": "be_logic",
+        "semantic_path": "Classroom/AvailableAt/isAvailableAt",
+        "source_file_path": "app/Models/Classroom.php"
+      },
+      {
+        "id": 133658,
+        "category": "be_logic",
+        "semantic_path": "Classroom/ScopeAvailable/scopeAvailable",
+        "source_file_path": "app/Models/Classroom.php"
+      },
+      {
+        "id": 133665,
+        "category": "data",
+        "semantic_path": "Classroom/Available/available",
+        "source_file_path": "app/Models/Classroom.php"
+      },
+      {
+        "id": 133663,
+        "category": "data",
+        "semantic_path": "Classroom/Capacity/capacity",
+        "source_file_path": "app/Models/Classroom.php"
+      },
+      {
+        "id": 133660,
+        "category": "data",
+        "semantic_path": "Classroom/Code/code",
+        "source_file_path": "app/Models/Classroom.php"
+      },
+      {
+        "id": 133662,
+        "category": "data",
+        "semantic_path": "Classroom/Description/description",
+        "source_file_path": "app/Models/Classroom.php"
+      },
+      {
+        "id": 133664,
+        "category": "data",
+        "semantic_path": "Classroom/Equipment/equipment",
+        "source_file_path": "app/Models/Classroom.php"
+      },
+      {
+        "id": 133661,
+        "category": "data",
+        "semantic_path": "Classroom/Name/name",
+        "source_file_path": "app/Models/Classroom.php"
+      },
+      {
+        "id": 133666,
+        "category": "data",
+        "semantic_path": "Classroom/Notes/notes",
+        "source_file_path": "app/Models/Classroom.php"
+      },
+      {
+        "id": 133896,
+        "category": "be_logic",
+        "semantic_path": "Lesson/Duration/getDurationAttribute",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133905,
+        "category": "be_logic",
+        "semantic_path": "Lesson/MarkAsCompleted/markAsCompleted",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133902,
+        "category": "be_logic",
+        "semantic_path": "Lesson/ScopeCompleted/scopeCompleted",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133904,
+        "category": "be_logic",
+        "semantic_path": "Lesson/ScopeForTeacher/scopeForTeacher",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133903,
+        "category": "be_logic",
+        "semantic_path": "Lesson/ScopePending/scopePending",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133913,
+        "category": "data",
+        "semantic_path": "Lesson/Completed/completed",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133906,
+        "category": "data",
+        "semantic_path": "Lesson/CourseId/course_id",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133909,
+        "category": "data",
+        "semantic_path": "Lesson/Date/date",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133912,
+        "category": "data",
+        "semantic_path": "Lesson/Notes/notes",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133908,
+        "category": "data",
+        "semantic_path": "Lesson/SubstituteTeacherId/substitute_teacher_id",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133907,
+        "category": "data",
+        "semantic_path": "Lesson/TeacherId/teacher_id",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133911,
+        "category": "data",
+        "semantic_path": "Lesson/TimeEnd/time_end",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133910,
+        "category": "data",
+        "semantic_path": "Lesson/TimeStart/time_start",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133901,
+        "category": "data_relation",
+        "semantic_path": "Lesson/_Attendance/attendances",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133900,
+        "category": "data_relation",
+        "semantic_path": "Lesson/_Course/classroom",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133897,
+        "category": "data_relation",
+        "semantic_path": "Lesson/_Course/course",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133899,
+        "category": "data_relation",
+        "semantic_path": "Lesson/_Course/substituteTeacher",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 133898,
+        "category": "data_relation",
+        "semantic_path": "Lesson/_Course/teacher",
+        "source_file_path": "app/Models/Lesson.php"
+      },
+      {
+        "id": 134173,
+        "category": "data",
+        "semantic_path": "CalendarLesson/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_17_164103_create_calendar_lessons_table.php"
+      },
+      {
+        "id": 134172,
+        "category": "data",
+        "semantic_path": "CalendarLesson/Id/id",
+        "source_file_path": "database/migrations/2025_12_17_164103_create_calendar_lessons_table.php"
+      },
+      {
+        "id": 134174,
+        "category": "data",
+        "semantic_path": "CalendarLesson/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_17_164103_create_calendar_lessons_table.php"
+      },
+      {
+        "id": 134176,
+        "category": "data",
+        "semantic_path": "CalendarSuspension/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_17_164130_create_calendar_suspensions_table.php"
+      },
+      {
+        "id": 134175,
+        "category": "data",
+        "semantic_path": "CalendarSuspension/Id/id",
+        "source_file_path": "database/migrations/2025_12_17_164130_create_calendar_suspensions_table.php"
+      },
+      {
+        "id": 134177,
+        "category": "data",
+        "semantic_path": "CalendarSuspension/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_17_164130_create_calendar_suspensions_table.php"
+      },
+      {
+        "id": 134188,
+        "category": "data",
+        "semantic_path": "Lesson/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_22_162047_create_lessons_table.php"
+      },
+      {
+        "id": 134187,
+        "category": "data",
+        "semantic_path": "Lesson/Id/id",
+        "source_file_path": "database/migrations/2025_12_22_162047_create_lessons_table.php"
+      },
+      {
+        "id": 134189,
+        "category": "data",
+        "semantic_path": "Lesson/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_22_162047_create_lessons_table.php"
+      },
+      {
+        "id": 134197,
+        "category": "data",
+        "semantic_path": "Classroom/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_22_214057_create_classrooms_table.php"
+      },
+      {
+        "id": 134196,
+        "category": "data",
+        "semantic_path": "Classroom/Id/id",
+        "source_file_path": "database/migrations/2025_12_22_214057_create_classrooms_table.php"
+      },
+      {
+        "id": 134198,
+        "category": "data",
+        "semantic_path": "Classroom/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_22_214057_create_classrooms_table.php"
+      },
+      {
+        "id": 134199,
+        "category": "data",
+        "semantic_path": "Lesson/ClassroomId/classroom_id",
+        "source_file_path": "database/migrations/2025_12_22_214217_add_classroom_id_to_lessons_table.php"
+      },
+      {
+        "id": 134205,
+        "category": "be_logic",
+        "semantic_path": "Calendar/Run/run",
+        "source_file_path": "database/seeders/CalendarSeeder.php"
+      },
+      {
+        "id": 134243,
+        "category": "ui_layout",
+        "semantic_path": "Year/Pluck/pluck",
+        "source_file_path": "resources/views/admin/calendar/create-suspension.blade.php"
+      },
+      {
+        "id": 134249,
+        "category": "ui_layout",
+        "semantic_path": "Admin/AcademicYearId/academic_year_id",
+        "source_file_path": "resources/views/admin/calendar/index.blade.php"
+      },
+      {
+        "id": 134250,
+        "category": "ui_layout",
+        "semantic_path": "Admin/YearId/year_id",
+        "source_file_path": "resources/views/admin/calendar/index.blade.php"
+      },
+      {
+        "id": 134244,
+        "category": "ui_layout",
+        "semantic_path": "Suspension/Format/format",
+        "source_file_path": "resources/views/admin/calendar/index.blade.php"
+      },
+      {
+        "id": 134247,
+        "category": "ui_layout",
+        "semantic_path": "Suspension/Name/name",
+        "source_file_path": "resources/views/admin/calendar/index.blade.php"
+      },
+      {
+        "id": 134248,
+        "category": "ui_layout",
+        "semantic_path": "Suspension/Notes/notes",
+        "source_file_path": "resources/views/admin/calendar/index.blade.php"
+      },
+      {
+        "id": 134246,
+        "category": "ui_layout",
+        "semantic_path": "Y/Name/name",
+        "source_file_path": "resources/views/admin/calendar/index.blade.php"
+      },
+      {
+        "id": 134245,
+        "category": "ui_layout",
+        "semantic_path": "Year/Name/name",
+        "source_file_path": "resources/views/admin/calendar/index.blade.php"
+      },
+      {
+        "id": 134340,
+        "category": "ui_layout",
+        "semantic_path": "Admin/ClassroomId/classroom_id",
+        "source_file_path": "resources/views/admin/lessons/calendar.blade.php"
+      },
+      {
+        "id": 134339,
+        "category": "ui_layout",
+        "semantic_path": "Admin/CourseId/course_id",
+        "source_file_path": "resources/views/admin/lessons/calendar.blade.php"
+      },
+      {
+        "id": 134337,
+        "category": "ui_layout",
+        "semantic_path": "C/Name/name",
+        "source_file_path": "resources/views/admin/lessons/calendar.blade.php"
+      },
+      {
+        "id": 134338,
+        "category": "ui_layout",
+        "semantic_path": "Cl/Name/name",
+        "source_file_path": "resources/views/admin/lessons/calendar.blade.php"
+      }
+    ],
+    "counts": {
+      "files": 15,
+      "devunits": 80,
+      "files_without_devunits": 0
+    }
+  },
+  "A10": {
+    "footility_activity_id": 2847,
+    "title": "Modulo Anagrafica e Disponibilita",
+    "files": [
+      "app/Http/Controllers/Admin/StudentAvailabilityController.php",
+      "app/Models/StudentAvailability.php",
+      "database/migrations/2025_12_11_093305_create_student_availability_table.php",
+      "database/seeders/AvailabilitySeeder.php",
+      "resources/views/admin/student-availability/create.blade.php",
+      "resources/views/admin/student-availability/edit.blade.php",
+      "resources/views/admin/student-availability/index.blade.php"
+    ],
+    "file_to_devunit_ids": {
+      "app/Http/Controllers/Admin/StudentAvailabilityController.php": [
+        133562,
+        133566,
+        133564,
+        133561,
+        133563,
+        133565
+      ],
+      "app/Models/StudentAvailability.php": [
+        133993,
+        133990,
+        133994,
+        133989,
+        133992,
+        133991,
+        133988
+      ],
+      "database/migrations/2025_12_11_093305_create_student_availability_table.php": [
+        134154,
+        134153,
+        134155
+      ],
+      "database/seeders/AvailabilitySeeder.php": [
+        134203,
+        134204,
+        134202
+      ],
+      "resources/views/admin/student-availability/create.blade.php": [],
+      "resources/views/admin/student-availability/edit.blade.php": [
+        134353
+      ],
+      "resources/views/admin/student-availability/index.blade.php": []
+    },
+    "devunits": [
+      {
+        "id": 133562,
+        "category": "be_logic",
+        "semantic_path": "StudentAvailability/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/StudentAvailabilityController.php"
+      },
+      {
+        "id": 133566,
+        "category": "be_logic",
+        "semantic_path": "StudentAvailability/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/StudentAvailabilityController.php"
+      },
+      {
+        "id": 133564,
+        "category": "be_logic",
+        "semantic_path": "StudentAvailability/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/StudentAvailabilityController.php"
+      },
+      {
+        "id": 133561,
+        "category": "be_logic",
+        "semantic_path": "StudentAvailability/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/StudentAvailabilityController.php"
+      },
+      {
+        "id": 133563,
+        "category": "be_logic",
+        "semantic_path": "StudentAvailability/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/StudentAvailabilityController.php"
+      },
+      {
+        "id": 133565,
+        "category": "be_logic",
+        "semantic_path": "StudentAvailability/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/StudentAvailabilityController.php"
+      },
+      {
+        "id": 133993,
+        "category": "data",
+        "semantic_path": "StudentAvailability/Available/available",
+        "source_file_path": "app/Models/StudentAvailability.php"
+      },
+      {
+        "id": 133990,
+        "category": "data",
+        "semantic_path": "StudentAvailability/DayOfWeek/day_of_week",
+        "source_file_path": "app/Models/StudentAvailability.php"
+      },
+      {
+        "id": 133994,
+        "category": "data",
+        "semantic_path": "StudentAvailability/Notes/notes",
+        "source_file_path": "app/Models/StudentAvailability.php"
+      },
+      {
+        "id": 133989,
+        "category": "data",
+        "semantic_path": "StudentAvailability/StudentId/student_id",
+        "source_file_path": "app/Models/StudentAvailability.php"
+      },
+      {
+        "id": 133992,
+        "category": "data",
+        "semantic_path": "StudentAvailability/TimeEnd/time_end",
+        "source_file_path": "app/Models/StudentAvailability.php"
+      },
+      {
+        "id": 133991,
+        "category": "data",
+        "semantic_path": "StudentAvailability/TimeStart/time_start",
+        "source_file_path": "app/Models/StudentAvailability.php"
+      },
+      {
+        "id": 133988,
+        "category": "data_relation",
+        "semantic_path": "StudentAvailability/_Student/student",
+        "source_file_path": "app/Models/StudentAvailability.php"
+      },
+      {
+        "id": 134154,
+        "category": "data",
+        "semantic_path": "StudentAvailability/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093305_create_student_availability_table.php"
+      },
+      {
+        "id": 134153,
+        "category": "data",
+        "semantic_path": "StudentAvailability/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093305_create_student_availability_table.php"
+      },
+      {
+        "id": 134155,
+        "category": "data",
+        "semantic_path": "StudentAvailability/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093305_create_student_availability_table.php"
+      },
+      {
+        "id": 134203,
+        "category": "be_logic",
+        "semantic_path": "Availability/CellValue/getCellValue",
+        "source_file_path": "database/seeders/AvailabilitySeeder.php"
+      },
+      {
+        "id": 134204,
+        "category": "be_logic",
+        "semantic_path": "Availability/ExcelTimeToTime/excelTimeToTime",
+        "source_file_path": "database/seeders/AvailabilitySeeder.php"
+      },
+      {
+        "id": 134202,
+        "category": "be_logic",
+        "semantic_path": "Availability/Run/run",
+        "source_file_path": "database/seeders/AvailabilitySeeder.php"
+      },
+      {
+        "id": 134353,
+        "category": "ui_layout",
+        "semantic_path": "StudentAvailability/Format/format",
+        "source_file_path": "resources/views/admin/student-availability/edit.blade.php"
+      }
+    ],
+    "counts": {
+      "files": 7,
+      "devunits": 20,
+      "files_without_devunits": 2
+    }
+  },
+  "A11": {
+    "footility_activity_id": 2848,
+    "title": "Statistiche Storiche",
+    "files": [],
+    "file_to_devunit_ids": {},
+    "devunits": [],
+    "counts": {
+      "files": 0,
+      "devunits": 0,
+      "files_without_devunits": 0
+    }
+  },
+  "A12": {
+    "footility_activity_id": 2849,
+    "title": "Documenti e Modelli Contratti",
+    "files": [
+      "app/Http/Controllers/Admin/DocumentController.php",
+      "app/Models/Document.php",
+      "database/migrations/2025_12_11_093315_create_documents_table.php",
+      "resources/views/admin/documents/create.blade.php",
+      "resources/views/admin/documents/edit.blade.php",
+      "resources/views/admin/documents/index.blade.php",
+      "resources/views/admin/documents/show.blade.php"
+    ],
+    "file_to_devunit_ids": {
+      "app/Http/Controllers/Admin/DocumentController.php": [
+        134423,
+        134428,
+        134426,
+        134422,
+        134425,
+        134424,
+        134427
+      ],
+      "app/Models/Document.php": [
+        133743,
+        133746,
+        133745,
+        133747,
+        133748,
+        133742,
+        133744,
+        133749,
+        133740,
+        133739,
+        133741
+      ],
+      "database/migrations/2025_12_11_093315_create_documents_table.php": [
+        134163,
+        134162,
+        134164
+      ],
+      "resources/views/admin/documents/create.blade.php": [
+        134462,
+        134461
+      ],
+      "resources/views/admin/documents/edit.blade.php": [],
+      "resources/views/admin/documents/index.blade.php": [],
+      "resources/views/admin/documents/show.blade.php": [
+        134467,
+        134464,
+        134463,
+        134465,
+        134466
+      ]
+    },
+    "devunits": [
+      {
+        "id": 134423,
+        "category": "be_logic",
+        "semantic_path": "Document/Create/create",
+        "source_file_path": "app/Http/Controllers/Admin/DocumentController.php"
+      },
+      {
+        "id": 134428,
+        "category": "be_logic",
+        "semantic_path": "Document/Destroy/destroy",
+        "source_file_path": "app/Http/Controllers/Admin/DocumentController.php"
+      },
+      {
+        "id": 134426,
+        "category": "be_logic",
+        "semantic_path": "Document/Edit/edit",
+        "source_file_path": "app/Http/Controllers/Admin/DocumentController.php"
+      },
+      {
+        "id": 134422,
+        "category": "be_logic",
+        "semantic_path": "Document/Index/index",
+        "source_file_path": "app/Http/Controllers/Admin/DocumentController.php"
+      },
+      {
+        "id": 134425,
+        "category": "be_logic",
+        "semantic_path": "Document/Show/show",
+        "source_file_path": "app/Http/Controllers/Admin/DocumentController.php"
+      },
+      {
+        "id": 134424,
+        "category": "be_logic",
+        "semantic_path": "Document/Store/store",
+        "source_file_path": "app/Http/Controllers/Admin/DocumentController.php"
+      },
+      {
+        "id": 134427,
+        "category": "be_logic",
+        "semantic_path": "Document/Update/update",
+        "source_file_path": "app/Http/Controllers/Admin/DocumentController.php"
+      },
+      {
+        "id": 133743,
+        "category": "data",
+        "semantic_path": "Document/ContractId/contract_id",
+        "source_file_path": "app/Models/Document.php"
+      },
+      {
+        "id": 133746,
+        "category": "data",
+        "semantic_path": "Document/FileName/file_name",
+        "source_file_path": "app/Models/Document.php"
+      },
+      {
+        "id": 133745,
+        "category": "data",
+        "semantic_path": "Document/FilePath/file_path",
+        "source_file_path": "app/Models/Document.php"
+      },
+      {
+        "id": 133747,
+        "category": "data",
+        "semantic_path": "Document/MimeType/mime_type",
+        "source_file_path": "app/Models/Document.php"
+      },
+      {
+        "id": 133748,
+        "category": "data",
+        "semantic_path": "Document/Size/size",
+        "source_file_path": "app/Models/Document.php"
+      },
+      {
+        "id": 133742,
+        "category": "data",
+        "semantic_path": "Document/StudentId/student_id",
+        "source_file_path": "app/Models/Document.php"
+      },
+      {
+        "id": 133744,
+        "category": "data",
+        "semantic_path": "Document/Type/type",
+        "source_file_path": "app/Models/Document.php"
+      },
+      {
+        "id": 133749,
+        "category": "data",
+        "semantic_path": "Document/UploadedByUserId/uploaded_by_user_id",
+        "source_file_path": "app/Models/Document.php"
+      },
+      {
+        "id": 133740,
+        "category": "data_relation",
+        "semantic_path": "Document/_Student/contract",
+        "source_file_path": "app/Models/Document.php"
+      },
+      {
+        "id": 133739,
+        "category": "data_relation",
+        "semantic_path": "Document/_Student/student",
+        "source_file_path": "app/Models/Document.php"
+      },
+      {
+        "id": 133741,
+        "category": "data_relation",
+        "semantic_path": "Document/_Student/uploadedBy",
+        "source_file_path": "app/Models/Document.php"
+      },
+      {
+        "id": 134163,
+        "category": "data",
+        "semantic_path": "Document/CreatedAt/created_at",
+        "source_file_path": "database/migrations/2025_12_11_093315_create_documents_table.php"
+      },
+      {
+        "id": 134162,
+        "category": "data",
+        "semantic_path": "Document/Id/id",
+        "source_file_path": "database/migrations/2025_12_11_093315_create_documents_table.php"
+      },
+      {
+        "id": 134164,
+        "category": "data",
+        "semantic_path": "Document/UpdatedAt/updated_at",
+        "source_file_path": "database/migrations/2025_12_11_093315_create_documents_table.php"
+      },
+      {
+        "id": 134462,
+        "category": "ui_layout",
+        "semantic_path": "Admin/File/file",
+        "source_file_path": "resources/views/admin/documents/create.blade.php"
+      },
+      {
+        "id": 134461,
+        "category": "ui_layout",
+        "semantic_path": "Contract/Pluck/pluck",
+        "source_file_path": "resources/views/admin/documents/create.blade.php"
+      },
+      {
+        "id": 134467,
+        "category": "ui_layout",
+        "semantic_path": "Document/Contract/contract",
+        "source_file_path": "resources/views/admin/documents/show.blade.php"
+      },
+      {
+        "id": 134464,
+        "category": "ui_layout",
+        "semantic_path": "Document/ContractNumber/contract_number",
+        "source_file_path": "resources/views/admin/documents/show.blade.php"
+      },
+      {
+        "id": 134463,
+        "category": "ui_layout",
+        "semantic_path": "Document/FullName/full_name",
+        "source_file_path": "resources/views/admin/documents/show.blade.php"
+      },
+      {
+        "id": 134465,
+        "category": "ui_layout",
+        "semantic_path": "Document/Name/name",
+        "source_file_path": "resources/views/admin/documents/show.blade.php"
+      },
+      {
+        "id": 134466,
+        "category": "ui_layout",
+        "semantic_path": "Document/Student/student",
+        "source_file_path": "resources/views/admin/documents/show.blade.php"
+      }
+    ],
+    "counts": {
+      "files": 7,
+      "devunits": 28,
+      "files_without_devunits": 2
+    }
+  }
+}
