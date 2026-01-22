@@ -17,7 +17,7 @@ todos:
       - crud-gap-analysis
   - id: import-and-validation
     content: "Completare/importare flussi dati (seeders ODS, import XLSX modulo disponibilità) con deduplica e validazioni minime, evitando update “distruttivi” che spostano dati storici: i dati per anno vanno scritti su entità annuali"
-    status: pending
+    status: in_progress
     dependencies:
       - crud-implement-missing
   - id: asis-reports
