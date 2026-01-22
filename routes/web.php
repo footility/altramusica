@@ -74,4 +74,5 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     // AS-IS missing CRUDs (Fase 1)
     Route::resource('books', \App\Http\Controllers\Admin\BookController::class);
     Route::resource('book-distributions', \App\Http\Controllers\Admin\BookDistributionController::class);
+    Route::resource('instrument-rentals', \App\Http\Controllers\Admin\InstrumentRentalController::class);
 });

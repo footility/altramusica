@@ -132,6 +132,12 @@
                     'route' => 'admin.instruments.index',
                     'active' => request()->routeIs('admin.instruments.*'),
                 ],
+                [
+                    'label' => 'Noleggi Strumenti',
+                    'icon' => 'bi-box-seam',
+                    'route' => 'admin.instrument-rentals.index',
+                    'active' => request()->routeIs('admin.instrument-rentals.*'),
+                ],
             ],
         ],
         [
