@@ -138,6 +138,12 @@
                     'route' => 'admin.instrument-rentals.index',
                     'active' => request()->routeIs('admin.instrument-rentals.*'),
                 ],
+                [
+                    'label' => 'Documenti',
+                    'icon' => 'bi-folder2-open',
+                    'route' => 'admin.documents.index',
+                    'active' => request()->routeIs('admin.documents.*'),
+                ],
             ],
         ],
         [
