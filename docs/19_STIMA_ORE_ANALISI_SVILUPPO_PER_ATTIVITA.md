@@ -54,9 +54,10 @@ Per ora il totale è imputato come manuale in preventivo, finché non associamo 
 
 ---
 
-## FASE 3 — Evoluzioni avanzate
+## FASE 3 — Funzionalità richieste (non presenti nel sistema ODS)
 
-Stima “ragionevole” (Analisi + Sviluppo) per attività “MVP” (senza servizi esterni, salvo decisioni successive).  
+Stima “ragionevole” (Analisi + Sviluppo) basata su richieste in trascrizione.  
+Nota: alcuni punti (es. **SMS** o integrazioni tipo **cassetto fiscale**) richiedono servizi esterni; qui stimiamo l’implementazione **solo se/quanto** decisa nel perimetro (altrimenti restano manuali o si escludono).
 In preventivo: tutto manuale (Analisi+Sviluppo), perché in Fase 3 non devono esserci DU.
 
 | Attività | Analisi | Sviluppo | Totale |

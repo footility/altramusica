@@ -146,10 +146,10 @@ Ogni task è stimato tra **15 min e 1 ora**.
 
 ---
 
-## FASE 3 — Evoluzioni avanzate (solo backlog, non incluso)
+## FASE 3 — Funzionalità richieste (non presenti nel sistema ODS)
 
-In Fase 3 manteniamo un approccio “minimo” per stimare: **task base di analisi/definizione** (non sviluppo pieno),
-così il cliente capisce cosa significa ogni evoluzione senza vincolarci troppo.
+In Fase 3 inseriamo **solo** funzionalità richieste nelle trascrizioni e non coperte dall’ODS.
+Le attività qui sotto sono quindi “nuovi moduli” (oltre la migrazione).
 
 ### 519 — Gestione richieste iniziali (primo contatto) (Base: 60 min)
 - **(15m)** Definizione flusso (da richiesta a contatto gestito)
@@ -164,8 +164,8 @@ così il cliente capisce cosa significa ogni evoluzione senza vincolarci troppo.
 - **(15m)** Criteri di successo e rischi
 
 ### 521 — Contratti: invio, accettazione e tracciamento (Base: 60 min)
-- **(15m)** Definizione step e stati (da bozza a firmato)
-- **(15m)** Regole archiviazione e tracciamento (manuale vs automatico)
+- **(15m)** Definizione step e stati (proposta → inviato → visualizzato → accettato/firmato)
+- **(15m)** Tracciamento “inviato / visualizzato / accettato” (minimo)
 - **(15m)** Gestione eccezioni (modifiche/annullamenti)
 - **(15m)** Criteri di successo
 
@@ -176,14 +176,14 @@ così il cliente capisce cosa significa ogni evoluzione senza vincolarci troppo.
 - **(15m)** Criteri di successo
 
 ### 523 — Comunicazioni: invii mirati e messaggi rapidi (Base: 60 min)
-- **(15m)** Tipi comunicazione (avvisi, scadenze, info)
+- **(15m)** Tipi comunicazione richiesti: mail “ufficiali” (contratti/rate/fatture) + canale rapido per convocazioni
 - **(15m)** Segmentazione destinatari (regole)
-- **(15m)** Tracciamento minimo (inviato/non inviato) anche manuale
+- **(15m)** Tracciamento minimo (inviato/non inviato) e template base
 - **(15m)** Criteri di successo
 
 ### 524 — Lezioni, recuperi e gestione aule (operatività docente) (Base: 60 min)
 - **(15m)** Regole recuperi/spostamenti
-- **(15m)** Conflitti aula/docente e gestione minima
+- **(15m)** Verifica disponibilità aula e richiesta/autorizzazione (minimo)
 - **(15m)** Flusso operativo (da richiesta a lezione aggiornata)
 - **(15m)** Criteri di successo
 
@@ -194,10 +194,10 @@ così il cliente capisce cosa significa ogni evoluzione senza vincolarci troppo.
 - **(15m)** Criteri di successo
 
 ### 526 — Compensi docenti: regole, extra e consuntivi (Base: 60 min)
-- **(15m)** Regole di calcolo (minime) e fonti dati
-- **(15m)** Gestione extra e casi reali
+- **(15m)** Regole di calcolo (minime) e fonti dati (conto orario)
+- **(15m)** Differenze soci/non soci + voci forfettarie per progetti/funzioni
 - **(15m)** Output necessario (riepiloghi)
-- **(15m)** Criteri di successo
+- **(15m)** Correzioni manuali (anche negative) e criteri di successo
 
 ### 527 — Report avanzati per direzione e bilancio sociale (Base: 60 min)
 - **(15m)** Elenco report prioritari (max 3)
@@ -212,7 +212,7 @@ così il cliente capisce cosa significa ogni evoluzione senza vincolarci troppo.
 - **(15m)** Criteri di successo
 
 ### 529 — Area personale per famiglie (opzionale) (Base: 60 min)
-- **(15m)** Cosa vede la famiglia (minimo)
+- **(15m)** Perimetro minimo (nota: richiesta come “futuribile” in trascrizione)
 - **(15m)** Dati accessibili e privacy
 - **(15m)** Flusso richieste/risposte (manuale vs automatico)
 - **(15m)** Criteri di successo
