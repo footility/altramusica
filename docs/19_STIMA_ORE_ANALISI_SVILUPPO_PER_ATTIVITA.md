@@ -23,14 +23,14 @@ Le ore “Sviluppo” sono derivate come: \( \text{DU} = \text{Totale preventivo
 | 498 — Genitori/Tutori | 2h 00m | 4h 24m | 6h 24m |
 | 499 — Corsi e Iscrizioni | 4h 00m | 8h 30m | 12h 30m |
 | 500 — Contratti Studenti | 3h 00m | 3h 24m | 6h 24m |
-| 501 — Contabilità Corsi | 5h 00m | 10h 24m | 15h 24m |
+| 501 — Contabilità Corsi | 15h 00m | 10h 24m | 25h 24m |
 | 502 — Contabilità Accessori/Noleggi/Cauzioni | 3h 00m | 4h 12m | 7h 12m |
-| 503 — Accessori/Noleggi/Libri/Esami | 4h 00m | 10h 54m | 14h 54m |
+| 503 — Accessori/Noleggi/Libri/Esami | 12h 00m | 10h 54m | 22h 54m |
 | 504 — Docenti/Lavoratori | 2h 00m | 5h 12m | 7h 12m |
-| 505 — Calendario Annuale | 4h 00m | 9h 18m | 13h 18m |
+| 505 — Calendario Annuale | 14h 00m | 9h 18m | 23h 18m |
 | 506 — Modulo Anagrafica e Disponibilità | 2h 00m | 2h 00m | 4h 00m |
 | 508 — Documenti e Modelli Contratti | 2h 00m | 2h 48m | 4h 48m |
-| 509 — Caricamento dati iniziali dai fogli esistenti | 6h 00m | 13h 48m | 19h 48m |
+| 509 — Caricamento dati iniziali dai fogli esistenti | 24h 00m | 13h 48m | 37h 48m |
 
 ---
 
@@ -64,12 +64,12 @@ In preventivo: tutto manuale (Analisi+Sviluppo), perché in Fase 3 non devono es
 |---|---:|---:|---:|
 | 519 — Gestione richieste iniziali (primo contatto) | 2h | 6h | 8h |
 | 520 — Preiscrizioni e rinnovi anno scolastico | 3h | 7h | 10h |
-| 521 — Contratti: invio, accettazione e tracciamento | 3h | 7h | 10h |
-| 522 — Pagamenti avanzati e gestione casi reali | 3h | 9h | 12h |
-| 523 — Comunicazioni: invii mirati e messaggi rapidi | 3h | 9h | 12h |
+| 521 — Contratti: invio, accettazione e tracciamento | 4h | 10h | 14h |
+| 522 — Pagamenti avanzati e gestione casi reali | 5h | 17h | 22h |
+| 523 — Comunicazioni: invii mirati e messaggi rapidi | 6h | 17h 43m | 23h 43m |
 | 524 — Lezioni, recuperi e gestione aule (operatività docente) | 3h | 9h | 12h |
-| 525 — Registro docenti e presenze | 3h | 9h | 12h |
-| 526 — Compensi docenti: regole, extra e consuntivi | 4h | 12h | 16h |
+| 525 — Registro docenti e presenze | 5h | 17h | 22h |
+| 526 — Compensi docenti: regole, extra e consuntivi | 6h | 20h | 26h |
 | 527 — Report avanzati per direzione e bilancio sociale | 2h | 8h | 10h |
 | 528 — Visione economica d’insieme (entrate/uscite) | 3h | 9h | 12h |
 | 529 — Area personale per famiglie (opzionale) | 4h | 12h | 16h |
