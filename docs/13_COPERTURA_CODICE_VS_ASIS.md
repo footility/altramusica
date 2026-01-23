@@ -10,13 +10,13 @@ Questo documento serve come **mappa 1:1** tra le 12 sezioni AS‑IS (`docs/01..1
 ## A01 — Anagrafiche Studenti
 
 - **Presente**
-  - Model: `app/Models/Student.php` (include `academic_year_id`, status, note, CF, ecc.)
+  - Model “persona”: `app/Models/Student.php`
+  - Model “nell’anno”: `app/Models/StudentYear.php`
   - Controller: `app/Http/Controllers/Admin/StudentController.php`
   - Views: `resources/views/admin/students/*`
   - Anno scolastico: `app/Models/AcademicYear.php`, `Admin/AcademicYearController.php`, `resources/views/admin/academic-years/*`
 - **Gap (da colmare)**
-  - Coerenza Master vs Annuale: oggi lo studente è “annuale” perché ha `academic_year_id` direttamente (valutare evoluzione verso stato per anno senza duplicare persona).
-  - Filtri: bug in `StudentController@index` (blocco status incompleto, non applica filtro).
+  - Rifiniture minori su filtri/ricerca e validazioni (AS‑IS completo già coperto).
 
 ## A02 — Genitori/Tutori
 
@@ -30,14 +30,13 @@ Questo documento serve come **mappa 1:1** tra le 12 sezioni AS‑IS (`docs/01..1
 ## A03 — Corsi e Iscrizioni
 
 - **Presente**
-  - Model: `app/Models/Course.php`, `app/Models/Enrollment.php`
+  - Model “catalogo”: `app/Models/Course.php`
+  - Model “offerta annuale”: `app/Models/CourseOffering.php`
+  - Iscrizioni: `app/Models/Enrollment.php`
   - Controllers: `Admin/CourseController.php`, `Admin/EnrollmentController.php`
   - Views: `resources/views/admin/courses/*`, `resources/views/admin/enrollments/*`
 - **Gap / criticità**
-  - **Master vs Annuale**: `Course` oggi contiene anche tariffa e schedulazione (quindi è più “offerta” che catalogo).
-  - Bug: `CourseController` valida `day_of_week` includendo `sunday` ma migration `courses.day_of_week` non lo prevede.
-  - Bug: cast di `time_start/time_end` in `Course` è `datetime` ma colonne sono `time`.
-  - Manca pattern `CourseOffering` (non presente in repo) per gestire tariffe/regole per anno senza retro-propagazione.
+  - Rifiniture minori su filtri/listati e coerenza dei campi opzionali (AS‑IS completo già coperto).
 
 ## A04 — Contratti Studenti
 
@@ -47,7 +46,7 @@ Questo documento serve come **mappa 1:1** tra le 12 sezioni AS‑IS (`docs/01..1
   - Views: `resources/views/admin/contracts/*`
   - Collegamento fatture: route `admin.contracts.create-invoice`
 - **Gap**
-  - Documenti: esiste model/migration `Document` ma manca CRUD admin dedicato (solo relazione su contract).
+  - Nessun gap bloccante: CRUD “Documenti” presente (archivio/upload/filtri minimi).
 
 ## A05 — Contabilità Corsi
 
@@ -64,8 +63,7 @@ Questo documento serve come **mappa 1:1** tra le 12 sezioni AS‑IS (`docs/01..1
 - **Presente**
   - Models: `InstrumentRental`, `InvoiceItem` (supporta `instrument_rental`)
 - **Gap**
-  - CRUD admin assente per `InstrumentRental`
-  - Collegamento fatture/accessori/cauzioni da rendere operativo via `InvoiceItem` + viste dedicate (report).
+  - Rifiniture reportistiche/collegamenti contabili specifici (parte base già operativa).
 
 ## A07 — Accessori/Noleggi/Libri/Esami
 
@@ -76,10 +74,7 @@ Questo documento serve come **mappa 1:1** tra le 12 sezioni AS‑IS (`docs/01..1
   - Esami: model `Exam` + controller `Admin/ExamController.php` + views `admin/exams/*`
   - Strumenti (cespiti): model `Instrument` + controller `Admin/InstrumentController.php` + views `admin/instruments/*`
 - **Gap**
-  - CRUD admin assente per `Book`
-  - CRUD admin assente per `BookDistribution`
-  - CRUD admin assente per `InstrumentRental`
-  - “Accessori” come entità dedicata non esiste (oggi si può veicolare su `InvoiceItem` tipo `other` o introdurre modello semplice).
+  - “Accessori” come entità dedicata (oltre a libri/noleggi) resta volutamente veicolata su contabilità/righe, salvo scelta futura.
 
 ## A08 — Docenti/Lavoratori
 
@@ -103,7 +98,7 @@ Questo documento serve come **mappa 1:1** tra le 12 sezioni AS‑IS (`docs/01..1
   - `StudentAvailability` + UI admin
   - Import ODS: `app/Services/OdsImportService.php`, comando `php artisan ods:import`
 - **Gap**
-  - Import XLSX “risposte modulo” dedicato (deduplica per CF) da completare.
+  - Rifiniture sull’import XLSX (reportistica e casi sporchi) se emergono nuove casistiche.
 
 ## A11 — Statistiche Storiche
 
@@ -117,5 +112,5 @@ Questo documento serve come **mappa 1:1** tra le 12 sezioni AS‑IS (`docs/01..1
 - **Presente**
   - Model/migration `Document`
 - **Gap**
-  - CRUD admin “Documenti” (upload/archivio/filtri per studente/contratto/anno) da implementare.
+  - Nessun gap bloccante: CRUD “Documenti” presente; resta possibile evoluzione su filtri/report più avanzati.
 
