@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Models\AcademicYear;
 use App\Models\Student;
+use App\Models\StudentYear;
 use App\Models\Guardian;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
@@ -103,21 +104,32 @@ class OdsImportService
                 }
                 
                 // Normalizza dati
-                $studentData = $this->normalizeStudentData($data, $academicYear);
+                $normalized = $this->normalizeStudentData($data, $academicYear);
+                $studentData = $normalized['student'] ?? [];
+                $studentYearData = $normalized['year'] ?? [];
                 
                 // Cerca studente esistente
                 $student = null;
                 if (!empty($studentData['tax_code'])) {
-                    // Fase 1 (Master vs Annuale con Student annuale): deduplica SOLO nell'anno corrente
-                    $student = Student::where('tax_code', $studentData['tax_code'])
-                        ->where('academic_year_id', $academicYear->id)
+                    // Student è master: deduplica globale per CF
+                    $student = Student::where('tax_code', $studentData['tax_code'])->first();
+                }
+
+                if (
+                    !$student
+                    && !empty($studentData['first_name'])
+                    && !empty($studentData['last_name'])
+                    && !empty($studentData['birth_date'])
+                ) {
+                    $student = Student::where('first_name', $studentData['first_name'])
+                        ->where('last_name', $studentData['last_name'])
+                        ->whereDate('birth_date', $studentData['birth_date'])
                         ->first();
                 }
-                
+
                 if (!$student && !empty($studentData['first_name']) && !empty($studentData['last_name'])) {
                     $student = Student::where('first_name', $studentData['first_name'])
                         ->where('last_name', $studentData['last_name'])
-                        ->where('academic_year_id', $academicYear->id)
                         ->first();
                 }
                 
@@ -126,6 +138,17 @@ class OdsImportService
                     $student->update($studentData);
                 } else {
                     $student = Student::create($studentData);
+                }
+
+                // Crea/Aggiorna dati annuali
+                if ($student && !empty($studentYearData)) {
+                    StudentYear::updateOrCreate(
+                        [
+                            'student_id' => $student->id,
+                            'academic_year_id' => $academicYear->id,
+                        ],
+                        $studentYearData
+                    );
                 }
                 
                 // Gestisci genitori
@@ -212,17 +235,25 @@ class OdsImportService
         }
         
         return [
-            'academic_year_id' => $academicYear->id,
-            'code' => !empty($data['enrollment_code']) ? $data['enrollment_code'] : null,
-            'first_name' => $data['first_name'] ?? '',
-            'last_name' => $data['last_name'] ?? '',
-            'birth_date' => $birthDate,
-            'age' => $age,
-            'tax_code' => !empty($data['tax_code']) ? strtoupper($data['tax_code']) : null,
-            'status' => $status,
-            'how_know_us' => $data['source'] ?? null,
-            'last_contact_date' => $lastContactDate,
-            'notes' => $notes,
+            'student' => [
+                'first_name' => $data['first_name'] ?? '',
+                'last_name' => $data['last_name'] ?? '',
+                'birth_date' => $birthDate,
+                'age' => $age,
+                'tax_code' => !empty($data['tax_code']) ? strtoupper($data['tax_code']) : null,
+            ],
+            'year' => [
+                'code' => !empty($data['enrollment_code']) ? $data['enrollment_code'] : null,
+                'status' => $status,
+                'how_know_us' => $data['source'] ?? null,
+                'last_contact_date' => $lastContactDate,
+                'notes' => $notes,
+                'admin_notes' => $data['admin_notes'] ?? null,
+                'preferences' => null,
+                'school_origin' => null,
+                'privacy_consent' => false,
+                'photo_consent' => false,
+            ],
         ];
     }
     

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Student;
+use App\Models\StudentYear;
 use App\Models\AcademicYear;
 use App\Services\AcademicYearService;
 use Illuminate\Http\Request;
@@ -22,11 +23,17 @@ class StudentController extends Controller
         $currentYear = $this->academicYearService->getCurrent();
         $query = Student::query();
 
-        // Filtro per anno scolastico
-        if ($request->has('academic_year_id')) {
-            $query->where('academic_year_id', $request->academic_year_id);
-        } elseif ($currentYear) {
-            $query->where('academic_year_id', $currentYear->id);
+        // Filtro per anno scolastico (su tabella annuale student_years)
+        $yearId = $request->get('academic_year_id') ?: ($currentYear?->id);
+        if ($yearId) {
+            $query->join('student_years', function ($join) use ($yearId) {
+                $join->on('student_years.student_id', '=', 'students.id')
+                    ->where('student_years.academic_year_id', '=', $yearId);
+            })->addSelect([
+                'students.*',
+                'student_years.code as code',
+                'student_years.status as status',
+            ]);
         }
 
         if ($request->has('search')) {
@@ -40,10 +47,10 @@ class StudentController extends Controller
         }
 
         if ($request->has('status')) {
-            $query->where('status', $request->status);
+            $query->where('student_years.status', $request->status);
         }
 
-        $students = $query->with('academicYear')
+        $students = $query
             ->orderBy('last_name')
             ->orderBy('first_name')
             ->paginate(20);
@@ -69,7 +76,7 @@ class StudentController extends Controller
     {
         $validated = $request->validate([
             'academic_year_id' => 'nullable|exists:academic_years,id',
-            'code' => 'nullable|string|unique:students,code',
+            'code' => 'nullable|string',
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'birth_date' => 'nullable|date',
@@ -92,7 +99,32 @@ class StudentController extends Controller
             $validated['academic_year_id'] = $currentYear?->id;
         }
 
-        Student::create($validated);
+        $student = Student::create([
+            'first_name' => $validated['first_name'],
+            'last_name' => $validated['last_name'],
+            'birth_date' => $validated['birth_date'] ?? null,
+            'age' => $validated['age'] ?? null,
+            'tax_code' => $validated['tax_code'] ?? null,
+        ]);
+
+        StudentYear::updateOrCreate(
+            [
+                'student_id' => $student->id,
+                'academic_year_id' => $validated['academic_year_id'],
+            ],
+            [
+                'code' => $validated['code'] ?? null,
+                'status' => $validated['status'],
+                'school_origin' => $validated['school_origin'] ?? null,
+                'how_know_us' => $validated['how_know_us'] ?? null,
+                'preferences' => $validated['preferences'] ?? null,
+                'notes' => $validated['notes'] ?? null,
+                'admin_notes' => $validated['admin_notes'] ?? null,
+                'privacy_consent' => (bool) ($validated['privacy_consent'] ?? false),
+                'photo_consent' => (bool) ($validated['photo_consent'] ?? false),
+                'last_contact_date' => $validated['last_contact_date'] ?? null,
+            ]
+        );
 
         return redirect()->route('admin.students.index')
             ->with('success', 'Studente creato con successo.');
@@ -101,7 +133,7 @@ class StudentController extends Controller
     public function show(Student $student)
     {
         $student->load([
-            'academicYear',
+            'years.academicYear',
             'guardians',
             'enrollments.course',
             'enrollments.academicYear',
@@ -124,7 +156,7 @@ class StudentController extends Controller
     {
         $validated = $request->validate([
             'academic_year_id' => 'nullable|exists:academic_years,id',
-            'code' => 'nullable|string|unique:students,code,' . $student->id,
+            'code' => 'nullable|string',
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'birth_date' => 'nullable|date',
@@ -141,7 +173,39 @@ class StudentController extends Controller
             'last_contact_date' => 'nullable|date',
         ]);
 
-        $student->update($validated);
+        if (!$validated['academic_year_id']) {
+            $currentYear = $this->academicYearService->getCurrent();
+            $validated['academic_year_id'] = $currentYear?->id;
+        }
+
+        $student->update([
+            'first_name' => $validated['first_name'],
+            'last_name' => $validated['last_name'],
+            'birth_date' => $validated['birth_date'] ?? null,
+            'age' => $validated['age'] ?? null,
+            'tax_code' => $validated['tax_code'] ?? null,
+        ]);
+
+        if ($validated['academic_year_id']) {
+            StudentYear::updateOrCreate(
+                [
+                    'student_id' => $student->id,
+                    'academic_year_id' => $validated['academic_year_id'],
+                ],
+                [
+                    'code' => $validated['code'] ?? null,
+                    'status' => $validated['status'],
+                    'school_origin' => $validated['school_origin'] ?? null,
+                    'how_know_us' => $validated['how_know_us'] ?? null,
+                    'preferences' => $validated['preferences'] ?? null,
+                    'notes' => $validated['notes'] ?? null,
+                    'admin_notes' => $validated['admin_notes'] ?? null,
+                    'privacy_consent' => (bool) ($validated['privacy_consent'] ?? false),
+                    'photo_consent' => (bool) ($validated['photo_consent'] ?? false),
+                    'last_contact_date' => $validated['last_contact_date'] ?? null,
+                ]
+            );
+        }
 
         return redirect()->route('admin.students.index')
             ->with('success', 'Studente aggiornato con successo.');

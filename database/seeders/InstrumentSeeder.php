@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Instrument;
 use App\Models\Student;
+use App\Models\StudentYear;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
 use Carbon\Carbon;
@@ -36,6 +37,7 @@ class InstrumentSeeder extends Seeder
         }
         
         try {
+            $academicYear = \App\Models\AcademicYear::where('is_active', true)->first();
             $spreadsheet = IOFactory::load($filePath);
             $sheet = $spreadsheet->getSheetByName('dati');
             
@@ -98,9 +100,23 @@ class InstrumentSeeder extends Seeder
                     }
                     
                     // Trova studente
-                    $student = Student::whereRaw('LOWER(last_name) = ?', [strtolower($cognome)])
-                        ->whereRaw('LOWER(first_name) = ?', [strtolower($nome)])
-                        ->first();
+                    $student = null;
+                    if ($academicYear) {
+                        $studentYear = StudentYear::where('academic_year_id', $academicYear->id)
+                            ->whereHas('student', function ($q) use ($cognome, $nome) {
+                                $q->whereRaw('LOWER(last_name) = ?', [strtolower($cognome)])
+                                  ->whereRaw('LOWER(first_name) = ?', [strtolower($nome)]);
+                            })
+                            ->with('student')
+                            ->first();
+                        $student = $studentYear?->student;
+                    }
+
+                    if (!$student) {
+                        $student = Student::whereRaw('LOWER(last_name) = ?', [strtolower($cognome)])
+                            ->whereRaw('LOWER(first_name) = ?', [strtolower($nome)])
+                            ->first();
+                    }
                     
                     if (!$student) {
                         continue;

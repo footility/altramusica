@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Invoice;
 use App\Models\Student;
+use App\Models\StudentYear;
 use App\Models\Contract;
 use App\Models\AcademicYear;
 use PhpOffice\PhpSpreadsheet\IOFactory;
@@ -187,10 +188,14 @@ class InvoiceSeeder extends Seeder
                     }
                     
                     // Trova studente (cerca anche senza filtro anno accademico)
-                    $student = Student::whereRaw('LOWER(last_name) = ?', [strtolower($cognome)])
-                        ->whereRaw('LOWER(first_name) = ?', [strtolower($nome)])
-                        ->where('academic_year_id', $academicYear->id)
+                    $studentYear = StudentYear::where('academic_year_id', $academicYear->id)
+                        ->whereHas('student', function ($q) use ($cognome, $nome) {
+                            $q->whereRaw('LOWER(last_name) = ?', [strtolower($cognome)])
+                              ->whereRaw('LOWER(first_name) = ?', [strtolower($nome)]);
+                        })
+                        ->with('student')
                         ->first();
+                    $student = $studentYear?->student;
                     
                     // Se non trova, cerca in tutti gli anni
                     if (!$student) {

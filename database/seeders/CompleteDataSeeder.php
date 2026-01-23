@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Student;
+use App\Models\StudentYear;
 use App\Models\StudentLevel;
 use App\Models\StudentAvailability;
 use App\Models\Instrument;
@@ -91,10 +92,14 @@ class CompleteDataSeeder extends Seeder
                         continue;
                     }
                     
-                    $student = Student::whereRaw('LOWER(last_name) = ?', [strtolower($cognome)])
-                        ->whereRaw('LOWER(first_name) = ?', [strtolower($nome)])
-                        ->where('academic_year_id', $academicYear->id)
+                    $studentYear = StudentYear::where('academic_year_id', $academicYear->id)
+                        ->whereHas('student', function ($q) use ($cognome, $nome) {
+                            $q->whereRaw('LOWER(last_name) = ?', [strtolower($cognome)])
+                              ->whereRaw('LOWER(first_name) = ?', [strtolower($nome)]);
+                        })
+                        ->with('student')
                         ->first();
+                    $student = $studentYear?->student;
                     
                     if (!$student) {
                         continue;
@@ -264,7 +269,7 @@ class CompleteDataSeeder extends Seeder
                     'instrument_id' => $instrument->id,
                 ],
                 [
-                    'academic_year_id' => $student->academic_year_id,
+                    'academic_year_id' => \App\Models\AcademicYear::getCurrent()?->id,
                     'start_date' => now(),
                     'monthly_fee' => 0, // Da calcolare
                     'status' => 'active',
@@ -285,10 +290,15 @@ class CompleteDataSeeder extends Seeder
         if (!empty($coro)) $tags[] = "Coro: {$coro}";
 
         if (!empty($tags)) {
-            $existing = trim((string) ($student->notes ?? ''));
+            $year = StudentYear::firstOrCreate(
+                ['student_id' => $student->id, 'academic_year_id' => $academicYear->id],
+                ['status' => 'prospect']
+            );
+
+            $existing = trim((string) ($year->notes ?? ''));
             $append = implode(' | ', $tags);
-            $student->notes = $existing ? ($existing . ' | ' . $append) : $append;
-            $student->save();
+            $year->notes = $existing ? ($existing . ' | ' . $append) : $append;
+            $year->save();
         }
     }
     

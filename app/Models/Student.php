@@ -11,35 +11,28 @@ class Student extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'academic_year_id',
-        'code',
         'first_name',
         'last_name',
         'birth_date',
         'age',
         'tax_code',
-        'status',
-        'school_origin',
-        'how_know_us',
-        'preferences',
-        'notes',
-        'admin_notes',
-        'privacy_consent',
-        'photo_consent',
-        'last_contact_date',
     ];
 
     protected $casts = [
         'birth_date' => 'date',
-        'last_contact_date' => 'date',
-        'privacy_consent' => 'boolean',
-        'photo_consent' => 'boolean',
     ];
 
     // Relationships
-    public function academicYear()
+    public function years()
     {
-        return $this->belongsTo(AcademicYear::class);
+        return $this->hasMany(StudentYear::class);
+    }
+
+    public function currentYear()
+    {
+        return $this->hasOne(StudentYear::class)->whereHas('academicYear', function ($q) {
+            $q->where('is_active', true);
+        });
     }
 
     public function guardians()
@@ -52,11 +45,6 @@ class Student extends Model
     public function enrollments()
     {
         return $this->hasMany(Enrollment::class);
-    }
-
-    public function extraActivityEnrollments()
-    {
-        return $this->hasMany(ExtraActivityEnrollment::class);
     }
 
     public function instrumentRentals()
@@ -107,14 +95,13 @@ class Student extends Model
         return "{$this->first_name} {$this->last_name}";
     }
 
-    // Scopes
-    public function scopeEnrolled($query)
+    public function getStatusAttribute()
     {
-        return $query->where('status', 'enrolled');
+        return $this->currentYear?->status;
     }
 
-    public function scopeActive($query)
+    public function getCodeAttribute()
     {
-        return $query->whereIn('status', ['enrolled', 'interested']);
+        return $this->currentYear?->code;
     }
 }

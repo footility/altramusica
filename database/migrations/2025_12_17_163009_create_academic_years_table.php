@@ -37,9 +37,26 @@ return new class extends Migration
             $table->timestamps();
         });
 
-        // Aggiungi foreign key a tutte le tabelle che referenziano l'anno scolastico
-        Schema::table('students', function (Blueprint $table) {
-            $table->foreignId('academic_year_id')->nullable()->after('id')->constrained()->nullOnDelete();
+        // Fase 1 (Master vs Annuale): dati operativi studente per anno
+        Schema::create('student_years', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('student_id')->constrained()->onDelete('cascade');
+            $table->foreignId('academic_year_id')->constrained()->onDelete('cascade');
+
+            $table->string('code')->nullable();
+            $table->enum('status', ['prospect', 'interested', 'enrolled', 'withdrawn'])->default('prospect');
+            $table->string('school_origin')->nullable();
+            $table->string('how_know_us')->nullable();
+            $table->text('preferences')->nullable();
+            $table->text('notes')->nullable();
+            $table->text('admin_notes')->nullable();
+            $table->boolean('privacy_consent')->default(false);
+            $table->boolean('photo_consent')->default(false);
+            $table->date('last_contact_date')->nullable();
+            $table->timestamps();
+
+            $table->unique(['student_id', 'academic_year_id']);
+            $table->index(['academic_year_id', 'status']);
         });
 
         Schema::table('enrollments', function (Blueprint $table) {
@@ -115,6 +132,14 @@ return new class extends Migration
             });
         }
 
+        // Retro-compatibilità: in vecchie versioni della migration esisteva students.academic_year_id
+        if (Schema::hasTable('students') && Schema::hasColumn('students', 'academic_year_id')) {
+            $this->dropAcademicYearForeignKeyIfExists('students');
+            Schema::table('students', function (Blueprint $table) {
+                $table->dropColumn('academic_year_id');
+            });
+        }
+
         if (Schema::hasTable('course_offerings') && Schema::hasColumn('course_offerings', 'academic_year_id')) {
             $this->dropAcademicYearForeignKeyIfExists('course_offerings');
             Schema::table('course_offerings', function (Blueprint $table) {
@@ -122,11 +147,8 @@ return new class extends Migration
             });
         }
 
-        if (Schema::hasTable('students') && Schema::hasColumn('students', 'academic_year_id')) {
-            $this->dropAcademicYearForeignKeyIfExists('students');
-            Schema::table('students', function (Blueprint $table) {
-                $table->dropColumn('academic_year_id');
-            });
+        if (Schema::hasTable('student_years')) {
+            Schema::dropIfExists('student_years');
         }
 
         Schema::dropIfExists('academic_years');

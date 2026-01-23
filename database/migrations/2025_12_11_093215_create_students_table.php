@@ -13,21 +13,11 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->string('code')->unique()->nullable();
             $table->string('first_name');
             $table->string('last_name');
             $table->date('birth_date')->nullable();
             $table->integer('age')->nullable();
             $table->string('tax_code')->nullable();
-            $table->enum('status', ['prospect', 'interested', 'enrolled', 'withdrawn'])->default('prospect');
-            $table->string('school_origin')->nullable();
-            $table->string('how_know_us')->nullable();
-            $table->text('preferences')->nullable();
-            $table->text('notes')->nullable();
-            $table->text('admin_notes')->nullable();
-            $table->boolean('privacy_consent')->default(false);
-            $table->boolean('photo_consent')->default(false);
-            $table->date('last_contact_date')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

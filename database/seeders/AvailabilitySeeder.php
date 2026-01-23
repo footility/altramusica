@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Student;
+use App\Models\StudentYear;
 use App\Models\StudentAvailability;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use Carbon\Carbon;
@@ -79,24 +80,36 @@ class AvailabilitySeeder extends Seeder
                     $cf = trim($cf);
                     
                     if (!empty($cf)) {
-                        $student = Student::where('tax_code', strtoupper($cf))
-                            ->where('academic_year_id', $academicYear->id)
+                        $studentYear = StudentYear::where('academic_year_id', $academicYear->id)
+                            ->whereHas('student', function ($q) use ($cf) {
+                                $q->where('tax_code', strtoupper($cf));
+                            })
+                            ->with('student')
                             ->first();
+                        $student = $studentYear?->student;
                     }
                     
                     if (!$student && !empty($cognome) && !empty($nome)) {
                         // Prova match esatto
-                        $student = Student::whereRaw('LOWER(last_name) = ?', [strtolower($cognome)])
-                            ->whereRaw('LOWER(first_name) = ?', [strtolower($nome)])
-                            ->where('academic_year_id', $academicYear->id)
+                        $studentYear = StudentYear::where('academic_year_id', $academicYear->id)
+                            ->whereHas('student', function ($q) use ($cognome, $nome) {
+                                $q->whereRaw('LOWER(last_name) = ?', [strtolower($cognome)])
+                                  ->whereRaw('LOWER(first_name) = ?', [strtolower($nome)]);
+                            })
+                            ->with('student')
                             ->first();
+                        $student = $studentYear?->student;
                         
                         // Se non trovato, prova match parziale
                         if (!$student) {
-                            $student = Student::whereRaw('LOWER(last_name) LIKE ?', ['%' . strtolower($cognome) . '%'])
-                                ->whereRaw('LOWER(first_name) LIKE ?', ['%' . strtolower($nome) . '%'])
-                                ->where('academic_year_id', $academicYear->id)
+                            $studentYear = StudentYear::where('academic_year_id', $academicYear->id)
+                                ->whereHas('student', function ($q) use ($cognome, $nome) {
+                                    $q->whereRaw('LOWER(last_name) LIKE ?', ['%' . strtolower($cognome) . '%'])
+                                      ->whereRaw('LOWER(first_name) LIKE ?', ['%' . strtolower($nome) . '%']);
+                                })
+                                ->with('student')
                                 ->first();
+                            $student = $studentYear?->student;
                         }
                     }
                     

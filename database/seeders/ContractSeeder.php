@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Contract;
 use App\Models\Student;
+use App\Models\StudentYear;
 use App\Models\AcademicYear;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
@@ -192,6 +193,12 @@ class ContractSeeder extends Seeder
                     $contract = Contract::where('student_id', $student->id)
                         ->where('academic_year_id', $academicYear->id)
                         ->first();
+
+                    // Assicura esistenza record annuale studente (status/note ecc) anche se lo StudentSeeder non lo ha creato
+                    StudentYear::firstOrCreate(
+                        ['student_id' => $student->id, 'academic_year_id' => $academicYear->id],
+                        ['status' => 'prospect']
+                    );
                     
                     if ($contract) {
                         $this->command->line("    ✓ Contratto esistente trovato per studente e anno (ID: {$contract->id}, Numero: {$contract->contract_number})");
