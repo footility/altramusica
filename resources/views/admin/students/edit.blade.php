@@ -15,7 +15,7 @@
                 label="Anno Scolastico" 
                 type="select"
                 :options="$years->pluck('name', 'id')->toArray()"
-                value="{{ old('academic_year_id', $student->academic_year_id) }}"
+                value="{{ old('academic_year_id', $selectedYearId) }}"
             />
 
             <div class="row">
@@ -42,7 +42,7 @@
                     <x-admin.form-field 
                         name="code" 
                         label="Codice" 
-                        value="{{ old('code', $student->code) }}"
+                        value="{{ old('code', $studentYear?->code) }}"
                     />
                 </div>
                 <div class="col-md-4">
@@ -74,7 +74,7 @@
                             'enrolled' => 'Iscritto',
                             'withdrawn' => 'Ritirato',
                         ]"
-                        value="{{ old('status', $student->status) }}"
+                        value="{{ old('status', $studentYear?->status ?? 'prospect') }}"
                         required
                     />
                 </div>
@@ -83,7 +83,7 @@
                         name="last_contact_date" 
                         label="Data Ultimo Contatto" 
                         type="date"
-                        value="{{ old('last_contact_date', $student->last_contact_date?->format('Y-m-d')) }}"
+                        value="{{ old('last_contact_date', $studentYear?->last_contact_date?->format('Y-m-d')) }}"
                     />
                 </div>
             </div>
@@ -91,34 +91,34 @@
             <x-admin.form-field 
                 name="school_origin" 
                 label="Scuola di Provenienza" 
-                value="{{ old('school_origin', $student->school_origin) }}"
+                value="{{ old('school_origin', $studentYear?->school_origin) }}"
             />
 
             <x-admin.form-field 
                 name="how_know_us" 
                 label="Come ci ha conosciuto" 
-                value="{{ old('how_know_us', $student->how_know_us) }}"
+                value="{{ old('how_know_us', $studentYear?->how_know_us) }}"
             />
 
             <x-admin.form-field 
                 name="preferences" 
                 label="Preferenze" 
                 type="textarea"
-                value="{{ old('preferences', $student->preferences) }}"
+                value="{{ old('preferences', $studentYear?->preferences) }}"
             />
 
             <x-admin.form-field 
                 name="notes" 
                 label="Note" 
                 type="textarea"
-                value="{{ old('notes', $student->notes) }}"
+                value="{{ old('notes', $studentYear?->notes) }}"
             />
 
             <x-admin.form-field 
                 name="admin_notes" 
                 label="Note Amministrative" 
                 type="textarea"
-                value="{{ old('admin_notes', $student->admin_notes) }}"
+                value="{{ old('admin_notes', $studentYear?->admin_notes) }}"
             />
 
             <div class="row">
@@ -127,7 +127,7 @@
                         name="privacy_consent" 
                         label="Consenso Privacy" 
                         type="checkbox"
-                        value="{{ old('privacy_consent', $student->privacy_consent) }}"
+                        value="{{ old('privacy_consent', $studentYear?->privacy_consent ?? false) }}"
                     />
                 </div>
                 <div class="col-md-6">
@@ -135,7 +135,7 @@
                         name="photo_consent" 
                         label="Consenso Foto" 
                         type="checkbox"
-                        value="{{ old('photo_consent', $student->photo_consent) }}"
+                        value="{{ old('photo_consent', $studentYear?->photo_consent ?? false) }}"
                     />
                 </div>
             </div>

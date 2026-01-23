@@ -14,7 +14,7 @@
                 label="Anno Scolastico" 
                 type="select"
                 :options="$years->pluck('name', 'id')->toArray()"
-                value="{{ old('academic_year_id') }}"
+                value="{{ old('academic_year_id', $currentYear?->id) }}"
                 placeholder="Anno corrente (se non specificato)"
             />
 

@@ -17,7 +17,7 @@
             :route="route('admin.students.index')"
             :filters="[
                 ['name' => 'search', 'type' => 'text', 'placeholder' => 'Cerca per nome, cognome, codice...', 'width' => 4],
-                ['name' => 'academic_year_id', 'type' => 'select', 'options' => $years->pluck('name', 'id')->toArray(), 'placeholder' => 'Tutti gli anni', 'width' => 3],
+                ['name' => 'academic_year_id', 'type' => 'select', 'options' => $years->pluck('name', 'id')->toArray(), 'placeholder' => 'Tutti gli anni', 'width' => 3, 'value' => $currentYear?->id],
                 ['name' => 'status', 'type' => 'select', 'options' => $statuses, 'placeholder' => 'Tutti gli stati', 'width' => 3],
             ]"
         />

@@ -68,8 +68,9 @@ class StudentController extends Controller
 
     public function create()
     {
+        $currentYear = $this->academicYearService->getCurrent();
         $years = AcademicYear::orderBy('start_date', 'desc')->get();
-        return view('admin.students.create', compact('years'));
+        return view('admin.students.create', compact('years', 'currentYear'));
     }
 
     public function store(Request $request)
@@ -132,10 +133,21 @@ class StudentController extends Controller
 
     public function show(Student $student)
     {
+        $currentYear = $this->academicYearService->getCurrent();
+        $years = AcademicYear::orderBy('start_date', 'desc')->get();
+        $selectedYearId = request()->get('academic_year_id') ?: ($currentYear?->id);
+
+        $studentYear = null;
+        if ($selectedYearId) {
+            $studentYear = StudentYear::where('student_id', $student->id)
+                ->where('academic_year_id', $selectedYearId)
+                ->first();
+        }
+
         $student->load([
             'years.academicYear',
             'guardians',
-            'enrollments.course',
+            'enrollments.courseOffering.course',
             'enrollments.academicYear',
             'invoices',
             'contracts',
@@ -143,13 +155,29 @@ class StudentController extends Controller
             'instrumentRentals.instrument',
             'bookDistributions',
         ]);
-        return view('admin.students.show', compact('student'));
+
+        $enrollments = $selectedYearId
+            ? $student->enrollments()->where('academic_year_id', $selectedYearId)->with(['courseOffering.course', 'academicYear'])->get()
+            : $student->enrollments()->with(['courseOffering.course', 'academicYear'])->get();
+
+        return view('admin.students.show', compact('student', 'years', 'currentYear', 'selectedYearId', 'studentYear', 'enrollments'));
     }
 
     public function edit(Student $student)
     {
+        $currentYear = $this->academicYearService->getCurrent();
+        $selectedYearId = request()->get('academic_year_id') ?: ($currentYear?->id);
         $years = AcademicYear::orderBy('start_date', 'desc')->get();
-        return view('admin.students.edit', compact('student', 'years'));
+
+        $studentYear = null;
+        if ($selectedYearId) {
+            $studentYear = StudentYear::firstOrNew([
+                'student_id' => $student->id,
+                'academic_year_id' => $selectedYearId,
+            ]);
+        }
+
+        return view('admin.students.edit', compact('student', 'years', 'currentYear', 'selectedYearId', 'studentYear'));
     }
 
     public function update(Request $request, Student $student)
