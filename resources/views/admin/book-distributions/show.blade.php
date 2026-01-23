@@ -40,7 +40,7 @@
             </dd>
 
             <dt class="col-sm-3">Corso</dt>
-            <dd class="col-sm-9">{{ $distribution->course->name ?? '-' }}</dd>
+            <dd class="col-sm-9">{{ $distribution->courseOffering?->course?->name ?? '-' }}</dd>
 
             <dt class="col-sm-3">Quantità</dt>
             <dd class="col-sm-9">{{ $distribution->quantity }}</dd>

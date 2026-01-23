@@ -20,7 +20,7 @@
                 ['name' => 'academic_year_id', 'type' => 'select', 'options' => $years->pluck('name', 'id')->toArray(), 'placeholder' => 'Tutti gli anni', 'width' => 3],
                 ['name' => 'student_id', 'type' => 'select', 'options' => $students->pluck('full_name', 'id')->toArray(), 'placeholder' => 'Tutti gli studenti', 'width' => 3],
                 ['name' => 'book_id', 'type' => 'select', 'options' => $books->pluck('title', 'id')->toArray(), 'placeholder' => 'Tutti i libri', 'width' => 3],
-                ['name' => 'course_id', 'type' => 'select', 'options' => $courses->pluck('name', 'id')->toArray(), 'placeholder' => 'Tutti i corsi', 'width' => 3],
+                ['name' => 'course_offering_id', 'type' => 'select', 'options' => $courseOfferings->mapWithKeys(fn($o) => [$o->id => ($o->course?->name ?? 'Corso')])->toArray(), 'placeholder' => 'Tutti i corsi', 'width' => 3],
             ]"
         />
 
@@ -31,7 +31,7 @@
                 ['relation' => 'academicYear', 'key' => 'name', 'label' => 'Anno'],
                 ['relation' => 'student', 'key' => 'full_name', 'label' => 'Studente'],
                 ['relation' => 'book', 'key' => 'title', 'label' => 'Libro'],
-                ['relation' => 'course', 'key' => 'name', 'label' => 'Corso'],
+                ['key' => 'courseOffering.course.name', 'label' => 'Corso'],
                 ['key' => 'quantity', 'label' => 'Q.tà'],
                 ['key' => 'price_paid', 'label' => 'Pagato', 'format' => 'currency'],
             ]"

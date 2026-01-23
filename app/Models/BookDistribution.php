@@ -13,7 +13,7 @@ class BookDistribution extends Model
         'student_id',
         'book_id',
         'academic_year_id',
-        'course_id',
+        'course_offering_id',
         'distribution_date',
         'quantity',
         'price_paid',
@@ -35,13 +35,26 @@ class BookDistribution extends Model
         return $this->belongsTo(Book::class);
     }
 
-    public function course()
+    public function courseOffering()
     {
-        return $this->belongsTo(Course::class);
+        return $this->belongsTo(CourseOffering::class, 'course_offering_id');
     }
 
     public function academicYear()
     {
         return $this->belongsTo(AcademicYear::class);
+    }
+
+    public function course()
+    {
+        // Compatibilità: accesso al catalogo corso tramite offering
+        return $this->hasOneThrough(
+            Course::class,
+            CourseOffering::class,
+            'id',                 // course_offerings.id
+            'id',                 // courses.id
+            'course_offering_id', // book_distributions.course_offering_id
+            'course_id'           // course_offerings.course_id
+        );
     }
 }

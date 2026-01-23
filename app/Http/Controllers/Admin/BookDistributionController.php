@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\AcademicYear;
 use App\Models\Book;
 use App\Models\BookDistribution;
-use App\Models\Course;
+use App\Models\CourseOffering;
 use App\Models\Student;
 use App\Services\AcademicYearService;
 use Illuminate\Http\Request;
@@ -50,26 +50,30 @@ class BookDistributionController extends Controller
             $query->where('book_id', $request->book_id);
         }
 
-        if ($request->filled('course_id')) {
-            $query->where('course_id', $request->course_id);
+        if ($request->filled('course_offering_id')) {
+            $query->where('course_offering_id', $request->course_offering_id);
         }
 
         $distributions = $query
-            ->with(['student', 'book', 'course', 'academicYear'])
+            ->with(['student', 'book', 'courseOffering.course', 'academicYear'])
             ->orderBy('distribution_date', 'desc')
             ->paginate(20);
 
         $years = AcademicYear::orderBy('start_date', 'desc')->get();
         $students = Student::orderBy('last_name')->orderBy('first_name')->get();
         $books = Book::orderBy('title')->get();
-        $courses = Course::orderBy('name')->get();
+        $offeringsQuery = CourseOffering::with(['course'])->orderByDesc('id');
+        if ($currentYear) {
+            $offeringsQuery->where('academic_year_id', $currentYear->id);
+        }
+        $courseOfferings = $offeringsQuery->get();
 
         return view('admin.book-distributions.index', compact(
             'distributions',
             'years',
             'students',
             'books',
-            'courses',
+            'courseOfferings',
             'currentYear'
         ));
     }
@@ -81,7 +85,11 @@ class BookDistributionController extends Controller
         $years = AcademicYear::orderBy('start_date', 'desc')->get();
         $students = Student::orderBy('last_name')->orderBy('first_name')->get();
         $books = Book::orderBy('title')->get();
-        $courses = Course::orderBy('name')->get();
+        $offeringsQuery = CourseOffering::with(['course'])->orderByDesc('id');
+        if ($currentYear) {
+            $offeringsQuery->where('academic_year_id', $currentYear->id);
+        }
+        $courseOfferings = $offeringsQuery->get();
 
         $preselectedStudent = $request->get('student_id') ? Student::find($request->get('student_id')) : null;
 
@@ -89,7 +97,7 @@ class BookDistributionController extends Controller
             'years',
             'students',
             'books',
-            'courses',
+            'courseOfferings',
             'currentYear',
             'preselectedStudent'
         ));
@@ -101,7 +109,7 @@ class BookDistributionController extends Controller
             'academic_year_id' => 'nullable|exists:academic_years,id',
             'student_id' => 'required|exists:students,id',
             'book_id' => 'required|exists:books,id',
-            'course_id' => 'nullable|exists:courses,id',
+            'course_offering_id' => 'nullable|exists:course_offerings,id',
             'distribution_date' => 'required|date',
             'quantity' => 'required|integer|min:1',
             'price_paid' => 'required|numeric|min:0',
@@ -126,7 +134,7 @@ class BookDistributionController extends Controller
 
     public function show(BookDistribution $bookDistribution)
     {
-        $bookDistribution->load(['student', 'book', 'course', 'academicYear']);
+        $bookDistribution->load(['student', 'book', 'courseOffering.course', 'academicYear']);
         return view('admin.book-distributions.show', ['distribution' => $bookDistribution]);
     }
 
@@ -134,19 +142,23 @@ class BookDistributionController extends Controller
     {
         $currentYear = $this->academicYearService->getCurrent();
 
-        $bookDistribution->load(['student', 'book', 'course', 'academicYear']);
+        $bookDistribution->load(['student', 'book', 'courseOffering.course', 'academicYear']);
 
         $years = AcademicYear::orderBy('start_date', 'desc')->get();
         $students = Student::orderBy('last_name')->orderBy('first_name')->get();
         $books = Book::orderBy('title')->get();
-        $courses = Course::orderBy('name')->get();
+        $offeringsQuery = CourseOffering::with(['course'])->orderByDesc('id');
+        if ($currentYear) {
+            $offeringsQuery->where('academic_year_id', $currentYear->id);
+        }
+        $courseOfferings = $offeringsQuery->get();
 
         return view('admin.book-distributions.edit', [
             'distribution' => $bookDistribution,
             'years' => $years,
             'students' => $students,
             'books' => $books,
-            'courses' => $courses,
+            'courseOfferings' => $courseOfferings,
             'currentYear' => $currentYear,
         ]);
     }
@@ -157,7 +169,7 @@ class BookDistributionController extends Controller
             'academic_year_id' => 'nullable|exists:academic_years,id',
             'student_id' => 'required|exists:students,id',
             'book_id' => 'required|exists:books,id',
-            'course_id' => 'nullable|exists:courses,id',
+            'course_offering_id' => 'nullable|exists:course_offerings,id',
             'distribution_date' => 'required|date',
             'quantity' => 'required|integer|min:1',
             'price_paid' => 'required|numeric|min:0',

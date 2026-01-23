@@ -89,20 +89,16 @@ class CalendarController extends Controller
 
         // Lezioni effettive (Lesson model)
         if ($type === 'all' || $type === 'schedule') {
-            $actualLessons = \App\Models\Lesson::with(['course', 'teacher', 'classroom'])
-                ->whereHas('course', function($q) use ($yearId) {
-                    $q->whereHas('enrollments', function($eq) use ($yearId) {
-                        $eq->whereHas('student', function($sq) use ($yearId) {
-                            $sq->where('academic_year_id', $yearId);
-                        });
-                    });
+            $actualLessons = \App\Models\Lesson::with(['courseOffering.course', 'teacher', 'classroom'])
+                ->whereHas('courseOffering', function ($q) use ($yearId) {
+                    $q->where('academic_year_id', $yearId);
                 })
                 ->where('date', '>=', $start)
                 ->where('date', '<=', $end)
                 ->get();
 
             foreach ($actualLessons as $lesson) {
-                $title = $lesson->course->name ?? 'Lezione';
+                $title = $lesson->courseOffering?->course?->name ?? 'Lezione';
                 if ($lesson->teacher) {
                     $title .= ' - ' . $lesson->teacher->last_name;
                 }
@@ -113,15 +109,15 @@ class CalendarController extends Controller
                 $events[] = [
                     'id' => 'actual-lesson-' . $lesson->id,
                     'title' => $title,
-                    'start' => $lesson->date->format('Y-m-d') . 'T' . $lesson->time_start->format('H:i:s'),
-                    'end' => $lesson->date->format('Y-m-d') . 'T' . $lesson->time_end->format('H:i:s'),
+                    'start' => $lesson->date->format('Y-m-d') . 'T' . ($lesson->time_start ?? '00:00:00'),
+                    'end' => $lesson->date->format('Y-m-d') . 'T' . ($lesson->time_end ?? '00:00:00'),
                     'backgroundColor' => $lesson->completed ? '#6c757d' : '#007bff',
                     'borderColor' => $lesson->completed ? '#6c757d' : '#007bff',
                     'textColor' => '#fff',
                     'extendedProps' => [
                         'type' => 'actual-lesson',
                         'lesson_id' => $lesson->id,
-                        'course_id' => $lesson->course_id,
+                        'course_offering_id' => $lesson->course_offering_id,
                         'teacher_id' => $lesson->teacher_id,
                         'classroom_id' => $lesson->classroom_id,
                         'completed' => $lesson->completed,

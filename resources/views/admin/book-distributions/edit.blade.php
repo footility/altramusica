@@ -82,11 +82,11 @@
             <div class="row">
                 <div class="col-md-6">
                     <x-admin.form-field
-                        name="course_id"
+                        name="course_offering_id"
                         label="Corso (opzionale)"
                         type="select"
-                        :options="$courses->pluck('name','id')->toArray()"
-                        :value="old('course_id', $distribution->course_id)"
+                        :options="$courseOfferings->mapWithKeys(fn($o) => [$o->id => ($o->course?->name ?? 'Corso')])->toArray()"
+                        :value="old('course_offering_id', $distribution->course_offering_id)"
                     />
                 </div>
             </div>
