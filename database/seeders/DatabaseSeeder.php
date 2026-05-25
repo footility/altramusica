@@ -25,11 +25,11 @@ class DatabaseSeeder extends Seeder
             ContractSeeder::class,        // 6. Contratti (dipende da studenti)
             AvailabilitySeeder::class,     // 7. Disponibilità studenti (dipende da studenti)
             InvoiceSeeder::class,         // 8. Fatture (dipende da studenti/contratti)
-            InstrumentSeeder::class,      // 9. Strumenti
-            ExamSeeder::class,            // 10. Esami (dipende da studenti)
-            CalendarSeeder::class,        // 11. Calendario (dipende da anno accademico)
-            ClassroomSeeder::class,       // 12. Aule
-            CompleteDataSeeder::class,     // 13. Importazione completa dati ODS (livelli, disponibilità, strumenti, orchestra, iscrizioni)
+            InstrumentSeeder::class,      // 9. Strumenti dal gestionale
+            CalendarSeeder::class,        // 10. Calendario (dipende da anno accademico)
+            ClassroomSeeder::class,       // 11. Aule
+            CompleteDataSeeder::class,    // 12. Livelli, disponibilità, strumenti, orchestra, iscrizioni
+            AccessorySeeder::class,       // 13. Noleggi, libri, esami e addebiti dal registro accessori
         ]);
     }
 }

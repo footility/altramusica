@@ -10,6 +10,7 @@ use App\Models\Contract;
 use App\Models\AcademicYear;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
+use PhpOffice\PhpSpreadsheet\Reader\IReadFilter;
 use PhpOffice\PhpSpreadsheet\Shared\Date as ExcelDate;
 use Carbon\Carbon;
 use App\Services\OdsImportService;
@@ -45,7 +46,15 @@ class InvoiceSeeder extends Seeder
         }
         
         try {
-            $spreadsheet = IOFactory::load($filePath);
+            $reader = IOFactory::createReaderForFile($filePath);
+            $reader->setLoadSheetsOnly(['fatt corsi']);
+            $reader->setReadFilter(new class implements IReadFilter {
+                public function readCell(string $columnAddress, int $row, string $worksheetName = ''): bool
+                {
+                    return $worksheetName === 'fatt corsi' && $row <= 1000;
+                }
+            });
+            $spreadsheet = $reader->load($filePath);
             
             // Processa foglio "fatt corsi"
             $sheet = $spreadsheet->getSheetByName('fatt corsi');
@@ -261,19 +270,12 @@ class InvoiceSeeder extends Seeder
                     }
                     $dueDate = $firstDue ?: $invoiceDate->copy()->addDays(30);
 
-                    // invoice_number univoco (una fattura per studente/anno in MVP; se già esiste, aggiunge suffisso)
-                    $baseNumber = 'FATT-' . $student->id . '-' . $academicYear->id;
-                    $invoiceNumber = $baseNumber;
-                    $suffix = 1;
-                    while (Invoice::where('invoice_number', $invoiceNumber)->exists()) {
-                        $suffix++;
-                        $invoiceNumber = $baseNumber . '-' . $suffix;
-                        if ($suffix > 50) break; // safety
-                    }
-
-                    $invoice = Invoice::create([
+                    // Una fattura corsi per allievo/anno: il re-import aggiorna
+                    // il record esistente invece di duplicare importi e rate.
+                    $invoiceNumber = 'FATT-' . $student->id . '-' . $academicYear->id;
+                    $invoice = Invoice::updateOrCreate(['invoice_number' => $invoiceNumber], [
+                        'academic_year_id' => $academicYear->id,
                         'student_id' => $student->id,
-                        'invoice_number' => $invoiceNumber,
                         'invoice_date' => $invoiceDate->format('Y-m-d'),
                         'due_date' => $dueDate->format('Y-m-d'),
                         'total_amount' => $totalAmount,
@@ -281,6 +283,8 @@ class InvoiceSeeder extends Seeder
                         'status' => 'draft',
                         'notes' => 'Importato da contabilità (ODS) - fatt corsi',
                     ]);
+
+                    $invoice->paymentPlans()->delete();
 
                     // Crea piano rate (se presenti importi rate, altrimenti 1 rata unica)
                     $hasAnyInstallment = false;

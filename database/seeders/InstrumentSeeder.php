@@ -20,7 +20,6 @@ class InstrumentSeeder extends Seeder
         $this->command->info('=== Importazione Strumenti ===');
         
         $imported = $this->importFromGestionale();
-        $imported += $this->importFromAccessori();
         
         $this->command->info("✓ Totale strumenti importati: {$imported}");
     }
@@ -129,16 +128,17 @@ class InstrumentSeeder extends Seeder
                         continue;
                     }
                     
-                    // Crea strumento
+                    // Crea strumento con i nomi colonna effettivi del model.
                     $instrument = Instrument::firstOrCreate(
                         [
-                            'name' => $type,
-                            'code' => !empty($colMap['code']) ? trim((string)$sheet->getCell($colMap['code'] . $row)->getValue()) : null,
+                            'type' => $type,
+                            'serial_number' => !empty($colMap['code']) ? trim((string)$sheet->getCell($colMap['code'] . $row)->getValue()) : null,
                         ],
                         [
                             'brand' => !empty($colMap['brand']) ? trim((string)$sheet->getCell($colMap['brand'] . $row)->getValue()) : null,
                             'model' => !empty($colMap['model']) ? trim((string)$sheet->getCell($colMap['model'] . $row)->getValue()) : null,
                             'size' => !empty($colMap['size']) ? trim((string)$sheet->getCell($colMap['size'] . $row)->getValue()) : null,
+                            'supplier' => !empty($colMap['supplier']) ? trim((string)$sheet->getCell($colMap['supplier'] . $row)->getValue()) : null,
                             'status' => 'available',
                         ]
                     );
@@ -159,19 +159,4 @@ class InstrumentSeeder extends Seeder
         }
     }
     
-    protected function importFromAccessori()
-    {
-        $this->command->info('Importazione strumenti da file accessori...');
-        
-        $filePath = base_path('docs/materiale cliente/Db Accessori 2025-26.ods');
-        
-        if (!file_exists($filePath)) {
-            $this->command->warn("File non trovato");
-            return 0;
-        }
-        
-        // TODO: Implementare importazione da file accessori (noleggi dettagliati)
-        $this->command->info("  (Da implementare - noleggi dettagliati)");
-        return 0;
-    }
 }

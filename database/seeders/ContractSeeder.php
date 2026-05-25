@@ -163,7 +163,11 @@ class ContractSeeder extends Seeder
                     // Trova studente
                     $student = null;
                     if (!empty($data['student_tax_code'])) {
-                        $student = Student::where('tax_code', strtoupper($data['student_tax_code']))->first();
+                        $taxCode = preg_replace('/\s+/', '', strtoupper($data['student_tax_code']));
+                        $student = Student::where('tax_code', $taxCode)
+                            ->whereRaw('LOWER(first_name) = ?', [strtolower($data['student_first_name'])])
+                            ->whereRaw('LOWER(last_name) = ?', [strtolower($data['student_last_name'])])
+                            ->first();
                         if ($student) {
                             $this->command->line("    ✓ Studente trovato per CF: {$data['student_tax_code']}");
                         }
@@ -386,6 +390,14 @@ class ContractSeeder extends Seeder
     protected function parseDate($value)
     {
         if (empty($value)) return null;
+
+        if (is_numeric($value) && (float) $value > 20000) {
+            try {
+                return Carbon::instance(\PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject((float) $value));
+            } catch (\Throwable $e) {
+                return null;
+            }
+        }
         
         $formats = ['Y-m-d', 'd/m/Y', 'd-m-Y', 'Y/m/d'];
         

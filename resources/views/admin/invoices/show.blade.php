@@ -73,6 +73,25 @@
             </div>
         </div>
 
+        @if($invoice->items->count() > 0)
+        <div class="card mb-3">
+            <div class="card-header">
+                <h5>Voci ({{ $invoice->items->count() }})</h5>
+            </div>
+            <div class="card-body">
+                <x-admin.data-table
+                    :items="$invoice->items"
+                    :columns="[
+                        ['key' => 'description', 'label' => 'Descrizione'],
+                        ['key' => 'quantity', 'label' => 'Qta'],
+                        ['key' => 'unit_price', 'label' => 'Importo', 'format' => 'currency'],
+                        ['key' => 'total_price', 'label' => 'Totale', 'format' => 'currency'],
+                    ]"
+                />
+            </div>
+        </div>
+        @endif
+
         @if($invoice->payments->count() > 0)
         <div class="card mb-3">
             <div class="card-header">
@@ -102,4 +121,3 @@
     </div>
 </div>
 @endsection
-

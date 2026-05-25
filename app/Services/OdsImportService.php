@@ -8,6 +8,7 @@ use App\Models\StudentYear;
 use App\Models\Guardian;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
+use PhpOffice\PhpSpreadsheet\Shared\Date as ExcelDate;
 use Carbon\Carbon;
 
 class OdsImportService
@@ -111,8 +112,12 @@ class OdsImportService
                 // Cerca studente esistente
                 $student = null;
                 if (!empty($studentData['tax_code'])) {
-                    // Student è master: deduplica globale per CF
-                    $student = Student::where('tax_code', $studentData['tax_code'])->first();
+                    // Il foglio contiene alcuni CF duplicati su nominativi distinti:
+                    // un CF da solo non e' sufficiente per un merge sicuro.
+                    $student = Student::where('tax_code', $studentData['tax_code'])
+                        ->whereRaw('LOWER(first_name) = ?', [strtolower($studentData['first_name'])])
+                        ->whereRaw('LOWER(last_name) = ?', [strtolower($studentData['last_name'])])
+                        ->first();
                 }
 
                 if (
@@ -240,7 +245,9 @@ class OdsImportService
                 'last_name' => $data['last_name'] ?? '',
                 'birth_date' => $birthDate,
                 'age' => $age,
-                'tax_code' => !empty($data['tax_code']) ? strtoupper($data['tax_code']) : null,
+                'tax_code' => !empty($data['tax_code'])
+                    ? preg_replace('/\s+/', '', strtoupper($data['tax_code']))
+                    : null,
             ],
             'year' => [
                 'code' => !empty($data['enrollment_code']) ? $data['enrollment_code'] : null,
@@ -328,6 +335,14 @@ class OdsImportService
     protected function parseDate($value)
     {
         if (empty($value)) return null;
+
+        if (is_numeric($value) && (float) $value > 20000) {
+            try {
+                return Carbon::instance(ExcelDate::excelToDateTimeObject((float) $value));
+            } catch (\Throwable $e) {
+                return null;
+            }
+        }
         
         $formats = ['Y-m-d', 'd/m/Y', 'd-m-Y', 'Y/m/d'];
         
@@ -350,10 +365,9 @@ class OdsImportService
     {
         if (empty($value)) return null;
         
-        $value = str_replace(['€', ' ', ','], '', $value);
+        $value = str_replace(['€', ' ', '.'], '', (string) $value);
         $value = str_replace(',', '.', $value);
         
         return is_numeric($value) ? (float)$value : null;
     }
 }
-

@@ -14,24 +14,25 @@
 </head>
 <body class="admin-body">
     <div class="admin-shell">
-        <x-admin.sidebar />
+        <x-admin.topbar>
+            <x-slot:pageTitle>
+                {{ $pageTitle ?? 'Dashboard' }}
+            </x-slot:pageTitle>
+        </x-admin.topbar>
 
-        <div class="admin-main">
-            <x-admin.topbar>
-                <x-slot:pageTitle>
-                    {{ $pageTitle ?? 'Dashboard' }}
-                </x-slot:pageTitle>
-            </x-admin.topbar>
+        <div class="admin-workspace">
+            <x-admin.sidebar />
 
-            <main class="admin-content container-fluid py-4">
-                <x-admin.alerts />
+            <div class="admin-main">
+                <main class="admin-content container-fluid py-4">
+                    <x-admin.alerts />
 
-                {{ $slot }}
-            </main>
+                    {{ $slot }}
+                </main>
+            </div>
         </div>
     </div>
 
     @stack('scripts')
 </body>
 </html>
-

@@ -55,6 +55,7 @@ class AvailabilitySeeder extends Seeder
             ];
             
             $imported = 0;
+            $createdProspects = 0;
             $skipped = 0;
             $errors = [];
             
@@ -77,12 +78,14 @@ class AvailabilitySeeder extends Seeder
                     $student = null;
                     $cognome = trim($cognome);
                     $nome = trim($nome);
-                    $cf = trim($cf);
+                    $cf = preg_replace('/\s+/', '', strtoupper(trim($cf)));
                     
                     if (!empty($cf)) {
                         $studentYear = StudentYear::where('academic_year_id', $academicYear->id)
-                            ->whereHas('student', function ($q) use ($cf) {
-                                $q->where('tax_code', strtoupper($cf));
+                            ->whereHas('student', function ($q) use ($cf, $cognome, $nome) {
+                                $q->where('tax_code', $cf)
+                                    ->whereRaw('LOWER(last_name) = ?', [strtolower($cognome)])
+                                    ->whereRaw('LOWER(first_name) = ?', [strtolower($nome)]);
                             })
                             ->with('student')
                             ->first();
@@ -114,11 +117,18 @@ class AvailabilitySeeder extends Seeder
                     }
                     
                     if (!$student) {
-                        $skipped++;
-                        if (count($errors) < 10) {
-                            $errors[] = "Riga {$row}: Studente non trovato ({$cognome} {$nome} - CF: {$cf})";
-                        }
-                        continue;
+                        $student = Student::create([
+                            'first_name' => $nome,
+                            'last_name' => $cognome,
+                            'tax_code' => $cf ?: null,
+                        ]);
+                        StudentYear::create([
+                            'student_id' => $student->id,
+                            'academic_year_id' => $academicYear->id,
+                            'status' => 'prospect',
+                            'notes' => 'Importato dal modulo anagrafica/disponibilità; non presente nel gestionale principale.',
+                        ]);
+                        $createdProspects++;
                     }
                     
                     // Importa disponibilità per ogni giorno
@@ -196,6 +206,7 @@ class AvailabilitySeeder extends Seeder
             
             $this->command->newLine();
             $this->command->info("✓ Disponibilità importate per {$imported} studenti");
+            $this->command->info("  Prospect creati dal solo modulo disponibilità: {$createdProspects}");
             $this->command->info("  Saltati: {$skipped}");
             if (!empty($errors)) {
                 $this->command->warn("  Errori: " . count($errors));

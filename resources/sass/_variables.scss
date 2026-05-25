@@ -1,7 +1,13 @@
 // Body
-$body-bg: #f8fafc;
+$body-bg: #faf8f7;
 
 // Typography
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+// L'Altramusica identity — rosso brand allineato a laltramusica.com (#ba1818)
+$primary: #ba1818;
+$link-color: $primary;
+$link-hover-color: #8f1212;
+$focus-ring-color: rgba($primary, 0.24);
