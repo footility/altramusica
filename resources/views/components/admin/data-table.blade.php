@@ -16,7 +16,12 @@
                     @foreach($columns as $column)
                         <td>
                             @php
-                                $rawValue = data_get($item, $column['key'] ?? null);
+                                // Supporta sia ['key' => 'attr'] / ['key' => 'rel.attr']
+                                // sia ['relation' => 'rel', 'key' => 'attr'] (path composto rel.attr).
+                                $lookupKey = isset($column['relation'])
+                                    ? trim($column['relation'], '.') . '.' . ($column['key'] ?? '')
+                                    : ($column['key'] ?? null);
+                                $rawValue = data_get($item, $lookupKey);
                             @endphp
                             @if(isset($column['format']) && $column['format'] === 'date')
                                 {{ $rawValue ? $rawValue->format('d/m/Y') : '-' }}
