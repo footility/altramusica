@@ -6,11 +6,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -52,13 +53,16 @@ class User extends Authenticatable
         return $this->hasOne(Teacher::class);
     }
 
-    public function isAdmin()
+    /**
+     * Retro-compatibile: privilegia i ruoli Spatie, fallback alla colonna legacy `role`.
+     */
+    public function isAdmin(): bool
     {
-        return $this->role === 'admin';
+        return $this->hasRole('admin') || $this->role === 'admin';
     }
 
-    public function isTeacher()
+    public function isTeacher(): bool
     {
-        return $this->role === 'teacher';
+        return $this->hasRole('teacher') || $this->role === 'teacher';
     }
 }

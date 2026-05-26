@@ -59,6 +59,11 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     // NOTE (Fase 1): rimosso extra-activities (evolutivo, non AS-IS).
     Route::resource('classrooms', \App\Http\Controllers\Admin\ClassroomController::class);
 
+    // ACL — griglia ruoli/permessi configurabile dall'amministratore
+    Route::get('acl', [\App\Http\Controllers\Admin\AclController::class, 'index'])->name('acl.index');
+    Route::put('acl/{role}', [\App\Http\Controllers\Admin\AclController::class, 'update'])->name('acl.update');
+    Route::post('acl/roles', [\App\Http\Controllers\Admin\AclController::class, 'storeRole'])->name('acl.roles.store');
+
     // AS-IS missing CRUDs (Fase 1)
     Route::resource('books', \App\Http\Controllers\Admin\BookController::class);
     Route::resource('book-distributions', \App\Http\Controllers\Admin\BookDistributionController::class);

@@ -72,4 +72,13 @@ return [
             ['label' => 'Distribuzioni libri', 'icon' => 'bi-journal-arrow-up', 'route' => 'admin.book-distributions.index', 'patterns' => ['admin.book-distributions.*']],
         ],
     ],
+    'settings' => [
+        'label' => 'Configurazione',
+        'icon' => 'bi-gear',
+        'home_route' => 'admin.acl.index',
+        'patterns' => ['admin.acl.*'],
+        'items' => [
+            ['label' => 'Ruoli e permessi', 'icon' => 'bi-shield-lock', 'route' => 'admin.acl.index', 'patterns' => ['admin.acl.*']],
+        ],
+    ],
 ];
