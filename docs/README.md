@@ -33,6 +33,7 @@ ed è aderente ai dati presenti in `docs/materiale cliente/`.
 - `29_R6_CONTROLLO_FINALE_VALIDAZIONE_MATERIALI.md` (R6 · Controllo finale — validazione E2E materiali/noleggi/libri/esami)
 - `30_UX_FLUSSO_CONTRATTO_E_FIRMA.md` (R3 · Design UX — flusso contratto: timeline proposta→inviato→firmato + firma mock con upload scansione, innesto webhook firma digitale)
 - `31_R3_CONTROLLO_FINALE_VALIDAZIONE_CONTRATTI.md` (R3 · Controllo finale — validazione E2E contratti + firma mock)
+- `32_UX_REGISTRO_PRESENZE_E_MOTORE_COMPENSI.md` (R8 · Design UX — registro presenze a tap + motore compensi configurabile soci/non-soci/forfait, tariffe DA CONFERMARE, consuntivo mensile)
 
 ## Allegati sorgenti
 
