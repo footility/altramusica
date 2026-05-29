@@ -121,22 +121,45 @@
                 value="{{ old('admin_notes', $studentYear?->admin_notes) }}"
             />
 
-            <div class="row">
-                <div class="col-md-6">
-                    <x-admin.form-field 
-                        name="privacy_consent" 
-                        label="Consenso Privacy" 
-                        type="checkbox"
-                        value="{{ old('privacy_consent', $studentYear?->privacy_consent ?? false) }}"
-                    />
-                </div>
-                <div class="col-md-6">
-                    <x-admin.form-field 
-                        name="photo_consent" 
-                        label="Consenso Foto" 
-                        type="checkbox"
-                        value="{{ old('photo_consent', $studentYear?->photo_consent ?? false) }}"
-                    />
+            <div class="card bg-light mb-3">
+                <div class="card-body">
+                    <h6 class="card-title mb-2"><i class="bi bi-shield-lock"></i> Consensi privacy (GDPR)</h6>
+                    <p class="small text-muted mb-3">
+                        <a href="{{ route('privacy.policy') }}" target="_blank">Informativa privacy</a>
+                        (vers. {{ config('privacy.policy_version') }}). La data del consenso viene registrata
+                        automaticamente alla prima spunta e azzerata in caso di revoca.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <x-admin.form-field
+                                name="privacy_consent"
+                                label="Consenso al trattamento dei dati"
+                                type="checkbox"
+                                value="{{ old('privacy_consent', $studentYear?->privacy_consent ?? false) }}"
+                            />
+                            @if($studentYear?->privacy_consent_at)
+                                <p class="small text-muted ms-4 mt-n2">
+                                    Registrato il {{ $studentYear->privacy_consent_at->format('d/m/Y H:i') }}
+                                    @if($studentYear->privacy_policy_version)
+                                        (informativa vers. {{ $studentYear->privacy_policy_version }})
+                                    @endif
+                                </p>
+                            @endif
+                        </div>
+                        <div class="col-md-6">
+                            <x-admin.form-field
+                                name="photo_consent"
+                                label="Consenso uso immagini/foto"
+                                type="checkbox"
+                                value="{{ old('photo_consent', $studentYear?->photo_consent ?? false) }}"
+                            />
+                            @if($studentYear?->photo_consent_at)
+                                <p class="small text-muted ms-4 mt-n2">
+                                    Registrato il {{ $studentYear->photo_consent_at->format('d/m/Y H:i') }}
+                                </p>
+                            @endif
+                        </div>
+                    </div>
                 </div>
             </div>
 

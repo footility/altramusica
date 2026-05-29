@@ -10,6 +10,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// Pagine privacy/cookie pubbliche (accessibili senza autenticazione)
+Route::get('/privacy-policy', [\App\Http\Controllers\Public\PrivacyController::class, 'policy'])->name('privacy.policy');
+Route::get('/cookie-policy', [\App\Http\Controllers\Public\PrivacyController::class, 'cookies'])->name('privacy.cookies');
+
 // NOTE (Fase 1): rimosse le rotte "teacher/register" (registro docente) perché non AS-IS.
 
 Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {

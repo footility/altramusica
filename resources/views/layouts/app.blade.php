@@ -76,5 +76,7 @@
             @yield('content')
         </main>
     </div>
+
+    <x-cookie-banner />
 </body>
 </html>

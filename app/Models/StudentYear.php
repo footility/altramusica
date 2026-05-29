@@ -20,14 +20,21 @@ class StudentYear extends Model
         'notes',
         'admin_notes',
         'privacy_consent',
+        'privacy_consent_at',
+        'privacy_policy_version',
         'photo_consent',
+        'photo_consent_at',
         'last_contact_date',
+        'withdrawn_at',
     ];
 
     protected $casts = [
         'privacy_consent' => 'boolean',
+        'privacy_consent_at' => 'datetime',
         'photo_consent' => 'boolean',
+        'photo_consent_at' => 'datetime',
         'last_contact_date' => 'date',
+        'withdrawn_at' => 'date',
     ];
 
     public function student()

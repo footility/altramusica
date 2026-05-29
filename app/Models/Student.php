@@ -16,10 +16,12 @@ class Student extends Model
         'birth_date',
         'age',
         'tax_code',
+        'anonymized_at',
     ];
 
     protected $casts = [
         'birth_date' => 'date',
+        'anonymized_at' => 'datetime',
     ];
 
     // Relationships

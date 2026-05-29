@@ -123,22 +123,33 @@
                 value="{{ old('admin_notes') }}"
             />
 
-            <div class="row">
-                <div class="col-md-6">
-                    <x-admin.form-field 
-                        name="privacy_consent" 
-                        label="Consenso Privacy" 
-                        type="checkbox"
-                        value="{{ old('privacy_consent', false) }}"
-                    />
-                </div>
-                <div class="col-md-6">
-                    <x-admin.form-field 
-                        name="photo_consent" 
-                        label="Consenso Foto" 
-                        type="checkbox"
-                        value="{{ old('photo_consent', false) }}"
-                    />
+            <div class="card bg-light mb-3">
+                <div class="card-body">
+                    <h6 class="card-title mb-2"><i class="bi bi-shield-lock"></i> Consensi privacy (GDPR)</h6>
+                    <p class="small text-muted mb-3">
+                        L'interessato (o chi esercita la responsabilità genitoriale per i minori) dichiara di aver
+                        preso visione dell'<a href="{{ route('privacy.policy') }}" target="_blank">informativa privacy</a>
+                        (vers. {{ config('privacy.policy_version') }}) e di prestare i consensi sotto indicati.
+                        La data del consenso viene registrata automaticamente al salvataggio.
+                    </p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <x-admin.form-field
+                                name="privacy_consent"
+                                label="Consenso al trattamento dei dati"
+                                type="checkbox"
+                                value="{{ old('privacy_consent', false) }}"
+                            />
+                        </div>
+                        <div class="col-md-6">
+                            <x-admin.form-field
+                                name="photo_consent"
+                                label="Consenso uso immagini/foto"
+                                type="checkbox"
+                                value="{{ old('photo_consent', false) }}"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
 

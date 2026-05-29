@@ -149,18 +149,39 @@
                 <h5>Privacy</h5>
             </div>
             <div class="card-body">
-                <p>
-                    <strong>Consenso Privacy:</strong> 
+                <p class="mb-1">
+                    <strong>Consenso Privacy:</strong>
                     <span class="badge bg-{{ ($studentYear?->privacy_consent ?? false) ? 'success' : 'danger' }}">
                         {{ ($studentYear?->privacy_consent ?? false) ? 'Sì' : 'No' }}
                     </span>
                 </p>
-                <p>
-                    <strong>Consenso Foto:</strong> 
+                @if($studentYear?->privacy_consent_at)
+                    <p class="small text-muted">
+                        Registrato il {{ $studentYear->privacy_consent_at->format('d/m/Y H:i') }}
+                        @if($studentYear->privacy_policy_version)
+                            · informativa vers. {{ $studentYear->privacy_policy_version }}
+                        @endif
+                    </p>
+                @endif
+                <p class="mb-1">
+                    <strong>Consenso Foto:</strong>
                     <span class="badge bg-{{ ($studentYear?->photo_consent ?? false) ? 'success' : 'danger' }}">
                         {{ ($studentYear?->photo_consent ?? false) ? 'Sì' : 'No' }}
                     </span>
                 </p>
+                @if($studentYear?->photo_consent_at)
+                    <p class="small text-muted">
+                        Registrato il {{ $studentYear->photo_consent_at->format('d/m/Y H:i') }}
+                    </p>
+                @endif
+                @if($studentYear?->withdrawn_at)
+                    <hr>
+                    <p class="small text-muted mb-0">
+                        <i class="bi bi-clock-history"></i>
+                        Ritirato il {{ $studentYear->withdrawn_at->format('d/m/Y') }}.
+                        Dati soggetti ad anonimizzazione dopo {{ config('privacy.retention_years') }} anni.
+                    </p>
+                @endif
             </div>
         </div>
     </div>

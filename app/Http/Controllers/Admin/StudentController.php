@@ -18,6 +18,48 @@ class StudentController extends Controller
         $this->academicYearService = $academicYearService;
     }
 
+    /**
+     * Calcola i campi privacy/retention da persistere su student_years,
+     * preservando data e versione del consenso già registrati (GDPR: testo + flag + data).
+     */
+    private function consentAndRetentionFields(array $validated, ?StudentYear $existing): array
+    {
+        $privacy = (bool) ($validated['privacy_consent'] ?? false);
+        $photo = (bool) ($validated['photo_consent'] ?? false);
+        $status = $validated['status'] ?? null;
+
+        // Data consenso: la fissa al primo "sì", la azzera se revocato, la preserva altrimenti.
+        $privacyAt = $privacy
+            ? ($existing?->privacy_consent_at ?? now())
+            : null;
+        $photoAt = $photo
+            ? ($existing?->photo_consent_at ?? now())
+            : null;
+
+        // Versione informativa accettata: registrata insieme al consenso privacy.
+        $policyVersion = $privacy
+            ? ($existing?->privacy_policy_version ?? config('privacy.policy_version'))
+            : null;
+
+        // Data di ritiro: base per la retention. Fissata al passaggio a "withdrawn",
+        // azzerata se lo studente torna attivo.
+        $withdrawnAt = $existing?->withdrawn_at;
+        if ($status === 'withdrawn') {
+            $withdrawnAt = $withdrawnAt ?? now()->toDateString();
+        } else {
+            $withdrawnAt = null;
+        }
+
+        return [
+            'privacy_consent' => $privacy,
+            'privacy_consent_at' => $privacyAt,
+            'privacy_policy_version' => $policyVersion,
+            'photo_consent' => $photo,
+            'photo_consent_at' => $photoAt,
+            'withdrawn_at' => $withdrawnAt,
+        ];
+    }
+
     public function index(Request $request)
     {
         $currentYear = $this->academicYearService->getCurrent();
@@ -108,12 +150,16 @@ class StudentController extends Controller
             'tax_code' => $validated['tax_code'] ?? null,
         ]);
 
+        $existingYear = StudentYear::where('student_id', $student->id)
+            ->where('academic_year_id', $validated['academic_year_id'])
+            ->first();
+
         StudentYear::updateOrCreate(
             [
                 'student_id' => $student->id,
                 'academic_year_id' => $validated['academic_year_id'],
             ],
-            [
+            array_merge([
                 'code' => $validated['code'] ?? null,
                 'status' => $validated['status'],
                 'school_origin' => $validated['school_origin'] ?? null,
@@ -121,10 +167,8 @@ class StudentController extends Controller
                 'preferences' => $validated['preferences'] ?? null,
                 'notes' => $validated['notes'] ?? null,
                 'admin_notes' => $validated['admin_notes'] ?? null,
-                'privacy_consent' => (bool) ($validated['privacy_consent'] ?? false),
-                'photo_consent' => (bool) ($validated['photo_consent'] ?? false),
                 'last_contact_date' => $validated['last_contact_date'] ?? null,
-            ]
+            ], $this->consentAndRetentionFields($validated, $existingYear))
         );
 
         return redirect()->route('admin.students.index')
@@ -215,12 +259,16 @@ class StudentController extends Controller
         ]);
 
         if ($validated['academic_year_id']) {
+            $existingYear = StudentYear::where('student_id', $student->id)
+                ->where('academic_year_id', $validated['academic_year_id'])
+                ->first();
+
             StudentYear::updateOrCreate(
                 [
                     'student_id' => $student->id,
                     'academic_year_id' => $validated['academic_year_id'],
                 ],
-                [
+                array_merge([
                     'code' => $validated['code'] ?? null,
                     'status' => $validated['status'],
                     'school_origin' => $validated['school_origin'] ?? null,
@@ -228,10 +276,8 @@ class StudentController extends Controller
                     'preferences' => $validated['preferences'] ?? null,
                     'notes' => $validated['notes'] ?? null,
                     'admin_notes' => $validated['admin_notes'] ?? null,
-                    'privacy_consent' => (bool) ($validated['privacy_consent'] ?? false),
-                    'photo_consent' => (bool) ($validated['photo_consent'] ?? false),
                     'last_contact_date' => $validated['last_contact_date'] ?? null,
-                ]
+                ], $this->consentAndRetentionFields($validated, $existingYear))
             );
         }
 
