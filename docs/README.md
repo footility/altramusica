@@ -27,6 +27,7 @@ ed è aderente ai dati presenti in `docs/materiale cliente/`.
 - `23_UX_ARCHIVIO_DOCUMENTI_RICERCA_RAPIDA.md` (R10 · Design UX — archivio documenti con ricerca rapida)
 - `24_R10_CONTROLLO_FINALE_VALIDAZIONE_DOCUMENTI.md` (R10 · Controllo finale — validazione E2E documenti/modelli)
 - `25_UX_VISTA_CONTABILITA_PER_STUDENTE.md` (R4 · Design UX — vista contabilità per studente)
+- `26_UX_GENERATORE_CALENDARIO_E_RECUPERI.md` (R7 · Design UX — generatore calendario a cicli + recuperi/spostamenti)
 
 ## Allegati sorgenti
 
