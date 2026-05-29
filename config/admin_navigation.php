@@ -54,9 +54,9 @@ return [
         'patterns' => ['admin.contracts.*', 'admin.invoices.*', 'admin.payment-plans.*', 'admin.accounting.*', 'admin.documents.*'],
         'items' => [
             ['label' => 'Contratti', 'icon' => 'bi-file-earmark-text', 'route' => 'admin.contracts.index', 'patterns' => ['admin.contracts.*']],
-            ['label' => 'Fatture', 'icon' => 'bi-receipt', 'route' => 'admin.invoices.index', 'patterns' => ['admin.invoices.*']],
-            ['label' => 'Scadenzario rate', 'icon' => 'bi-calendar-check', 'route' => 'admin.payment-plans.index', 'patterns' => ['admin.payment-plans.*']],
-            ['label' => 'Crediti/Debiti', 'icon' => 'bi-cash-coin', 'route' => 'admin.accounting.balances', 'patterns' => ['admin.accounting.*']],
+            ['label' => 'Fatture', 'icon' => 'bi-receipt', 'route' => 'admin.invoices.index', 'patterns' => ['admin.invoices.*'], 'permission' => 'invoices.view'],
+            ['label' => 'Scadenzario rate', 'icon' => 'bi-calendar-check', 'route' => 'admin.payment-plans.index', 'patterns' => ['admin.payment-plans.*'], 'permission' => 'payment-plans.view'],
+            ['label' => 'Crediti/Debiti', 'icon' => 'bi-cash-coin', 'route' => 'admin.accounting.balances', 'patterns' => ['admin.accounting.*'], 'permission' => 'accounting.view'],
             ['label' => 'Documenti', 'icon' => 'bi-folder2-open', 'route' => 'admin.documents.index', 'patterns' => ['admin.documents.*']],
         ],
     ],
@@ -76,9 +76,11 @@ return [
         'label' => 'Configurazione',
         'icon' => 'bi-gear',
         'home_route' => 'admin.acl.index',
-        'patterns' => ['admin.acl.*'],
+        'patterns' => ['admin.acl.*', 'admin.login-logs.*'],
+        'permission' => 'acl.view',
         'items' => [
-            ['label' => 'Ruoli e permessi', 'icon' => 'bi-shield-lock', 'route' => 'admin.acl.index', 'patterns' => ['admin.acl.*']],
+            ['label' => 'Ruoli e permessi', 'icon' => 'bi-shield-lock', 'route' => 'admin.acl.index', 'patterns' => ['admin.acl.*'], 'permission' => 'acl.view'],
+            ['label' => 'Log accessi', 'icon' => 'bi-clock-history', 'route' => 'admin.login-logs.index', 'patterns' => ['admin.login-logs.*'], 'permission' => 'acl.view'],
         ],
     ],
 ];

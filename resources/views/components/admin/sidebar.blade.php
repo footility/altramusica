@@ -17,6 +17,7 @@
     <div class="admin-sidebar__content">
         <ul class="nav nav-pills flex-column gap-1">
             @foreach($activeArea['items'] as $item)
+                @continue(!empty($item['permission']) && !auth()->user()->can($item['permission']))
                 @php
                     $isActive = collect($item['patterns'])->contains(fn (string $pattern) => request()->routeIs($pattern));
                 @endphp

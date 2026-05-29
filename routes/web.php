@@ -45,12 +45,15 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::resource('teachers', \App\Http\Controllers\Admin\TeacherController::class);
     Route::resource('courses', \App\Http\Controllers\Admin\CourseController::class);
     Route::resource('enrollments', \App\Http\Controllers\Admin\EnrollmentController::class);
-    Route::resource('invoices', \App\Http\Controllers\Admin\InvoiceController::class);
-    Route::post('invoices/{invoice}/payment-plan', [\App\Http\Controllers\Admin\InvoiceController::class, 'createPaymentPlan'])->name('invoices.payment-plan');
-    Route::post('invoices/{invoice}/payment', [\App\Http\Controllers\Admin\InvoiceController::class, 'recordPayment'])->name('invoices.payment');
-    Route::get('payment-plans', [\App\Http\Controllers\Admin\PaymentPlanController::class, 'index'])->name('payment-plans.index');
-    Route::get('accounting/balances', [\App\Http\Controllers\Admin\AccountingReportController::class, 'balances'])->name('accounting.balances');
-    Route::post('contracts/{contract}/create-invoice', [\App\Http\Controllers\Admin\InvoiceController::class, 'createFromContract'])->name('contracts.create-invoice');
+    // Contabilità — riservata a chi ha i permessi (la segreteria ne è esclusa).
+    Route::middleware('permission:invoices.view')->group(function () {
+        Route::resource('invoices', \App\Http\Controllers\Admin\InvoiceController::class);
+        Route::post('invoices/{invoice}/payment-plan', [\App\Http\Controllers\Admin\InvoiceController::class, 'createPaymentPlan'])->name('invoices.payment-plan');
+        Route::post('invoices/{invoice}/payment', [\App\Http\Controllers\Admin\InvoiceController::class, 'recordPayment'])->name('invoices.payment');
+        Route::post('contracts/{contract}/create-invoice', [\App\Http\Controllers\Admin\InvoiceController::class, 'createFromContract'])->name('contracts.create-invoice');
+    });
+    Route::get('payment-plans', [\App\Http\Controllers\Admin\PaymentPlanController::class, 'index'])->middleware('permission:payment-plans.view')->name('payment-plans.index');
+    Route::get('accounting/balances', [\App\Http\Controllers\Admin\AccountingReportController::class, 'balances'])->middleware('permission:accounting.view')->name('accounting.balances');
     Route::resource('instruments', \App\Http\Controllers\Admin\InstrumentController::class);
     Route::resource('contracts', \App\Http\Controllers\Admin\ContractController::class);
     Route::post('contracts/{contract}/send', [\App\Http\Controllers\Admin\ContractController::class, 'send'])->name('contracts.send');
@@ -59,10 +62,15 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     // NOTE (Fase 1): rimosso extra-activities (evolutivo, non AS-IS).
     Route::resource('classrooms', \App\Http\Controllers\Admin\ClassroomController::class);
 
-    // ACL — griglia ruoli/permessi configurabile dall'amministratore
-    Route::get('acl', [\App\Http\Controllers\Admin\AclController::class, 'index'])->name('acl.index');
-    Route::put('acl/{role}', [\App\Http\Controllers\Admin\AclController::class, 'update'])->name('acl.update');
-    Route::post('acl/roles', [\App\Http\Controllers\Admin\AclController::class, 'storeRole'])->name('acl.roles.store');
+    // ACL — griglia ruoli/permessi configurabile dall'amministratore (solo chi gestisce ACL)
+    Route::middleware('permission:acl.view')->group(function () {
+        Route::get('acl', [\App\Http\Controllers\Admin\AclController::class, 'index'])->name('acl.index');
+        Route::put('acl/{role}', [\App\Http\Controllers\Admin\AclController::class, 'update'])->name('acl.update');
+        Route::post('acl/roles', [\App\Http\Controllers\Admin\AclController::class, 'storeRole'])->name('acl.roles.store');
+
+        // Log accessi minimo
+        Route::get('login-logs', [\App\Http\Controllers\Admin\LoginLogController::class, 'index'])->name('login-logs.index');
+    });
 
     // AS-IS missing CRUDs (Fase 1)
     Route::resource('books', \App\Http\Controllers\Admin\BookController::class);

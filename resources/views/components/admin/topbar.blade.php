@@ -13,6 +13,7 @@
 
     <nav class="admin-areas" aria-label="Aree principali">
         @foreach($areas as $area)
+            @continue(!empty($area['permission']) && !auth()->user()->can($area['permission']))
             @php
                 $isActive = collect($area['patterns'])->contains(fn (string $pattern) => request()->routeIs($pattern));
             @endphp

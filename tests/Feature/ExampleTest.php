@@ -8,12 +8,12 @@ use Tests\TestCase;
 class ExampleTest extends TestCase
 {
     /**
-     * A basic test example.
+     * La home reindirizza alla dashboard admin; un ospite finisce sul login.
      */
-    public function test_the_application_returns_a_successful_response(): void
+    public function test_the_application_redirects_guests_to_login(): void
     {
-        $response = $this->get('/');
+        $this->get('/')->assertRedirect(route('admin.dashboard'));
 
-        $response->assertStatus(200);
+        $this->get('/admin/dashboard')->assertRedirect(route('login'));
     }
 }
