@@ -36,6 +36,7 @@ ed è aderente ai dati presenti in `docs/materiale cliente/`.
 - `32_UX_REGISTRO_PRESENZE_E_MOTORE_COMPENSI.md` (R8 · Design UX — registro presenze a tap + motore compensi configurabile soci/non-soci/forfait, tariffe DA CONFERMARE, consuntivo mensile)
 - `33_R8_CONTROLLO_FINALE_VALIDAZIONE_REGISTRO_COMPENSI.md` (R8 · Controllo finale — validazione substrato + flussi presenze/compenso/override; BLOCCO implementazione documentato)
 - `34_UX_COMUNICAZIONI_MIRATE_E_LOG.md` (R9 · Design UX — comunicazioni mirate: composer + segmento corso/anno/stato, email SMTP reale, SMS/WhatsApp in bozza con copia, log invii per tracciabilità)
+- `35_R9_CONTROLLO_FINALE_VALIDAZIONE_COMUNICAZIONI.md` (R9 · Controllo finale — validazione flussi segmentazione/consenso/dedup/email reale/bozza SMS-WhatsApp/log; BLOCCO implementazione documentato)
 
 ## Allegati sorgenti
 
