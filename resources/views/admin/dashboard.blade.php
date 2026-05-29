@@ -16,6 +16,39 @@
         <p class="text-muted">{{ $currentYear->start_date->format('d/m/Y') }} - {{ $currentYear->end_date->format('d/m/Y') }}</p>
     </div>
 
+    {{-- Alert anagrafiche incomplete --}}
+    @if($incompleteCount > 0)
+        <div class="alert alert-warning d-flex justify-content-between align-items-center">
+            <div>
+                <i class="bi bi-exclamation-triangle"></i>
+                <strong>{{ $incompleteCount }}</strong> anagrafic{{ $incompleteCount == 1 ? 'a incompleta' : 'he incomplete' }}
+                (codice fiscale, data di nascita o genitore/tutore mancante).
+            </div>
+            <button class="btn btn-sm btn-outline-dark" type="button" data-bs-toggle="collapse" data-bs-target="#incompleteList">
+                Mostra
+            </button>
+        </div>
+        <div class="collapse mb-3" id="incompleteList">
+            <div class="card card-body">
+                <ul class="list-unstyled mb-0">
+                    @foreach($incompleteStudents->take(20) as $student)
+                        <li class="mb-1">
+                            <a href="{{ route('admin.students.show', $student) }}">{{ $student->full_name }}</a>
+                            <small class="text-muted">
+                                @if(empty($student->tax_code)) · CF mancante @endif
+                                @if(empty($student->birth_date)) · data nascita mancante @endif
+                                @if($student->guardians->isEmpty()) · nessun genitore/tutore @endif
+                            </small>
+                        </li>
+                    @endforeach
+                </ul>
+                @if($incompleteCount > 20)
+                    <small class="text-muted mt-2">… e altri {{ $incompleteCount - 20 }}.</small>
+                @endif
+            </div>
+        </div>
+    @endif
+
     <div class="row mb-4">
         <!-- Studenti -->
         <div class="col-md-3">
@@ -24,7 +57,7 @@
                     <h5 class="card-title">Studenti</h5>
                     <h2>{{ $stats['students']['total'] }}</h2>
                     <small>
-                        Iscritti: {{ $stats['students']['enrolled'] }} | 
+                        Iscritti: {{ $stats['students']['enrolled'] }} |
                         Interessati: {{ $stats['students']['interested'] }}
                     </small>
                 </div>
@@ -42,33 +75,131 @@
             </div>
         </div>
 
-        <!-- Contratti -->
+        <!-- Lezioni della settimana -->
+        <div class="col-md-3">
+            <div class="card text-white bg-secondary">
+                <div class="card-body">
+                    <h5 class="card-title">Lezioni settimana</h5>
+                    <h2>{{ $weekLessonsCount }}</h2>
+                    <small>
+                        <a href="{{ route('admin.lessons.calendar') }}" class="text-white text-decoration-underline">Vai al calendario</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+
+        @can('invoices.view')
+        <!-- Fatture aperte -->
+        <div class="col-md-3">
+            <div class="card text-white bg-warning">
+                <div class="card-body">
+                    <h5 class="card-title">Fatture aperte</h5>
+                    <h2>{{ $stats['invoices']['pending'] }}</h2>
+                    <small>
+                        Pagate: {{ $stats['invoices']['paid'] }} | Totale: {{ $stats['invoices']['total'] }}
+                    </small>
+                    <div class="mt-2">
+                        <strong>Importo: € {{ number_format($stats['invoices']['total_amount'], 2, ',', '.') }}</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @else
+        <!-- Contratti (alternativa quando non si ha accesso alla contabilità) -->
         <div class="col-md-3">
             <div class="card text-white bg-info">
                 <div class="card-body">
                     <h5 class="card-title">Contratti</h5>
                     <h2>{{ $stats['contracts']['total'] }}</h2>
                     <small>
-                        Firmati: {{ $stats['contracts']['signed'] }} | 
+                        Firmati: {{ $stats['contracts']['signed'] }} |
                         In attesa: {{ $stats['contracts']['pending'] }}
                     </small>
                 </div>
             </div>
         </div>
+        @endcan
+    </div>
 
-        <!-- Fatture -->
-        <div class="col-md-3">
-            <div class="card text-white bg-warning">
+    <div class="row">
+        {{-- Prossime scadenze (solo contabilità) --}}
+        @can('invoices.view')
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Prossime scadenze (7 giorni)</h5>
+                    @if($overdueCount > 0)
+                        <span class="badge bg-danger">{{ $overdueCount }} scadut{{ $overdueCount == 1 ? 'a' : 'e' }}</span>
+                    @endif
+                </div>
                 <div class="card-body">
-                    <h5 class="card-title">Fatture</h5>
-                    <h2>{{ $stats['invoices']['total'] }}</h2>
-                    <small>
-                        Pagate: {{ $stats['invoices']['paid'] }} | 
-                        In attesa: {{ $stats['invoices']['pending'] }}
-                    </small>
-                    <div class="mt-2">
-                        <strong>Totale: € {{ number_format($stats['invoices']['total_amount'], 2, ',', '.') }}</strong>
-                    </div>
+                    @if($dueSoon->isEmpty())
+                        <p class="text-muted mb-0">Nessuna rata in scadenza nei prossimi 7 giorni.</p>
+                    @else
+                        <table class="table table-sm mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Scadenza</th>
+                                    <th>Studente</th>
+                                    <th class="text-end">Importo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($dueSoon as $plan)
+                                    <tr>
+                                        <td>{{ $plan->due_date->format('d/m/Y') }}</td>
+                                        <td>
+                                            @if($plan->invoice && $plan->invoice->student)
+                                                <a href="{{ route('admin.invoices.show', $plan->invoice) }}">{{ $plan->invoice->student->full_name }}</a>
+                                            @else
+                                                <span class="text-muted">—</span>
+                                            @endif
+                                        </td>
+                                        <td class="text-end">€ {{ number_format($plan->amount, 2, ',', '.') }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    @endif
+                </div>
+            </div>
+        </div>
+        @endcan
+
+        {{-- Lezioni della settimana --}}
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Lezioni della settimana</h5>
+                </div>
+                <div class="card-body">
+                    @if($weekLessons->isEmpty())
+                        <p class="text-muted mb-0">Nessuna lezione pianificata questa settimana.</p>
+                    @else
+                        <table class="table table-sm mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Giorno</th>
+                                    <th>Ora</th>
+                                    <th>Corso</th>
+                                    <th>Docente</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($weekLessons->take(15) as $lesson)
+                                    <tr>
+                                        <td>{{ $lesson->date->format('d/m') }}</td>
+                                        <td>{{ \Illuminate\Support\Str::of($lesson->time_start)->substr(0, 5) }}</td>
+                                        <td>{{ optional($lesson->courseOffering->course ?? null)->name ?? '—' }}</td>
+                                        <td>{{ optional($lesson->teacher)->full_name ?? '—' }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                        @if($weekLessonsCount > 15)
+                            <small class="text-muted">… e altre {{ $weekLessonsCount - 15 }} lezioni.</small>
+                        @endif
+                    @endif
                 </div>
             </div>
         </div>
@@ -91,9 +222,11 @@
                         <a href="{{ route('admin.contracts.create') }}" class="btn btn-info">
                             <i class="bi bi-file-earmark-plus"></i> Nuovo Contratto
                         </a>
+                        @can('invoices.view')
                         <a href="{{ route('admin.invoices.create') }}" class="btn btn-warning">
                             <i class="bi bi-receipt-cutoff"></i> Nuova Fattura
                         </a>
+                        @endcan
                     </div>
                 </div>
             </div>
