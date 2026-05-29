@@ -37,6 +37,7 @@ ed è aderente ai dati presenti in `docs/materiale cliente/`.
 - `33_R8_CONTROLLO_FINALE_VALIDAZIONE_REGISTRO_COMPENSI.md` (R8 · Controllo finale — validazione substrato + flussi presenze/compenso/override; BLOCCO implementazione documentato)
 - `34_UX_COMUNICAZIONI_MIRATE_E_LOG.md` (R9 · Design UX — comunicazioni mirate: composer + segmento corso/anno/stato, email SMTP reale, SMS/WhatsApp in bozza con copia, log invii per tracciabilità)
 - `35_R9_CONTROLLO_FINALE_VALIDAZIONE_COMUNICAZIONI.md` (R9 · Controllo finale — validazione flussi segmentazione/consenso/dedup/email reale/bozza SMS-WhatsApp/log; BLOCCO implementazione documentato)
+- `36_UX_RICONCILIAZIONE_MANUALE_E_IMPORT_CSV.md` (R5 · Design UX — riconciliazione manuale: import CSV estratto conto con dry-run/anomalie, schermata di match estratto conto↔scadenze con drag/click, parziali e storni gestiti come eventi reversibili)
 
 ## Allegati sorgenti
 
