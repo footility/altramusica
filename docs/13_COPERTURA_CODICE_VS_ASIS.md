@@ -97,8 +97,9 @@ Questo documento serve come **mappa 1:1** tra le 12 sezioni AS‑IS (`docs/01..1
 - **Presente**
   - `StudentAvailability` + UI admin
   - Import ODS: `app/Services/OdsImportService.php`, comando `php artisan ods:import`
+  - Hardening import (#8428): matching header alias-based (tollerante a export Google Form), gestione casi sporchi (omonimi, CF mancanti/malformati/duplicati, note miste a dati, email/date non valide), **dry-run** reale e **report anomalie** dettagliato per riga (`--dry-run`, `--report=path.json`). Test: `tests/Feature/OdsImportServiceTest.php`.
 - **Gap**
-  - Rifiniture sull’import XLSX (reportistica e casi sporchi) se emergono nuove casistiche.
+  - Strumenti di merge guidato per omonimi/CF duplicati (vedi F2-09): oggi rilevati e segnalati, risoluzione manuale.
 
 ## A11 — Statistiche Storiche
 
