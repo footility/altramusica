@@ -25,6 +25,7 @@ ed è aderente ai dati presenti in `docs/materiale cliente/`.
 - `20_UX_FLUSSO_ANAGRAFICHE_E_FAMIGLIE.md` (R1 · Design UX — anagrafiche e famiglie)
 - `21_UX_FLUSSO_CORSI_ISCRIZIONI_RINNOVI.md` (R2 · Design UX — corsi, iscrizioni, rinnovi)
 - `23_UX_ARCHIVIO_DOCUMENTI_RICERCA_RAPIDA.md` (R10 · Design UX — archivio documenti con ricerca rapida)
+- `24_R10_CONTROLLO_FINALE_VALIDAZIONE_DOCUMENTI.md` (R10 · Controllo finale — validazione E2E documenti/modelli)
 
 ## Allegati sorgenti
 
