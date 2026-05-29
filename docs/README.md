@@ -23,6 +23,7 @@ ed è aderente ai dati presenti in `docs/materiale cliente/`.
 - `14_FASE2_OTTIMIZZAZIONI_E_ALLEGGERIMENTO_OPERATIVO.md`
 - `15_ATTIVITA_FASE2_FOOTILITY.md`
 - `20_UX_FLUSSO_ANAGRAFICHE_E_FAMIGLIE.md` (R1 · Design UX — anagrafiche e famiglie)
+- `21_UX_FLUSSO_CORSI_ISCRIZIONI_RINNOVI.md` (R2 · Design UX — corsi, iscrizioni, rinnovi)
 
 ## Allegati sorgenti
 
