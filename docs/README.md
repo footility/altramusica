@@ -29,6 +29,7 @@ ed è aderente ai dati presenti in `docs/materiale cliente/`.
 - `25_UX_VISTA_CONTABILITA_PER_STUDENTE.md` (R4 · Design UX — vista contabilità per studente)
 - `26_UX_GENERATORE_CALENDARIO_E_RECUPERI.md` (R7 · Design UX — generatore calendario a cicli + recuperi/spostamenti)
 - `27_R7_CONTROLLO_FINALE_VALIDAZIONE_CALENDARIO.md` (R7 · Controllo finale — validazione E2E calendario/recuperi)
+- `28_UX_MATERIALI_NOLEGGI_LIBRI_ESAMI.md` (R6 · Design UX — materiali, noleggi, libri ed esami: vista unificata + cauzioni con stato + catalogo libri pulito)
 
 ## Allegati sorgenti
 
