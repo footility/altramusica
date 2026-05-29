@@ -35,6 +35,7 @@ ed è aderente ai dati presenti in `docs/materiale cliente/`.
 - `31_R3_CONTROLLO_FINALE_VALIDAZIONE_CONTRATTI.md` (R3 · Controllo finale — validazione E2E contratti + firma mock)
 - `32_UX_REGISTRO_PRESENZE_E_MOTORE_COMPENSI.md` (R8 · Design UX — registro presenze a tap + motore compensi configurabile soci/non-soci/forfait, tariffe DA CONFERMARE, consuntivo mensile)
 - `33_R8_CONTROLLO_FINALE_VALIDAZIONE_REGISTRO_COMPENSI.md` (R8 · Controllo finale — validazione substrato + flussi presenze/compenso/override; BLOCCO implementazione documentato)
+- `34_UX_COMUNICAZIONI_MIRATE_E_LOG.md` (R9 · Design UX — comunicazioni mirate: composer + segmento corso/anno/stato, email SMTP reale, SMS/WhatsApp in bozza con copia, log invii per tracciabilità)
 
 ## Allegati sorgenti
 
