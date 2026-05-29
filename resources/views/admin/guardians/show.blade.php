@@ -22,7 +22,7 @@
                     <dd class="col-sm-9">{{ $guardian->tax_code ?? '-' }}</dd>
 
                     <dt class="col-sm-3">Relazione:</dt>
-                    <dd class="col-sm-9">{{ ucfirst($guardian->relationship ?? '-') }}</dd>
+                    <dd class="col-sm-9">{{ $guardian->relationship_label }}</dd>
 
                     <dt class="col-sm-3">Email:</dt>
                     <dd class="col-sm-9">{{ $guardian->email_1 ?? '-' }}</dd>

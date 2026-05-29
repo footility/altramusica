@@ -45,6 +45,16 @@ class Guardian extends Model
     // NOTE (Fase 1): rimosse relazioni verso moduli extra non AS-IS (comunicazioni).
 
     // Accessors
+    public function getRelationshipLabelAttribute()
+    {
+        return [
+            'mother' => 'Madre',
+            'father' => 'Padre',
+            'guardian' => 'Tutore',
+            'other' => 'Altro',
+        ][$this->relationship] ?? '-';
+    }
+
     public function getFullNameAttribute()
     {
         return "{$this->first_name} {$this->last_name}";

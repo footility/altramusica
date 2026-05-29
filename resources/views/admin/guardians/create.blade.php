@@ -42,9 +42,9 @@
                         label="Relazione" 
                         type="select"
                         :options="[
-                            'madre' => 'Madre',
-                            'padre' => 'Padre',
-                            'tutore' => 'Tutore',
+                            'mother' => 'Madre',
+                            'father' => 'Padre',
+                            'guardian' => 'Tutore',
                             'other' => 'Altro',
                         ]"
                         value="{{ old('relationship') }}"

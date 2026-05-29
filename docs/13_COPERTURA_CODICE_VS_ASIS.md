@@ -24,8 +24,8 @@ Questo documento serve come **mappa 1:1** tra le 12 sezioni AS‑IS (`docs/01..1
   - Model: `app/Models/Guardian.php` + pivot `student_guardian`
   - Controller: `app/Http/Controllers/Admin/GuardianController.php`
   - Views: `resources/views/admin/guardians/*`
-- **Gap**
-  - Pivot: in `GuardianController@update` usa `sync($studentIds)` ma perde i pivot fields (`relationship_type`, `is_primary`, `is_billing_contact`) → va gestito.
+- **Risolto** (2026-05-29)
+  - Pivot: `GuardianController@update`/`@store` ora usano `syncStudents()` che preserva i pivot fields esistenti (`relationship_type`, `is_primary`, `is_billing_contact`) e valorizza quelli nuovi (un solo primary/billing per genitore). Allineati `relationship` (enum EN `mother/father/guardian/other`) tra validazione, blade (label IT) e DB; accessor `relationship_label` per la visualizzazione. Test: `tests/Feature/GuardianStudentPivotTest.php` (caso 2 figli/1 genitore incluso).
 
 ## A03 — Corsi e Iscrizioni
 

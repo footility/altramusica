@@ -43,7 +43,7 @@ class GuardianController extends Controller
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'tax_code' => 'nullable|string|max:16',
-            'relationship' => 'nullable|in:madre,padre,tutore,other',
+            'relationship' => 'nullable|in:mother,father,guardian,other',
             'phone_home' => 'nullable|string|max:20',
             'phone_work' => 'nullable|string|max:20',
             'cell_1' => 'nullable|string|max:20',
@@ -67,15 +67,7 @@ class GuardianController extends Controller
 
         $guardian = Guardian::create($validated);
 
-        if (!empty($studentIds)) {
-            foreach ($studentIds as $index => $studentId) {
-                $guardian->students()->attach($studentId, [
-                    'relationship_type' => $validated['relationship'] ?? 'other',
-                    'is_primary' => $index === 0,
-                    'is_billing_contact' => $index === 0,
-                ]);
-            }
-        }
+        $this->syncStudents($guardian, $studentIds);
 
         return redirect()->route('admin.guardians.index')
             ->with('success', 'Genitore/Tutore creato con successo.');
@@ -100,7 +92,7 @@ class GuardianController extends Controller
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'tax_code' => 'nullable|string|max:16',
-            'relationship' => 'nullable|in:madre,padre,tutore,other',
+            'relationship' => 'nullable|in:mother,father,guardian,other',
             'phone_home' => 'nullable|string|max:20',
             'phone_work' => 'nullable|string|max:20',
             'cell_1' => 'nullable|string|max:20',
@@ -124,12 +116,73 @@ class GuardianController extends Controller
 
         $guardian->update($validated);
 
-        if (isset($studentIds)) {
-            $guardian->students()->sync($studentIds);
-        }
+        $this->syncStudents($guardian, $studentIds);
 
         return redirect()->route('admin.guardians.index')
             ->with('success', 'Genitore/Tutore aggiornato con successo.');
+    }
+
+    /**
+     * Sincronizza gli studenti associati preservando i campi del pivot
+     * (relationship_type, is_primary, is_billing_contact).
+     *
+     * sync() con una semplice lista di ID non valorizza i pivot fields sulle
+     * nuove associazioni: qui costruiamo un array associativo id => pivot in cui
+     * le associazioni esistenti mantengono i loro valori e quelle nuove ricevono
+     * default sensati (un solo primary / billing contact per genitore).
+     */
+    private function syncStudents(Guardian $guardian, array $studentIds): void
+    {
+        $existing = $guardian->students()->get()->keyBy('id');
+
+        $defaultRelationship = $this->mapRelationshipType($guardian->relationship);
+        $hasPrimary = $existing->contains(fn ($student) => (bool) $student->pivot->is_primary);
+
+        $syncData = [];
+
+        foreach (array_values($studentIds) as $studentId) {
+            $studentId = (int) $studentId;
+
+            if ($existing->has($studentId)) {
+                // Preserva i pivot fields del rapporto già esistente.
+                $pivot = $existing[$studentId]->pivot;
+                $syncData[$studentId] = [
+                    'relationship_type' => $pivot->relationship_type,
+                    'is_primary' => (bool) $pivot->is_primary,
+                    'is_billing_contact' => (bool) $pivot->is_billing_contact,
+                ];
+
+                continue;
+            }
+
+            // Nuova associazione: primo/unico studente senza primary diventa
+            // contatto principale e di fatturazione.
+            $makePrimary = ! $hasPrimary;
+
+            $syncData[$studentId] = [
+                'relationship_type' => $defaultRelationship,
+                'is_primary' => $makePrimary,
+                'is_billing_contact' => $makePrimary,
+            ];
+
+            if ($makePrimary) {
+                $hasPrimary = true;
+            }
+        }
+
+        $guardian->students()->sync($syncData);
+    }
+
+    /**
+     * Normalizza la relazione sull'enum del pivot (mother/father/guardian/other).
+     * Guardian.relationship e student_guardian.relationship_type condividono lo
+     * stesso enum, quindi il valore viene riusato così com'è.
+     */
+    private function mapRelationshipType(?string $relationship): string
+    {
+        return in_array($relationship, ['mother', 'father', 'guardian'], true)
+            ? $relationship
+            : 'other';
     }
 
     public function destroy(Guardian $guardian)
