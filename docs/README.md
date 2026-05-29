@@ -31,6 +31,7 @@ ed è aderente ai dati presenti in `docs/materiale cliente/`.
 - `27_R7_CONTROLLO_FINALE_VALIDAZIONE_CALENDARIO.md` (R7 · Controllo finale — validazione E2E calendario/recuperi)
 - `28_UX_MATERIALI_NOLEGGI_LIBRI_ESAMI.md` (R6 · Design UX — materiali, noleggi, libri ed esami: vista unificata + cauzioni con stato + catalogo libri pulito)
 - `29_R6_CONTROLLO_FINALE_VALIDAZIONE_MATERIALI.md` (R6 · Controllo finale — validazione E2E materiali/noleggi/libri/esami)
+- `30_UX_FLUSSO_CONTRATTO_E_FIRMA.md` (R3 · Design UX — flusso contratto: timeline proposta→inviato→firmato + firma mock con upload scansione, innesto webhook firma digitale)
 
 ## Allegati sorgenti
 
