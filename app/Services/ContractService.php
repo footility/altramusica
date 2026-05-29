@@ -57,13 +57,17 @@ class ContractService
     }
 
     /**
-     * Firma contratto (cambia stato a signed)
+     * Firma contratto (cambia stato a signed).
+     *
+     * La firma mock (R3, doc 30 §5) registra la data che compare sulla copia
+     * cartacea firmata, che può essere diversa da oggi. Per questo accetta una
+     * $signedDate opzionale; in assenza usa now() (comportamento storico).
      */
-    public function signContract(Contract $contract): Contract
+    public function signContract(Contract $contract, $signedDate = null): Contract
     {
         $contract->update([
             'status' => 'signed',
-            'signed_date' => now(),
+            'signed_date' => $signedDate ?? now(),
         ]);
 
         return $contract;

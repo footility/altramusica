@@ -90,12 +90,12 @@ class ContractController extends Controller
             'notes' => 'nullable|string',
         ]);
 
-        if (!$validated['academic_year_id']) {
+        if (empty($validated['academic_year_id'])) {
             $currentYear = $this->academicYearService->getCurrent();
             $validated['academic_year_id'] = $currentYear?->id;
         }
 
-        if (!$validated['contract_number']) {
+        if (empty($validated['contract_number'])) {
             $validated['contract_number'] = $this->contractService->generateContractNumber();
         }
 
