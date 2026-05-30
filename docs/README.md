@@ -38,6 +38,8 @@ ed è aderente ai dati presenti in `docs/materiale cliente/`.
 - `34_UX_COMUNICAZIONI_MIRATE_E_LOG.md` (R9 · Design UX — comunicazioni mirate: composer + segmento corso/anno/stato, email SMTP reale, SMS/WhatsApp in bozza con copia, log invii per tracciabilità)
 - `35_R9_CONTROLLO_FINALE_VALIDAZIONE_COMUNICAZIONI.md` (R9 · Controllo finale — validazione flussi segmentazione/consenso/dedup/email reale/bozza SMS-WhatsApp/log; BLOCCO implementazione documentato)
 - `36_UX_RICONCILIAZIONE_MANUALE_E_IMPORT_CSV.md` (R5 · Design UX — riconciliazione manuale: import CSV estratto conto con dry-run/anomalie, schermata di match estratto conto↔scadenze con drag/click, parziali e storni gestiti come eventi reversibili)
+- `37_UX_DASHBOARD_DIREZIONALE_E_BILANCIO_SOCIALE.md` (R11 · Design UX — dashboard direzionale: KPI iscritti/retention/cassa/entrate-uscite con delta anno-su-anno, serie storica multi-anno, cohort retention, flusso cassa con uscite parziali, export bilancio sociale CSV/PDF aggregato GDPR)
+- `38_R11_CONTROLLO_FINALE_VALIDAZIONE_DASHBOARD_DIREZIONALE.md` (R11 · Controllo finale — validazione flussi KPI/delta/retention cohort/serie storica/cassa parziale/maturato-incassato/export bilancio sociale; BLOCCO implementazione documentato)
 
 ## Allegati sorgenti
 
