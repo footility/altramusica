@@ -40,6 +40,7 @@ ed è aderente ai dati presenti in `docs/materiale cliente/`.
 - `36_UX_RICONCILIAZIONE_MANUALE_E_IMPORT_CSV.md` (R5 · Design UX — riconciliazione manuale: import CSV estratto conto con dry-run/anomalie, schermata di match estratto conto↔scadenze con drag/click, parziali e storni gestiti come eventi reversibili)
 - `37_UX_DASHBOARD_DIREZIONALE_E_BILANCIO_SOCIALE.md` (R11 · Design UX — dashboard direzionale: KPI iscritti/retention/cassa/entrate-uscite con delta anno-su-anno, serie storica multi-anno, cohort retention, flusso cassa con uscite parziali, export bilancio sociale CSV/PDF aggregato GDPR)
 - `38_R11_CONTROLLO_FINALE_VALIDAZIONE_DASHBOARD_DIREZIONALE.md` (R11 · Controllo finale — validazione flussi KPI/delta/retention cohort/serie storica/cassa parziale/maturato-incassato/export bilancio sociale; BLOCCO implementazione documentato)
+- `39_UX_PANNELLO_QUALITA_DATI_E_ANOMALIE.md` (R12 · Design UX — pannello qualità dati: duplicati/omonimi/campi critici mancanti/record orfani, azioni guidate non bloccanti (unisci con anteprima+log, completa col campo a fuoco, ricollega/archivia orfani), tabella eccezioni per falsi positivi, riuso del motore anomalie di `OdsImportService`)
 
 ## Allegati sorgenti
 
