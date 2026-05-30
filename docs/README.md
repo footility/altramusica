@@ -41,6 +41,7 @@ ed è aderente ai dati presenti in `docs/materiale cliente/`.
 - `37_UX_DASHBOARD_DIREZIONALE_E_BILANCIO_SOCIALE.md` (R11 · Design UX — dashboard direzionale: KPI iscritti/retention/cassa/entrate-uscite con delta anno-su-anno, serie storica multi-anno, cohort retention, flusso cassa con uscite parziali, export bilancio sociale CSV/PDF aggregato GDPR)
 - `38_R11_CONTROLLO_FINALE_VALIDAZIONE_DASHBOARD_DIREZIONALE.md` (R11 · Controllo finale — validazione flussi KPI/delta/retention cohort/serie storica/cassa parziale/maturato-incassato/export bilancio sociale; BLOCCO implementazione documentato)
 - `39_UX_PANNELLO_QUALITA_DATI_E_ANOMALIE.md` (R12 · Design UX — pannello qualità dati: duplicati/omonimi/campi critici mancanti/record orfani, azioni guidate non bloccanti (unisci con anteprima+log, completa col campo a fuoco, ricollega/archivia orfani), tabella eccezioni per falsi positivi, riuso del motore anomalie di `OdsImportService`)
+- `40_R12_CONTROLLO_FINALE_VALIDAZIONE_QUALITA_DATI_ANOMALIE.md` (R12 · Controllo finale — report anomalie su tutte le entità: validazione regole su dato vivo (duplicati CF/nome, omonimi, campi critici mancanti, orfani contratto-senza-iscrizione/fattura-senza-righe) + riuso motore `OdsImportService`; scoperte SoftDeletes/cascade; BLOCCO implementazione documentato)
 
 ## Allegati sorgenti
 
