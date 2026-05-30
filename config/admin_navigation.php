@@ -14,10 +14,11 @@ return [
         'label' => 'Persone',
         'icon' => 'bi-people',
         'home_route' => 'admin.students.index',
-        'patterns' => ['admin.students.*', 'admin.guardians.*', 'admin.teachers.*', 'admin.academic-years.*'],
+        'patterns' => ['admin.students.*', 'admin.guardians.*', 'admin.teachers.*', 'admin.academic-years.*', 'admin.family-requests.*'],
         'items' => [
             ['label' => 'Studenti', 'icon' => 'bi-people', 'route' => 'admin.students.index', 'patterns' => ['admin.students.*']],
             ['label' => 'Genitori/Tutori', 'icon' => 'bi-person-badge', 'route' => 'admin.guardians.index', 'patterns' => ['admin.guardians.*']],
+            ['label' => 'Richieste famiglie', 'icon' => 'bi-chat-left-dots', 'route' => 'admin.family-requests.index', 'patterns' => ['admin.family-requests.*']],
             ['label' => 'Docenti', 'icon' => 'bi-person-workspace', 'route' => 'admin.teachers.index', 'patterns' => ['admin.teachers.*']],
             ['label' => 'Anni scolastici', 'icon' => 'bi-calendar-range', 'route' => 'admin.academic-years.index', 'patterns' => ['admin.academic-years.*']],
         ],

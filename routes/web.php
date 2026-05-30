@@ -48,6 +48,11 @@ Route::middleware(['auth', 'block.family'])->prefix('admin')->name('admin.')->gr
     Route::resource('guardians', \App\Http\Controllers\Admin\GuardianController::class);
     // R13 — invito del tutore all'area famiglie (token monouso)
     Route::post('guardians/{guardian}/invite', [\App\Http\Controllers\Admin\GuardianInvitationController::class, 'store'])->name('guardians.invite');
+    // R13 (#8539) — canale richieste famiglia: inbox segreteria + thread + stati
+    Route::get('family-requests', [\App\Http\Controllers\Admin\FamilyRequestController::class, 'index'])->name('family-requests.index');
+    Route::get('family-requests/{familyRequest}', [\App\Http\Controllers\Admin\FamilyRequestController::class, 'show'])->name('family-requests.show');
+    Route::post('family-requests/{familyRequest}/reply', [\App\Http\Controllers\Admin\FamilyRequestController::class, 'reply'])->name('family-requests.reply');
+    Route::patch('family-requests/{familyRequest}/status', [\App\Http\Controllers\Admin\FamilyRequestController::class, 'updateStatus'])->name('family-requests.status');
     Route::resource('teachers', \App\Http\Controllers\Admin\TeacherController::class);
     Route::resource('courses', \App\Http\Controllers\Admin\CourseController::class);
     Route::resource('enrollments', \App\Http\Controllers\Admin\EnrollmentController::class);
@@ -109,5 +114,12 @@ Route::prefix('famiglia')->name('family.')->group(function () {
         Route::get('/', [\App\Http\Controllers\Family\DashboardController::class, 'index'])->name('dashboard');
         Route::get('studente/{student}', [\App\Http\Controllers\Family\DashboardController::class, 'student'])->name('student');
         Route::get('documenti/{document}/download', [\App\Http\Controllers\Family\DocumentController::class, 'download'])->name('document.download');
+
+        // R13 (#8539) — canale richieste/messaggi verso la segreteria.
+        Route::get('richieste', [\App\Http\Controllers\Family\FamilyRequestController::class, 'index'])->name('requests.index');
+        Route::get('richieste/nuova', [\App\Http\Controllers\Family\FamilyRequestController::class, 'create'])->name('requests.create');
+        Route::post('richieste', [\App\Http\Controllers\Family\FamilyRequestController::class, 'store'])->name('requests.store');
+        Route::get('richieste/{familyRequest}', [\App\Http\Controllers\Family\FamilyRequestController::class, 'show'])->name('requests.show');
+        Route::post('richieste/{familyRequest}/messaggi', [\App\Http\Controllers\Family\FamilyRequestController::class, 'reply'])->name('requests.reply');
     });
 });

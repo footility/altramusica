@@ -17,7 +17,13 @@
                 Area famiglie
             </a>
             @auth
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('family.dashboard') ? 'active' : '' }}" href="{{ route('family.dashboard') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('family.requests.*') ? 'active' : '' }}" href="{{ route('family.requests.index') }}">Richieste</a>
+                    </li>
                     <li class="nav-item">
                         <form method="POST" action="{{ route('family.logout') }}">
                             @csrf

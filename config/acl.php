@@ -53,6 +53,9 @@ return [
             'instrument-rentals' => 'Noleggio strumenti',
             'documents'          => 'Documenti',
         ],
+        'Famiglie' => [
+            'family-requests' => 'Richieste famiglie',
+        ],
         'Configurazione' => [
             'academic-years' => 'Anni accademici',
             'settings'       => 'Impostazioni',

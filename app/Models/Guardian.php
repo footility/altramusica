@@ -54,6 +54,12 @@ class Guardian extends Model
         return $this->hasMany(GuardianInvitation::class);
     }
 
+    /** R13 (#8539) — richieste/messaggi aperti dalla famiglia verso il gestionale. */
+    public function familyRequests()
+    {
+        return $this->hasMany(FamilyRequest::class);
+    }
+
     // NOTE (Fase 1): rimosse relazioni verso moduli extra non AS-IS (comunicazioni).
 
     // Accessors
