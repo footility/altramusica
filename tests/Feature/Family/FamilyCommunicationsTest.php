@@ -3,116 +3,138 @@
 namespace Tests\Feature\Family;
 
 use App\Models\Communication;
-use App\Models\FamilySession;
+use App\Models\Guardian;
 use App\Models\Student;
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Artisan;
 use Tests\TestCase;
 
+/**
+ * R13 (#8538) — Comunicazioni ricevute consultabili dall'area famiglie.
+ * Sola lettura, scopata sul tutore e sui suoi figli; solo comunicazioni
+ * effettivamente inviate (status sent/delivered).
+ */
 class FamilyCommunicationsTest extends TestCase
 {
     use RefreshDatabase;
 
-    private function actingAsFamily(Student $student): string
+    protected function setUp(): void
     {
-        $plain = Str::random(64);
-        FamilySession::create([
-            'student_id' => $student->id,
-            'token' => hash('sha256', $plain),
-            'expires_at' => now()->addDays(30),
+        parent::setUp();
+        Artisan::call('acl:sync', ['--reset-defaults' => true]);
+    }
+
+    private function makeGuardian(array $overrides = []): Guardian
+    {
+        return Guardian::create(array_merge([
+            'first_name' => 'Anna',
+            'last_name' => 'Rossi',
+            'relationship' => 'mother',
+            'email_1' => 'anna'.uniqid().'@example.test',
+            'privacy_consent' => true,
+        ], $overrides));
+    }
+
+    private function makeStudent(string $first = 'Marco', string $last = 'Rossi'): Student
+    {
+        return Student::create(['first_name' => $first, 'last_name' => $last]);
+    }
+
+    private function makeFamilyUser(Guardian $guardian): User
+    {
+        $user = User::create([
+            'name' => $guardian->full_name,
+            'email' => $guardian->email_1,
+            'password' => bcrypt('password123'),
+            'guardian_id' => $guardian->id,
         ]);
+        $user->assignRole('family');
 
-        return $plain;
+        return $user;
     }
 
-    private function makeStudent(string $first = 'Mario'): Student
-    {
-        return Student::create(['first_name' => $first, 'last_name' => 'Rossi']);
-    }
-
-    private function makeComm(array $attrs = []): Communication
+    private function makeCommunication(array $attrs = []): Communication
     {
         return Communication::create(array_merge([
-            'student_id' => null,
-            'title' => 'Avviso',
-            'body' => 'Corpo comunicazione',
-            'audience' => 'families',
-            'published_at' => now(),
+            'type' => 'email',
+            'subject' => 'Comunicazione',
+            'message' => 'Corpo della comunicazione.',
+            'sent_at' => now(),
+            'status' => 'sent',
         ], $attrs));
     }
 
-    public function test_index_lists_general_and_own_communications(): void
+    public function test_index_lists_own_and_childrens_communications(): void
     {
-        $student = $this->makeStudent();
-        $other = $this->makeStudent('Luigi');
+        $guardian = $this->makeGuardian();
+        $figlio = $this->makeStudent();
+        $guardian->students()->attach($figlio->id);
+        $user = $this->makeFamilyUser($guardian);
 
-        $this->makeComm(['title' => 'Generale a tutti', 'student_id' => null]);
-        $this->makeComm(['title' => 'Solo Mario', 'student_id' => $student->id]);
-        $this->makeComm(['title' => 'Solo Luigi', 'student_id' => $other->id]);
-        $this->makeComm(['title' => 'Per docenti', 'audience' => 'teachers', 'student_id' => null]);
+        $this->makeCommunication(['student_id' => $figlio->id, 'subject' => 'PER-FIGLIO']);
+        $this->makeCommunication(['guardian_id' => $guardian->id, 'subject' => 'PER-TUTORE']);
 
-        $token = $this->actingAsFamily($student);
+        // Non inviata: non deve comparire.
+        $this->makeCommunication(['student_id' => $figlio->id, 'subject' => 'FALLITA', 'status' => 'failed']);
 
-        $this->withCookie('family_session', $token)
-            ->get(route('family.communications'))
+        // Di un'altra famiglia: fuori perimetro.
+        $altro = $this->makeGuardian(['first_name' => 'Bruno']);
+        $altrui = $this->makeStudent('Luca', 'Bianchi');
+        $altro->students()->attach($altrui->id);
+        $this->makeCommunication(['student_id' => $altrui->id, 'subject' => 'ALTRUI']);
+
+        $this->actingAs($user)->get(route('family.communications.index'))
             ->assertOk()
-            ->assertSee('Generale a tutti')
-            ->assertSee('Solo Mario')
-            ->assertDontSee('Solo Luigi')
-            ->assertDontSee('Per docenti');
-    }
-
-    public function test_index_is_not_limited_to_ten(): void
-    {
-        $student = $this->makeStudent();
-        for ($i = 1; $i <= 15; $i++) {
-            $this->makeComm(['title' => 'Comunicazione '.$i, 'published_at' => now()->subDays($i)]);
-        }
-
-        $token = $this->actingAsFamily($student);
-
-        // paginazione a 20 → la quindicesima è presente nella prima pagina
-        $this->withCookie('family_session', $token)
-            ->get(route('family.communications'))
-            ->assertOk()
-            ->assertSee('Comunicazione 15');
+            ->assertSee('PER-FIGLIO')
+            ->assertSee('PER-TUTORE')
+            ->assertDontSee('FALLITA')
+            ->assertDontSee('ALTRUI');
     }
 
     public function test_show_own_communication(): void
     {
-        $student = $this->makeStudent();
-        $comm = $this->makeComm(['title' => 'Dettaglio', 'student_id' => $student->id]);
+        $guardian = $this->makeGuardian();
+        $figlio = $this->makeStudent();
+        $guardian->students()->attach($figlio->id);
+        $user = $this->makeFamilyUser($guardian);
 
-        $token = $this->actingAsFamily($student);
+        $com = $this->makeCommunication(['student_id' => $figlio->id, 'subject' => 'Avviso saggio']);
 
-        $this->withCookie('family_session', $token)
-            ->get(route('family.communications.show', $comm))
+        $this->actingAs($user)->get(route('family.communications.show', $com))
             ->assertOk()
-            ->assertSee('Dettaglio');
+            ->assertSee('Avviso saggio');
     }
 
-    public function test_show_denies_other_students_communication(): void
+    public function test_show_denies_other_familys_communication(): void
     {
-        $student = $this->makeStudent();
-        $other = $this->makeStudent('Luigi');
-        $comm = $this->makeComm(['student_id' => $other->id]);
+        $guardian = $this->makeGuardian();
+        $user = $this->makeFamilyUser($guardian);
 
-        $token = $this->actingAsFamily($student);
+        $altro = $this->makeGuardian(['first_name' => 'Bruno']);
+        $altrui = $this->makeStudent('Luca', 'Bianchi');
+        $altro->students()->attach($altrui->id);
+        $com = $this->makeCommunication(['student_id' => $altrui->id, 'subject' => 'Altrui']);
 
-        $this->withCookie('family_session', $token)
-            ->get(route('family.communications.show', $comm))
+        $this->actingAs($user)->get(route('family.communications.show', $com))
             ->assertNotFound();
     }
 
-    public function test_show_denies_non_family_audience(): void
+    public function test_show_denies_unsent_communication(): void
     {
-        $student = $this->makeStudent();
-        $comm = $this->makeComm(['audience' => 'teachers', 'student_id' => null]);
+        $guardian = $this->makeGuardian();
+        $figlio = $this->makeStudent();
+        $guardian->students()->attach($figlio->id);
+        $user = $this->makeFamilyUser($guardian);
 
-        $token = $this->actingAsFamily($student);
+        $com = $this->makeCommunication(['student_id' => $figlio->id, 'status' => 'failed']);
 
-        $this->withCookie('family_session', $token)
-            ->get(route('family.communications.show', $comm))
+        $this->actingAs($user)->get(route('family.communications.show', $com))
             ->assertNotFound();
+    }
+
+    public function test_index_requires_family_session(): void
+    {
+        $this->get(route('family.communications.index'))->assertRedirect(route('login'));
     }
 }

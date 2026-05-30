@@ -16,6 +16,21 @@ class DocumentController extends Controller
 {
     use ScopesToGuardian;
 
+    /** Archivio: tutti i documenti dei figli condivisi con la famiglia. */
+    public function index()
+    {
+        $documents = Document::whereIn('student_id', $this->childIds())
+            ->visibleToFamily()
+            ->with('student')
+            ->latest()
+            ->get();
+
+        return view('family.documents.index', [
+            'guardian' => $this->guardian(),
+            'documents' => $documents,
+        ]);
+    }
+
     public function download(string $document)
     {
         // Scoping: deve appartenere a un figlio accessibile ed essere condiviso.

@@ -3,49 +3,55 @@
 namespace App\Http\Controllers\Family;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Family\Concerns\ScopesToGuardian;
 use App\Models\Invoice;
-use Illuminate\Http\Request;
 
+/**
+ * R13 — Ricevute pagamenti scaricabili dall'area famiglie.
+ *
+ * Sola lettura, scopata sui figli del tutore: vengono elencate e rese
+ * scaricabili solo le fatture saldate (status = paid). La ricevuta è un
+ * documento HTML stampabile (print-to-PDF, nessuna libreria PDF).
+ */
 class ReceiptsController extends Controller
 {
-    /**
-     * Stati considerati "pagati": solo per questi è disponibile la ricevuta.
-     */
+    use ScopesToGuardian;
+
+    /** Stati considerati "pagati": solo per questi è disponibile la ricevuta. */
     private const PAID_STATUSES = ['paid'];
 
-    /**
-     * Elenco ricevute scaricabili: solo pagamenti saldati dello studente di sessione.
-     */
-    public function index(Request $request)
+    /** Elenco ricevute scaricabili: solo pagamenti saldati dei figli del tutore. */
+    public function index()
     {
-        $student = $request->attributes->get('family_student');
-
-        $invoices = $student->invoices()
+        $invoices = Invoice::whereIn('student_id', $this->childIds())
             ->whereIn('status', self::PAID_STATUSES)
-            ->orderByDesc('issued_at')
+            ->with('student')
+            ->orderByDesc('invoice_date')
+            ->orderByDesc('id')
             ->get();
 
-        return view('family.receipts.index', compact('student', 'invoices'));
+        return view('family.receipts.index', [
+            'guardian' => $this->guardian(),
+            'invoices' => $invoices,
+        ]);
     }
 
     /**
      * Ricevuta stampabile (HTML print-to-PDF) di un pagamento saldato.
-     * Valida che la fattura appartenga allo studente di sessione e sia pagata.
+     * Deve appartenere a un figlio nel perimetro ed essere saldata, altrimenti 404.
      */
-    public function download(Request $request, Invoice $invoice)
+    public function download(string $invoice)
     {
-        $student = $request->attributes->get('family_student');
+        $model = Invoice::whereIn('student_id', $this->childIds())
+            ->whereIn('status', self::PAID_STATUSES)
+            ->with(['items', 'student'])
+            ->find($invoice);
 
-        abort_unless(
-            $invoice->student_id === $student->id && in_array($invoice->status, self::PAID_STATUSES, true),
-            404
-        );
-
-        $invoice->load('lines', 'student');
+        abort_if($model === null, 404, 'Ricevuta non disponibile.');
 
         return view('family.receipts.pdf', [
-            'student' => $student,
-            'invoice' => $invoice,
+            'student' => $model->student,
+            'invoice' => $model,
         ]);
     }
 }

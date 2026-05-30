@@ -556,10 +556,16 @@ class ComunicazioniMirateE2EValidationTest extends TestCase
     // 6. BLOCCO — fotografia del gap di implementazione (doc §10, NON parte di R9)
     // ─────────────────────────────────────────────────────────────────────────
 
-    /** §1/§10: il model Communication che mapperebbe la tabella dormiente NON esiste. */
-    public function test_blocco_model_communication_assente(): void
+    /**
+     * §1/§10: il model Communication esiste da R13 (#8538), introdotto per la
+     * vista READ-ONLY dell'area famiglie (comunicazioni ricevute consultabili).
+     * Mappa la tabella `communications` ma NON copre ancora la macchina di invio
+     * mirato di R9 (service, mailable, esito per-destinatario, snapshot segmento),
+     * che resta dormiente — vedi i blocchi successivi.
+     */
+    public function test_model_communication_presente_solo_per_vista_famiglie(): void
     {
-        $this->assertFalse(class_exists(\App\Models\Communication::class), 'Model Communication ancora dormiente');
+        $this->assertTrue(class_exists(\App\Models\Communication::class), 'Model Communication introdotto da #8538 (vista famiglie)');
     }
 
     /** §10: il service di risoluzione segmento → destinatari NON esiste ancora. */

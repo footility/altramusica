@@ -3,58 +3,70 @@
 namespace App\Http\Controllers\Family;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Family\Concerns\ScopesToGuardian;
 use App\Models\Communication;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Http\Request;
 
+/**
+ * R13 — Comunicazioni ricevute, consultabili dall'area famiglie.
+ *
+ * Sola lettura: il tutore vede le comunicazioni effettivamente inviate
+ * (status sent/delivered) rivolte a sé o ai propri figli. Scoping server-side
+ * tramite {@see ScopesToGuardian}: mai un find() non filtrato.
+ */
 class CommunicationsController extends Controller
 {
-    /**
-     * Tutte le comunicazioni rivolte alla famiglia dello studente di sessione.
-     * Stesso filtro della dashboard, ma paginato e senza limite 10.
-     */
-    public function index(Request $request)
-    {
-        $student = $request->attributes->get('family_student');
+    use ScopesToGuardian;
 
-        $communications = $this->familyScope($request)
-            ->orderByDesc('published_at')
+    /** Comunicazioni considerate consegnabili alla famiglia. */
+    private const VISIBLE_STATUSES = ['sent', 'delivered'];
+
+    /** Elenco paginato delle comunicazioni rivolte alla famiglia. */
+    public function index()
+    {
+        $communications = $this->familyScope()
+            ->with('student')
+            ->orderByDesc('sent_at')
+            ->orderByDesc('id')
             ->paginate(20);
 
-        return view('family.communications.index', compact('student', 'communications'));
+        return view('family.communications.index', [
+            'guardian' => $this->guardian(),
+            'communications' => $communications,
+        ]);
     }
 
-    /**
-     * Dettaglio di una singola comunicazione.
-     * Valida che sia rivolta alla famiglia dello studente di sessione.
-     */
-    public function show(Request $request, Communication $communication)
+    /** Dettaglio di una singola comunicazione, se nel perimetro del tutore. */
+    public function show(string $communication)
     {
-        $student = $request->attributes->get('family_student');
+        $model = $this->familyScope()->with('student')->find($communication);
 
-        $visible = $communication->audience === 'families'
-            && ($communication->student_id === null || $communication->student_id === $student->id);
-
-        abort_unless($visible, 404);
+        abort_if($model === null, 404, 'Comunicazione non disponibile.');
 
         return view('family.communications.show', [
-            'student' => $student,
-            'communication' => $communication,
+            'guardian' => $this->guardian(),
+            'communication' => $model,
         ]);
     }
 
     /**
-     * Comunicazioni rivolte alla famiglia: generali (student_id null) o del proprio studente.
+     * Base query delle comunicazioni visibili al tutore: inviate (non in errore,
+     * con sent_at valorizzato) e rivolte a un proprio figlio o al tutore stesso.
      */
-    private function familyScope(Request $request): Builder
+    private function familyScope(): Builder
     {
-        $student = $request->attributes->get('family_student');
+        $childIds = $this->childIds();
+        $guardianId = $this->guardian()->id;
 
         return Communication::query()
-            ->where('audience', 'families')
-            ->where(function (Builder $q) use ($student) {
-                $q->whereNull('student_id')
-                    ->orWhere('student_id', $student->id);
+            ->whereIn('status', self::VISIBLE_STATUSES)
+            ->whereNotNull('sent_at')
+            ->where(function (Builder $q) use ($childIds, $guardianId) {
+                $q->where('guardian_id', $guardianId);
+
+                if (! empty($childIds)) {
+                    $q->orWhereIn('student_id', $childIds);
+                }
             });
     }
 }

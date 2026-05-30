@@ -22,6 +22,15 @@
                         <a class="nav-link {{ request()->routeIs('family.dashboard') ? 'active' : '' }}" href="{{ route('family.dashboard') }}">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('family.documents.*') ? 'active' : '' }}" href="{{ route('family.documents.index') }}">Documenti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('family.receipts.*') ? 'active' : '' }}" href="{{ route('family.receipts.index') }}">Ricevute</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('family.communications.*') ? 'active' : '' }}" href="{{ route('family.communications.index') }}">Comunicazioni</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {{ request()->routeIs('family.requests.*') ? 'active' : '' }}" href="{{ route('family.requests.index') }}">Richieste</a>
                     </li>
                     <li class="nav-item">

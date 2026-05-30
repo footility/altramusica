@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ricevuta {{ $invoice->number ?? ('#'.$invoice->id) }}</title>
+    <title>Ricevuta {{ $invoice->invoice_number }}</title>
     <style>
         body { font-family: Arial, Helvetica, sans-serif; color: #222; margin: 40px; font-size: 14px; }
         .header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #222; padding-bottom: 12px; margin-bottom: 24px; }
@@ -33,9 +33,9 @@
     </div>
 
     <div class="meta">
-        <div><strong>Numero:</strong> {{ $invoice->number ?? ('#'.$invoice->id) }}</div>
-        <div><strong>Data:</strong> {{ optional($invoice->issued_at)->format('d/m/Y') }}</div>
-        <div><strong>Allievo:</strong> {{ trim($student->first_name.' '.$student->last_name) }}</div>
+        <div><strong>Numero:</strong> {{ $invoice->invoice_number }}</div>
+        <div><strong>Data:</strong> {{ optional($invoice->invoice_date)->format('d/m/Y') }}</div>
+        <div><strong>Allievo:</strong> {{ $student?->full_name ?? trim(($student->first_name ?? '').' '.($student->last_name ?? '')) }}</div>
         <div><strong>Stato:</strong> Pagato</div>
     </div>
 
@@ -49,22 +49,22 @@
             </tr>
         </thead>
         <tbody>
-            @forelse($invoice->lines as $line)
+            @forelse($invoice->items as $item)
                 <tr>
-                    <td>{{ $line->description }}</td>
-                    <td class="num">{{ rtrim(rtrim(number_format($line->quantity, 2, ',', '.'), '0'), ',') }}</td>
-                    <td class="num">€ {{ number_format($line->unit_price, 2, ',', '.') }}</td>
-                    <td class="num">€ {{ number_format($line->quantity * $line->unit_price, 2, ',', '.') }}</td>
+                    <td>{{ $item->description }}</td>
+                    <td class="num">{{ rtrim(rtrim(number_format($item->quantity, 2, ',', '.'), '0'), ',') }}</td>
+                    <td class="num">€ {{ number_format($item->unit_price, 2, ',', '.') }}</td>
+                    <td class="num">€ {{ number_format($item->total_price, 2, ',', '.') }}</td>
                 </tr>
             @empty
                 <tr>
-                    <td colspan="4">Pagamento {{ $invoice->number ?? ('#'.$invoice->id) }}</td>
+                    <td colspan="4">Pagamento {{ $invoice->invoice_number }}</td>
                 </tr>
             @endforelse
         </tbody>
     </table>
 
-    <div class="total">Totale: € {{ number_format($invoice->total ?? 0, 2, ',', '.') }}</div>
+    <div class="total">Totale: € {{ number_format($invoice->total_amount ?? 0, 2, ',', '.') }}</div>
 
     <div class="footer">
         Documento generato dall'Area Famiglie. Ricevuta relativa a un pagamento già saldato.

@@ -113,7 +113,14 @@ Route::prefix('famiglia')->name('family.')->group(function () {
     Route::middleware(['auth', 'role:family'])->group(function () {
         Route::get('/', [\App\Http\Controllers\Family\DashboardController::class, 'index'])->name('dashboard');
         Route::get('studente/{student}', [\App\Http\Controllers\Family\DashboardController::class, 'student'])->name('student');
+
+        // R13 (#8538) — archivio documenti, ricevute scaricabili, comunicazioni.
+        Route::get('documenti', [\App\Http\Controllers\Family\DocumentController::class, 'index'])->name('documents.index');
         Route::get('documenti/{document}/download', [\App\Http\Controllers\Family\DocumentController::class, 'download'])->name('document.download');
+        Route::get('ricevute', [\App\Http\Controllers\Family\ReceiptsController::class, 'index'])->name('receipts.index');
+        Route::get('ricevute/{invoice}/download', [\App\Http\Controllers\Family\ReceiptsController::class, 'download'])->name('receipts.download');
+        Route::get('comunicazioni', [\App\Http\Controllers\Family\CommunicationsController::class, 'index'])->name('communications.index');
+        Route::get('comunicazioni/{communication}', [\App\Http\Controllers\Family\CommunicationsController::class, 'show'])->name('communications.show');
 
         // R13 (#8539) — canale richieste/messaggi verso la segreteria.
         Route::get('richieste', [\App\Http\Controllers\Family\FamilyRequestController::class, 'index'])->name('requests.index');
