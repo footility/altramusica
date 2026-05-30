@@ -16,7 +16,7 @@ Route::get('/cookie-policy', [\App\Http\Controllers\Public\PrivacyController::cl
 
 // NOTE (Fase 1): rimosse le rotte "teacher/register" (registro docente) perché non AS-IS.
 
-Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
+Route::middleware(['auth', 'block.family'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     
     // Academic Years
@@ -46,6 +46,8 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     // - attendances (registro/presenze evolutivo)
     // - teacher-hours (conto ore evolutivo)
     Route::resource('guardians', \App\Http\Controllers\Admin\GuardianController::class);
+    // R13 — invito del tutore all'area famiglie (token monouso)
+    Route::post('guardians/{guardian}/invite', [\App\Http\Controllers\Admin\GuardianInvitationController::class, 'store'])->name('guardians.invite');
     Route::resource('teachers', \App\Http\Controllers\Admin\TeacherController::class);
     Route::resource('courses', \App\Http\Controllers\Admin\CourseController::class);
     Route::resource('enrollments', \App\Http\Controllers\Admin\EnrollmentController::class);
@@ -81,4 +83,31 @@ Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () 
     Route::resource('book-distributions', \App\Http\Controllers\Admin\BookDistributionController::class);
     Route::resource('instrument-rentals', \App\Http\Controllers\Admin\InstrumentRentalController::class);
     Route::resource('documents', \App\Http\Controllers\Admin\DocumentController::class);
+});
+
+/*
+|--------------------------------------------------------------------------
+| R13 — Area famiglie (#8537)
+|--------------------------------------------------------------------------
+| Guard web + ruolo `family`, isolata dal backoffice via prefix `famiglia`
+| e middleware. Sola lettura, scopata sui figli del tutore (vedi
+| docs/44_UX_AREA_FAMIGLIE_E_PRIVACY.md).
+*/
+Route::prefix('famiglia')->name('family.')->group(function () {
+    // Accesso su invito + login (solo ospiti).
+    Route::middleware('guest')->group(function () {
+        Route::get('login', [\App\Http\Controllers\Family\AuthController::class, 'showLogin'])->name('login');
+        Route::post('login', [\App\Http\Controllers\Family\AuthController::class, 'login'])->name('login.attempt');
+        Route::get('attiva/{token}', [\App\Http\Controllers\Family\InvitationController::class, 'show'])->name('invitation.show');
+        Route::post('attiva/{token}', [\App\Http\Controllers\Family\InvitationController::class, 'activate'])->name('invitation.activate');
+    });
+
+    Route::post('logout', [\App\Http\Controllers\Family\AuthController::class, 'logout'])->name('logout');
+
+    // Area autenticata: solo account con ruolo family.
+    Route::middleware(['auth', 'role:family'])->group(function () {
+        Route::get('/', [\App\Http\Controllers\Family\DashboardController::class, 'index'])->name('dashboard');
+        Route::get('studente/{student}', [\App\Http\Controllers\Family\DashboardController::class, 'student'])->name('student');
+        Route::get('documenti/{document}/download', [\App\Http\Controllers\Family\DocumentController::class, 'download'])->name('document.download');
+    });
 });

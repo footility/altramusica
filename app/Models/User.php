@@ -11,7 +11,7 @@ use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable, HasRoles;
+    use HasFactory, HasRoles, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -23,6 +23,7 @@ class User extends Authenticatable
         'email',
         'password',
         'role',
+        'guardian_id',
     ];
 
     /**
@@ -51,6 +52,18 @@ class User extends Authenticatable
     public function teacher()
     {
         return $this->hasOne(Teacher::class);
+    }
+
+    /** R13 — tutore collegato a questo account (solo per gli utenti dell'area famiglie). */
+    public function guardian()
+    {
+        return $this->belongsTo(Guardian::class);
+    }
+
+    /** Account dell'area famiglie: ha il ruolo `family` ed è collegato a un tutore. */
+    public function isFamily(): bool
+    {
+        return $this->hasRole('family');
     }
 
     /**

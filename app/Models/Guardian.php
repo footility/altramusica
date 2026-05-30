@@ -42,6 +42,18 @@ class Guardian extends Model
             ->withTimestamps();
     }
 
+    /** R13 — account area famiglie collegato a questo tutore (può non esistere). */
+    public function user()
+    {
+        return $this->hasOne(User::class);
+    }
+
+    /** R13 — inviti all'area famiglie generati per questo tutore. */
+    public function invitations()
+    {
+        return $this->hasMany(GuardianInvitation::class);
+    }
+
     // NOTE (Fase 1): rimosse relazioni verso moduli extra non AS-IS (comunicazioni).
 
     // Accessors

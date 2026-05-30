@@ -67,5 +67,8 @@ return [
         'admin',
         'segreteria',
         'teacher',
+        // R13 — area famiglie: ruolo SENZA permessi backoffice. Serve solo da gate
+        // per le rotte `famiglia.*` (middleware role:family), mai per `admin.*`.
+        'family',
     ],
 ];

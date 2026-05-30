@@ -13,6 +13,7 @@ class Document extends Model
         'student_id',
         'contract_id',
         'type',
+        'visible_to_family',
         'file_path',
         'file_name',
         'mime_type',
@@ -22,7 +23,14 @@ class Document extends Model
 
     protected $casts = [
         'size' => 'integer',
+        'visible_to_family' => 'boolean',
     ];
+
+    /** R13 — documenti esplicitamente condivisi con l'area famiglie (fail-safe: default false). */
+    public function scopeVisibleToFamily($query)
+    {
+        return $query->where('visible_to_family', true);
+    }
 
     public function student()
     {

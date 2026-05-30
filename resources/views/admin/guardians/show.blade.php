@@ -64,6 +64,27 @@
                 <a href="{{ route('admin.guardians.index') }}" class="btn btn-secondary w-100">Torna all'elenco</a>
             </div>
         </div>
+
+        {{-- R13 — Invito all'area famiglie (token monouso) --}}
+        <div class="card mt-3">
+            <div class="card-header">Area famiglie</div>
+            <div class="card-body">
+                @if($guardian->user)
+                    <p class="text-success small mb-2">Accesso attivo ({{ $guardian->user->email }}).</p>
+                @endif
+                @if($guardian->privacy_consent && $guardian->primary_email)
+                    <form method="POST" action="{{ route('admin.guardians.invite', $guardian) }}">
+                        @csrf
+                        <button type="submit" class="btn btn-outline-primary w-100">
+                            Invita all'area famiglie
+                        </button>
+                    </form>
+                    <p class="text-muted small mt-2 mb-0">Genera un link di attivazione (scade in 7 giorni) per {{ $guardian->primary_email }}.</p>
+                @else
+                    <p class="text-muted small mb-0">Per invitare il tutore servono consenso privacy ed email valida.</p>
+                @endif
+            </div>
+        </div>
     </div>
 </div>
 @endsection
